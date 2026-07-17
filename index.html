@@ -1,3 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="Gang Life RP — UK serious FiveM roleplay.">
+  <title>Gang Life RP | UK Serious Roleplay</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+R0xSUCBlbWJsZW08L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BIHJlZCBhbmQgZ29sZCBjaXJjdWxhciBHTFJQIGVtYmxlbS48L2Rlc2M+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJpbmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY0MzVkIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLjQ4IiBzdG9wLWNvbG9yPSIjOWQxMDI4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZDA3MyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iY29yZSIgY3g9IjUwJSIgY3k9IjQwJSIgcj0iNjUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMzAxMDFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4MDkwZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii01MCUiIHk9Ii01MCUiIHdpZHRoPSIyMDAlIiBoZWlnaHQ9IjIwMCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI4IiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjI2IiBmaWxsPSJ1cmwoI2NvcmUpIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiLz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjA4IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTE4IDMzNyAxNzUgMTU3bDM0IDExMWg5NGwzNS0xMTEgNTYgMTgwLTYyLTQ1LTI5IDU4aC05NGwtMjktNTh6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbHRlcj0idXJsKCNnbG93KSIvPgogIDx0ZXh0IHg9IjI1NiIgeT0iMjg2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjdmMWU3IiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkwIiBsZXR0ZXItc3BhY2luZz0iNiI+R0xSUDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjM4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDA3MyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iOCI+TE9ZQUxUWSDigKIgUkVTUEVDVCDigKIgRElTQ0lQTElORTwvdGV4dD4KPC9zdmc+Cg==" type="image/svg+xml">
+  <style>
+:root {
+  --bg: #08090d;
+  --panel: #101117;
+  --panel-2: #15161d;
+  --text: #f6f1e9;
+  --muted: #a9a6a3;
+  --red: #ef2747;
+  --red-dark: #8e0d24;
+  --gold: #f2bd66;
+  --line: rgba(255,255,255,.10);
+  --max: 1220px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.noise { position: fixed; inset: 0; pointer-events: none; opacity: .035; z-index: 100; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"); }
+.site-header { position: fixed; z-index: 50; top: 0; left: 0; right: 0; height: 82px; padding: 0 max(24px, calc((100vw - var(--max)) / 2)); display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(8,9,13,.94), rgba(8,9,13,.65), transparent); transition: .25s ease; }
+.site-header.scrolled { background: rgba(8,9,13,.92); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
+.brand { display: inline-flex; align-items: center; gap: 12px; min-width: 190px; }
+.brand img { width: 48px; height: 48px; filter: drop-shadow(0 0 16px rgba(239,39,71,.3)); }
+.brand span { display: flex; flex-direction: column; line-height: .95; }
+.brand strong { font-size: 16px; letter-spacing: .14em; }
+.brand small { margin-top: 6px; color: var(--gold); font-size: 9px; letter-spacing: .47em; }
+.site-nav { display: flex; align-items: center; gap: 30px; font-size: 13px; font-weight: 700; letter-spacing: .06em; }
+.site-nav a { color: #d9d5ce; transition: .2s ease; }
+.site-nav a:hover { color: #fff; }
+.site-nav .nav-cta { padding: 12px 18px; border: 1px solid rgba(239,39,71,.55); background: rgba(239,39,71,.08); color: #fff; }
+.menu-toggle { display: none; background: none; border: 0; color: #fff; font-size: 24px; }
+.hero { min-height: 100vh; position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 40px; padding: 140px max(24px, calc((100vw - var(--max)) / 2)) 88px; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: auto 0 0; height: 220px; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none; }
+.city-grid { position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 70px 70px; transform: perspective(800px) rotateX(64deg) translateY(30%); transform-origin: center bottom; mask-image: linear-gradient(to bottom, transparent 5%, #000 44%, transparent 95%); }
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .25; }
+.glow-one { width: 540px; height: 540px; background: var(--red); right: -180px; top: 9%; }
+.glow-two { width: 380px; height: 380px; background: #5d1831; left: -200px; bottom: -90px; }
+.hero-content, .hero-emblem { position: relative; z-index: 2; }
+.status-pill { width: fit-content; display: flex; align-items: center; gap: 10px; padding: 9px 12px; border: 1px solid rgba(239,39,71,.34); background: rgba(239,39,71,.06); font-size: 11px; letter-spacing: .14em; }
+.status-pill span { width: 7px; height: 7px; border-radius: 50%; background: var(--red); box-shadow: 0 0 13px var(--red); animation: pulse 1.8s infinite; }
+.eyebrow { margin: 28px 0 18px; color: var(--gold); font-weight: 800; font-size: 11px; letter-spacing: .26em; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 22px; max-width: 780px; font-size: clamp(55px, 7.2vw, 106px); line-height: .88; letter-spacing: -.065em; text-transform: uppercase; }
+h1 em, h2 span { color: var(--red); font-style: normal; }
+.hero-copy { max-width: 600px; margin-bottom: 30px; color: #c1bdb8; font-size: clamp(17px, 2vw, 21px); line-height: 1.6; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button { min-width: 180px; padding: 16px 22px; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .11em; border: 1px solid transparent; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button.primary { background: linear-gradient(135deg, var(--red), #b10f2b); box-shadow: 0 12px 35px rgba(239,39,71,.2); }
+.button.secondary { border-color: var(--line); background: rgba(255,255,255,.025); }
+.button.secondary:hover { border-color: rgba(255,255,255,.3); }
+.notice { margin: 18px 0 0; color: #77767a; font-size: 12px; }
+.hero-emblem { justify-self: center; width: min(510px, 41vw); aspect-ratio: 1; display: grid; place-items: center; }
+.hero-emblem img { width: 74%; filter: drop-shadow(0 0 45px rgba(239,39,71,.22)); animation: float 5s ease-in-out infinite; }
+.emblem-orbit { position: absolute; inset: 2%; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; animation: spin 26s linear infinite; }
+.emblem-orbit::before, .emblem-orbit::after { content: ""; position: absolute; width: 8px; height: 8px; border-radius: 50%; background: var(--red); box-shadow: 0 0 20px var(--red); }
+.emblem-orbit::before { top: 16%; left: 12%; }.emblem-orbit::after { right: 10%; bottom: 19%; background: var(--gold); box-shadow: 0 0 20px var(--gold); }
+.emblem-tag { position: absolute; bottom: 2%; padding: 10px 16px; background: rgba(8,9,13,.72); border: 1px solid var(--line); color: #b9b6b0; font-size: 9px; letter-spacing: .22em; backdrop-filter: blur(12px); }
+.scroll-cue { position: absolute; z-index: 4; left: 50%; bottom: 26px; width: 25px; height: 42px; border: 1px solid rgba(255,255,255,.25); border-radius: 20px; }
+.scroll-cue span { position: absolute; left: 50%; top: 8px; width: 3px; height: 8px; border-radius: 3px; background: #fff; transform: translateX(-50%); animation: scroll 1.5s infinite; }
+.section { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; padding: 120px 0; }
+.section-heading h2, .journey h2, .code-section h2, .join-card h2 { margin: 0; font-size: clamp(42px, 6vw, 80px); line-height: .95; letter-spacing: -.055em; text-transform: uppercase; }
+.intro { display: grid; grid-template-columns: .95fr 1.05fr; gap: 64px; align-items: start; }
+.intro-copy { padding-top: 30px; color: #b5b1ab; font-size: 18px; line-height: 1.8; }
+.stats-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.stats-grid article { min-height: 145px; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 28px; border-right: 1px solid var(--line); }
+.stats-grid article:last-child { border-right: 0; }
+.stats-grid strong { color: var(--red); font-size: 14px; letter-spacing: .14em; }
+.stats-grid span { font-weight: 800; font-size: 14px; letter-spacing: .04em; }
+.systems { padding-top: 140px; }
+.centre { text-align: center; }.centre .eyebrow { margin-inline: auto; }
+.feature-grid { margin-top: 58px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.feature-card { position: relative; min-height: 310px; padding: 38px 32px; background: linear-gradient(155deg, rgba(255,255,255,.03), transparent 60%); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; transition: .25s ease; }
+.feature-card:hover { background: linear-gradient(155deg, rgba(239,39,71,.11), rgba(255,255,255,.01) 65%); transform: translateY(-3px); }
+.feature-card::after { content: ""; position: absolute; width: 160px; height: 160px; border-radius: 50%; background: var(--red); filter: blur(75px); opacity: 0; right: -80px; top: -70px; transition: .25s ease; }
+.feature-card:hover::after { opacity: .16; }
+.feature-number { color: #77747a; font-size: 11px; letter-spacing: .16em; }
+.feature-icon { margin: 32px 0 28px; color: var(--red); font-size: 38px; text-shadow: 0 0 25px rgba(239,39,71,.35); }
+.feature-card h3 { margin-bottom: 14px; font-size: 22px; text-transform: uppercase; letter-spacing: -.02em; }
+.feature-card p { color: #9c9996; line-height: 1.7; font-size: 14px; }
+.journey-panel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; padding: 70px; background: radial-gradient(circle at 10% 20%, rgba(239,39,71,.16), transparent 35%), var(--panel); border: 1px solid var(--line); }
+.journey-steps { list-style: none; padding: 0; margin: 0; }
+.journey-steps li { display: grid; grid-template-columns: 52px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.journey-steps li:last-child { border-bottom: 0; }
+.journey-steps b { color: var(--red); font-size: 12px; letter-spacing: .15em; }
+.journey-steps strong, .journey-steps span { display: block; }
+.journey-steps strong { margin-bottom: 7px; font-size: 16px; text-transform: uppercase; }
+.journey-steps span { color: #999694; font-size: 14px; line-height: 1.5; }
+.code-section { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: end; }
+.code-section blockquote { margin: 0; padding: 56px; background: var(--panel); border-left: 3px solid var(--red); font-size: clamp(23px, 3vw, 38px); line-height: 1.35; letter-spacing: -.025em; }
+.code-section cite { display: block; margin-top: 28px; color: var(--gold); font-size: 11px; font-style: normal; letter-spacing: .16em; }
+.join-section { padding-bottom: 150px; }
+.join-card { position: relative; overflow: hidden; padding: 90px 28px; text-align: center; background: radial-gradient(circle at 50% 50%, rgba(239,39,71,.18), transparent 44%), var(--panel); border: 1px solid var(--line); }
+.join-card::before { content: "GLRP"; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.025); font-size: clamp(150px, 28vw, 360px); font-weight: 950; letter-spacing: -.08em; }
+.join-card > * { position: relative; z-index: 2; }
+.join-card img { width: 105px; filter: drop-shadow(0 0 30px rgba(239,39,71,.3)); }
+.join-card p:not(.eyebrow) { max-width: 570px; margin: 24px auto 28px; color: #aaa7a3; line-height: 1.7; }
+.centre-actions { justify-content: center; }
+footer { min-height: 140px; padding: 34px max(24px, calc((100vw - var(--max)) / 2)); display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; border-top: 1px solid var(--line); color: #716f72; font-size: 11px; }
+.footer-brand img { width: 38px; height: 38px; }.footer-brand strong { color: #ddd; font-size: 13px; }.footer-brand small { font-size: 7px; }
+footer p { margin: 0; text-align: center; }.footer-links { display: flex; justify-content: flex-end; gap: 20px; }.footer-links a:hover { color: #fff; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }.reveal.visible { opacity: 1; transform: none; }.delay-one { transition-delay: .12s; }.delay-two { transition-delay: .22s; }
+.rules-main { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; padding: 150px 0 120px; }
+.rules-hero { max-width: 880px; padding: 70px 0; }.rules-hero h1 { font-size: clamp(72px, 11vw, 150px); }.rules-hero p:last-child { max-width: 660px; color: #a6a3a0; font-size: 18px; line-height: 1.7; }
+.rules-layout { display: grid; grid-template-columns: 240px 1fr; gap: 55px; align-items: start; }
+.rules-index { position: sticky; top: 120px; display: flex; flex-direction: column; gap: 18px; padding: 25px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.rules-index strong { color: var(--gold); font-size: 10px; letter-spacing: .2em; }.rules-index a { color: #8f8c8a; font-size: 13px; }.rules-index a:hover { color: #fff; }
+.rule-card { scroll-margin-top: 120px; display: grid; grid-template-columns: 70px 1fr; gap: 30px; padding: 40px; margin-bottom: 14px; background: var(--panel); border: 1px solid var(--line); }
+.rule-card > span { color: var(--red); font-weight: 900; letter-spacing: .14em; }.rule-card h2 { margin-bottom: 14px; font-size: 26px; text-transform: uppercase; }.rule-card p { margin: 0; color: #a3a09d; line-height: 1.75; }
+@keyframes pulse { 50% { opacity: .4; transform: scale(.8); } }
+@keyframes float { 50% { transform: translateY(-12px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes scroll { 0% { opacity: 0; transform: translate(-50%,0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%,14px); } }
+@media (max-width: 900px) {
+  .menu-toggle { display: block; z-index: 5; }
+  .site-nav { position: fixed; top: 0; right: -100%; width: min(340px, 88vw); height: 100vh; padding: 105px 30px 30px; flex-direction: column; align-items: stretch; gap: 0; background: rgba(11,12,16,.98); border-left: 1px solid var(--line); transition: right .25s ease; }
+  .site-nav.open { right: 0; }.site-nav a { padding: 18px 0; border-bottom: 1px solid var(--line); }.site-nav .nav-cta { margin-top: 18px; padding-inline: 18px; text-align: center; }
+  .hero { grid-template-columns: 1fr; padding-top: 135px; }.hero-emblem { position: absolute; width: 420px; opacity: .23; right: -160px; top: 21%; }.hero-content { max-width: 720px; }.scroll-cue { display: none; }
+  .intro, .journey-panel, .code-section { grid-template-columns: 1fr; }.stats-grid { grid-template-columns: repeat(2,1fr); }.stats-grid article:nth-child(2) { border-right: 0; }
+  .feature-grid { grid-template-columns: repeat(2,1fr); }.journey-panel { padding: 45px; gap: 40px; }.rules-layout { grid-template-columns: 1fr; }.rules-index { position: static; flex-direction: row; flex-wrap: wrap; }.rules-nav { display: flex; position: static; width: auto; height: auto; padding: 0; flex-direction: row; background: none; border: 0; }.rules-nav a { border: 0; }.rules-page .menu-toggle { display: none; }
+  footer { grid-template-columns: 1fr; gap: 24px; text-align: center; }.footer-brand, .footer-links { justify-content: center; } 
+}
+@media (max-width: 600px) {
+  .site-header { height: 70px; }.brand img { width: 40px; height: 40px; }.brand strong { font-size: 14px; }
+  .hero { padding-inline: 22px; min-height: 900px; align-content: center; }.hero-emblem { top: 36%; right: -210px; }
+  h1 { font-size: 54px; }.hero-copy { font-size: 16px; }.button { width: 100%; }
+  .section { width: min(100% - 32px, var(--max)); padding: 82px 0; }.section-heading h2, .journey h2, .code-section h2, .join-card h2 { font-size: 42px; }
+  .intro { gap: 22px; }.intro-copy { font-size: 16px; }.stats-grid { grid-template-columns: 1fr; }.stats-grid article { border-right: 0; border-bottom: 1px solid var(--line); }.stats-grid article:last-child { border-bottom: 0; }
+  .feature-grid { grid-template-columns: 1fr; }.feature-card { min-height: 270px; }.journey-panel { padding: 32px 24px; }.journey-steps li { grid-template-columns: 40px 1fr; }
+  .code-section blockquote { padding: 34px 28px; }.join-card { padding: 64px 20px; }.rules-main { width: min(100% - 32px, var(--max)); padding-top: 115px; }.rules-hero { padding-bottom: 45px; }.rules-hero h1 { font-size: 70px; }.rule-card { grid-template-columns: 1fr; gap: 16px; padding: 28px 22px; }.rules-nav a:first-child { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+
+  </style>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Gang Life RP home">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+R0xSUCBlbWJsZW08L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BIHJlZCBhbmQgZ29sZCBjaXJjdWxhciBHTFJQIGVtYmxlbS48L2Rlc2M+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJpbmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY0MzVkIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLjQ4IiBzdG9wLWNvbG9yPSIjOWQxMDI4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZDA3MyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iY29yZSIgY3g9IjUwJSIgY3k9IjQwJSIgcj0iNjUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMzAxMDFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4MDkwZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii01MCUiIHk9Ii01MCUiIHdpZHRoPSIyMDAlIiBoZWlnaHQ9IjIwMCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI4IiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjI2IiBmaWxsPSJ1cmwoI2NvcmUpIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiLz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjA4IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTE4IDMzNyAxNzUgMTU3bDM0IDExMWg5NGwzNS0xMTEgNTYgMTgwLTYyLTQ1LTI5IDU4aC05NGwtMjktNTh6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbHRlcj0idXJsKCNnbG93KSIvPgogIDx0ZXh0IHg9IjI1NiIgeT0iMjg2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjdmMWU3IiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkwIiBsZXR0ZXItc3BhY2luZz0iNiI+R0xSUDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjM4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDA3MyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iOCI+TE9ZQUxUWSDigKIgUkVTUEVDVCDigKIgRElTQ0lQTElORTwvdGV4dD4KPC9zdmc+Cg==" alt="GLRP emblem">
+      <span><strong>GANG LIFE</strong><small>ROLEPLAY</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#about">The City</a>
+      <a href="#systems">Gameplay</a>
+      <a href="#journey">Your Journey</a>
+      <a href="#rules">Rules</a>
+      <a class="nav-cta js-discord" href="#">Join Discord</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="city-grid" aria-hidden="true"></div>
+      <div class="hero-glow glow-one" aria-hidden="true"></div>
+      <div class="hero-glow glow-two" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <div class="status-pill"><span></span><b class="js-status">OPEN FOR APPLICATIONS</b></div>
+        <p class="eyebrow">UK SERIOUS ROLEPLAY • BUILT DIFFERENT</p>
+        <h1>Your choices.<br><em>Your streets.</em><br>Your legacy.</h1>
+        <p class="hero-copy js-tagline">UK Serious Roleplay. Your story starts on the streets.</p>
+        <div class="hero-actions">
+          <a class="button primary js-discord" href="#">Enter the City</a>
+          <a class="button secondary js-connect" href="#">Connect to FiveM</a>
+        </div>
+        <p class="notice js-notice">Join the Discord for city announcements, applications and support.</p>
+      </div>
+      <div class="hero-emblem reveal delay-one">
+        <div class="emblem-orbit"></div>
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+R0xSUCBlbWJsZW08L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BIHJlZCBhbmQgZ29sZCBjaXJjdWxhciBHTFJQIGVtYmxlbS48L2Rlc2M+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJpbmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY0MzVkIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLjQ4IiBzdG9wLWNvbG9yPSIjOWQxMDI4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZDA3MyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iY29yZSIgY3g9IjUwJSIgY3k9IjQwJSIgcj0iNjUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMzAxMDFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4MDkwZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii01MCUiIHk9Ii01MCUiIHdpZHRoPSIyMDAlIiBoZWlnaHQ9IjIwMCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI4IiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjI2IiBmaWxsPSJ1cmwoI2NvcmUpIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiLz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjA4IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTE4IDMzNyAxNzUgMTU3bDM0IDExMWg5NGwzNS0xMTEgNTYgMTgwLTYyLTQ1LTI5IDU4aC05NGwtMjktNTh6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbHRlcj0idXJsKCNnbG93KSIvPgogIDx0ZXh0IHg9IjI1NiIgeT0iMjg2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjdmMWU3IiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkwIiBsZXR0ZXItc3BhY2luZz0iNiI+R0xSUDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjM4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDA3MyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iOCI+TE9ZQUxUWSDigKIgUkVTUEVDVCDigKIgRElTQ0lQTElORTwvdGV4dD4KPC9zdmc+Cg==" alt="Gang Life RP emblem">
+        <div class="emblem-tag">LOYALTY • RESPECT • DISCIPLINE</div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to learn more"><span></span></a>
+    </section>
+
+    <section class="section intro" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WELCOME TO GLRP</p>
+        <h2>More than a server.<br><span>A living city.</span></h2>
+      </div>
+      <div class="intro-copy reveal delay-one">
+        <p>Gang Life RP is a custom-built QBCore city focused on meaningful progression, serious stories and gameplay that gives every character a reason to keep moving.</p>
+        <p>Start with nothing, learn the streets, build your reputation and choose what kind of name you leave behind.</p>
+      </div>
+      <div class="stats-grid reveal">
+        <article><strong>01</strong><span>Custom City Systems</span></article>
+        <article><strong>02</strong><span>Player-Led Economy</span></article>
+        <article><strong>03</strong><span>Long-Term Progression</span></article>
+        <article><strong>04</strong><span>Serious UK Roleplay</span></article>
+      </div>
+    </section>
+
+    <section class="section systems" id="systems">
+      <div class="section-heading centre reveal">
+        <p class="eyebrow">WHAT MAKES GLRP DIFFERENT</p>
+        <h2>Every system builds<br><span>your character’s story.</span></h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span class="feature-number">01</span>
+          <div class="feature-icon">⌁</div>
+          <h3>Life Paths</h3>
+          <p>Choose a direction, complete challenges and unlock perks that reflect how your character lives.</p>
+        </article>
+        <article class="feature-card reveal delay-one">
+          <span class="feature-number">02</span>
+          <div class="feature-icon">◇</div>
+          <h3>Player Businesses</h3>
+          <p>Own, operate and grow businesses supported by real stock, crafting and customer systems.</p>
+        </article>
+        <article class="feature-card reveal delay-two">
+          <span class="feature-number">03</span>
+          <div class="feature-icon">✦</div>
+          <h3>Street Progression</h3>
+          <p>Start low, earn connections and uncover deeper opportunities as your reputation grows.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-number">04</span>
+          <div class="feature-icon">△</div>
+          <h3>Custom Careers</h3>
+          <p>Mechanic work, dealerships, city services, legal jobs and underground routes built for active play.</p>
+        </article>
+        <article class="feature-card reveal delay-one">
+          <span class="feature-number">05</span>
+          <div class="feature-icon">⬡</div>
+          <h3>Collect & Compete</h3>
+          <p>Discover creatures, cards and city collectibles with rarity, training and competitive systems.</p>
+        </article>
+        <article class="feature-card reveal delay-two">
+          <span class="feature-number">06</span>
+          <div class="feature-icon">↯</div>
+          <h3>Living Events</h3>
+          <p>City-wide moments, hidden discoveries and evolving content keep the streets unpredictable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="journey-panel reveal">
+        <div>
+          <p class="eyebrow">THE PLAYER JOURNEY</p>
+          <h2>Arrive with a bag.<br><span>Leave with a legacy.</span></h2>
+        </div>
+        <ol class="journey-steps">
+          <li><b>01</b><div><strong>Create your character</strong><span>Build an identity and enter the starter apartments.</span></div></li>
+          <li><b>02</b><div><strong>Learn the city</strong><span>Use your starter gear, take early work and meet people.</span></div></li>
+          <li><b>03</b><div><strong>Choose your path</strong><span>Develop skills, reputation and specialist opportunities.</span></div></li>
+          <li><b>04</b><div><strong>Build your name</strong><span>Own assets, lead stories and shape the future of GLRP.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section code-section">
+      <div class="code-copy reveal">
+        <p class="eyebrow">THE GLRP CODE</p>
+        <h2>Loyalty.<br>Respect.<br><span>Discipline.</span></h2>
+      </div>
+      <blockquote class="reveal delay-one">
+        “Your reputation is built by what you do when nobody is watching.”
+        <cite>— Gang Life RP</cite>
+      </blockquote>
+    </section>
+
+
+    <section class="section systems" id="rules">
+      <div class="section-heading centre reveal">
+        <p class="eyebrow">GLRP COMMUNITY STANDARD</p>
+        <h2>City <span>Rules.</span></h2>
+        <p style="max-width:760px;margin:1rem auto 0;color:var(--muted);">Read the full detailed rules in Discord before playing. These core standards apply everywhere in the city.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal"><span class="feature-number">01</span><div class="feature-icon">◇</div><h3>Respect the Community</h3><p>Treat players and staff with respect. Harassment, discrimination, threats and targeted abuse are not accepted.</p></article>
+        <article class="feature-card reveal delay-one"><span class="feature-number">02</span><div class="feature-icon">✦</div><h3>Value Roleplay</h3><p>Remain in character during active scenes, value your life and give other players a fair opportunity to respond.</p></article>
+        <article class="feature-card reveal delay-two"><span class="feature-number">03</span><div class="feature-icon">△</div><h3>Fair Combat</h3><p>No random killing, vehicle deathmatching, combat logging, exploiting or returning without a valid roleplay reason.</p></article>
+        <article class="feature-card reveal"><span class="feature-number">04</span><div class="feature-icon">⬡</div><h3>Meaningful Crime</h3><p>Criminal activity should create roleplay, not only rewards. Follow all robbery, gang and cooldown rules in Discord.</p></article>
+        <article class="feature-card reveal delay-one"><span class="feature-number">05</span><div class="feature-icon">↯</div><h3>Use Support Properly</h3><p>Report problems through Discord tickets with clips or evidence. Never disrupt a live scene to argue rules.</p></article>
+        <article class="feature-card reveal delay-two"><span class="feature-number">06</span><div class="feature-icon">⌁</div><h3>Know the Rulebook</h3><p>Joining the server means you agree to follow the complete current rulebook and staff directions published in Discord.</p></article>
+      </div>
+    </section>
+
+    <section class="section join-section" id="join">
+      <div class="join-card reveal">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+R0xSUCBlbWJsZW08L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BIHJlZCBhbmQgZ29sZCBjaXJjdWxhciBHTFJQIGVtYmxlbS48L2Rlc2M+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJpbmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY0MzVkIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLjQ4IiBzdG9wLWNvbG9yPSIjOWQxMDI4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZDA3MyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iY29yZSIgY3g9IjUwJSIgY3k9IjQwJSIgcj0iNjUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMzAxMDFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4MDkwZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii01MCUiIHk9Ii01MCUiIHdpZHRoPSIyMDAlIiBoZWlnaHQ9IjIwMCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI4IiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjI2IiBmaWxsPSJ1cmwoI2NvcmUpIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiLz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjA4IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTE4IDMzNyAxNzUgMTU3bDM0IDExMWg5NGwzNS0xMTEgNTYgMTgwLTYyLTQ1LTI5IDU4aC05NGwtMjktNTh6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbHRlcj0idXJsKCNnbG93KSIvPgogIDx0ZXh0IHg9IjI1NiIgeT0iMjg2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjdmMWU3IiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkwIiBsZXR0ZXItc3BhY2luZz0iNiI+R0xSUDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjM4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDA3MyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iOCI+TE9ZQUxUWSDigKIgUkVTUEVDVCDigKIgRElTQ0lQTElORTwvdGV4dD4KPC9zdmc+Cg==" alt="GLRP emblem">
+        <p class="eyebrow">YOUR STORY IS WAITING</p>
+        <h2>Ready to enter<br><span>Gang Life RP?</span></h2>
+        <p>Join the community, read the rules and start your application through Discord.</p>
+        <div class="hero-actions centre-actions">
+          <a class="button primary js-discord" href="#">Join the Discord</a>
+          <a class="button secondary" href="#rules">Read the Rules</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+R0xSUCBlbWJsZW08L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BIHJlZCBhbmQgZ29sZCBjaXJjdWxhciBHTFJQIGVtYmxlbS48L2Rlc2M+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJpbmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY0MzVkIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLjQ4IiBzdG9wLWNvbG9yPSIjOWQxMDI4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZDA3MyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iY29yZSIgY3g9IjUwJSIgY3k9IjQwJSIgcj0iNjUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMzAxMDFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4MDkwZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii01MCUiIHk9Ii01MCUiIHdpZHRoPSIyMDAlIiBoZWlnaHQ9IjIwMCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI4IiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjI2IiBmaWxsPSJ1cmwoI2NvcmUpIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiLz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjA4IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTE4IDMzNyAxNzUgMTU3bDM0IDExMWg5NGwzNS0xMTEgNTYgMTgwLTYyLTQ1LTI5IDU4aC05NGwtMjktNTh6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbHRlcj0idXJsKCNnbG93KSIvPgogIDx0ZXh0IHg9IjI1NiIgeT0iMjg2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjdmMWU3IiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkwIiBsZXR0ZXItc3BhY2luZz0iNiI+R0xSUDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjM4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDA3MyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iOCI+TE9ZQUxUWSDigKIgUkVTUEVDVCDigKIgRElTQ0lQTElORTwvdGV4dD4KPC9zdmc+Cg==" alt="">
+      <span><strong>GANG LIFE</strong><small>ROLEPLAY</small></span>
+    </a>
+    <p>© <span id="year"></span> Gang Life RP. Not affiliated with Rockstar Games or Cfx.re.</p>
+    <div class="footer-links">
+      <a class="js-discord" href="#">Discord</a>
+      <a class="js-youtube" href="#">YouTube</a>
+      <a class="js-tiktok" href="#">TikTok</a>
+      <a href="#rules">Rules</a>
+    </div>
+  </footer>
+  <script>
 window.GLRP_CONFIG = {
   serverName: "Gang Life RP",
   tagline: "UK Serious Roleplay. Your story starts on the streets.",
@@ -8,3 +326,76 @@ window.GLRP_CONFIG = {
   serverStatus: "OPEN FOR APPLICATIONS",
   launchNotice: "Join the Discord for city announcements, applications and support."
 };
+(() => {
+  const config = window.GLRP_CONFIG || {};
+  const setText = (selector, value) => {
+    if (!value) return;
+    document.querySelectorAll(selector).forEach((el) => { el.textContent = value; });
+  };
+  const setLink = (selector, value) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      if (!value || value === "#") {
+        el.href = "#";
+        el.addEventListener("click", (event) => {
+          event.preventDefault();
+          alert("Add this link inside config.js before publishing the website.");
+        });
+      } else {
+        el.href = value;
+        el.target = "_blank";
+        el.rel = "noopener noreferrer";
+      }
+    });
+  };
+
+  setText(".js-status", config.serverStatus);
+  setText(".js-tagline", config.tagline);
+  setText(".js-notice", config.launchNotice);
+  setLink(".js-discord", config.discordUrl);
+  setLink(".js-connect", config.connectUrl);
+  setLink(".js-youtube", config.youtubeUrl);
+  setLink(".js-tiktok", config.tiktokUrl);
+
+  const year = document.querySelector("#year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  const header = document.querySelector(".site-header");
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  const updateHeader = () => header?.classList.toggle("scrolled", window.scrollY > 16);
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.textContent = open ? "✕" : "☰";
+    });
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.textContent = "☰";
+    }));
+  }
+
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach((element) => observer.observe(element));
+  } else {
+    reveals.forEach((element) => element.classList.add("visible"));
+  }
+})();
+
+  </script>
+</body>
+</html>
