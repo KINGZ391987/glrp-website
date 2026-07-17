@@ -140,6 +140,58 @@ footer p { margin: 0; text-align: center; }.footer-links { display: flex; justif
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
 
+
+/* GLRP promotional city overview */
+.city-poster-section {
+  width: min(100% - 48px, var(--max));
+  margin: -28px auto 0;
+  padding: 0 0 96px;
+  position: relative;
+  z-index: 5;
+}
+.city-poster-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(242,189,102,.28);
+  background: #050506;
+  box-shadow: 0 30px 90px rgba(0,0,0,.55), 0 0 50px rgba(239,89,20,.08);
+}
+.city-poster-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.035), inset 0 -100px 100px rgba(0,0,0,.38);
+}
+.city-poster-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.city-poster-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.city-poster-note {
+  margin: 14px auto 0;
+  max-width: 760px;
+  text-align: center;
+  color: #8f8b87;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .city-poster-section { width: min(100% - 24px, var(--max)); padding-bottom: 72px; margin-top: -8px; }
+  .city-poster-frame { overflow-x: auto; }
+  .city-poster-frame img { min-width: 780px; }
+  .city-poster-actions .button { width: 100%; }
+}
+
   </style>
 </head>
 <body>
@@ -181,6 +233,18 @@ footer p { margin: 0; text-align: center; }.footer-links { display: flex; justif
         <div class="emblem-tag">LOYALTY • RESPECT • DISCIPLINE</div>
       </div>
       <a class="scroll-cue" href="#about" aria-label="Scroll to learn more"><span></span></a>
+    </section>
+
+    <section class="city-poster-section reveal" aria-label="Gang Life RP city overview">
+      <div class="city-poster-frame">
+        <img src="glrp-city-overview.webp" alt="Gang Life RP city overview showing jobs, gangs, businesses, vehicles, properties, phone, backpacks, shops and city systems">
+      </div>
+      <div class="city-poster-actions">
+        <a class="button primary js-discord" href="#">Join the Discord</a>
+        <a class="button secondary js-connect" href="#">Connect to FiveM</a>
+        <a class="button secondary js-youtube" href="#">Watch on YouTube</a>
+      </div>
+      <p class="city-poster-note">One city. Multiple paths. Your choices build your reputation.</p>
     </section>
 
     <section class="section intro" id="about">
