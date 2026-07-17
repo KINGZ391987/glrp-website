@@ -1,197 +1,118 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gang Life RP | GLRP Website V4</title>
-  <meta name="description" content="Gang Life RP — UK serious FiveM roleplay. Join the city, build your story, and explore custom gameplay systems.">
-  <style>
-    :root{
-      --bg:#08090d;--panel:#121318;--panel-2:#17181f;--line:rgba(255,255,255,.08);--text:#f4efe9;--muted:#b5b1aa;--orange:#f08a1e;--orange-2:#ffb34f;--red:#ef2747;--shadow:0 20px 60px rgba(0,0,0,.35);--max:1220px;
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at top, #15120f 0, #0a0b10 32%, #07080c 100%);color:var(--text);overflow-x:hidden}
-    img{max-width:100%;display:block} a{text-decoration:none;color:inherit} p{line-height:1.7} h1,h2,h3,p{margin:0}
-    .wrap{width:min(var(--max), calc(100% - 40px));margin:0 auto}
-    .header{position:sticky;top:0;z-index:60;background:rgba(8,9,13,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:14px;min-width:0}
-    .brand-mark{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 30%, #ffbd66, #e55319 55%, #7b121f 100%);font-weight:900;letter-spacing:.08em;color:#fff;box-shadow:0 0 25px rgba(240,138,30,.25)}
-    .brand-text{display:flex;flex-direction:column;line-height:1}.brand-text strong{font-size:16px;letter-spacing:.18em}.brand-text span{margin-top:5px;font-size:10px;color:var(--orange-2);letter-spacing:.38em}
-    .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.nav-links a{color:#d8d4cf}.nav-links a:hover{color:white}.cta{padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,var(--orange),#d65f10);color:#140d06;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow)}
-    .hero{padding:76px 0 40px;position:relative;overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.22;pointer-events:none}.hero:before{width:420px;height:420px;background:var(--orange);right:-120px;top:-60px}.hero:after{width:320px;height:320px;background:var(--red);left:-110px;bottom:40px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border-radius:999px;border:1px solid rgba(240,138,30,.28);background:rgba(240,138,30,.08);color:var(--orange-2);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px}.eyebrow b{width:7px;height:7px;border-radius:50%;background:#6cff8c;box-shadow:0 0 12px #6cff8c}
-    h1{font-size:clamp(44px,6vw,90px);line-height:.92;text-transform:uppercase;letter-spacing:-.05em;margin-bottom:20px}.accent{color:var(--orange)}
-    .lead{max-width:610px;color:#cbc7bf;font-size:clamp(17px,2vw,20px);margin-bottom:28px}
-    .actions{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:16px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:12px;transition:.2s ease;border:1px solid transparent}.btn:hover{transform:translateY(-2px)}.btn.primary{background:linear-gradient(135deg,var(--orange),#df6515);color:#150d05;box-shadow:var(--shadow)}.btn.secondary{border-color:var(--line);background:rgba(255,255,255,.03)}
-    .quick-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.stat{padding:16px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid var(--line)}.stat strong{display:block;color:var(--orange-2);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}.stat span{font-size:15px;font-weight:800}
-    .hero-card{position:relative;border-radius:28px;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid var(--line);box-shadow:var(--shadow)}.hero-card img{border-radius:22px}.hero-badge{position:absolute;right:34px;bottom:34px;padding:10px 14px;border-radius:14px;background:rgba(8,9,13,.74);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);font-size:12px;font-weight:800;letter-spacing:.08em}
-    .section{padding:72px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.section-head h2{font-size:clamp(32px,5vw,58px);line-height:.96;text-transform:uppercase;letter-spacing:-.04em}.section-head p{max-width:560px;color:var(--muted)}
-    .showcase{border-radius:30px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--panel)}
-    .phone-panel{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start}
-    .phone-highlight{padding:26px;border-radius:24px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));border:1px solid var(--line)}
-    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}.pill{padding:10px 12px;border-radius:999px;border:1px solid rgba(240,138,30,.22);background:rgba(240,138,30,.08);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-2)}
-    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}.mini{padding:18px;border-radius:20px;background:rgba(255,255,255,.03);border:1px solid var(--line)}.mini h3{font-size:16px;margin-bottom:8px}.mini p{color:var(--muted);font-size:14px}.mini ul{padding-left:18px;margin:10px 0 0;color:#d8d4cf;font-size:14px;line-height:1.6}
-    .phone-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.shot{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0d0e13;box-shadow:var(--shadow)}.shot img{width:100%;height:100%;object-fit:cover}.shot figcaption{padding:12px 14px;font-size:13px;font-weight:700;color:#d7d2cc;border-top:1px solid var(--line);background:rgba(255,255,255,.02)}
-    .info-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.strip{padding:18px;border-radius:20px;background:rgba(255,255,255,.03);border:1px solid var(--line)}.strip strong{display:block;font-size:13px;color:var(--orange-2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}.strip span{color:#d9d5ce;font-size:14px;line-height:1.55}
-    .cta-box{padding:36px;border-radius:30px;background:linear-gradient(120deg, rgba(240,138,30,.12), rgba(239,39,71,.08));border:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;box-shadow:var(--shadow)}.cta-box h2{font-size:clamp(30px,5vw,54px);text-transform:uppercase;line-height:.98}.cta-box p{color:#d7d2ca}
-    .footer{padding:30px 0 48px;color:#9b978f;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
-    @media (max-width: 980px){.hero-grid,.phone-panel,.cta-box{grid-template-columns:1fr}.section-head{flex-direction:column;align-items:start}.quick-stats,.info-strip{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width: 760px){.nav{padding:12px 0}.nav-links{gap:14px;font-size:11px}.brand-text strong{font-size:14px}.hero{padding-top:44px}.quick-stats,.cards,.phone-grid,.info-strip{grid-template-columns:1fr}.wrap{width:min(var(--max), calc(100% - 28px))}.cta,.btn{width:100%}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0908">
+<meta name="description" content="Gang Life RP — UK serious FiveM roleplay with custom progression, businesses, vehicles, life paths, creature collection, city activities and more.">
+<title>Gang Life RP | Full City Experience</title>
+<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<style>
+:root{--bg:#080808;--bg2:#0d0c0b;--panel:#121211;--panel2:#191714;--text:#f6f0e8;--muted:#b9b0a5;--orange:#ff7b19;--gold:#ffb54c;--red:#d72d27;--green:#67e281;--line:rgba(255,255,255,.09);--shadow:0 24px 70px rgba(0,0,0,.48);--max:1320px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0,#2b1609 0,transparent 26%),linear-gradient(#080808,#0b0908 40%,#070707);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 15px var(--orange)}.accent{color:var(--orange)}
+.header{position:fixed;inset:0 0 auto;z-index:100;background:linear-gradient(rgba(7,7,7,.98),rgba(7,7,7,.88));border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px;min-width:190px}.brand img{width:44px;height:44px;border-radius:50%;box-shadow:0 0 22px rgba(255,123,25,.22)}.brand strong{display:block;font-size:15px;letter-spacing:.15em}.brand small{display:block;color:var(--gold);font-size:8px;letter-spacing:.42em;margin-top:4px}.links{display:flex;align-items:center;gap:22px;font-size:12px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}.links a{color:#d7d0c7;transition:.2s}.links a:hover{color:#fff}.nav-join{background:linear-gradient(135deg,var(--orange),#cf4a0e);color:#140b04!important;padding:12px 17px;border-radius:11px;box-shadow:0 9px 24px rgba(255,123,25,.19)}.menu{display:none;border:1px solid var(--line);background:#111;color:#fff;border-radius:10px;padding:9px 12px}
+.hero{min-height:940px;padding-top:72px;position:relative;display:flex;align-items:end;overflow:hidden}.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.68) 31%,rgba(0,0,0,.08) 64%,rgba(0,0,0,.52) 100%),linear-gradient(0deg,#080808 0%,transparent 24%),url('assets/hero.webp');background-size:cover;background-position:center}.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr .66fr;align-items:end;gap:42px;padding:120px 0 86px}.hero-copy{max-width:720px}.hero h1{font-size:clamp(58px,8vw,118px);line-height:.83;letter-spacing:-.065em;text-transform:uppercase;margin:20px 0 24px}.hero p{max-width:650px;font-size:19px;line-height:1.65;color:#d1c9c0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-width:165px;padding:15px 20px;border-radius:12px;border:1px solid var(--line);font-size:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.28)}.btn.primary{background:linear-gradient(135deg,var(--orange),#cf4a0e);color:#160b03;border:0;box-shadow:0 14px 32px rgba(255,123,25,.23)}.hero-side{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.hero-stat{background:rgba(10,10,10,.75);backdrop-filter:blur(12px);border:1px solid var(--line);padding:18px;border-radius:16px}.hero-stat strong{display:block;color:var(--gold);font-size:11px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:8px}.hero-stat span{font-weight:800;line-height:1.35}
+.section{padding:96px 0}.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}.section-head h2{font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.048em;text-transform:uppercase;margin:10px 0 0}.section-head p{max-width:610px;color:var(--muted);line-height:1.75;font-size:16px}.dark{background:#090909;border-block:1px solid var(--line)}
+.overview-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:26px;align-items:stretch}.overview-copy{padding:34px;border-radius:24px;background:linear-gradient(160deg,#1b1611,#111);border:1px solid var(--line);box-shadow:var(--shadow)}.overview-copy h3{font-size:35px;line-height:1.02;text-transform:uppercase;margin:12px 0}.overview-copy p{color:var(--muted);line-height:1.75}.overview-image{border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#111}.overview-image img{width:100%;height:100%;object-fit:cover}
+.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{position:relative;min-height:240px;padding:24px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(255,123,25,.09),rgba(255,255,255,.025));overflow:hidden}.step:after{content:attr(data-step);position:absolute;right:-8px;bottom:-22px;font-size:100px;font-weight:950;color:rgba(255,255,255,.035)}.step strong{color:var(--orange);font-size:11px;letter-spacing:.16em;text-transform:uppercase}.step h3{font-size:22px;margin:12px 0 10px}.step p{font-size:14px;color:var(--muted);line-height:1.6}
+.filter-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}.filter{border:1px solid var(--line);background:#111;color:#d9d2ca;padding:10px 14px;border-radius:999px;font-size:11px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.filter.active,.filter:hover{background:rgba(255,123,25,.13);border-color:rgba(255,123,25,.55);color:#fff}.systems-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.system-card{min-height:245px;position:relative;border-radius:20px;border:1px solid var(--line);background:linear-gradient(150deg,#1a1713,#101010 65%);padding:22px;overflow:hidden;transition:.22s}.system-card:hover{transform:translateY(-4px);border-color:rgba(255,123,25,.45);box-shadow:var(--shadow)}.system-card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-85px;background:var(--card-color,var(--orange));filter:blur(70px);opacity:.22}.icon{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:rgba(255,123,25,.12);border:1px solid rgba(255,123,25,.25);color:var(--gold);font-size:12px;font-weight:950;letter-spacing:.04em}.system-card .tag{position:absolute;right:18px;top:18px;color:#746d65;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.system-card h3{font-size:20px;margin:17px 0 9px}.system-card p{color:var(--muted);font-size:14px;line-height:1.62}.system-card ul{padding-left:17px;color:#d1cac2;font-size:13px;line-height:1.62;margin:10px 0 0}.system-card.hidden{display:none}
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;margin:34px 0}.feature.reverse{grid-template-columns:.95fr 1.05fr}.feature.reverse .visual{order:2}.visual{border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#101010;box-shadow:var(--shadow);min-height:460px;position:relative}.visual img{width:100%;height:100%;object-fit:cover}.visual.phone-stage{display:grid;place-items:center;padding:28px;background:radial-gradient(circle at 50% 25%,rgba(255,123,25,.22),transparent 30%),linear-gradient(#15120f,#090909)}.phone-stage img{height:520px;width:auto;filter:drop-shadow(0 28px 32px rgba(0,0,0,.55))}.copy{padding:24px}.copy h3{font-size:clamp(35px,4vw,58px);line-height:.95;text-transform:uppercase;margin:13px 0 18px}.copy p{color:var(--muted);line-height:1.75}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.chip{padding:9px 11px;border-radius:999px;background:rgba(255,123,25,.08);border:1px solid rgba(255,123,25,.24);font-size:10px;font-weight:850;letter-spacing:.09em;text-transform:uppercase;color:var(--gold)}.feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}.feature-list div{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:14px;padding:13px;font-size:13px;color:#d8d0c8}.phone-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}.phone-card{min-height:420px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(#161310,#0b0b0b);display:grid;place-items:center;padding:18px;overflow:hidden}.phone-card img{height:390px;width:auto;filter:drop-shadow(0 22px 22px rgba(0,0,0,.55))}.phone-card strong{display:block;text-align:center;margin-top:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.activity-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.activity{min-height:190px;border:1px solid var(--line);border-radius:18px;padding:20px;background:linear-gradient(160deg,rgba(255,123,25,.07),#111 60%);position:relative;overflow:hidden}.activity b{font-size:32px;color:var(--orange);opacity:.9}.activity h3{font-size:17px;margin:18px 0 7px}.activity p{font-size:13px;color:var(--muted);line-height:1.55}.activity .live{position:absolute;right:13px;top:13px;color:var(--green);font-size:8px;font-weight:950;letter-spacing:.1em;text-transform:uppercase}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:12px}.gallery button{border:0;padding:0;background:none;overflow:hidden;border-radius:18px;cursor:pointer;border:1px solid var(--line)}.gallery button:first-child{grid-row:1/3}.gallery img{width:100%;height:100%;object-fit:cover;transition:.25s}.gallery button:hover img{transform:scale(1.025)}
+.rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.rule{border:1px solid var(--line);border-radius:18px;background:#111;padding:21px}.rule strong{display:block;color:var(--orange);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}.rule p{color:var(--muted);font-size:14px;line-height:1.65}.faq{display:grid;gap:10px;margin-top:26px}.faq details{border:1px solid var(--line);background:#111;border-radius:15px;padding:17px 19px}.faq summary{font-weight:850;cursor:pointer}.faq p{color:var(--muted);font-size:14px;margin:12px 0 0;line-height:1.65}
+.join{padding:78px 0}.join-box{position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:34px;padding:46px;border-radius:28px;border:1px solid rgba(255,123,25,.28);background:linear-gradient(120deg,#241308,#12100e 56%,#0d0d0d);box-shadow:var(--shadow)}.join-box:after{content:"GLRP";position:absolute;right:-20px;bottom:-60px;font-size:190px;font-weight:950;color:rgba(255,255,255,.025)}.join h2{font-size:clamp(42px,6vw,78px);line-height:.9;text-transform:uppercase;margin:12px 0}.join p{color:#d6cec5;line-height:1.65}.join-buttons{position:relative;z-index:2;display:grid;gap:11px}.join-buttons .btn{width:100%}.footer{border-top:1px solid var(--line);padding:32px 0;color:#8c857e;font-size:12px}.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer a{color:#c9c0b8}.modal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:30px}.modal.open{display:flex}.modal img{max-height:88vh;max-width:92vw;border-radius:18px;border:1px solid var(--line)}.modal button{position:absolute;top:18px;right:20px;border:1px solid var(--line);background:#111;color:#fff;border-radius:12px;padding:11px 15px;cursor:pointer}
+@media(max-width:1100px){.systems-grid{grid-template-columns:repeat(3,1fr)}.journey{grid-template-columns:repeat(3,1fr)}.activity-grid{grid-template-columns:repeat(3,1fr)}.phone-gallery{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.hero-side{max-width:680px}.feature,.feature.reverse{grid-template-columns:1fr}.feature.reverse .visual{order:0}.overview-grid{grid-template-columns:1fr}.rules-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.wrap{width:min(var(--max),calc(100% - 28px))}.menu{display:block}.links{position:absolute;left:14px;right:14px;top:66px;display:none;flex-direction:column;align-items:stretch;background:#0b0b0b;border:1px solid var(--line);border-radius:16px;padding:14px}.links.open{display:flex}.links a{text-align:center;padding:10px}.hero{min-height:820px}.hero-grid{padding-bottom:55px}.hero-side{grid-template-columns:1fr 1fr}.section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:18px}.journey,.systems-grid,.activity-grid,.rules-grid{grid-template-columns:1fr}.phone-gallery{grid-template-columns:1fr}.phone-card{min-height:380px}.phone-card img{height:350px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 170px 170px}.gallery button:first-child{grid-column:1/3;grid-row:auto}.feature-list{grid-template-columns:1fr}.join-box{grid-template-columns:1fr;padding:30px}.hero h1{font-size:58px}.overview-copy{padding:25px}}
+</style>
 </head>
 <body>
-  <header class="header">
-    <div class="wrap nav">
-      <a class="brand" href="#top">
-        <div class="brand-mark">GL</div>
-        <div class="brand-text"><strong>GANG LIFE</strong><span>ROLEPLAY</span></div>
-      </a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#phone">Phone</a>
-        <a href="#join">Join</a>
-        <a class="cta" href="https://discord.gg/QPgcjHWShX" target="_blank" rel="noopener">Discord</a>
-      </nav>
-    </div>
-  </header>
+<header class="header"><div class="wrap nav">
+<a class="brand" href="#home"><img src="assets/favicon.webp" alt="GLRP"><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a>
+<button class="menu" id="menuBtn" aria-label="Open menu">MENU</button>
+<nav class="links" id="links"><a href="#about">About</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
+<div class="hero-copy"><span class="kicker">Beta city • built for testing, stories and progression</span><h1>Live the streets.<br><span class="accent">Run the city.</span><br>Build your legacy.</h1><p>Gang Life RP is a custom QBCore FiveM city with serious UK roleplay, long-term progression, player-run businesses, detailed vehicle systems, creature discovery, card collecting, city activities and a world designed to keep evolving.</p><div class="actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">Watch GLRP</a></div></div>
+<div class="hero-side"><div class="hero-stat"><strong>City Status</strong><span>Open for applications and active testing</span></div><div class="hero-stat"><strong>Framework</strong><span>Custom QBCore city with GLRP systems</span></div><div class="hero-stat"><strong>Style</strong><span>Serious roleplay with progression and freedom</span></div><div class="hero-stat"><strong>Community</strong><span>Player stories, businesses, gangs and events</span></div></div>
+</div></section>
 
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow"><b></b> Open for applications • UK serious roleplay</div>
-          <h1 id="top">Build your <span class="accent">story</span>.<br>Run your city.<br>Leave your mark.</h1>
-          <p class="lead">Gang Life RP is a custom QBCore FiveM city focused on serious roleplay, strong progression, player-run businesses and systems that keep your character moving. This V4 update adds a proper <strong>phone & city systems</strong> showcase using your in-city screenshots.</p>
-          <div class="actions">
-            <a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank" rel="noopener">Join Discord</a>
-            <a class="btn secondary" href="https://cfx.re/join/a44z4m5" target="_blank" rel="noopener">Connect to FiveM</a>
-            <a class="btn secondary" href="https://www.youtube.com/@GLRPFiveM" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-          <div class="quick-stats">
-            <div class="stat"><strong>Serious RP</strong><span>Real stories. Real consequences.</span></div>
-            <div class="stat"><strong>Custom Systems</strong><span>Phone, businesses, garages, progression and more.</span></div>
-            <div class="stat"><strong>Player Driven</strong><span>Businesses, gangs, legal work and street hustle.</span></div>
-            <div class="stat"><strong>Active City</strong><span>Events, updates and plenty to do every session.</span></div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <img src="glrp-city-overview.webp" alt="GLRP city overview banner">
-          <div class="hero-badge">GLRP • CITY OVERVIEW</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section" id="about"><div class="wrap"><div class="section-head"><div><span class="kicker">Welcome to Gang Life RP</span><h2>A full city.<br><span class="accent">Not just a server.</span></h2></div><p>Start with basic gear, learn how the city works, choose a Life Path and slowly build your name. Legal work, street hustles, businesses, project cars, creature collecting, city events and social systems all feed into one connected player journey.</p></div>
+<div class="overview-grid"><div class="overview-copy"><span class="kicker">The GLRP promise</span><h3>Your choices shape your character.</h3><p>GLRP is designed around meaningful progression. Your phone, backpack, vehicles, businesses, skills, contacts and reputation all matter. The city supports serious stories without removing the fun of discovering new systems and trying different routes.</p><div class="chips"><span class="chip">UK serious roleplay</span><span class="chip">Custom city systems</span><span class="chip">Player economy</span><span class="chip">Regular updates</span><span class="chip">Beta testing city</span></div></div><div class="overview-image"><img src="assets/city-overview.webp" alt="Gang Life RP overview"></div></div>
+</div></section>
 
-  <section class="section" id="about">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">The city at a glance</div>
-          <h2>What GLRP is <span class="accent">all about</span></h2>
-        </div>
-        <p>From legal careers and player businesses to street life, custom vehicles, active police and EMS, and progression systems that reward time in the city — GLRP is designed to give every player a lane to grow in.</p>
-      </div>
-      <div class="showcase">
-        <img src="glrp-city-overview.webp" alt="GLRP overview showcase image">
-      </div>
-      <div class="info-strip">
-        <div class="strip"><strong>Jobs & Careers</strong><span>Mechanic work, businesses, legal routes, city jobs and player-run opportunities.</span></div>
-        <div class="strip"><strong>Crime & Hustles</strong><span>Street progression, robberies, boosting, gangs and risky money-making routes.</span></div>
-        <div class="strip"><strong>Vehicles & Garages</strong><span>Dealerships, project builds, custom cars and improved garage systems.</span></div>
-        <div class="strip"><strong>Homes & Lifestyle</strong><span>Properties, outfits, social spots, casino nights and chill city scenes.</span></div>
-      </div>
-    </div>
-  </section>
+<section class="section dark"><div class="wrap"><div class="section-head"><div><span class="kicker">Your first hours</span><h2>From arrival<br><span class="accent">to city life.</span></h2></div><p>The website walks new players through the same journey they will experience in game, making it clear what to do after landing and how the wider systems connect.</p></div><div class="journey">
+<div class="step" data-step="01"><strong>Step 01</strong><h3>Create your character</h3><p>Build your identity through the GLRP character, clothing and appearance systems.</p></div>
+<div class="step" data-step="02"><strong>Step 02</strong><h3>Land at the starter home</h3><p>Learn the basics, unpack your starter gear and understand your first objectives.</p></div>
+<div class="step" data-step="03"><strong>Step 03</strong><h3>Use your backpack & phone</h3><p>Your backpack expands how you carry items, while your phone connects you to the city.</p></div>
+<div class="step" data-step="04"><strong>Step 04</strong><h3>Begin your Life Path</h3><p>Start at street level, complete tasks, earn XP and unlock deeper perks and routes.</p></div>
+<div class="step" data-step="05"><strong>Step 05</strong><h3>Build your reputation</h3><p>Work, hustle, collect, own, compete and turn your character into somebody known.</p></div>
+</div></div></section>
 
-  <section class="section" id="phone">
-    <div class="wrap phone-panel">
-      <div class="phone-highlight">
-        <div class="eyebrow">V4 update • Phone & city systems</div>
-        <h2 style="font-size:clamp(32px,5vw,56px);margin-bottom:14px;text-transform:uppercase;line-height:1;"><span class="accent">Your phone</span> is part of the roleplay.</h2>
-        <p style="color:var(--muted);font-size:17px">The GLRP phone is more than just a prop. It ties players into messages, business tools, city feeds, contacts, maps, events and everyday roleplay. I’ve also filled the blank parts with realistic example content so this section feels alive on the website.</p>
-        <div class="pill-row">
-          <span class="pill">Messages</span>
-          <span class="pill">City feed</span>
-          <span class="pill">Business apps</span>
-          <span class="pill">Contacts & services</span>
-          <span class="pill">Events & news</span>
-          <span class="pill">Phone roleplay</span>
-        </div>
-        <div class="cards">
-          <div class="mini">
-            <h3>Fake conversation examples added</h3>
-            <ul>
-              <li>“Meet at Legion in 10?”</li>
-              <li>“Vehicle ready for pickup.”</li>
-              <li>“Casino night starts at 23:00.”</li>
-              <li>“Your coffee order is ready.”</li>
-            </ul>
-          </div>
-          <div class="mini">
-            <h3>Fake city feed examples added</h3>
-            <ul>
-              <li>City meet announcement</li>
-              <li>Kingz Autos hiring post</li>
-              <li>Business spotlight card</li>
-              <li>Extra event/news chips</li>
-            </ul>
-          </div>
-          <div class="mini">
-            <h3>How it helps the website</h3>
-            <p>Instead of empty app screens, the section now looks active and gives new players a feel for how the city communicates, organises events and runs businesses.</p>
-          </div>
-          <div class="mini">
-            <h3>What you can send next</h3>
-            <p>Clean shots of the garage, mechanic bay, business interiors, skyline, starter apartment and a phone-in-hand close shot will let me build the next showcase block even stronger.</p>
-          </div>
-        </div>
-      </div>
-      <div class="phone-grid">
-        <figure class="shot"><img src="phone-lockscreen.webp" alt="GLRP phone lockscreen screenshot"><figcaption>GLRP lockscreen in the city</figcaption></figure>
-        <figure class="shot"><img src="phone-apps.webp" alt="GLRP app grid screenshot"><figcaption>App grid with city systems & services</figcaption></figure>
-        <figure class="shot"><img src="phone-messages-filled.webp" alt="GLRP messages screen with filled example chats"><figcaption>Messages filled with example conversations</figcaption></figure>
-        <figure class="shot"><img src="phone-feed-filled.webp" alt="GLRP city feed screen with example posts"><figcaption>City feed filled with news & event examples</figcaption></figure>
-      </div>
-    </div>
-  </section>
+<section class="section" id="systems"><div class="wrap"><div class="section-head"><div><span class="kicker">Everything in the city</span><h2>Custom systems<br><span class="accent">built around players.</span></h2></div><p>Use the filters to explore the full city. Every card below is written around the systems currently built, tested or being expanded for GLRP.</p></div>
+<div class="filter-row" id="filterRow"><button class="filter active" data-filter="all">All Systems</button><button class="filter" data-filter="progression">Progression</button><button class="filter" data-filter="vehicles">Vehicles</button><button class="filter" data-filter="business">Businesses</button><button class="filter" data-filter="street">Street Life</button><button class="filter" data-filter="social">Social & City</button></div>
+<div class="systems-grid" id="systemsGrid">
+<article class="system-card" data-cat="progression"><span class="tag">Progression</span><div class="icon">LP</div><h3>GLRP Life Paths</h3><p>Choose a route, complete themed challenges, gain XP and unlock perks that reflect how your character lives.</p><ul><li>Bum starter journey</li><li>Daily objectives</li><li>Master Mechanic and specialist paths</li></ul></article>
+<article class="system-card" data-cat="progression street"><span class="tag">Collect & Battle</span><div class="icon">SCAN</div><h3>Creature Scanner & Catching</h3><p>Scan districts, find creatures, capture them and build a team from what you discover around the city.</p><ul><li>Rarity and stats</li><li>Training and evolution</li><li>Eggs, duplicates and team building</li></ul></article>
+<article class="system-card" data-cat="progression social"><span class="tag">Collectible Game</span><div class="icon">PACK</div><h3>Card Packs</h3><p>Open packs with interactive reveals, collect rarities and use your starter scanner and card box to begin.</p><ul><li>Pull-tab pack opening</li><li>Collection progression</li><li>Trading and future competition</li></ul></article>
+<article class="system-card" data-cat="vehicles business"><span class="tag">Kingz Autos</span><div class="icon">AUTO</div><h3>Standalone Mechanic System</h3><p>Diagnostics, repairs, service work, parts, neon, NOS and proper mechanic gameplay without relying on old systems.</p><ul><li>Quick and deep diagnostics</li><li>Service bays and parts stock</li><li>NPC fallback when staff are offline</li></ul></article>
+<article class="system-card" data-cat="vehicles progression"><span class="tag">Vehicle Build</span><div class="icon">BUILD</div><h3>Project Cars</h3><p>Buy broken vehicles, transport them by flatbed and rebuild them stage by stage using parts and minigames.</p><ul><li>Recovery and towing</li><li>Jacks and build stages</li><li>Upgrade minigames</li></ul></article>
+<article class="system-card" data-cat="vehicles"><span class="tag">Dealerships</span><div class="icon">PDM</div><h3>PDM & Luxury Dealers</h3><p>Browse catalogue-style dealerships, view vehicles in a showroom, change paint, upgrade and pay by cash or bank.</p><ul><li>Vehicle preview cameras</li><li>Paint and engine options</li><li>Forecourt builder tools</li></ul></article>
+<article class="system-card" data-cat="vehicles"><span class="tag">Garage</span><div class="icon">GAR</div><h3>Custom Garage Experience</h3><p>Premium garage UI with dedicated vehicle previews, clean storage flow and proper spawned-vehicle tracking.</p><ul><li>Global preview studio</li><li>Duplicate protection</li><li>Vehicle status and storage</li></ul></article>
+<article class="system-card" data-cat="vehicles"><span class="tag">Performance</span><div class="icon">NOS</div><h3>NOS, Purge & Neon</h3><p>Install performance parts, control NOS and purge effects, customise lighting and show vehicle upgrades in action.</p></article>
+<article class="system-card" data-cat="business social"><span class="tag">Player Business</span><div class="icon">COFF</div><h3>Coffee Shop</h3><p>Craft drinks and food, order stock, use storage, serve customers and run the business through employee and boss systems.</p><ul><li>Stock deliveries</li><li>Crafting and props</li><li>Customer payments and management</li></ul></article>
+<article class="system-card" data-cat="business social"><span class="tag">Player Owned</span><div class="icon">STAND</div><h3>City Stands</h3><p>Place, move and manage street stands with worker peds, stock, prices and persistent saved locations.</p><ul><li>Placement gizmo</li><li>Custom worker appearance</li><li>Persistent stock and sales</li></ul></article>
+<article class="system-card" data-cat="business"><span class="tag">Economy</span><div class="icon">SHOP</div><h3>Markets, Vending & Street Food</h3><p>Use shops, vending points, street-food systems and player markets to keep the local economy moving.</p></article>
+<article class="system-card" data-cat="street progression"><span class="tag">Starter Path</span><div class="icon">BIN</div><h3>Bins & Recycling</h3><p>Search bins, collect materials, use recycling trolleys and process finds while earning Bum Path XP.</p><ul><li>Daily bin challenges</li><li>Collect and recall trolley</li><li>Warehouse processing</li></ul></article>
+<article class="system-card" data-cat="street"><span class="tag">Crime</span><div class="icon">VAULT</div><h3>Multi-Stage Robberies</h3><p>Plan robberies with tools, hacks, guards, vault stages, evidence and rewards instead of one-button interactions.</p><ul><li>Node-based hacking</li><li>Guard encounters</li><li>Weapon condition and risk</li></ul></article>
+<article class="system-card" data-cat="street progression"><span class="tag">Growing</span><div class="icon">GROW</div><h3>Planting & Drug Systems</h3><p>Use seeds, pots, watering tools and plant-care menus to grow products through an interactive progression loop.</p></article>
+<article class="system-card" data-cat="social business"><span class="tag">Casino</span><div class="icon">CAS</div><h3>Crown Casino</h3><p>Use a dedicated casino wallet, chips, table games, creator tools and a full social nightlife location.</p><ul><li>Blackjack and casino gameplay</li><li>Chips and wallet balance</li><li>VIP and staff placement tools</li></ul></article>
+<article class="system-card" data-cat="social"><span class="tag">Phone</span><div class="icon">TEL</div><h3>City Phone</h3><p>Messages, contacts, feeds, jobs, homes, services, business apps, cards, events and everyday roleplay in one device.</p></article>
+<article class="system-card" data-cat="progression social"><span class="tag">Inventory</span><div class="icon">BAG</div><h3>Backpack System</h3><p>Carry extra items through physical backpacks that matter to your character and are part of starter progression.</p></article>
+<article class="system-card" data-cat="social"><span class="tag">Interface</span><div class="icon">HUD</div><h3>Kings HUD & Chat</h3><p>Custom GLRP HUD, vehicle information, compass, seatbelt, cinematic mode and a clean branded chat experience.</p></article>
+<article class="system-card" data-cat="social progression"><span class="tag">Wearable</span><div class="icon">WATCH</div><h3>Kings Watch</h3><p>A custom wearable replacement built around the city rather than a generic fitness tracker.</p></article>
+<article class="system-card" data-cat="vehicles business"><span class="tag">Roadside</span><div class="icon">TOW</div><h3>Tow & Road Calls</h3><p>Mechanics can take roadside calls, recover stranded vehicles and use tow or flatbed gameplay for jobs.</p></article>
+<article class="system-card" data-cat="social"><span class="tag">Emergency</span><div class="icon">PD</div><h3>Police, EMS & City Services</h3><p>Active emergency-roleplay routes supported by custom vehicles, systems and city incidents.</p></article>
+<article class="system-card" data-cat="social progression"><span class="tag">Properties</span><div class="icon">HOME</div><h3>Homes & Apartments</h3><p>Starter accommodation, properties, storage, wardrobes and a place to build your character’s lifestyle.</p></article>
+<article class="system-card" data-cat="business progression"><span class="tag">Crafting</span><div class="icon">CRAFT</div><h3>Crafting & Stock</h3><p>Business crafting, ingredient storage, ordered supplies, props and inventory support across city jobs.</p></article>
+<article class="system-card" data-cat="street social"><span class="tag">Events</span><div class="icon">LIVE</div><h3>Living City Events</h3><p>Designed scenes, traffic routes, gatherings, competitions and promotional events that make the beta city feel active.</p></article>
+</div></div></section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Connected gameplay</div>
-          <h2>Phone systems that <span class="accent">feed into city life</span></h2>
-        </div>
-        <p>These screenshots help show that GLRP isn’t only about visuals — your systems connect to the world around you, from businesses and city services to events and player interaction.</p>
-      </div>
-      <div class="cards" style="grid-template-columns:repeat(3,1fr);">
-        <div class="mini"><h3>Business Management</h3><p>Use in-city apps to manage work, respond to business needs and keep your operation moving.</p><img src="phone-business.webp" alt="Business app screenshot" style="margin-top:14px;border-radius:16px;border:1px solid var(--line)"></div>
-        <div class="mini"><h3>Messages & Contacts</h3><p>Reach players, organise jobs, set up meets, coordinate crews and push roleplay forward naturally.</p><p style="margin-top:12px">Examples: mechanic pickups, event invites, staff messages, customer orders and city updates.</p></div>
-        <div class="mini"><h3>Events & Discovery</h3><p>The phone makes the city feel active — players can spot what is going on, find services and see reasons to actually log in and play.</p><p style="margin-top:12px">Perfect for promoting weekly meets, business spotlights, hiring posts and server news.</p></div>
-      </div>
-    </div>
-  </section>
+<section class="section dark" id="phone"><div class="wrap"><div class="section-head"><div><span class="kicker">Always connected</span><h2>The GLRP phone<br><span class="accent">shown properly.</span></h2></div><p>The phone is the visual focus here. Messages and news are displayed inside the actual apps — never explained as fake text outside the device.</p></div>
+<div class="feature"><div class="visual phone-stage"><img src="assets/phone-messages.webp" alt="GLRP messages"></div><div class="copy"><span class="kicker">Messages & contacts</span><h3>Organise your roleplay from the street.</h3><p>Message friends, customers, mechanics and crews. The phone supports the small conversations that turn into jobs, meetings, business orders and bigger stories.</p><div class="chips"><span class="chip">Contacts</span><span class="chip">Private messages</span><span class="chip">Business calls</span><span class="chip">City services</span></div><div class="feature-list"><div>Mechanic collection messages</div><div>Event invites</div><div>Customer orders</div><div>Crew coordination</div></div></div></div>
+<div class="feature reverse"><div class="visual phone-stage"><img src="assets/phone-feed.webp" alt="GLRP city feed"></div><div class="copy"><span class="kicker">City feed & news</span><h3>See what is happening before you miss it.</h3><p>City events, business hiring posts, service announcements and community updates give players a reason to explore and interact.</p><div class="chips"><span class="chip">Events</span><span class="chip">Hiring</span><span class="chip">Business spotlight</span><span class="chip">City news</span></div></div></div>
+<div class="phone-gallery"><div class="phone-card"><div><img src="assets/phone-lock.webp" alt="Phone lockscreen"><strong>GLRP Lock Screen</strong></div></div><div class="phone-card"><div><img src="assets/phone-apps.webp" alt="Phone apps"><strong>Apps & Services</strong></div></div><div class="phone-card"><div><img src="assets/phone-business.webp" alt="Phone business app"><strong>Business Management</strong></div></div><div class="phone-card"><div><img src="assets/phone-feed.webp" alt="Phone city feed"><strong>City Feed</strong></div></div></div>
+</div></section>
 
-  <section class="section" id="join">
-    <div class="wrap cta-box">
-      <div>
-        <div class="eyebrow">Ready to join?</div>
-        <h2>Get in the city.<br><span class="accent">Start your legacy.</span></h2>
-        <p style="margin-top:16px">Whether you want legal work, businesses, mechanics, gangs, cars, police, EMS or a fresh character story — GLRP gives you room to build it.</p>
-      </div>
-      <div class="actions" style="justify-content:flex-start;align-items:flex-start;flex-direction:column;">
-        <a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank" rel="noopener">Join Discord</a>
-        <a class="btn secondary" href="https://cfx.re/join/a44z4m5" target="_blank" rel="noopener">Connect to FiveM</a>
-        <a class="btn secondary" href="https://www.youtube.com/@GLRPFiveM" target="_blank" rel="noopener">Visit YouTube</a>
-      </div>
-    </div>
-  </section>
+<section class="section"><div class="wrap"><div class="feature"><div class="visual"><img src="assets/coffee-shop.webp" alt="GLRP coffee shop"></div><div class="copy"><span class="kicker">Player-run economy</span><h3>Businesses are places to actually work.</h3><p>GLRP businesses are built around stock, crafting, props, employees, customers and management. The coffee shop is one example of a wider approach to jobs that gives owners and workers real tasks.</p><div class="feature-list"><div>Order stock by cash or bank</div><div>Deliver supplies into storage</div><div>Craft drinks and food</div><div>Manage employees and earnings</div></div></div></div>
+<div class="feature reverse"><div class="visual"><img src="assets/city-ongoings.webp" alt="GLRP city events"></div><div class="copy"><span class="kicker">A city with things happening</span><h3>Jobs, gangs, cars, emergency services and events.</h3><p>GLRP is built to support different types of player. You can focus on businesses and legal work, become part of emergency services, chase vehicle progression, build a crew or explore the city’s underground routes.</p><div class="chips"><span class="chip">Weekly events</span><span class="chip">Active gangs</span><span class="chip">Player businesses</span><span class="chip">Custom cars</span><span class="chip">PD & EMS</span></div></div></div></div></section>
 
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>Gang Life RP • GLRP Website V4 • Phone & City Systems update</span>
-      <span>Discord: QPgcjHWShX • Connect: cfx.re/join/a44z4m5</span>
-    </div>
-  </footer>
-</body>
-</html>
+<section class="section dark" id="activities"><div class="wrap"><div class="section-head"><div><span class="kicker">Games, minigames & side activities</span><h2>More to do<br><span class="accent">than grind a job.</span></h2></div><p>The city mixes roleplay systems with interactive activities, collections and minigames so each session can feel different.</p></div><div class="activity-grid">
+<div class="activity"><span class="live">Featured</span><b>◉</b><h3>Creature Catching</h3><p>Scan, capture, train, evolve and build a team from creatures found around districts.</p></div>
+<div class="activity"><span class="live">Featured</span><b>▣</b><h3>Card Pack Opening</h3><p>Interactive pull-tab packs, rarity reveals, collections and starter card gear.</p></div>
+<div class="activity"><b>♠</b><h3>Blackjack & Casino</h3><p>Casino wallet, chips and table gameplay inside the Crown Casino.</p></div>
+<div class="activity"><b>⚙</b><h3>Project Car Builds</h3><p>Recover, strip and rebuild vehicles with parts, tools and build minigames.</p></div>
+<div class="activity"><b>◌</b><h3>Wheel & Bolt Games</h3><p>Interactive wheel removal and fitting instead of a simple progress bar.</p></div>
+<div class="activity"><b>↯</b><h3>Life Path Challenges</h3><p>Daily and milestone tasks that reward XP and unlock character perks.</p></div>
+<div class="activity"><b>♻</b><h3>Recycling Routes</h3><p>Collect materials, move a trolley and process finds at the warehouse.</p></div>
+<div class="activity"><b>⌁</b><h3>District Surveys</h3><p>Explore areas, interact with creature care and investigate city signals.</p></div>
+<div class="activity"><b>◆</b><h3>Robbery Hacks</h3><p>Node-based electronic hacks and staged objectives before vault access.</p></div>
+<div class="activity"><b>★</b><h3>City Events</h3><p>Car meets, competitions, business openings and designed city scenes.</p></div>
+</div></div></section>
+
+<section class="section" id="gallery"><div class="wrap"><div class="section-head"><div><span class="kicker">Visual tour</span><h2>See the style<br><span class="accent">of Gang Life RP.</span></h2></div><p>These images show the current GLRP visual direction. More genuine in-city screenshots can replace any image later without rebuilding the structure.</p></div><div class="gallery" id="galleryGrid"><button data-img="assets/hero.webp"><img src="assets/hero.webp" alt="GLRP hero"></button><button data-img="assets/city-ongoings.webp"><img src="assets/city-ongoings.webp" alt="City ongoings"></button><button data-img="assets/coffee-shop.webp"><img src="assets/coffee-shop.webp" alt="Coffee shop"></button><button data-img="assets/systems-poster.webp"><img src="assets/systems-poster.webp" alt="Systems overview"></button><button data-img="assets/youtube-banner.webp"><img src="assets/youtube-banner.webp" alt="GLRP YouTube banner"></button></div></div></section>
+
+<section class="section dark" id="rules"><div class="wrap"><div class="section-head"><div><span class="kicker">City standards</span><h2>Serious roleplay<br><span class="accent">without the confusion.</span></h2></div><p>The final detailed rulebook can be linked from Discord. The website gives visitors a clear overview before they join.</p></div><div class="rules-grid"><div class="rule"><strong>Value roleplay</strong><p>Stay in character, react realistically and give other players room to build a scene.</p></div><div class="rule"><strong>No random violence</strong><p>Conflict should have roleplay behind it. Random attacks and low-effort scenes damage the city.</p></div><div class="rule"><strong>Respect the community</strong><p>Keep out-of-character conduct respectful and use staff channels when a situation needs review.</p></div><div class="rule"><strong>Protect progression</strong><p>Do not exploit bugs, duplicate items or abuse systems. Report issues during beta testing.</p></div><div class="rule"><strong>Build stories</strong><p>The goal is not simply winning. Create situations that other players can respond to and remember.</p></div><div class="rule"><strong>Follow staff direction</strong><p>Staff decisions, applications and detailed rules are handled through the official Discord.</p></div></div>
+<div class="faq"><details><summary>Is GLRP currently a beta city?</summary><p>Yes. The website clearly presents the city as an active beta and testing environment while systems are expanded and polished.</p></details><details><summary>How do I join?</summary><p>Join the Discord for applications and announcements, then use the FiveM connect button when you are ready.</p></details><details><summary>Do I need to know every system before joining?</summary><p>No. The starter journey, phone, Life Paths and Discord information are designed to help new players learn as they play.</p></details><details><summary>Can systems be changed on the site later?</summary><p>Yes. The site is structured so individual cards, images and sections can be edited without rebuilding everything.</p></details></div>
+</div></section>
+
+<section class="join" id="join"><div class="wrap"><div class="join-box"><div><span class="kicker">Ready to start?</span><h2>Enter the city.<br><span class="accent">Create your legacy.</span></h2><p>Join the GLRP community, follow city development and become part of a server designed around player stories and custom gameplay.</p></div><div class="join-buttons"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">GLRP YouTube</a></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
+<div class="modal" id="modal"><button id="closeModal">CLOSE</button><img id="modalImg" alt="Gallery image"></div>
+<script>
+const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links');menuBtn.addEventListener('click',()=>links.classList.toggle('open'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const filters=[...document.querySelectorAll('.filter')],cards=[...document.querySelectorAll('.system-card')];filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;cards.forEach(c=>c.classList.toggle('hidden',f!=='all'&&!c.dataset.cat.split(' ').includes(f)));}));
+const modal=document.getElementById('modal'),modalImg=document.getElementById('modalImg');document.querySelectorAll('#galleryGrid button').forEach(b=>b.addEventListener('click',()=>{modalImg.src=b.dataset.img;modal.classList.add('open')}));document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('open'));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+</script>
+</body></html>
