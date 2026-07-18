@@ -193,15 +193,38 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 @media(max-width:700px){.city-pulse{padding:20px 0 72px}.pulse-shell{padding:25px}.launch-countdown,.pulse-grid{grid-template-columns:repeat(2,1fr)}.countdown-top{display:block}.countdown-top span{display:block;text-align:left;margin-top:7px}.story-signal{grid-template-columns:1fr}.story-signal button{width:100%}.pulse-shell:before{font-size:72px}.pulse-ticker:before,.pulse-ticker:after{width:35px}}
 @media(prefers-reduced-motion:reduce){.pulse-live i,.pulse-track{animation:none}.pulse-track{flex-wrap:wrap;width:auto;padding:13px;gap:13px}.pulse-track span:nth-child(n+6){display:none}}
 
+
+
+/* V3.1.5 — Smart site search and quick navigation */
+.site-search-trigger{position:fixed;right:18px;top:88px;z-index:96;display:inline-flex;align-items:center;gap:9px;padding:11px 13px;border:1px solid rgba(255,255,255,.13);border-radius:13px;background:rgba(9,14,22,.9);color:#fff;box-shadow:0 14px 36px rgba(0,0,0,.38);backdrop-filter:blur(15px);cursor:pointer;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;transition:.2s ease}.site-search-trigger:hover{transform:translateY(-2px);border-color:rgba(255,107,26,.6);background:#111925}.site-search-trigger svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2}.site-search-trigger kbd{padding:4px 6px;border:1px solid rgba(255,255,255,.14);border-bottom-color:rgba(255,255,255,.28);border-radius:6px;background:#070b11;color:#aeb8c7;font:800 9px/1 Inter,system-ui,sans-serif;letter-spacing:.04em}
+.site-search-overlay{position:fixed;inset:0;z-index:500;display:none;align-items:flex-start;justify-content:center;padding:9vh 18px 30px;background:rgba(2,4,7,.82);backdrop-filter:blur(18px)}.site-search-overlay.open{display:flex}.site-search-panel{width:min(760px,100%);max-height:82vh;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:linear-gradient(155deg,#111a25,#080c12 68%);box-shadow:0 42px 120px rgba(0,0,0,.72);overflow:hidden}.site-search-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:17px 18px;border-bottom:1px solid var(--line)}.site-search-head svg{width:22px;height:22px;fill:none;stroke:var(--orange);stroke-width:2}.site-search-input{width:100%;border:0;outline:0;background:transparent;color:#fff;font:750 18px/1.3 Inter,system-ui,sans-serif}.site-search-input::placeholder{color:#667286}.site-search-close{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#0b1119;color:#dce3ec;cursor:pointer;font-size:18px}.site-search-help{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:11px 18px;border-bottom:1px solid var(--line);color:#7f8b9d;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.site-search-help span{display:inline-flex;align-items:center;gap:6px}.site-search-help kbd{padding:4px 6px;border:1px solid rgba(255,255,255,.12);border-radius:5px;background:#070b11;color:#bdc6d3;font:800 9px/1 Inter,system-ui,sans-serif}.site-search-results{overflow:auto;padding:10px}.site-search-result{width:100%;display:grid;grid-template-columns:44px 1fr auto;gap:13px;align-items:center;padding:13px;border:1px solid transparent;border-radius:15px;background:transparent;color:#fff;text-align:left;cursor:pointer;transition:.16s ease}.site-search-result:hover,.site-search-result.active{background:rgba(255,107,26,.09);border-color:rgba(255,107,26,.31)}.site-search-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(255,107,26,.18),rgba(255,51,78,.08));border:1px solid rgba(255,107,26,.22);color:var(--gold);font-size:15px;font-weight:950}.site-search-copy strong{display:block;font-size:14px}.site-search-copy span{display:block;margin-top:5px;color:#8f9aac;font-size:12px;line-height:1.42;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:530px}.site-search-category{color:#748196;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.site-search-empty{padding:42px 24px;text-align:center;color:#8d98a9}.site-search-empty strong{display:block;color:#e8edf4;font-size:17px;margin-bottom:8px}.search-flash{animation:searchFlash 1.45s ease}.body-search-open{overflow:hidden}@keyframes searchFlash{0%,100%{box-shadow:inherit}25%{box-shadow:0 0 0 3px rgba(255,107,26,.7),0 0 55px rgba(255,107,26,.38)}60%{box-shadow:0 0 0 1px rgba(255,107,26,.25),0 0 28px rgba(255,107,26,.16)}}
+@media(max-width:760px){.site-search-trigger{top:auto;right:14px;bottom:68px;padding:11px}.site-search-trigger span,.site-search-trigger kbd{display:none}.site-search-overlay{padding:12px;align-items:flex-start}.site-search-panel{max-height:calc(100vh - 24px);border-radius:18px}.site-search-head{padding:14px}.site-search-input{font-size:16px}.site-search-help{display:none}.site-search-result{grid-template-columns:40px 1fr}.site-search-category{display:none}.site-search-copy span{max-width:calc(100vw - 145px)}}
+
+
+
+/* V3.1.6 — GLRP Role Matcher */
+.role-matcher{padding:96px 0;position:relative;overflow:hidden;background:radial-gradient(circle at 88% 12%,rgba(255,51,78,.13),transparent 30%),radial-gradient(circle at 8% 90%,rgba(74,168,255,.1),transparent 32%),linear-gradient(180deg,#080c13,#0b1019)}
+.role-matcher:before{content:"FIND YOUR ROLE";position:absolute;right:-28px;top:10px;color:rgba(255,255,255,.024);font-size:clamp(70px,11vw,165px);font-weight:950;letter-spacing:-.07em;pointer-events:none;white-space:nowrap}
+.matcher-head{position:relative;z-index:2;display:grid;grid-template-columns:1fr .78fr;gap:34px;align-items:end;margin-bottom:30px}.matcher-head h2{font-size:clamp(42px,5.8vw,76px);line-height:.92;letter-spacing:-.055em;text-transform:uppercase;margin:12px 0 0}.matcher-head p{margin:0;color:#bcc7d5;line-height:1.75}
+.matcher-shell{position:relative;z-index:2;display:grid;grid-template-columns:280px 1fr;border:1px solid rgba(255,255,255,.1);border-radius:30px;overflow:hidden;background:linear-gradient(145deg,rgba(17,25,37,.97),rgba(6,9,14,.98));box-shadow:0 35px 90px rgba(0,0,0,.42)}
+.matcher-side{padding:28px;border-right:1px solid var(--line);background:linear-gradient(180deg,rgba(255,107,26,.075),transparent 45%)}.matcher-side small{display:block;color:#7f8da1;font-size:9px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.matcher-side h3{margin:10px 0 12px;font-size:25px;line-height:1.08}.matcher-side p{color:#909caf;font-size:13px;line-height:1.65;margin:0}.matcher-progress{display:flex;gap:8px;margin:24px 0 20px}.matcher-progress span{height:5px;flex:1;border-radius:999px;background:rgba(255,255,255,.09);overflow:hidden}.matcher-progress span:after{content:"";display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--red),var(--orange));transition:width .28s ease}.matcher-progress span.done:after,.matcher-progress span.active:after{width:100%}.matcher-step-label{color:var(--gold);font-size:10px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}.matcher-side-list{display:grid;gap:9px;margin-top:24px}.matcher-side-list span{display:flex;gap:9px;align-items:center;color:#bdc6d2;font-size:12px}.matcher-side-list span:before{content:"";width:7px;height:7px;border-radius:50%;background:rgba(255,107,26,.65);box-shadow:0 0 10px rgba(255,107,26,.35)}
+.matcher-main{min-height:500px;padding:34px;display:flex;flex-direction:column;justify-content:center}.match-question{display:none}.match-question.active{display:block;animation:matchEnter .3s ease both}@keyframes matchEnter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.match-question .question-number{color:var(--orange);font-size:10px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.match-question h3{font-size:clamp(29px,4vw,48px);line-height:1.06;letter-spacing:-.035em;margin:12px 0 10px}.match-question>p{color:#929fb1;margin:0 0 24px;line-height:1.65}.match-options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.match-option{position:relative;min-height:125px;padding:20px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(255,255,255,.025);color:#fff;text-align:left;cursor:pointer;transition:.2s ease}.match-option:hover,.match-option:focus-visible{transform:translateY(-3px);border-color:rgba(255,107,26,.48);background:linear-gradient(145deg,rgba(255,107,26,.11),rgba(255,51,78,.055));outline:0}.match-option strong{display:block;font-size:17px;margin-bottom:7px}.match-option span{display:block;color:#8f9bad;font-size:12px;line-height:1.55}.match-option i{position:absolute;right:15px;top:15px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.12);color:#68758a;font-style:normal;font-size:11px}.match-option:hover i{border-color:var(--orange);color:var(--gold)}
+.matcher-controls{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:22px}.matcher-back{border:0;background:transparent;color:#8793a4;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:10px 0}.matcher-back:hover{color:#fff}.matcher-back[hidden]{visibility:hidden}.matcher-skip{color:#68758a;font-size:10px;line-height:1.5;text-align:right}
+.match-result{display:none}.match-result.active{display:block;animation:matchEnter .4s ease both}.result-badge{display:inline-flex;padding:9px 12px;border:1px solid rgba(88,229,138,.25);border-radius:999px;background:rgba(88,229,138,.07);color:#a8ffbf;font-size:9px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.match-result h3{font-size:clamp(35px,5vw,64px);line-height:.95;letter-spacing:-.05em;text-transform:uppercase;margin:16px 0 12px}.match-result .result-line{color:var(--gold);font-size:17px;font-weight:850;margin-bottom:13px}.match-result .result-description{max-width:760px;color:#b8c2d0;line-height:1.75}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.result-card{padding:18px;border-radius:17px;border:1px solid var(--line);background:rgba(255,255,255,.025)}.result-card small{display:block;color:#758398;font-size:9px;font-weight:950;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}.result-card strong{display:block;font-size:15px;line-height:1.45}.result-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}.result-actions .btn{cursor:pointer}.match-restart{border-color:rgba(255,255,255,.11);background:rgba(255,255,255,.025)}
+@media(max-width:900px){.matcher-head{grid-template-columns:1fr}.matcher-shell{grid-template-columns:1fr}.matcher-side{border-right:0;border-bottom:1px solid var(--line)}.matcher-side-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.role-matcher{padding:72px 0}.matcher-main,.matcher-side{padding:23px}.match-options,.result-grid{grid-template-columns:1fr}.matcher-side-list{grid-template-columns:1fr}.matcher-controls{align-items:flex-start}.matcher-skip{max-width:150px}.role-matcher:before{font-size:62px;top:28px}}
+@media(prefers-reduced-motion:reduce){.match-question.active,.match-result.active{animation:none}.match-option:hover{transform:none}}
+
 </style>
 </head>
 <body>
 <header class="header"><div class="wrap nav">
 <a class="brand" href="#home"><img src="assets/favicon.webp" alt="GLRP"><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a>
 <button class="menu" id="menuBtn" aria-label="Open menu">MENU</button>
-<nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#directory">Directory</a><a href="#city-map">City Map</a><a href="#server">Server</a><a href="#start">Start Here</a><a href="#news">News & Events</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="#support">Support</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
+<nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#role-match">Find Your Role</a><a href="#directory">Directory</a><a href="#city-map">City Map</a><a href="#server">Server</a><a href="#start">Start Here</a><a href="#news">News & Events</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="#support">Support</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
 </div></header>
 <div class="page-progress" aria-hidden="true"><span id="pageProgressBar"></span></div>
+<button class="site-search-trigger" id="siteSearchTrigger" type="button" aria-label="Search the GLRP website" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>Find anything</span><kbd>Ctrl K</kbd></button>
 <main>
 <section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
 <div class="hero-copy"><span class="kicker">Coming soon • UK serious roleplay • applications open</span><h1>Live the streets.<br><span class="accent">Run the city.</span><br>Build your legacy.</h1><p>Step into a serious UK roleplay city where every shift, deal, rivalry and discovery can change your character’s future. Build a name through business, street life, emergency services, custom cars, collecting, competition and stories that keep moving long after your first night.</p><div class="hero-live-line" aria-live="polite"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">Watch GLRP</a></div></div>
@@ -259,6 +282,76 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 <div class="recruit-actions"><span>Applications, interviews and launch updates are handled through the official GLRP Discord.</span><div class="recruit-buttons"><a class="btn" href="#systems">Explore City Systems</a><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Apply Through Discord</a></div></div>
 </div></div></section>
 
+
+
+
+<section class="role-matcher" id="role-match"><div class="wrap">
+  <div class="matcher-head">
+    <div><span class="kicker">Interactive GLRP role matcher</span><h2>What kind of story<br><span class="accent">should you start?</span></h2></div>
+    <p>Answer four quick questions and GLRP will point you toward a role that matches how you actually like to play. There is no wrong result—you can change direction whenever your character’s story takes a turn.</p>
+  </div>
+  <div class="matcher-shell" id="roleMatcher">
+    <aside class="matcher-side">
+      <small>Your GLRP starting route</small>
+      <h3>Find the lane that fits you.</h3>
+      <p>This is not a whitelist test. It is a quick way to discover which part of the city could give you the strongest first chapter.</p>
+      <div class="matcher-progress" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+      <div class="matcher-step-label" id="matcherStepLabel">Question 1 of 4</div>
+      <div class="matcher-side-list"><span>Department careers</span><span>Player businesses</span><span>Cars and racing</span><span>Street progression</span><span>Collecting and discovery</span><span>Civilian life</span></div>
+    </aside>
+    <div class="matcher-main">
+      <article class="match-question active" data-match-step="0">
+        <div class="question-number">Question 01</div><h3>What should your first big GLRP moment feel like?</h3><p>Choose the scene you would be most excited to turn into a proper character story.</p>
+        <div class="match-options">
+          <button class="match-option" type="button" data-match-tags="police ems"><i>01</i><strong>Answer an urgent call</strong><span>Take responsibility when the city needs someone calm, trained and ready.</span></button>
+          <button class="match-option" type="button" data-match-tags="mechanic business"><i>02</i><strong>Build something people remember</strong><span>Create a car, service or business that earns a real reputation.</span></button>
+          <button class="match-option" type="button" data-match-tags="street racing"><i>03</i><strong>Make a name under pressure</strong><span>Chase risk, rivalry, money and respect where every choice has consequences.</span></button>
+          <button class="match-option" type="button" data-match-tags="collector civilian"><i>04</i><strong>Discover your own path</strong><span>Explore the city, meet people and find opportunities other players overlook.</span></button>
+        </div>
+      </article>
+      <article class="match-question" data-match-step="1">
+        <div class="question-number">Question 02</div><h3>Where would your character naturally spend the most time?</h3><p>Think about the place where conversations, contacts and long-running scenes would happen.</p>
+        <div class="match-options">
+          <button class="match-option" type="button" data-match-tags="police ems"><i>01</i><strong>Patrol, hospital or emergency scenes</strong><span>Work as part of a trained department with structure and responsibility.</span></button>
+          <button class="match-option" type="button" data-match-tags="mechanic racing"><i>02</i><strong>Workshop, showroom or car meet</strong><span>Live around engines, custom builds, customers and street machines.</span></button>
+          <button class="match-option" type="button" data-match-tags="business civilian"><i>03</i><strong>A busy shop or social business</strong><span>Build regular customers, employ players and become part of daily city life.</span></button>
+          <button class="match-option" type="button" data-match-tags="street collector"><i>04</i><strong>Backstreets and unknown locations</strong><span>Follow rumours, rare finds, hidden routes and opportunities with an edge.</span></button>
+        </div>
+      </article>
+      <article class="match-question" data-match-step="2">
+        <div class="question-number">Question 03</div><h3>What kind of pressure creates the best roleplay for you?</h3><p>Your answer helps match you to the pace and consequences you are likely to enjoy.</p>
+        <div class="match-options">
+          <button class="match-option" type="button" data-match-tags="police ems"><i>01</i><strong>Being trusted with real responsibility</strong><span>Other players depend on your judgement, communication and teamwork.</span></button>
+          <button class="match-option" type="button" data-match-tags="mechanic business"><i>02</i><strong>Protecting a reputation you built</strong><span>Customers, employees and competitors all remember how you operate.</span></button>
+          <button class="match-option" type="button" data-match-tags="street racing"><i>03</i><strong>Risk, rivalry and consequences</strong><span>The bigger the reward, the more your decisions can change the story.</span></button>
+          <button class="match-option" type="button" data-match-tags="collector civilian"><i>04</i><strong>Patience, discovery and slow progression</strong><span>You enjoy earning knowledge, contacts and rare rewards over time.</span></button>
+        </div>
+      </article>
+      <article class="match-question" data-match-step="3">
+        <div class="question-number">Question 04</div><h3>Which final direction sounds most like your character?</h3><p>This last choice separates the closest matches and gives you one clear starting recommendation.</p>
+        <div class="match-options">
+          <button class="match-option" type="button" data-match-tags="police"><i>01</i><strong>Officer & investigator</strong><span>Patrol, question, protect and make difficult calls when the city is watching.</span></button>
+          <button class="match-option" type="button" data-match-tags="ems"><i>02</i><strong>Medic & emergency responder</strong><span>Save lives, calm scenes and become someone players trust at their lowest point.</span></button>
+          <button class="match-option" type="button" data-match-tags="mechanic"><i>03</i><strong>Mechanic & recovery driver</strong><span>Repair, recover and build the machines that define GLRP’s roads.</span></button>
+          <button class="match-option" type="button" data-match-tags="business"><i>04</i><strong>Owner & employer</strong><span>Create a place, lead a team and build a business people choose to visit.</span></button>
+          <button class="match-option" type="button" data-match-tags="street"><i>05</i><strong>Street hustler & crew builder</strong><span>Earn contacts, respect and access through choices with real consequences.</span></button>
+          <button class="match-option" type="button" data-match-tags="racing"><i>06</i><strong>Driver & car-culture name</strong><span>Build your machine, learn the roads and chase a reputation through speed.</span></button>
+          <button class="match-option" type="button" data-match-tags="collector"><i>07</i><strong>Creature hunter & collector</strong><span>Follow signals, find rare captures and build a collection no one else owns.</span></button>
+          <button class="match-option" type="button" data-match-tags="civilian"><i>08</i><strong>Free civilian story</strong><span>Start without a label and let jobs, friendships and city life choose the path.</span></button>
+        </div>
+      </article>
+      <article class="match-result" id="matchResult" aria-live="polite">
+        <span class="result-badge">Your recommended GLRP starting route</span>
+        <h3 id="matchResultTitle">Civilian Story</h3>
+        <div class="result-line" id="matchResultLine">Start small and let the city reveal who your character becomes.</div>
+        <p class="result-description" id="matchResultDescription"></p>
+        <div class="result-grid"><div class="result-card"><small>Your strongest first move</small><strong id="matchResultFirst"></strong></div><div class="result-card"><small>Where the story can lead</small><strong id="matchResultFuture"></strong></div></div>
+        <div class="result-actions"><a class="btn primary" id="matchExploreLink" href="#directory">Explore this route</a><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank">Join the GLRP Discord</a><button class="btn match-restart" id="matchRestart" type="button">Try again</button></div>
+      </article>
+      <div class="matcher-controls" id="matcherControls"><button class="matcher-back" id="matcherBack" type="button" hidden>← Previous question</button><span class="matcher-skip">Four quick choices. No application or account needed.</span></div>
+    </div>
+  </div>
+</div></section>
 
 
 <section class="directory" id="directory"><div class="wrap">
@@ -543,9 +636,22 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 
 <section class="join" id="join"><div class="wrap"><div class="join-box"><div><span class="kicker">Coming soon • ready to start?</span><h2>Enter the city.<br><span class="accent">Create your legacy.</span></h2><p>Join the GLRP community before launch, follow official announcements and help shape a server designed around player stories and custom gameplay.</p></div><div class="join-buttons"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">GLRP YouTube</a></div></div></div></section>
 </main>
-<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown & Live City Pulse</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
+<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown • Live City Pulse • Smart Search</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
 <div class="toast" id="copyToast">Copied to clipboard</div>
 <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+<div class="site-search-overlay" id="siteSearchOverlay" role="dialog" aria-modal="true" aria-labelledby="siteSearchTitle">
+  <div class="site-search-panel">
+    <div class="site-search-head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+      <input class="site-search-input" id="siteSearchInput" type="search" autocomplete="off" placeholder="Search cars, jobs, licences, creatures, businesses…" aria-label="Search GLRP website">
+      <button class="site-search-close" id="siteSearchClose" type="button" aria-label="Close search">×</button>
+    </div>
+    <div class="site-search-help"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span><span id="siteSearchCount">Quick links</span></div>
+    <div class="site-search-results" id="siteSearchResults" role="listbox" aria-label="Search results"></div>
+  </div>
+</div>
+
 <div class="modal" id="modal"><button id="closeModal">CLOSE</button><img id="modalImg" alt="Gallery image"></div>
 <script>
 const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links');menuBtn.addEventListener('click',()=>links.classList.toggle('open'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
@@ -638,7 +744,7 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealTargets = [
-    ...document.querySelectorAll('.section-head, .overview-copy, .overview-image, .recruit-card, .directory-card, .system-card, .activity, .step, .news-card, .handbook-shell, .server-shell, .support-shell, .city-map-shell, .pulse-shell, .pulse-card')
+    ...document.querySelectorAll('.section-head, .overview-copy, .overview-image, .recruit-card, .directory-card, .system-card, .activity, .step, .news-card, .handbook-shell, .server-shell, .support-shell, .city-map-shell')
   ];
 
   revealTargets.forEach((el, index) => {
@@ -760,7 +866,7 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   }
 
   // Subtle cursor lighting and depth on premium cards.
-  const interactiveCards = [...document.querySelectorAll('.system-card,.recruit-card,.directory-card,.news-card,.support-card,.activity,.hero-stat,.starter-item,.handbook-time,.pulse-card')];
+  const interactiveCards = [...document.querySelectorAll('.system-card,.recruit-card,.directory-card,.news-card,.support-card,.activity,.hero-stat,.starter-item,.handbook-time')];
   interactiveCards.forEach(card => {
     card.classList.add('js-interactive-card');
     if (!finePointer || reduceMotion) return;
@@ -782,7 +888,7 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   });
 
   // Physical click feedback on buttons and controls.
-  document.querySelectorAll('.btn,.filter,.news-filter,.city-map-filter,.handbook-tab,.copy-btn,.nav-join,#nextPulseStory').forEach(control => {
+  document.querySelectorAll('.btn,.filter,.news-filter,.city-map-filter,.handbook-tab,.copy-btn,.nav-join').forEach(control => {
     control.classList.add('js-ripple-host');
     control.addEventListener('pointerdown', event => {
       if (reduceMotion) return;
@@ -924,5 +1030,280 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   });
 })();
 
+
+
+// V3.1.5 — smart site search and quick navigation
+(() => {
+  const trigger = document.getElementById('siteSearchTrigger');
+  const overlay = document.getElementById('siteSearchOverlay');
+  const input = document.getElementById('siteSearchInput');
+  const results = document.getElementById('siteSearchResults');
+  const closeButton = document.getElementById('siteSearchClose');
+  const count = document.getElementById('siteSearchCount');
+  if (!trigger || !overlay || !input || !results) return;
+
+  const clean = value => (value || '').replace(/\s+/g, ' ').trim();
+  const sectionName = section => clean(section?.querySelector('h2,h1')?.textContent) || clean(section?.id?.replace(/-/g, ' ')) || 'GLRP';
+  const categoryFor = element => {
+    if (element.matches('.system-card')) return 'City system';
+    if (element.matches('.activity')) return 'Activity';
+    if (element.matches('.directory-card')) return 'Directory';
+    if (element.matches('.recruit-card')) return 'Recruitment';
+    if (element.matches('.news-card')) return 'News & events';
+    if (element.matches('.support-card')) return 'Support';
+    if (element.matches('.city-map-item')) return 'City location';
+    if (element.matches('.rule')) return 'City rules';
+    return 'Website section';
+  };
+  const iconFor = category => ({
+    'City system':'SYS','Activity':'GO','Directory':'DIR','Recruitment':'JOIN','News & events':'NEW','Support':'HELP','City location':'MAP','City rules':'RULE','Website section':'GL'
+  }[category] || 'GL');
+
+  const searchableSelectors = [
+    '.system-card','.activity','.directory-card','.recruit-card','.news-card','.support-card','.city-map-item','.rule'
+  ].join(',');
+  const items = [];
+  document.querySelectorAll('section[id]').forEach(section => {
+    items.push({
+      title: sectionName(section),
+      description: clean(section.querySelector('.section-head p,.support-head p,.city-map-head p,.recruit-top p,.handbook-head p,.copy p')?.textContent || section.textContent).slice(0, 180),
+      category: 'Website section',
+      target: section,
+      search: clean(section.textContent).toLowerCase()
+    });
+  });
+  document.querySelectorAll(searchableSelectors).forEach(element => {
+    const title = clean(element.querySelector('h3,strong,.city-map-item-title')?.textContent);
+    if (!title) return;
+    const category = categoryFor(element);
+    const section = element.closest('section[id]');
+    items.push({
+      title,
+      description: clean(element.querySelector('p,span')?.textContent || element.textContent).slice(0, 180),
+      category,
+      target: element,
+      section,
+      search: `${title} ${clean(element.textContent)} ${sectionName(section)} ${category}`.toLowerCase()
+    });
+  });
+
+  const quickOrder = ['server','start','systems','phone','city-map','directory','recruitment','news','showcase','support'];
+  const quickItems = quickOrder.map(id => items.find(item => item.target.id === id)).filter(Boolean);
+  let visible = [];
+  let activeIndex = 0;
+  let previousFocus = null;
+
+  function scoreItem(item, query) {
+    const title = item.title.toLowerCase();
+    const words = query.split(/\s+/).filter(Boolean);
+    if (!words.every(word => item.search.includes(word))) return -1;
+    let score = 0;
+    if (title === query) score += 120;
+    if (title.startsWith(query)) score += 70;
+    if (title.includes(query)) score += 45;
+    words.forEach(word => {
+      if (title.startsWith(word)) score += 22;
+      else if (title.includes(word)) score += 12;
+      else score += 3;
+    });
+    if (item.category !== 'Website section') score += 5;
+    return score;
+  }
+
+  function render(query = '') {
+    const q = clean(query).toLowerCase();
+    visible = q
+      ? items.map(item => ({ item, score: scoreItem(item, q) })).filter(entry => entry.score >= 0).sort((a,b) => b.score - a.score).slice(0, 12).map(entry => entry.item)
+      : quickItems;
+    activeIndex = 0;
+    results.replaceChildren();
+    count.textContent = q ? `${visible.length} result${visible.length === 1 ? '' : 's'}` : 'Quick links';
+    if (!visible.length) {
+      const empty = document.createElement('div');
+      empty.className = 'site-search-empty';
+      const strong = document.createElement('strong');
+      strong.textContent = 'Nothing matched that search.';
+      const span = document.createElement('span');
+      span.textContent = 'Try cars, Police, licences, creatures, jobs, casino or businesses.';
+      empty.append(strong, span);
+      results.appendChild(empty);
+      return;
+    }
+    visible.forEach((item, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `site-search-result${index === 0 ? ' active' : ''}`;
+      button.setAttribute('role','option');
+      button.setAttribute('aria-selected', String(index === 0));
+      const icon = document.createElement('span');
+      icon.className = 'site-search-icon';
+      icon.textContent = iconFor(item.category);
+      const copy = document.createElement('span');
+      copy.className = 'site-search-copy';
+      const title = document.createElement('strong');
+      title.textContent = item.title;
+      const description = document.createElement('span');
+      description.textContent = item.description || 'Open this part of the GLRP website.';
+      copy.append(title, description);
+      const category = document.createElement('span');
+      category.className = 'site-search-category';
+      category.textContent = item.category;
+      button.append(icon, copy, category);
+      button.addEventListener('click', () => openItem(item));
+      button.addEventListener('mousemove', () => setActive(index));
+      results.appendChild(button);
+    });
+  }
+
+  function setActive(index) {
+    if (!visible.length) return;
+    activeIndex = (index + visible.length) % visible.length;
+    [...results.querySelectorAll('.site-search-result')].forEach((button, i) => {
+      const active = i === activeIndex;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-selected', String(active));
+    });
+    results.querySelectorAll('.site-search-result')[activeIndex]?.scrollIntoView({ block: 'nearest' });
+  }
+
+  function openItem(item) {
+    closeSearch(false);
+    const target = item.target;
+    if (target.classList.contains('system-card') && target.classList.contains('hidden')) {
+      document.querySelector('.filter[data-filter="all"]')?.click();
+    }
+    if (target.classList.contains('news-card') && target.classList.contains('hidden')) {
+      document.querySelector('.news-filter[data-news-filter="all"]')?.click();
+    }
+    window.setTimeout(() => {
+      target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+      target.classList.remove('search-flash');
+      void target.offsetWidth;
+      target.classList.add('search-flash');
+      window.setTimeout(() => target.classList.remove('search-flash'), 1600);
+    }, 40);
+  }
+
+  function openSearch() {
+    previousFocus = document.activeElement;
+    overlay.classList.add('open');
+    document.body.classList.add('body-search-open');
+    input.value = '';
+    render('');
+    window.setTimeout(() => input.focus(), 30);
+  }
+  function closeSearch(restore = true) {
+    overlay.classList.remove('open');
+    document.body.classList.remove('body-search-open');
+    if (restore) previousFocus?.focus?.();
+  }
+
+  trigger.addEventListener('click', openSearch);
+  closeButton?.addEventListener('click', () => closeSearch());
+  overlay.addEventListener('mousedown', event => { if (event.target === overlay) closeSearch(); });
+  input.addEventListener('input', () => render(input.value));
+  input.addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown') { event.preventDefault(); setActive(activeIndex + 1); }
+    if (event.key === 'ArrowUp') { event.preventDefault(); setActive(activeIndex - 1); }
+    if (event.key === 'Enter' && visible[activeIndex]) { event.preventDefault(); openItem(visible[activeIndex]); }
+  });
+  document.addEventListener('keydown', event => {
+    const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName || '') || document.activeElement?.isContentEditable;
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+      event.preventDefault();
+      overlay.classList.contains('open') ? closeSearch() : openSearch();
+    } else if (event.key === '/' && !typing && !overlay.classList.contains('open')) {
+      event.preventDefault(); openSearch();
+    } else if (event.key === 'Escape' && overlay.classList.contains('open')) {
+      event.preventDefault(); closeSearch();
+    }
+  });
+  render('');
+})();
+
 </script>
+
+<script>
+// V3.1.6 — GLRP role matcher
+(() => {
+  const root = document.getElementById('roleMatcher');
+  if (!root) return;
+  const questions = [...root.querySelectorAll('.match-question')];
+  const progress = [...root.querySelectorAll('.matcher-progress span')];
+  const label = document.getElementById('matcherStepLabel');
+  const back = document.getElementById('matcherBack');
+  const controls = document.getElementById('matcherControls');
+  const result = document.getElementById('matchResult');
+  const restart = document.getElementById('matchRestart');
+  const scores = {police:0,ems:0,mechanic:0,business:0,street:0,racing:0,collector:0,civilian:0};
+  const answers = [];
+  let step = 0;
+
+  const roles = {
+    police:{title:'Police Department',line:'Be the person the city notices when control matters most.',description:'You are likely to enjoy structured teamwork, investigations, patrol scenes and the responsibility of making decisions that affect other characters. Police roleplay gives you regular interaction with every side of GLRP—from everyday citizens to the city’s biggest criminal stories.',first:'Join Discord, register your Police interest and begin with the department’s recruitment and training route.',future:'Specialist policing, investigations, command responsibility and a reputation built through how you handle pressure.',link:'#recruitment'},
+    ems:{title:'EMS & Medical',line:'Turn the city’s worst moments into roleplay people remember.',description:'You value teamwork, responsibility and scenes where communication matters. EMS gives you the chance to save lives, build patient stories and become one of the names players trust when everything goes wrong.',first:'Register your EMS interest, meet the medical team and prepare for department training.',future:'Emergency response, hospital roleplay, specialist medical paths and future leadership.',link:'#recruitment'},
+    mechanic:{title:'Kingz Autos',line:'Build machines, customers and a name the whole car scene knows.',description:'You are drawn to hands-on progression and visible results. At Kingz Autos, every repair, recovery and project build can create customers, rivals and long-term connections across the city.',first:'Apply for Kingz Autos, learn the service flow and start building trust one customer at a time.',future:'Custom work, roadside recovery, project vehicles, management and influence across GLRP’s automotive scene.',link:'#directory'},
+    business:{title:'Player Business Owner',line:'Create the place other players choose to spend their time.',description:'You enjoy building something social and protecting its reputation. A GLRP business can become a meeting place, employer and daily source of roleplay shaped by your staff, customers and decisions.',first:'Bring a clear business idea to Discord or join an existing team and learn how the player economy works.',future:'Ownership, staff management, supplier relationships, events and a brand recognised throughout the city.',link:'#directory'},
+    street:{title:'Street Progression',line:'Start with little, earn the right contacts and decide how far you will go.',description:'You enjoy risk, consequences and a reputation earned through choices rather than menus. Street life can lead from small hustles into crews, robberies, rivalries and deeper opportunities that must be discovered in character.',first:'Begin with starter work, meet people naturally and let contacts open the next door instead of rushing progression.',future:'A known crew, deeper criminal routes, rivalries, territory and consequences that follow your name.',link:'#systems'},
+    racing:{title:'Racing & Car Culture',line:'Build the car, learn the roads and make the city remember your plate.',description:'You want competition, automotive identity and scenes that start at the workshop and end under pressure. Racing in GLRP connects builds, meets, rivalries and reputation into one lifestyle.',first:'Get established, build a road-worthy car and find the people connected to meets and racing culture.',future:'Custom builds, recognised rivals, organised events, high-pressure runs and a place in the city’s car scene.',link:'#activities'},
+    collector:{title:'Creature Hunter & Collector',line:'Follow the signal, find what others miss and build a collection nobody can copy.',description:'You enjoy discovery, long-term progression and rare rewards. GLRP’s scanner, creature, card-pack and collection systems give you a separate adventure that can grow alongside your main character story.',first:'Use your starter scanner and card supplies, learn how signals work and begin building your first team.',future:'Rare captures, evolved creatures, completed collections, trading and competitive team-building.',link:'#systems'},
+    civilian:{title:'Civilian Life',line:'Start small and let the people you meet decide where the story goes.',description:'You prefer freedom over a fixed label. Civilian life lets you explore jobs, businesses, homes, hobbies and social scenes before committing to a department, crew or specialist path.',first:'Follow the New Player Handbook, complete starter progression and speak to people instead of trying to speed-run the city.',future:'A home, career, business, community role or completely unexpected direction shaped through organic roleplay.',link:'#start'}
+  };
+
+  function showStep(index){
+    step = Math.max(0, Math.min(index, questions.length - 1));
+    questions.forEach((q,i)=>q.classList.toggle('active',i===step));
+    result.classList.remove('active');
+    progress.forEach((bar,i)=>{bar.classList.toggle('done',i<step);bar.classList.toggle('active',i===step);});
+    label.textContent = `Question ${step + 1} of ${questions.length}`;
+    back.hidden = step === 0;
+    controls.hidden = false;
+  }
+
+  function choose(tags){
+    const list = tags.split(/\s+/).filter(Boolean);
+    answers[step] = list;
+    list.forEach(tag => { if (tag in scores) scores[tag] += 1; });
+    if (step < questions.length - 1) showStep(step + 1); else showResult();
+  }
+
+  function undoStep(){
+    if (step <= 0) return;
+    const previousAnswer = answers[step - 1] || [];
+    previousAnswer.forEach(tag => { if (tag in scores) scores[tag] = Math.max(0, scores[tag] - 1); });
+    answers[step - 1] = null;
+    showStep(step - 1);
+  }
+
+  function showResult(){
+    questions.forEach(q=>q.classList.remove('active'));
+    progress.forEach(bar=>{bar.classList.add('done');bar.classList.remove('active');});
+    label.textContent = 'Your match is ready';
+    controls.hidden = true;
+    const priority = ['police','ems','mechanic','business','street','racing','collector','civilian'];
+    const winner = priority.reduce((best,key)=>scores[key] > scores[best] ? key : best, priority[0]);
+    const role = roles[winner];
+    document.getElementById('matchResultTitle').textContent = role.title;
+    document.getElementById('matchResultLine').textContent = role.line;
+    document.getElementById('matchResultDescription').textContent = role.description;
+    document.getElementById('matchResultFirst').textContent = role.first;
+    document.getElementById('matchResultFuture').textContent = role.future;
+    document.getElementById('matchExploreLink').href = role.link;
+    result.classList.add('active');
+  }
+
+  function reset(){
+    Object.keys(scores).forEach(key=>scores[key]=0);
+    answers.length = 0;
+    showStep(0);
+    root.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+  }
+
+  root.querySelectorAll('.match-option').forEach(button=>button.addEventListener('click',()=>choose(button.dataset.matchTags || 'civilian')));
+  back.addEventListener('click',undoStep);
+  restart.addEventListener('click',reset);
+  showStep(0);
+})();
+</script>
+
 </body></html>
