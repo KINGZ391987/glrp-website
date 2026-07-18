@@ -63,13 +63,29 @@
 @media(max-width:1100px){.directory-grid{grid-template-columns:repeat(2,1fr)}.directory-summary{grid-template-columns:1fr}}
 @media(max-width:760px){.directory{padding:70px 0}.directory-grid{grid-template-columns:1fr}.directory-card{min-height:300px}.directory-footer .btn{width:100%}.directory-summary h2{font-size:42px}}
 
+
+
+/* V2.7 — New Player Handbook */
+.handbook{padding:96px 0;background:radial-gradient(circle at 88% 10%,rgba(255,123,25,.15),transparent 29%),linear-gradient(180deg,#080808,#0d0a08 55%,#080808);border-block:1px solid var(--line)}
+.handbook-head{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:end;margin-bottom:30px}.handbook-head h2{font-size:clamp(42px,5vw,74px);line-height:.92;letter-spacing:-.05em;text-transform:uppercase;margin:12px 0 0}.handbook-head p{color:var(--muted);font-size:16px;line-height:1.75;margin:0}
+.handbook-shell{display:grid;grid-template-columns:290px 1fr;gap:14px;padding:14px;border-radius:28px;border:1px solid rgba(255,123,25,.24);background:linear-gradient(145deg,rgba(255,123,25,.08),rgba(255,255,255,.018) 38%,rgba(0,0,0,.32));box-shadow:var(--shadow)}
+.handbook-tabs{display:flex;flex-direction:column;gap:9px;padding:8px}.handbook-tab{display:flex;align-items:center;gap:12px;text-align:left;padding:15px;border-radius:15px;border:1px solid var(--line);background:rgba(255,255,255,.022);color:#ddd5cc;cursor:pointer;transition:.2s}.handbook-tab:hover{border-color:rgba(255,123,25,.38);transform:translateX(2px)}.handbook-tab.active{background:linear-gradient(135deg,rgba(255,123,25,.2),rgba(255,123,25,.06));border-color:rgba(255,123,25,.48);color:#fff}.handbook-tab b{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;background:#0a0a0a;border:1px solid rgba(255,123,25,.25);color:var(--gold);font-size:10px;letter-spacing:.08em}.handbook-tab span{display:block;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}.handbook-tab small{display:block;color:#8f877e;font-size:10px;margin-top:3px;line-height:1.3}.handbook-tab.active small{color:#cfc6bc}
+.handbook-content{min-width:0}.handbook-panel{display:none;min-height:600px;padding:34px;border-radius:21px;background:linear-gradient(145deg,#17130f,#0d0d0d 62%);border:1px solid var(--line);overflow:hidden;position:relative}.handbook-panel.active{display:block;animation:handbookIn .28s ease}.handbook-panel:after{content:attr(data-mark);position:absolute;right:-20px;bottom:-72px;font-size:210px;font-weight:950;letter-spacing:-.1em;color:rgba(255,255,255,.018);pointer-events:none}.handbook-panel-top{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:start}.handbook-panel h3{font-size:clamp(30px,4vw,52px);line-height:.98;text-transform:uppercase;margin:10px 0 15px;letter-spacing:-.035em}.handbook-panel-top>p,.handbook-intro{max-width:760px;color:var(--muted);font-size:15px;line-height:1.72}.handbook-badge{padding:10px 13px;border-radius:999px;border:1px solid rgba(255,123,25,.3);background:rgba(255,123,25,.09);color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.handbook-timeline{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:26px}.handbook-time{min-height:190px;padding:18px;border-radius:17px;border:1px solid var(--line);background:rgba(255,255,255,.026)}.handbook-time b{display:block;color:var(--orange);font-size:10px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:9px}.handbook-time strong{display:block;font-size:15px;line-height:1.3}.handbook-time span{display:block;color:var(--muted);font-size:12px;line-height:1.55;margin-top:8px}
+.starter-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:24px}.starter-item{min-height:170px;padding:18px;border-radius:17px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,123,25,.07),rgba(255,255,255,.02))}.starter-item i{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:rgba(255,123,25,.11);border:1px solid rgba(255,123,25,.25);color:var(--gold);font-style:normal;font-size:10px;font-weight:950;letter-spacing:.06em}.starter-item strong{display:block;font-size:16px;margin:13px 0 6px}.starter-item span{display:block;color:var(--muted);font-size:12px;line-height:1.56}
+.handbook-columns{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.handbook-box{padding:21px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.024)}.handbook-box h4{font-size:18px;margin:0 0 11px}.handbook-box p{color:var(--muted);font-size:13px;line-height:1.65;margin:0}.handbook-box ul{padding-left:18px;color:#d9d1c8;font-size:13px;line-height:1.7;margin:12px 0 0}.handbook-note{position:relative;z-index:2;margin-top:16px;padding:16px 18px;border-radius:15px;border:1px solid rgba(103,226,129,.22);background:rgba(103,226,129,.055);color:#cfe8d4;font-size:13px;line-height:1.62}.handbook-note strong{color:#8cff9f}
+.handbook-actions{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.handbook-actions .btn{min-width:190px}
+@keyframes handbookIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(max-width:1100px){.handbook-shell{grid-template-columns:1fr}.handbook-tabs{display:grid;grid-template-columns:repeat(3,1fr)}.handbook-timeline{grid-template-columns:repeat(3,1fr)}.starter-grid{grid-template-columns:repeat(2,1fr)}.handbook-head{grid-template-columns:1fr}}
+@media(max-width:760px){.handbook{padding:70px 0}.handbook-shell{padding:9px}.handbook-tabs{grid-template-columns:1fr 1fr;padding:3px}.handbook-tab{padding:12px}.handbook-tab small{display:none}.handbook-panel{padding:24px;min-height:auto}.handbook-panel-top{grid-template-columns:1fr}.handbook-badge{width:max-content}.handbook-timeline,.starter-grid,.handbook-columns{grid-template-columns:1fr}.handbook-actions .btn{width:100%}.handbook-head h2{font-size:42px}}
+
 </style>
 </head>
 <body>
 <header class="header"><div class="wrap nav">
 <a class="brand" href="#home"><img src="assets/favicon.webp" alt="GLRP"><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a>
 <button class="menu" id="menuBtn" aria-label="Open menu">MENU</button>
-<nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#directory">Directory</a><a href="#server">Server</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
+<nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#directory">Directory</a><a href="#server">Server</a><a href="#start">Start Here</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
@@ -143,6 +159,82 @@
 <div class="server-actions"><a class="btn primary" href="https://cfx.re/join/a44z4m5" target="_blank">Direct Connect</a><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><button class="btn" type="button" id="refreshStatus">Refresh Status</button></div>
 <p class="status-note">The live FiveM status is treated as an extra convenience. If the public server-list endpoint is unavailable or launch access is restricted, the website safely keeps the official Coming Soon status instead of showing a broken panel.</p>
 </div></div></section>
+
+<section class="handbook" id="start"><div class="wrap">
+<div class="handbook-head"><div><span class="kicker">New player handbook</span><h2>Land prepared.<br><span class="accent">Start your story.</span></h2></div><p>This quick-start guide explains the systems players meet first: arrival, starter gear, backpacks, Life Paths, card packs, creature catching, housing and support. Use the tabs to see how the opening hours of GLRP fit together.</p></div>
+<div class="handbook-shell">
+<div class="handbook-tabs" role="tablist" aria-label="New player handbook sections">
+<button class="handbook-tab active" type="button" role="tab" aria-selected="true" data-handbook-tab="arrival"><b>01</b><span>First 15 Minutes<small>Arrival and first priorities</small></span></button>
+<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="starter"><b>02</b><span>Starter Gear<small>What your first items do</small></span></button>
+<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="paths"><b>03</b><span>Life Paths<small>Progression and daily goals</small></span></button>
+<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="collect"><b>04</b><span>Cards & Creatures<small>Collect, scan and evolve</small></span></button>
+<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="home"><b>05</b><span>Home & Storage<small>Apartments and backpacks</small></span></button>
+<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="help"><b>06</b><span>Help & Support<small>Rules, staff and Discord</small></span></button>
+</div>
+<div class="handbook-content">
+<article class="handbook-panel active" role="tabpanel" data-handbook-panel="arrival" data-mark="01">
+<div class="handbook-panel-top"><div><span class="kicker">Your first session</span><h3>Five clear steps after landing.</h3><p>GLRP is built so new players can learn by doing. You do not need to understand every system immediately—focus on these first actions and the rest of the city opens naturally.</p></div><span class="handbook-badge">Start here</span></div>
+<div class="handbook-timeline">
+<div class="handbook-time"><b>Minute 01</b><strong>Finish your character</strong><span>Create a believable identity, outfit and direction that fits serious roleplay.</span></div>
+<div class="handbook-time"><b>Minute 03</b><strong>Check your starter home</strong><span>Learn the apartment controls, storage areas and wardrobe before heading out.</span></div>
+<div class="handbook-time"><b>Minute 05</b><strong>Open your starter gear</strong><span>Find your backpack, phone, card box and scanner so you know what tools you already own.</span></div>
+<div class="handbook-time"><b>Minute 08</b><strong>Read your Life Path</strong><span>Your opening objectives give you a reason to explore and a clear route toward better opportunities.</span></div>
+<div class="handbook-time"><b>Minute 12</b><strong>Enter the city</strong><span>Use your phone, find legal starter work, meet players or begin your first street-level task.</span></div>
+</div>
+<div class="handbook-note"><strong>Best first move:</strong> keep your starter tools safe, read the phone and Life Path screens, and ask questions in character where possible.</div>
+</article>
+
+<article class="handbook-panel" role="tabpanel" data-handbook-panel="starter" data-mark="02">
+<div class="handbook-panel-top"><div><span class="kicker">Starter equipment</span><h3>Your first tools already connect to bigger systems.</h3><p>The starter kit is designed to introduce different sides of GLRP without flooding you with high-value gear. Each item points toward a system you can grow into.</p></div><span class="handbook-badge">Included at arrival</span></div>
+<div class="starter-grid">
+<div class="starter-item"><i>BAG</i><strong>Starter Backpack</strong><span>Portable extra storage for everyday items. Keep it organised and use home storage for things you do not need on the street.</span></div>
+<div class="starter-item"><i>PHONE</i><strong>GLRP Phone</strong><span>Messages, contacts, city services, news, events and business tools all connect through the phone.</span></div>
+<div class="starter-item"><i>BOX</i><strong>Card Box</strong><span>Your entry point into collectible packs, rarity reveals and the wider GLRP card collection.</span></div>
+<div class="starter-item"><i>SCAN</i><strong>Creature Scanner</strong><span>Use district signals and scanner gameplay to discover creatures across the city.</span></div>
+<div class="starter-item"><i>PACK</i><strong>Starter Cards</strong><span>Low-rarity starter pulls let you learn pack opening and begin building a collection immediately.</span></div>
+<div class="starter-item"><i>INFO</i><strong>City Information</strong><span>Discord, the website and in-city prompts explain rules, applications, jobs and current opportunities.</span></div>
+</div>
+<div class="handbook-note"><strong>Starter gear is a beginning, not an endgame reward.</strong> Better storage, rarer cards, stronger creatures, vehicles and specialist equipment come through progression and roleplay.</div>
+</article>
+
+<article class="handbook-panel" role="tabpanel" data-handbook-panel="paths" data-mark="03">
+<div class="handbook-panel-top"><div><span class="kicker">Character progression</span><h3>Life Paths turn actions into reputation.</h3><p>Life Paths give characters themed objectives, XP and unlocks. Early progression starts at street level before deeper specialist paths become available.</p></div><span class="handbook-badge">Daily & long-term</span></div>
+<div class="handbook-columns">
+<div class="handbook-box"><h4>How progression works</h4><ul><li>Choose or begin the available starter route.</li><li>Complete daily and milestone objectives.</li><li>Earn path XP from real gameplay actions.</li><li>Unlock perks, specialist tasks and stronger opportunities.</li><li>Build a character identity through the work you actually do.</li></ul></div>
+<div class="handbook-box"><h4>Examples across the city</h4><ul><li>Bins, recycling and street survival.</li><li>Mechanic diagnostics, repairs and road calls.</li><li>Deliveries, businesses and supplier progression.</li><li>Creature surveys, collecting and care.</li><li>Future legal, criminal and specialist paths.</li></ul></div>
+</div>
+<div class="handbook-note"><strong>Daily objectives are paced.</strong> Once a daily task is completed, move on to another activity instead of repeating one action endlessly.</div>
+</article>
+
+<article class="handbook-panel" role="tabpanel" data-handbook-panel="collect" data-mark="04">
+<div class="handbook-panel-top"><div><span class="kicker">Collectible gameplay</span><h3>Open packs. Scan districts. Build a team.</h3><p>GLRP combines interactive card packs with a creature-catching system. Both are designed as long-term collections rather than one-time menus.</p></div><span class="handbook-badge">Collect & compete</span></div>
+<div class="handbook-columns">
+<div class="handbook-box"><h4>Card packs</h4><ul><li>Use the interactive pull-tab opening experience.</li><li>Reveal different rarities and collection pieces.</li><li>Keep early pulls inside your collection flow.</li><li>Build toward trading, showcases and future competition.</li></ul></div>
+<div class="handbook-box"><h4>Creature catching</h4><ul><li>Use the scanner to find district signals.</li><li>Capture creatures with different stats and rarity.</li><li>Build a team, train favourites and explore evolution.</li><li>Use duplicates and eggs as part of long-term progression.</li></ul></div>
+</div>
+<div class="handbook-note"><strong>Explore instead of standing still.</strong> Creature signals, surveys and collection opportunities are designed to send players through different districts.</div>
+</article>
+
+<article class="handbook-panel" role="tabpanel" data-handbook-panel="home" data-mark="05">
+<div class="handbook-panel-top"><div><span class="kicker">Apartments & storage</span><h3>Your backpack travels. Your home keeps the rest safe.</h3><p>Portable storage and apartment storage have different jobs. Learning that difference early keeps your inventory clean and stops important items being carried everywhere.</p></div><span class="handbook-badge">Keep organised</span></div>
+<div class="handbook-columns">
+<div class="handbook-box"><h4>Backpack</h4><ul><li>Use it for items you need while travelling.</li><li>Keep job tools and everyday supplies organised.</li><li>Different backpack types may offer different storage value.</li><li>Avoid filling portable space with items that belong at home.</li></ul></div>
+<div class="handbook-box"><h4>Apartment tabs</h4><ul><li>Storage keeps spare items and long-term supplies at home.</li><li>Wardrobe access handles saved outfits and character clothing.</li><li>Home controls give you a safe base before entering city life.</li><li>Future properties can expand how your character lives and stores belongings.</li></ul></div>
+</div>
+<div class="handbook-note"><strong>Simple rule:</strong> carry what your current scene needs and store the rest. This makes jobs, searches and inventory management much easier.</div>
+</article>
+
+<article class="handbook-panel" role="tabpanel" data-handbook-panel="help" data-mark="06">
+<div class="handbook-panel-top"><div><span class="kicker">Community support</span><h3>Get help without breaking the scene.</h3><p>GLRP supports new and experienced players. Use in-character help for normal city questions and official support channels for technical issues, applications or rule concerns.</p></div><span class="handbook-badge">Discord open</span></div>
+<div class="handbook-columns">
+<div class="handbook-box"><h4>Use in-character help for</h4><ul><li>Finding a mechanic, taxi, business or city service.</li><li>Learning where legal work and public locations are.</li><li>Meeting people and asking believable city questions.</li><li>Building scenes instead of treating everything like a game menu.</li></ul></div>
+<div class="handbook-box"><h4>Use official support for</h4><ul><li>Technical problems or missing items.</li><li>Rule questions and staff reports.</li><li>Police, EMS, staff and business applications.</li><li>Announcements, launch information and server updates.</li></ul></div>
+</div>
+<div class="handbook-actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Open GLRP Discord</a><a class="btn" href="#rules">Read City Standards</a><a class="btn" href="#server">Connection Guide</a></div>
+</article>
+</div>
+</div>
+</div></section>
 
 <section class="city-showcase" id="showcase"><div class="wrap">
 <div class="section-head"><div><span class="kicker">A look inside Gang Life RP</span><h2>The city in<br><span class="accent">motion.</span></h2></div><p>Only the strongest GLRP scenes made the cut. Use the arrows or dots to move through the city, or let the slideshow change automatically.</p></div>
@@ -273,5 +365,15 @@ if(showcase){
  restart();
 }
 
+
+
+// V2.7 handbook tabs
+const handbookTabs=[...document.querySelectorAll('[data-handbook-tab]')];
+const handbookPanels=[...document.querySelectorAll('[data-handbook-panel]')];
+handbookTabs.forEach(tab=>tab.addEventListener('click',()=>{
+  const target=tab.dataset.handbookTab;
+  handbookTabs.forEach(item=>{const active=item===tab;item.classList.toggle('active',active);item.setAttribute('aria-selected',String(active));});
+  handbookPanels.forEach(panel=>panel.classList.toggle('active',panel.dataset.handbookPanel===target));
+}));
 </script>
 </body></html>

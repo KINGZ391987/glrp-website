@@ -25,3 +25,16 @@ Suggested commit message: `Add GLRP city directory`
 
 
 V2.6.1 update: The server-status fallback now displays 1 player online instead of Launch pending when the public FiveM listing cannot be reached.
+
+## V2.7 — New Player Handbook
+
+This build adds an interactive Start Here section covering:
+
+- first 15 minutes after landing
+- starter backpack, phone, card box and creature scanner
+- Life Path progression and daily objectives
+- card packs, creature catching, training and evolution
+- apartment storage, wardrobe and backpack organisation
+- Discord, staff support and connection help
+
+The top navigation now includes a Start Here link. All existing V2.6.1 systems, directory, server status, player-count fallback and slideshow remain included.
