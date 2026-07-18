@@ -328,6 +328,51 @@ section[id]{scroll-margin-top:92px}
 @media(max-width:980px){.media-head,.media-feature{grid-template-columns:1fr}.media-feature-visual{min-height:320px}.media-feature-visual:after{background:linear-gradient(0deg,#080c12 0%,transparent 48%)}.media-grid{grid-template-columns:repeat(6,1fr)}.media-card,.media-card:nth-child(5),.media-card:nth-child(6){grid-column:span 3}.media-card:nth-child(1),.media-card:nth-child(8){grid-column:span 6}}
 @media(max-width:680px){.media-hub{padding:72px 0}.media-head h2{font-size:46px}.media-feature-copy{padding:25px}.media-toolbar,.media-footer{align-items:flex-start;flex-direction:column}.media-count{display:none}.media-filters{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px}.media-filter{white-space:nowrap}.media-grid{display:grid;grid-template-columns:1fr;grid-auto-rows:240px}.media-card,.media-card:nth-child(n){grid-column:auto;grid-row:auto}.media-footer .btn,.media-feature-actions,.media-feature-actions .btn{width:100%}}
 
+
+/* V3.2.6.1 — Hero action button readability */
+.btn:not(.primary){
+  color:#f7f9fc;
+  background:rgba(10,16,25,.88);
+  border-color:rgba(255,255,255,.24);
+  box-shadow:0 10px 28px rgba(0,0,0,.28);
+  text-shadow:0 1px 2px rgba(0,0,0,.75);
+}
+.btn:not(.primary):hover{
+  color:#fff;
+  background:rgba(19,29,43,.96);
+  border-color:rgba(255,255,255,.48);
+  box-shadow:0 15px 34px rgba(0,0,0,.38),0 0 24px rgba(255,107,26,.12);
+}
+.hero .actions .tour-launch{
+  color:#fff;
+  background:linear-gradient(135deg,#1a3657,#326fa7);
+  border-color:rgba(108,190,255,.72)!important;
+  box-shadow:0 12px 30px rgba(39,116,180,.34);
+}
+.hero .actions .tour-launch:before{color:#d8f1ff;}
+.hero .actions .pulse-launch{
+  color:#fff;
+  background:linear-gradient(135deg,#9f1834,#e04435 58%,#f07828);
+  border-color:rgba(255,132,90,.78)!important;
+  box-shadow:0 12px 32px rgba(224,52,62,.34);
+}
+.hero .actions .story-launch{
+  color:#fff;
+  background:linear-gradient(135deg,#542087,#8d3ac4 55%,#ca5bdc);
+  border-color:rgba(221,142,255,.75)!important;
+  box-shadow:0 12px 32px rgba(130,55,190,.34);
+}
+.hero .actions .tour-launch:hover,
+.hero .actions .pulse-launch:hover,
+.hero .actions .story-launch:hover{
+  filter:brightness(1.13) saturate(1.08);
+  transform:translateY(-3px);
+  border-color:#fff!important;
+}
+@media(max-width:760px){
+  .hero .actions .btn{min-height:50px;font-size:11px;}
+}
+
 </style>
 <style>
 /* V3.2.3 — Welcome & Visual Story Pass */
