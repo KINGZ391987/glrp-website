@@ -360,6 +360,22 @@ body{background:radial-gradient(circle at 18% 0%,rgba(255,51,78,.07),transparent
 @media(max-width:1100px){.story-card-grid{grid-template-columns:repeat(2,1fr)}.story-intro,.possibility-head{grid-template-columns:1fr}.possibility-grid{grid-template-columns:1fr 1fr}.hero-invite-panel{max-width:720px}}
 @media(max-width:760px){.hero{min-height:auto}.hero-grid{padding-top:112px}.hero h1{font-size:50px}.hero-copy>p{font-size:16px}.hero-invite-panel{margin-top:8px}.story-card-grid,.possibility-grid{grid-template-columns:1fr}.story-card{min-height:330px}.story-intro h2,.possibility-head h2{font-size:42px}.overview-copy{padding:26px}.overview-image{min-height:290px}.city-pulse{padding-top:18px}.pulse-grid{grid-template-columns:1fr}.launch-countdown{grid-template-columns:1fr 1fr}.count-cell{min-height:70px}.possibility-grid blockquote{font-size:16px}}
 @media(prefers-reduced-motion:reduce){.story-card,.story-card:before,.invite-links a,.possibility-grid article{transition:none}.story-card:hover,.possibility-grid article:hover{transform:none}}
+
+/* V3.2.4 — 60-second guided city tour */
+.tour-launch{cursor:pointer;background:rgba(9,14,22,.72);backdrop-filter:blur(12px)}
+.tour-launch:before{content:"▶";font-size:9px;margin-right:9px;color:var(--gold)}
+.city-tour{position:fixed;inset:0;z-index:520;display:grid;place-items:center;padding:22px;background:rgba(2,4,7,.88);backdrop-filter:blur(18px);opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}
+.city-tour.open{opacity:1;visibility:visible}.city-tour-panel{width:min(1120px,100%);min-height:650px;position:relative;display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:30px;background:#080c13;box-shadow:0 45px 130px rgba(0,0,0,.7);transform:translateY(18px) scale(.985);transition:transform .32s cubic-bezier(.2,.72,.2,1)}.city-tour.open .city-tour-panel{transform:none}
+.tour-close{position:absolute;right:18px;top:18px;z-index:6;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(4,7,11,.72);color:#fff;font-size:22px;cursor:pointer;backdrop-filter:blur(12px)}.tour-close:hover{border-color:rgba(255,107,26,.7);color:var(--gold)}
+.tour-visual{position:relative;min-height:650px;overflow:hidden;background:#05070b}.tour-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 45%,rgba(8,12,19,.9) 100%),linear-gradient(0deg,rgba(5,7,11,.78),transparent 42%);pointer-events:none}.tour-visual img{width:100%;height:100%;object-fit:cover;transition:opacity .25s ease,transform .8s ease;transform:scale(1.02)}.city-tour.open .tour-visual img{transform:scale(1.06)}
+.tour-visual-label{position:absolute;z-index:2;left:28px;bottom:28px;display:flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid rgba(255,255,255,.13);border-radius:999px;background:rgba(5,8,13,.7);backdrop-filter:blur(12px);color:#fff;font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.tour-visual-label i{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 14px var(--orange)}
+.tour-copy{position:relative;display:flex;flex-direction:column;padding:72px 46px 36px;background:radial-gradient(circle at 100% 0,rgba(255,51,78,.12),transparent 36%),linear-gradient(160deg,#101722,#080c13 70%)}.tour-copy small{color:var(--gold);font-size:10px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.tour-copy h2{font-size:clamp(38px,4.5vw,64px);line-height:.91;letter-spacing:-.052em;text-transform:uppercase;margin:14px 0 18px}.tour-copy p{color:#aeb9c8;font-size:16px;line-height:1.72;margin:0}.tour-points{display:grid;gap:10px;margin:24px 0 28px}.tour-point{display:flex;align-items:flex-start;gap:11px;padding:12px 13px;border:1px solid rgba(255,255,255,.075);border-radius:13px;background:rgba(255,255,255,.025);color:#dbe2ec;font-size:13px;line-height:1.5}.tour-point:before{content:"✓";color:var(--green);font-weight:950}.tour-spacer{flex:1}.tour-progress{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:18px}.tour-progress button{height:4px;padding:0;border:0;border-radius:999px;background:rgba(255,255,255,.12);cursor:pointer;overflow:hidden}.tour-progress button:after{content:"";display:block;width:0;height:100%;background:linear-gradient(90deg,var(--orange),var(--red));transition:width .28s ease}.tour-progress button.done:after,.tour-progress button.active:after{width:100%}.tour-progress button.active{box-shadow:0 0 14px rgba(255,107,26,.42)}
+.tour-controls{display:flex;align-items:center;gap:10px}.tour-control{min-width:115px;padding:13px 16px;border-radius:11px;border:1px solid var(--line);background:rgba(255,255,255,.025);color:#fff;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.tour-control:hover{border-color:rgba(255,107,26,.55)}.tour-control.next{margin-left:auto;background:linear-gradient(135deg,var(--orange),#d84318);border:0;color:#140609}.tour-control[disabled]{opacity:.35;cursor:not-allowed}.tour-step-count{color:#7f8b9c;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+body.tour-open{overflow:hidden}
+@media(max-width:900px){.city-tour{padding:10px}.city-tour-panel{grid-template-columns:1fr;max-height:calc(100vh - 20px);overflow:auto}.tour-visual{min-height:300px}.tour-visual:after{background:linear-gradient(0deg,#080c13 0%,transparent 55%)}.tour-copy{padding:34px 24px 25px}.tour-copy h2{font-size:42px}.tour-visual-label{left:18px;bottom:18px}.tour-close{right:13px;top:13px}.tour-spacer{display:none}}
+@media(max-width:560px){.tour-visual{min-height:230px}.tour-copy h2{font-size:34px}.tour-copy p{font-size:14px}.tour-points{margin:18px 0}.tour-point{font-size:12px}.tour-controls{flex-wrap:wrap}.tour-control{flex:1;min-width:0}.tour-control.next{margin-left:0}.tour-step-count{width:100%;text-align:center;order:-1}}
+@media(prefers-reduced-motion:reduce){.city-tour,.city-tour-panel,.tour-visual img,.tour-progress button:after{transition:none}}
+
 </style></head>
 <body>
 <header class="header"><div class="wrap nav">
@@ -394,7 +410,7 @@ body{background:radial-gradient(circle at 18% 0%,rgba(255,51,78,.07),transparent
 <button aria-haspopup="dialog" aria-label="Search the GLRP website" class="site-search-trigger" id="siteSearchTrigger" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>Find anything</span><kbd>Ctrl K</kbd></button>
 <main>
 <section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
-<div class="hero-copy"><span class="kicker">WELCOME TO GANG LIFE RP • COMING SOON</span><h1>Start with nothing.<br/><span class="accent">Build something</span><br/>the city remembers.</h1><p>A serious UK roleplay city where your contacts, choices, vehicles, businesses and reputation become one connected story. Find your lane, meet the right people and give the city a reason to remember your name.</p><div aria-live="polite" class="hero-live-line"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="#showcase">Explore the City</a><a class="btn" href="#role-match">Find Your Role</a><a class="btn" href="https://discord.gg/QPgcjHWShX" rel="noopener" target="_blank">Join GLRP</a></div></div>
+<div class="hero-copy"><span class="kicker">WELCOME TO GANG LIFE RP • COMING SOON</span><h1>Start with nothing.<br/><span class="accent">Build something</span><br/>the city remembers.</h1><p>A serious UK roleplay city where your contacts, choices, vehicles, businesses and reputation become one connected story. Find your lane, meet the right people and give the city a reason to remember your name.</p><div aria-live="polite" class="hero-live-line"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="#showcase">Explore the City</a><button class="btn tour-launch" id="launchCityTour" type="button">Take 60-Second Tour</button><a class="btn" href="#role-match">Find Your Role</a><a class="btn" href="https://discord.gg/QPgcjHWShX" rel="noopener" target="_blank">Join GLRP</a></div></div>
 <div class="hero-side hero-invite-panel">
 <div class="invite-live"><span class="invite-dot"></span><div><small>Live city status</small><strong data-live-state="">Connecting to GLRP…</strong><span data-live-capacity="">Checking the real server count.</span></div></div>
 <div class="invite-copy"><small>YOUR FIRST CHAPTER</small><h2>There is no single right way to arrive.</h2><p>Serve the city, build a business, chase rare finds, live for cars or earn respect on the streets. GLRP gives your choices somewhere to lead.</p></div>
@@ -2017,4 +2033,154 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
     });
   });
 })();
-</script></body></html>
+</script>
+<div aria-hidden="true" aria-label="60-second GLRP city tour" aria-modal="true" class="city-tour" id="cityTour" role="dialog">
+  <div class="city-tour-panel">
+    <button aria-label="Close city tour" class="tour-close" id="closeCityTour" type="button">×</button>
+    <div class="tour-visual"><img alt="GLRP guided city tour" id="tourImage" src="assets/slide-city-life.webp"/><div class="tour-visual-label"><i></i><span id="tourVisualLabel">Welcome to GLRP</span></div></div>
+    <div class="tour-copy">
+      <small id="tourKicker">Chapter 01 • Your arrival</small>
+      <h2 id="tourTitle">Start with nothing.<br/><span class="accent">Make it matter.</span></h2>
+      <p id="tourText">GLRP is built around connected stories. The job you take, the people you trust and the risks you choose can shape what your character becomes.</p>
+      <div class="tour-points" id="tourPoints"></div>
+      <div class="tour-spacer"></div>
+      <div aria-label="Tour progress" class="tour-progress" id="tourProgress"></div>
+      <div class="tour-controls"><button class="tour-control" id="tourBack" type="button">Back</button><span class="tour-step-count" id="tourStepCount">1 of 6</span><button class="tour-control" id="tourSkip" type="button">Close Tour</button><button class="tour-control next" id="tourNext" type="button">Next Chapter</button></div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+// V3.2.4 — 60-second guided city tour
+(() => {
+  const modal = document.getElementById('cityTour');
+  const openButton = document.getElementById('launchCityTour');
+  const closeButton = document.getElementById('closeCityTour');
+  if (!modal || !openButton || !closeButton) return;
+
+  const chapters = [
+    {
+      image:'assets/slide-city-life.webp', label:'Welcome to GLRP', kicker:'Chapter 01 • Your arrival',
+      title:'Start with nothing.<br><span class="accent">Make it matter.</span>',
+      text:'GLRP is built around connected stories. The job you take, the people you trust and the risks you choose can shape what your character becomes.',
+      points:['A serious UK roleplay city with room to grow','Progress that follows your character instead of resetting every night','A community opening its doors soon'], target:'#about'
+    },
+    {
+      image:'assets/slide-police.webp', label:'Departments & careers', kicker:'Chapter 02 • Find your purpose',
+      title:'Be someone the city<br><span class="accent">can depend on.</span>',
+      text:'Join Police, EMS, staff, Kingz Autos or a player business and build a role through real scenes, relationships and responsibility.',
+      points:['Police and EMS recruitment open','Kingz Autos careers and roadside work','Business ownership and staff opportunities'], target:'#recruitment'
+    },
+    {
+      image:'assets/slide-street-hustle.webp', label:'Street progression', kicker:'Chapter 03 • Build your reputation',
+      title:'The streets remember<br><span class="accent">how you moved.</span>',
+      text:'Start small, build contacts and decide what your name means. Every shortcut, rivalry and alliance can open one door while closing another.',
+      points:['Jobs, hustles and long-term Life Paths','Multi-stage robberies and meaningful risk','Crews, rivalries and reputation built through roleplay'], target:'#systems'
+    },
+    {
+      image:'assets/slide-motors.webp', label:'Cars & Kingz Autos', kicker:'Chapter 04 • Build the machine',
+      title:'Create a car people<br><span class="accent">know by sound.</span>',
+      text:'Project cars, diagnostics, recovery work, NOS, neon and custom builds turn vehicles into part of your character—not disposable transport.',
+      points:['In-house garages and vehicle protection','Project builds, repairs and towing careers','Performance, lighting and visual identity'], target:'#systems'
+    },
+    {
+      image:'assets/coffee-shop.webp', label:'Businesses & city life', kicker:'Chapter 05 • Give people a reason to visit',
+      title:'Build somewhere<br><span class="accent">the city returns to.</span>',
+      text:'Run a coffee shop, dispensary, street stand or original business idea. Hire people, manage stock and create everyday scenes between the big moments.',
+      points:['Player-run economy with real customers','Stock, crafting, employees and suppliers','Social venues that become part of city culture'], target:'#businesses'
+    },
+    {
+      image:'assets/systems-poster.webp', label:'Custom GLRP experiences', kicker:'Chapter 06 • Choose your next obsession',
+      title:'Catch it. Build it.<br><span class="accent">Live it.</span>',
+      text:'Hunt creatures, open interactive card packs, chase rare finds, play at the Crown Casino or build a completely different life. Your next chapter starts with one choice.',
+      points:['Creature scanning, catching, training and evolution','Interactive card collections, casino nights and city events','Character tools, first-week planner and live server access'], target:'#activities'
+    }
+  ];
+
+  const image = document.getElementById('tourImage');
+  const label = document.getElementById('tourVisualLabel');
+  const kicker = document.getElementById('tourKicker');
+  const title = document.getElementById('tourTitle');
+  const text = document.getElementById('tourText');
+  const points = document.getElementById('tourPoints');
+  const progress = document.getElementById('tourProgress');
+  const back = document.getElementById('tourBack');
+  const next = document.getElementById('tourNext');
+  const skip = document.getElementById('tourSkip');
+  const count = document.getElementById('tourStepCount');
+  let index = 0;
+  let lastFocus = null;
+
+  chapters.forEach((_, chapterIndex) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Open tour chapter ${chapterIndex + 1}`);
+    dot.addEventListener('click', () => render(chapterIndex));
+    progress.appendChild(dot);
+  });
+
+  function render(nextIndex) {
+    index = Math.max(0, Math.min(chapters.length - 1, nextIndex));
+    const chapter = chapters[index];
+    image.style.opacity = '0';
+    window.setTimeout(() => {
+      image.src = chapter.image;
+      image.alt = chapter.label;
+      image.style.opacity = '1';
+    }, 120);
+    label.textContent = chapter.label;
+    kicker.textContent = chapter.kicker;
+    title.innerHTML = chapter.title;
+    text.textContent = chapter.text;
+    points.innerHTML = chapter.points.map(point => `<div class="tour-point">${point}</div>`).join('');
+    [...progress.children].forEach((dot, dotIndex) => {
+      dot.classList.toggle('active', dotIndex === index);
+      dot.classList.toggle('done', dotIndex < index);
+      dot.setAttribute('aria-current', dotIndex === index ? 'step' : 'false');
+    });
+    back.disabled = index === 0;
+    next.textContent = index === chapters.length - 1 ? 'Explore This Story' : 'Next Chapter';
+    count.textContent = `${index + 1} of ${chapters.length}`;
+  }
+
+  function openTour() {
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('tour-open');
+    render(0);
+    closeButton.focus();
+  }
+
+  function closeTour() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('tour-open');
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+
+  function finishOrNext() {
+    if (index < chapters.length - 1) return render(index + 1);
+    const target = chapters[index].target;
+    closeTour();
+    window.setTimeout(() => document.querySelector(target)?.scrollIntoView({behavior:'smooth',block:'start'}), 100);
+  }
+
+  openButton.addEventListener('click', openTour);
+  closeButton.addEventListener('click', closeTour);
+  skip.addEventListener('click', closeTour);
+  back.addEventListener('click', () => render(index - 1));
+  next.addEventListener('click', finishOrNext);
+  modal.addEventListener('click', event => { if (event.target === modal) closeTour(); });
+  document.addEventListener('keydown', event => {
+    if (!modal.classList.contains('open')) return;
+    if (event.key === 'Escape') closeTour();
+    if (event.key === 'ArrowRight') finishOrNext();
+    if (event.key === 'ArrowLeft' && index > 0) render(index - 1);
+  });
+  render(0);
+})();
+
+</script>
+</body></html>
