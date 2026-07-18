@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#070a10">
-<meta name="description" content="Gang Life RP — UK serious FiveM roleplay with custom progression, businesses, vehicles, life paths, creature collection, city activities and more.">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#070a10" name="theme-color"/>
+<meta content="Gang Life RP — UK serious FiveM roleplay with custom progression, businesses, vehicles, life paths, creature collection, city activities and more." name="description"/>
 <title>Gang Life RP | Coming Soon — Join Before Launch</title>
-<link rel="icon" type="image/webp" href="assets/favicon.webp">
+<link href="assets/favicon.webp" rel="icon" type="image/webp"/>
 <style>
 :root{--bg:#05070b;--bg2:#090e16;--panel:#0d141e;--panel2:#151e2a;--text:#f5f7fb;--muted:#9da8b8;--orange:#ff6b1a;--gold:#ffb347;--red:#ff334e;--green:#58e58a;--line:rgba(255,255,255,.09);--shadow:0 24px 70px rgba(0,0,0,.48);--max:1320px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0,#2a0b18 0,transparent 26%),linear-gradient(#05070b,#070a10 40%,#04060a);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 15px var(--orange)}.accent{color:var(--orange)}
@@ -246,310 +247,204 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 @media(max-width:980px){.planner-heading,.planner-shell{grid-template-columns:1fr}.planner-sidebar{position:static}.planner-paths{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.first-week-planner{padding:70px 0}.planner-heading h2{font-size:43px}.planner-paths{grid-template-columns:1fr}.planner-main,.planner-sidebar{padding:17px}.planner-day{grid-template-columns:56px 1fr auto;gap:10px}.planner-day-number{min-height:52px}.planner-actions .btn{width:100%}.planner-status{margin-left:0;width:100%;text-align:center}}
 
+
+
+/* V3.1.9 — Site arrangement and navigation overhaul */
+section[id]{scroll-margin-top:92px}
+.links{gap:18px}
+.nav-more{position:relative;color:#d8dee8}
+.nav-more summary{display:flex;align-items:center;gap:6px;cursor:pointer;list-style:none;transition:.2s;color:#d8dee8}
+.nav-more summary::-webkit-details-marker{display:none}
+.nav-more summary:hover,.nav-more[open] summary{color:#fff}
+.nav-more summary span{color:var(--orange);font-size:12px;transition:transform .2s}
+.nav-more[open] summary span{transform:rotate(180deg)}
+.nav-more-menu{position:absolute;right:0;top:calc(100% + 18px);width:250px;display:grid;gap:3px;padding:10px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:linear-gradient(155deg,#111925,#070b11 72%);box-shadow:0 26px 70px rgba(0,0,0,.58);animation:navMenuIn .18s ease both}
+.nav-more-menu:before{content:"";position:absolute;right:28px;top:-7px;width:12px;height:12px;background:#101823;border-left:1px solid rgba(255,255,255,.12);border-top:1px solid rgba(255,255,255,.12);transform:rotate(45deg)}
+.nav-more-menu a{position:relative!important;padding:11px 12px!important;border-radius:10px;text-align:left!important;color:#bcc6d4!important;font-size:10px}
+.nav-more-menu a:hover{background:rgba(255,107,26,.09);color:#fff!important}
+.nav-more-menu a:after{display:none!important}
+@keyframes navMenuIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+.site-routes{position:relative;padding:70px 0 86px;background:linear-gradient(180deg,#070a10,#0a1018);border-bottom:1px solid var(--line);overflow:hidden}
+.site-routes:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-250px;top:-300px;background:var(--red);filter:blur(120px);opacity:.12;pointer-events:none}
+.route-intro{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:end;margin-bottom:28px}
+.route-intro h2{font-size:clamp(36px,5vw,64px);line-height:.94;letter-spacing:-.048em;text-transform:uppercase;margin:11px 0 0}
+.route-intro p{margin:0;color:var(--muted);line-height:1.75}
+.route-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.route-card{min-height:185px;display:flex;flex-direction:column;padding:21px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
+.route-card:hover{transform:translateY(-4px);border-color:rgba(255,107,26,.43);background:linear-gradient(145deg,rgba(255,107,26,.09),rgba(255,51,78,.035));box-shadow:0 22px 50px rgba(0,0,0,.27)}
+.route-card>span{color:var(--orange);font-size:10px;font-weight:950;letter-spacing:.16em}
+.route-card strong{margin-top:auto;padding-top:28px;font-size:19px}
+.route-card small{display:block;margin-top:8px;color:#929eaf;font-size:12px;line-height:1.55}
+.route-card-hot{border-color:rgba(255,107,26,.28);background:linear-gradient(145deg,rgba(255,107,26,.13),rgba(255,51,78,.055))}
+.route-card-hot strong{color:var(--gold)}
+@media(max-width:1120px){
+  .links{gap:13px;font-size:10px}
+  .nav-more-menu{right:-15px}
+}
+@media(max-width:900px){
+  .route-intro{grid-template-columns:1fr;gap:18px}
+  .route-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-more{width:100%}
+  .nav-more summary{justify-content:center;padding:10px;text-align:center}
+  .nav-more-menu{position:static;width:100%;margin-top:5px;box-shadow:none;background:#0b1119;border-radius:12px}
+  .nav-more-menu:before{display:none}
+  .nav-more-menu a{text-align:center!important}
+}
+@media(max-width:620px){
+  .site-routes{padding:56px 0 66px}
+  .route-grid{grid-template-columns:1fr}
+  .route-card{min-height:150px}
+}
+@media(prefers-reduced-motion:reduce){.nav-more-menu{animation:none}.route-card:hover{transform:none}}
 </style>
 </head>
 <body>
 <header class="header"><div class="wrap nav">
-<a class="brand" href="#home"><img src="assets/favicon.webp" alt="GLRP"><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a>
-<button class="menu" id="menuBtn" aria-label="Open menu">MENU</button>
-<nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#role-match">Find Your Role</a><a href="#character-builder">Build Character</a><a href="#first-week">My First Week</a><a href="#directory">Directory</a><a href="#city-map">City Map</a><a href="#server">Server</a><a href="#start">Start Here</a><a href="#news">News & Events</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="#support">Support</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
+<a class="brand" href="#home"><img alt="GLRP" src="assets/favicon.webp"/><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a>
+<button aria-label="Open menu" class="menu" id="menuBtn">MENU</button>
+<nav class="links" id="links">
+<a href="#about">The City</a>
+<a href="#showcase">Explore</a>
+<a href="#start">Start Here</a>
+<a href="#recruitment">Careers</a>
+<a href="#systems">Gameplay</a>
+<details class="nav-more">
+<summary>More <span aria-hidden="true">⌄</span></summary>
+<div class="nav-more-menu">
+<a href="#role-match">Find Your Role</a>
+<a href="#character-builder">Build Character</a>
+<a href="#first-week">First Week Plan</a>
+<a href="#directory">City Directory</a>
+<a href="#city-map">City Map</a>
+<a href="#server">Server Access</a>
+<a href="#news">News &amp; Events</a>
+<a href="#gallery">Gallery</a>
+<a href="#rules">Rules</a>
+<a href="#support">Support</a>
+</div>
+</details>
+<a class="nav-join" href="https://discord.gg/QPgcjHWShX" target="_blank">Join City</a>
+</nav>
 </div></header>
-<div class="page-progress" aria-hidden="true"><span id="pageProgressBar"></span></div>
-<button class="site-search-trigger" id="siteSearchTrigger" type="button" aria-label="Search the GLRP website" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>Find anything</span><kbd>Ctrl K</kbd></button>
+<div aria-hidden="true" class="page-progress"><span id="pageProgressBar"></span></div>
+<button aria-haspopup="dialog" aria-label="Search the GLRP website" class="site-search-trigger" id="siteSearchTrigger" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>Find anything</span><kbd>Ctrl K</kbd></button>
 <main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
-<div class="hero-copy"><span class="kicker">Coming soon • UK serious roleplay • applications open</span><h1>Live the streets.<br><span class="accent">Run the city.</span><br>Build your legacy.</h1><p>Step into a serious UK roleplay city where every shift, deal, rivalry and discovery can change your character’s future. Build a name through business, street life, emergency services, custom cars, collecting, competition and stories that keep moving long after your first night.</p><div class="hero-live-line" aria-live="polite"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">Watch GLRP</a></div></div>
+<div class="hero-copy"><span class="kicker">Coming soon • UK serious roleplay • applications open</span><h1>Live the streets.<br/><span class="accent">Run the city.</span><br/>Build your legacy.</h1><p>Step into a serious UK roleplay city where every shift, deal, rivalry and discovery can change your character’s future. Build a name through business, street life, emergency services, custom cars, collecting, competition and stories that keep moving long after your first night.</p><div aria-live="polite" class="hero-live-line"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">Watch GLRP</a></div></div>
 <div class="hero-side"><div class="hero-stat"><strong>City Status</strong><span>Coming soon — applications open now</span></div><div class="hero-stat"><strong>Applications Open</strong><span>Staff, Police, EMS, Kingz Autos, businesses and players</span></div><div class="hero-stat"><strong>Style</strong><span>Serious roleplay with progression and freedom</span></div><div class="hero-stat"><strong>Community</strong><span>Player stories, businesses, gangs and events</span></div></div>
-</div></section>
-
-<section class="city-pulse" id="pulse"><div class="wrap"><div class="pulse-shell">
-  <div class="pulse-head">
-    <div><span class="kicker">GLRP launch countdown & live city pulse</span><h2>The city is getting ready.<br><span class="accent">Get in before the doors open.</span></h2></div>
-    <div><div class="pulse-live"><i></i> Community access open now</div><p>Follow the road to launch, register your interest early and find the role that could shape your first chapter. The official date will appear here the moment it is locked in.</p></div>
-  </div>
-  <div class="countdown-wrap" id="launchCountdown" data-launch-date="">
-    <div class="countdown-top"><strong>Official GLRP launch countdown</strong><span id="countdownStatus">Launch date reveal coming soon — join Discord so you do not miss it.</span></div>
-    <div class="launch-countdown" aria-live="polite">
-      <div class="count-cell"><strong id="countDays">DATE</strong><small id="labelDays">Launch</small></div>
-      <div class="count-cell"><strong id="countHours">REVEAL</strong><small id="labelHours">Announcement</small></div>
-      <div class="count-cell"><strong id="countMinutes">COMING</strong><small id="labelMinutes">GLRP</small></div>
-      <div class="count-cell"><strong id="countSeconds">SOON</strong><small id="labelSeconds">Be Ready</small></div>
-    </div>
-    <p class="countdown-note">The timer is launch-ready. Once the official date is confirmed, it automatically changes from the Coming Soon display into a live days, hours, minutes and seconds countdown.</p>
-  </div>
-  <div class="pulse-grid">
-    <article class="pulse-card"><small>Community</small><h3>Applications open</h3><p>Join before launch, introduce your character and get into the right channels for departments, businesses and community access.</p><span class="pulse-state">Open now</span></article>
-    <article class="pulse-card"><small>Departments</small><h3>Police & EMS recruiting</h3><p>Help shape the teams that will handle the city’s biggest calls, investigations, medical scenes and long-running stories.</p><span class="pulse-state">Recruiting</span></article>
-    <article class="pulse-card"><small>Automotive</small><h3>Kingz Autos building its crew</h3><p>Mechanics, recovery drivers and future management can claim a place before the first customers roll through the doors.</p><span class="pulse-state">Roles open</span></article>
-    <article class="pulse-card"><small>Player economy</small><h3>Business ideas welcome</h3><p>Bring a concept worth visiting, build a team around it and become one of the names that gives daily city life its character.</p><span class="pulse-state">Interest open</span></article>
-  </div>
-  <div class="story-signal">
-    <div><small>Your first GLRP chapter could begin with</small><strong id="pulseStory">a starter job, one useful contact and a plan to own the block.</strong></div>
-    <button type="button" id="nextPulseStory">Show another path</button>
-  </div>
-  <div class="pulse-ticker" aria-label="Current GLRP opportunities"><div class="pulse-track">
-    <span>Staff applications open</span><span>Police recruits wanted</span><span>EMS recruits wanted</span><span>Kingz Autos crew wanted</span><span>Business proposals welcome</span><span>General players welcome</span>
-    <span aria-hidden="true">Staff applications open</span><span aria-hidden="true">Police recruits wanted</span><span aria-hidden="true">EMS recruits wanted</span><span aria-hidden="true">Kingz Autos crew wanted</span><span aria-hidden="true">Business proposals welcome</span><span aria-hidden="true">General players welcome</span>
-  </div></div>
-</div></div></section>
-
-<section class="section" id="about"><div class="wrap"><div class="section-head"><div><span class="kicker">Welcome to Gang Life RP</span><h2>A full city.<br><span class="accent">Not just a server.</span></h2></div><p>Land with the basics and decide who you are going to become. Earn your first money, meet the right people, choose a Life Path and turn small opportunities into a reputation the whole city recognises.</p></div>
-<div class="overview-grid"><div class="overview-copy"><span class="kicker">Why GLRP feels different</span><h3>Build a life worth logging back into.</h3><p>Every choice leaves a mark. The people you trust, the cars you build, the businesses you grow, the skills you master, the collections you complete and the reputation you earn all become part of one connected story. Nothing feels like a throwaway session—each night moves your character closer to the name you want the city to remember.</p><div class="chips"><span class="chip">UK serious roleplay</span><span class="chip">Progress that matters</span><span class="chip">Player-run economy</span><span class="chip">In-house GLRP systems</span><span class="chip">New chapters coming</span></div></div><div class="overview-image"><img src="assets/city-overview.webp" alt="Gang Life RP overview"></div></div>
-</div></section>
-
-<section class="recruitment" id="recruitment"><div class="wrap"><div class="recruit-shell">
+</div></section><section class="city-pulse" id="pulse"><div class="wrap"><div class="pulse-shell">
+<div class="pulse-head">
+<div><span class="kicker">GLRP launch countdown &amp; live city pulse</span><h2>The city is getting ready.<br/><span class="accent">Get in before the doors open.</span></h2></div>
+<div><div class="pulse-live"><i></i> Community access open now</div><p>Follow the road to launch, register your interest early and find the role that could shape your first chapter. The official date will appear here the moment it is locked in.</p></div>
+</div>
+<div class="countdown-wrap" data-launch-date="" id="launchCountdown">
+<div class="countdown-top"><strong>Official GLRP launch countdown</strong><span id="countdownStatus">Launch date reveal coming soon — join Discord so you do not miss it.</span></div>
+<div aria-live="polite" class="launch-countdown">
+<div class="count-cell"><strong id="countDays">DATE</strong><small id="labelDays">Launch</small></div>
+<div class="count-cell"><strong id="countHours">REVEAL</strong><small id="labelHours">Announcement</small></div>
+<div class="count-cell"><strong id="countMinutes">COMING</strong><small id="labelMinutes">GLRP</small></div>
+<div class="count-cell"><strong id="countSeconds">SOON</strong><small id="labelSeconds">Be Ready</small></div>
+</div>
+<p class="countdown-note">The timer is launch-ready. Once the official date is confirmed, it automatically changes from the Coming Soon display into a live days, hours, minutes and seconds countdown.</p>
+</div>
+<div class="pulse-grid">
+<article class="pulse-card"><small>Community</small><h3>Applications open</h3><p>Join before launch, introduce your character and get into the right channels for departments, businesses and community access.</p><span class="pulse-state">Open now</span></article>
+<article class="pulse-card"><small>Departments</small><h3>Police &amp; EMS recruiting</h3><p>Help shape the teams that will handle the city’s biggest calls, investigations, medical scenes and long-running stories.</p><span class="pulse-state">Recruiting</span></article>
+<article class="pulse-card"><small>Automotive</small><h3>Kingz Autos building its crew</h3><p>Mechanics, recovery drivers and future management can claim a place before the first customers roll through the doors.</p><span class="pulse-state">Roles open</span></article>
+<article class="pulse-card"><small>Player economy</small><h3>Business ideas welcome</h3><p>Bring a concept worth visiting, build a team around it and become one of the names that gives daily city life its character.</p><span class="pulse-state">Interest open</span></article>
+</div>
+<div class="story-signal">
+<div><small>Your first GLRP chapter could begin with</small><strong id="pulseStory">a starter job, one useful contact and a plan to own the block.</strong></div>
+<button id="nextPulseStory" type="button">Show another path</button>
+</div>
+<div aria-label="Current GLRP opportunities" class="pulse-ticker"><div class="pulse-track">
+<span>Staff applications open</span><span>Police recruits wanted</span><span>EMS recruits wanted</span><span>Kingz Autos crew wanted</span><span>Business proposals welcome</span><span>General players welcome</span>
+<span aria-hidden="true">Staff applications open</span><span aria-hidden="true">Police recruits wanted</span><span aria-hidden="true">EMS recruits wanted</span><span aria-hidden="true">Kingz Autos crew wanted</span><span aria-hidden="true">Business proposals welcome</span><span aria-hidden="true">General players welcome</span>
+</div></div>
+</div></div></section><section aria-labelledby="explore-title" class="site-routes" id="explore-glrp">
+<div class="wrap">
+<div class="route-intro">
+<div>
+<span class="kicker">Choose where to go next</span>
+<h2 id="explore-title">Everything is still here.<br/><span class="accent">Now it is easier to find.</span></h2>
+</div>
+<p>The site has grown with the city, so the important parts are now arranged around the journey a player actually takes—from discovering GLRP to building a character, finding work and joining the community.</p>
+</div>
+<div class="route-grid">
+<a class="route-card" href="#showcase"><span>01</span><strong>See the City</strong><small>Watch the streets, businesses, vehicles and services come to life.</small></a>
+<a class="route-card" href="#start"><span>02</span><strong>Start Prepared</strong><small>Learn what happens after landing and how your first hours should flow.</small></a>
+<a class="route-card" href="#role-match"><span>03</span><strong>Find Your Role</strong><small>Discover the kind of character journey that suits how you want to play.</small></a>
+<a class="route-card" href="#systems"><span>04</span><strong>Explore Gameplay</strong><small>See the custom systems, activities and progression waiting in GLRP.</small></a>
+<a class="route-card" href="#directory"><span>05</span><strong>Find Work &amp; Places</strong><small>Browse departments, businesses, services and important city locations.</small></a>
+<a class="route-card route-card-hot" href="#recruitment"><span>06</span><strong>Join Before Launch</strong><small>Apply for Staff, Police, EMS, Kingz Autos, businesses or general city life.</small></a>
+</div>
+</div>
+</section><section class="section" id="about"><div class="wrap"><div class="section-head"><div><span class="kicker">Welcome to Gang Life RP</span><h2>A full city.<br/><span class="accent">Not just a server.</span></h2></div><p>Land with the basics and decide who you are going to become. Earn your first money, meet the right people, choose a Life Path and turn small opportunities into a reputation the whole city recognises.</p></div>
+<div class="overview-grid"><div class="overview-copy"><span class="kicker">Why GLRP feels different</span><h3>Build a life worth logging back into.</h3><p>Every choice leaves a mark. The people you trust, the cars you build, the businesses you grow, the skills you master, the collections you complete and the reputation you earn all become part of one connected story. Nothing feels like a throwaway session—each night moves your character closer to the name you want the city to remember.</p><div class="chips"><span class="chip">UK serious roleplay</span><span class="chip">Progress that matters</span><span class="chip">Player-run economy</span><span class="chip">In-house GLRP systems</span><span class="chip">New chapters coming</span></div></div><div class="overview-image"><img alt="Gang Life RP overview" src="assets/city-overview.webp"/></div></div>
+</div></section><section class="city-showcase" id="showcase"><div class="wrap">
+<div class="section-head"><div><span class="kicker">A look inside Gang Life RP</span><h2>The city in<br/><span class="accent">motion.</span></h2></div><p>Only the strongest GLRP scenes made the cut. Use the arrows or dots to move through the city, or let the slideshow change automatically.</p></div>
+<div class="showcase-shell" id="cityShowcase">
+<div class="showcase-stage">
+<article class="showcase-slide active"><img alt="GLRP city life at sunset" src="assets/slide-city-life.webp"/><div class="showcase-copy"><span>City atmosphere</span><h3>Every street has a story.</h3><p>Custom businesses, tuned cars, active streets and a city skyline built around serious roleplay.</p></div></article>
+<article class="showcase-slide"><img alt="GLRP street hustle scene" src="assets/slide-street-hustle.webp"/><div class="showcase-copy"><span>Street life</span><h3>Start with nothing. Build your name.</h3><p>Search, hustle, survive and turn the smallest beginning into a character people remember.</p></div></article>
+<article class="showcase-slide"><img alt="GLRP police patrol scene" src="assets/slide-police.webp"/><div class="showcase-copy"><span>Police &amp; city services</span><h3>Professional scenes. Real consequences.</h3><p>Join the police, EMS or city services and create roleplay that reaches every corner of GLRP.</p></div></article>
+<article class="showcase-slide"><img alt="GLRP Motors and custom cars" src="assets/slide-motors.webp"/><div class="showcase-copy"><span>Kingz Autos</span><h3>Build it. Tune it. Own it.</h3><p>Custom cars, diagnostics, repairs, project builds, towing and proper mechanic careers.</p></div></article>
+<article class="showcase-slide"><img alt="GLRP coffee and social roleplay" src="assets/slide-social.webp"/><div class="showcase-copy"><span>Businesses &amp; social life</span><h3>The city lives between the big scenes.</h3><p>Coffee shops, food spots, nightlife, local businesses and everyday moments keep GLRP feeling alive.</p></div></article>
+<article class="showcase-slide"><img alt="GLRP dispensary business" src="assets/slide-dispensary.webp"/><div class="showcase-copy"><span>Player-run economy</span><h3>Own a business. Build a legacy.</h3><p>Operate venues, manage staff, control stock and create places the whole community wants to visit.</p></div></article>
+<button aria-label="Previous city image" class="showcase-arrow prev" type="button">‹</button>
+<button aria-label="Next city image" class="showcase-arrow next" type="button">›</button>
+</div>
+<div class="showcase-footer"><div aria-label="City slideshow navigation" class="showcase-dots"></div><div class="showcase-count"><span id="showcaseCurrent">01</span> / 06 • auto slides every 6 seconds</div></div>
+</div>
+</div></section><section class="recruitment" id="recruitment"><div class="wrap"><div class="recruit-shell">
 <div class="launch-ribbon">Gang Life RP coming soon • applications and department recruitment open now</div>
-<div class="recruit-top"><div><span class="kicker">GLRP recruitment & launch hub</span><h2>Join the team.<br><span class="accent">Build the city with us.</span></h2></div><p>GLRP is coming soon, and the first chapter needs the right people. Step forward early, claim a role and help shape the departments, businesses and stories players will remember after launch.</p></div>
+<div class="recruit-top"><div><span class="kicker">GLRP recruitment &amp; launch hub</span><h2>Join the team.<br/><span class="accent">Build the city with us.</span></h2></div><p>GLRP is coming soon, and the first chapter needs the right people. Step forward early, claim a role and help shape the departments, businesses and stories players will remember after launch.</p></div>
 <div class="launch-status"><article><small>City launch</small><strong>Coming Soon</strong></article><article><small>Applications</small><strong>Open Now</strong></article><article><small>Departments</small><strong>Recruiting</strong></article><article><small>Community</small><strong>Growing Daily</strong></article></div>
 <div class="recruit-grid">
-<article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">STAFF</div><span class="role-status">Recruiting now</span></div><strong>City Team</strong><h3>Staff & Support</h3><p>Be one of the people players can trust. Guide newcomers, protect fair roleplay and help turn GLRP into a community people are proud to call home.</p><ul><li>Support and moderation</li><li>Player guidance</li><li>Community and scene support</li></ul></article>
+<article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">STAFF</div><span class="role-status">Recruiting now</span></div><strong>City Team</strong><h3>Staff &amp; Support</h3><p>Be one of the people players can trust. Guide newcomers, protect fair roleplay and help turn GLRP into a community people are proud to call home.</p><ul><li>Support and moderation</li><li>Player guidance</li><li>Community and scene support</li></ul></article>
 <article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">PD</div><span class="role-status">Recruiting now</span></div><strong>Emergency Services</strong><h3>Police Department</h3><p>Put on the uniform and become part of the city’s biggest moments—from routine patrols to investigations, pursuits and scenes that can change lives.</p><ul><li>Officers and recruits</li><li>Future command roles</li><li>Training and specialist paths</li></ul></article>
-<article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">EMS</div><span class="role-status">Recruiting now</span></div><strong>Emergency Services</strong><h3>EMS & Medical</h3><p>Be the calm voice at the worst moment. Save lives, support long-term medical stories and help build an EMS department the whole city depends on.</p><ul><li>Medics and trainees</li><li>Future medical leadership</li><li>Scene and hospital roleplay</li></ul></article>
+<article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">EMS</div><span class="role-status">Recruiting now</span></div><strong>Emergency Services</strong><h3>EMS &amp; Medical</h3><p>Be the calm voice at the worst moment. Save lives, support long-term medical stories and help build an EMS department the whole city depends on.</p><ul><li>Medics and trainees</li><li>Future medical leadership</li><li>Scene and hospital roleplay</li></ul></article>
 <article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">AUTO</div><span class="role-status">Recruiting now</span></div><strong>Automotive Careers</strong><h3>Kingz Autos</h3><p>Turn your love of cars into a career. Build a name at Kingz Autos through repairs, recoveries, custom work and project vehicles customers will remember.</p><ul><li>Mechanics and service staff</li><li>Tow and roadside drivers</li><li>Management opportunities</li></ul></article>
 <article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">BIZ</div><span class="role-status">Interest open</span></div><strong>Player Economy</strong><h3>Business Owners</h3><p>Create a place players choose to visit. Hire a team, build regular customers and turn your idea into part of everyday life across GLRP.</p><ul><li>Owners and managers</li><li>Employees and suppliers</li><li>New business ideas welcomed</li></ul></article>
-<article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">PLAY</div><span class="role-status">Everyone welcome</span></div><strong>Community</strong><h3>Players & Characters</h3><p>Arrive with a character worth discovering. Whether you chase respect, money, speed, power, community or redemption, the city gives your story room to grow.</p><ul><li>New and experienced players</li><li>Legal and criminal stories</li><li>Crews, families and solo characters</li></ul></article>
+<article class="recruit-card"><div class="recruit-card-head"><div class="role-icon">PLAY</div><span class="role-status">Everyone welcome</span></div><strong>Community</strong><h3>Players &amp; Characters</h3><p>Arrive with a character worth discovering. Whether you chase respect, money, speed, power, community or redemption, the city gives your story room to grow.</p><ul><li>New and experienced players</li><li>Legal and criminal stories</li><li>Crews, families and solo characters</li></ul></article>
 </div>
 <div class="application-flow"><div class="application-flow-top"><div><span class="kicker">Simple application process</span><h3>How to register your interest</h3></div><p>You do not need to know every GLRP system before applying. Join the community, choose the area that interests you and the relevant team will guide you through the next steps.</p></div><div class="apply-steps"><div class="apply-step"><b>Step 01</b><strong>Join the official Discord</strong><span>Access launch news, department information and the application channels.</span></div><div class="apply-step"><b>Step 02</b><strong>Choose your role</strong><span>Select staff, PD, EMS, Kingz Autos, business ownership or general player interest.</span></div><div class="apply-step"><b>Step 03</b><strong>Submit your application</strong><span>Answer the questions honestly and speak with the relevant department team.</span></div></div></div>
 <div class="recruit-actions"><span>Applications, interviews and launch updates are handled through the official GLRP Discord.</span><div class="recruit-buttons"><a class="btn" href="#systems">Explore City Systems</a><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Apply Through Discord</a></div></div>
-</div></div></section>
-
-
-
-
-<section class="role-matcher" id="role-match"><div class="wrap">
-  <div class="matcher-head">
-    <div><span class="kicker">Interactive GLRP role matcher</span><h2>What kind of story<br><span class="accent">should you start?</span></h2></div>
-    <p>Answer four quick questions and GLRP will point you toward a role that matches how you actually like to play. There is no wrong result—you can change direction whenever your character’s story takes a turn.</p>
-  </div>
-  <div class="matcher-shell" id="roleMatcher">
-    <aside class="matcher-side">
-      <small>Your GLRP starting route</small>
-      <h3>Find the lane that fits you.</h3>
-      <p>This is not a whitelist test. It is a quick way to discover which part of the city could give you the strongest first chapter.</p>
-      <div class="matcher-progress" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
-      <div class="matcher-step-label" id="matcherStepLabel">Question 1 of 4</div>
-      <div class="matcher-side-list"><span>Department careers</span><span>Player businesses</span><span>Cars and racing</span><span>Street progression</span><span>Collecting and discovery</span><span>Civilian life</span></div>
-    </aside>
-    <div class="matcher-main">
-      <article class="match-question active" data-match-step="0">
-        <div class="question-number">Question 01</div><h3>What should your first big GLRP moment feel like?</h3><p>Choose the scene you would be most excited to turn into a proper character story.</p>
-        <div class="match-options">
-          <button class="match-option" type="button" data-match-tags="police ems"><i>01</i><strong>Answer an urgent call</strong><span>Take responsibility when the city needs someone calm, trained and ready.</span></button>
-          <button class="match-option" type="button" data-match-tags="mechanic business"><i>02</i><strong>Build something people remember</strong><span>Create a car, service or business that earns a real reputation.</span></button>
-          <button class="match-option" type="button" data-match-tags="street racing"><i>03</i><strong>Make a name under pressure</strong><span>Chase risk, rivalry, money and respect where every choice has consequences.</span></button>
-          <button class="match-option" type="button" data-match-tags="collector civilian"><i>04</i><strong>Discover your own path</strong><span>Explore the city, meet people and find opportunities other players overlook.</span></button>
-        </div>
-      </article>
-      <article class="match-question" data-match-step="1">
-        <div class="question-number">Question 02</div><h3>Where would your character naturally spend the most time?</h3><p>Think about the place where conversations, contacts and long-running scenes would happen.</p>
-        <div class="match-options">
-          <button class="match-option" type="button" data-match-tags="police ems"><i>01</i><strong>Patrol, hospital or emergency scenes</strong><span>Work as part of a trained department with structure and responsibility.</span></button>
-          <button class="match-option" type="button" data-match-tags="mechanic racing"><i>02</i><strong>Workshop, showroom or car meet</strong><span>Live around engines, custom builds, customers and street machines.</span></button>
-          <button class="match-option" type="button" data-match-tags="business civilian"><i>03</i><strong>A busy shop or social business</strong><span>Build regular customers, employ players and become part of daily city life.</span></button>
-          <button class="match-option" type="button" data-match-tags="street collector"><i>04</i><strong>Backstreets and unknown locations</strong><span>Follow rumours, rare finds, hidden routes and opportunities with an edge.</span></button>
-        </div>
-      </article>
-      <article class="match-question" data-match-step="2">
-        <div class="question-number">Question 03</div><h3>What kind of pressure creates the best roleplay for you?</h3><p>Your answer helps match you to the pace and consequences you are likely to enjoy.</p>
-        <div class="match-options">
-          <button class="match-option" type="button" data-match-tags="police ems"><i>01</i><strong>Being trusted with real responsibility</strong><span>Other players depend on your judgement, communication and teamwork.</span></button>
-          <button class="match-option" type="button" data-match-tags="mechanic business"><i>02</i><strong>Protecting a reputation you built</strong><span>Customers, employees and competitors all remember how you operate.</span></button>
-          <button class="match-option" type="button" data-match-tags="street racing"><i>03</i><strong>Risk, rivalry and consequences</strong><span>The bigger the reward, the more your decisions can change the story.</span></button>
-          <button class="match-option" type="button" data-match-tags="collector civilian"><i>04</i><strong>Patience, discovery and slow progression</strong><span>You enjoy earning knowledge, contacts and rare rewards over time.</span></button>
-        </div>
-      </article>
-      <article class="match-question" data-match-step="3">
-        <div class="question-number">Question 04</div><h3>Which final direction sounds most like your character?</h3><p>This last choice separates the closest matches and gives you one clear starting recommendation.</p>
-        <div class="match-options">
-          <button class="match-option" type="button" data-match-tags="police"><i>01</i><strong>Officer & investigator</strong><span>Patrol, question, protect and make difficult calls when the city is watching.</span></button>
-          <button class="match-option" type="button" data-match-tags="ems"><i>02</i><strong>Medic & emergency responder</strong><span>Save lives, calm scenes and become someone players trust at their lowest point.</span></button>
-          <button class="match-option" type="button" data-match-tags="mechanic"><i>03</i><strong>Mechanic & recovery driver</strong><span>Repair, recover and build the machines that define GLRP’s roads.</span></button>
-          <button class="match-option" type="button" data-match-tags="business"><i>04</i><strong>Owner & employer</strong><span>Create a place, lead a team and build a business people choose to visit.</span></button>
-          <button class="match-option" type="button" data-match-tags="street"><i>05</i><strong>Street hustler & crew builder</strong><span>Earn contacts, respect and access through choices with real consequences.</span></button>
-          <button class="match-option" type="button" data-match-tags="racing"><i>06</i><strong>Driver & car-culture name</strong><span>Build your machine, learn the roads and chase a reputation through speed.</span></button>
-          <button class="match-option" type="button" data-match-tags="collector"><i>07</i><strong>Creature hunter & collector</strong><span>Follow signals, find rare captures and build a collection no one else owns.</span></button>
-          <button class="match-option" type="button" data-match-tags="civilian"><i>08</i><strong>Free civilian story</strong><span>Start without a label and let jobs, friendships and city life choose the path.</span></button>
-        </div>
-      </article>
-      <article class="match-result" id="matchResult" aria-live="polite">
-        <span class="result-badge">Your recommended GLRP starting route</span>
-        <h3 id="matchResultTitle">Civilian Story</h3>
-        <div class="result-line" id="matchResultLine">Start small and let the city reveal who your character becomes.</div>
-        <p class="result-description" id="matchResultDescription"></p>
-        <div class="result-grid"><div class="result-card"><small>Your strongest first move</small><strong id="matchResultFirst"></strong></div><div class="result-card"><small>Where the story can lead</small><strong id="matchResultFuture"></strong></div></div>
-        <div class="result-actions"><a class="btn primary" id="matchExploreLink" href="#directory">Explore this route</a><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank">Join the GLRP Discord</a><button class="btn match-restart" id="matchRestart" type="button">Try again</button></div>
-      </article>
-      <div class="matcher-controls" id="matcherControls"><button class="matcher-back" id="matcherBack" type="button" hidden>← Previous question</button><span class="matcher-skip">Four quick choices. No application or account needed.</span></div>
-    </div>
-  </div>
-</div></section>
-
-
-<section class="character-builder" id="character-builder"><div class="wrap">
-  <div class="builder-head">
-    <div><span class="kicker">Interactive character builder</span><h2>Arrive with a person.<br><span class="accent">Not just a name.</span></h2></div>
-    <p>Build the foundations of a believable GLRP character before launch. Shape their background, goals, strengths and flaws, then copy a clean draft you can use when preparing your whitelist or department application.</p>
-  </div>
-  <div class="builder-shell">
-    <form class="builder-form" id="characterBuilderForm" autocomplete="off">
-      <div class="builder-intro"><div><span class="kicker">Your first chapter</span><h3>Create someone the city can change.</h3><p>Keep the character grounded enough to grow. The strongest stories leave room for mistakes, setbacks, relationships and unexpected turns.</p></div><span class="builder-local">Saved on this device</span></div>
-      <div class="builder-grid">
-        <div class="builder-field"><label for="cbName">Character name</label><input id="cbName" maxlength="36" placeholder="Example: Marcus Hale"><small>Use a believable first and last name.</small></div>
-        <div class="builder-field"><label for="cbAge">Character age</label><input id="cbAge" type="number" min="18" max="90" placeholder="24"><small>Choose an age that fits their experience.</small></div>
-        <div class="builder-field"><label for="cbOrigin">Where are they coming from?</label><select id="cbOrigin"><option value="">Choose a background</option><option>Local to Los Santos</option><option>Moved for a fresh start</option><option>Following family or friends</option><option>Escaping an old reputation</option><option>Looking for work and opportunity</option><option>Returning after years away</option></select></div>
-        <div class="builder-field"><label for="cbPath">First direction</label><select id="cbPath"><option value="">Choose a starting direction</option><option>Civilian life and honest work</option><option>Player business and entrepreneurship</option><option>Kingz Autos and car culture</option><option>Police Department</option><option>EMS and medical roleplay</option><option>Street life and criminal progression</option><option>Racing and performance cars</option><option>Creature hunting and collecting</option></select></div>
-        <div class="builder-field"><label for="cbStrength">Strongest quality</label><input id="cbStrength" maxlength="70" placeholder="Loyal, patient, ambitious, calm under pressure…"></div>
-        <div class="builder-field"><label for="cbFlaw">Real character flaw</label><input id="cbFlaw" maxlength="70" placeholder="Proud, reckless, distrustful, easily influenced…"></div>
-        <div class="builder-field wide"><label for="cbGoal">What do they want from the city?</label><textarea id="cbGoal" maxlength="260" placeholder="Describe a goal they can work toward over time—not something they should receive immediately."></textarea><span class="builder-counter" data-counter-for="cbGoal">0 / 260</span></div>
-        <div class="builder-field wide"><label for="cbStory">Short background story</label><textarea id="cbStory" maxlength="650" placeholder="Where did they come from? What happened before they arrived? Why is GLRP the place where their next chapter begins?"></textarea><span class="builder-counter" data-counter-for="cbStory">0 / 650</span></div>
-        <div class="builder-field wide"><label for="cbScene">The first scene you want to create</label><textarea id="cbScene" maxlength="260" placeholder="Example: Ask for work at Kingz Autos, meet a landlord, report a stolen bag, or find someone from their past."></textarea><span class="builder-counter" data-counter-for="cbScene">0 / 260</span></div>
-      </div>
-      <div class="builder-prompts"><button class="builder-prompt" type="button" data-builder-prompt="fresh">Fresh-start idea</button><button class="builder-prompt" type="button" data-builder-prompt="business">Business idea</button><button class="builder-prompt" type="button" data-builder-prompt="service">Department idea</button><button class="builder-prompt" type="button" data-builder-prompt="street">Street-life idea</button><button class="builder-prompt" type="button" data-builder-prompt="collector">Collector idea</button></div>
-      <div class="builder-actions"><button class="btn primary" type="submit">Build Character Draft</button><button class="btn" id="copyCharacterDraft" type="button">Copy Application Draft</button><button class="btn builder-clear" id="clearCharacterDraft" type="button">Clear</button></div>
-      <div class="builder-save-state" id="builderSaveState" aria-live="polite">Your draft will autosave locally as you type.</div>
-    </form>
-    <aside class="builder-preview" id="characterPreview" aria-live="polite">
-      <div class="preview-top"><div><small>GLRP character profile</small><h3 class="preview-name" id="previewName">Unnamed Character</h3><div class="preview-meta" id="previewMeta">Age unknown • Direction undecided</div></div><div class="preview-score" id="previewScore" style="--score:0%"><strong id="previewScoreNumber">0</strong><span>ready</span></div></div>
-      <div class="preview-quote" id="previewQuote">“A good character arrives with a reason to move forward—and enough flaws for the city to push back.”</div>
-      <div class="preview-grid">
-        <div class="preview-block"><small>Background</small><strong id="previewOrigin">Not chosen yet</strong></div>
-        <div class="preview-block"><small>Starting path</small><strong id="previewPath">Not chosen yet</strong></div>
-        <div class="preview-block"><small>Strength</small><strong id="previewStrength">Still to be defined</strong></div>
-        <div class="preview-block"><small>Flaw</small><strong id="previewFlaw">Still to be defined</strong></div>
-        <div class="preview-block wide"><small>Long-term goal</small><p id="previewGoal">Give your character something meaningful to chase.</p></div>
-        <div class="preview-block wide"><small>Background story</small><p id="previewStory">Their history will appear here as you build it.</p></div>
-        <div class="preview-block wide"><small>Opening scene</small><p id="previewScene">Plan a small first scene that gives other players a reason to respond.</p></div>
-      </div>
-      <div class="preview-footer"><span>This tool prepares a draft only. Official applications remain in the GLRP Discord.</span><button id="randomCharacterSpark" type="button">Give me a story spark →</button></div>
-    </aside>
-  </div>
-  <div class="builder-disclaimer"><strong>Private by design:</strong> this builder runs entirely in your browser. It does not submit information to GLRP, GitHub or any external service. Use the copy button when you are ready to paste your draft into the correct Discord application channel.</div>
-</div></section>
-
-
-
-<section class="first-week-planner" id="first-week"><div class="wrap">
-  <div class="planner-heading"><div><span class="kicker">Your first seven days in GLRP</span><h2>Arrive with a plan.<br><span class="accent">Leave with a reputation.</span></h2></div><p>Your first week should create contacts, money, direction and stories—not feel like a list of menus. Choose the life you want to chase and GLRP will build a practical seven-day route you can complete at your own pace.</p></div>
-  <div class="planner-shell" id="firstWeekPlanner">
-    <aside class="planner-sidebar">
-      <small>Choose your starting focus</small><h3>What do you want your first week to become?</h3><p>Your route changes the daily goals below. Progress is saved privately on this device.</p>
-      <div class="planner-paths" role="tablist" aria-label="First week paths">
-        <button class="planner-path active" type="button" data-plan="civilian"><span>Civilian Foundation</span><span>→</span></button>
-        <button class="planner-path" type="button" data-plan="business"><span>Business Builder</span><span>→</span></button>
-        <button class="planner-path" type="button" data-plan="mechanic"><span>Kingz Autos</span><span>→</span></button>
-        <button class="planner-path" type="button" data-plan="service"><span>Police or EMS</span><span>→</span></button>
-        <button class="planner-path" type="button" data-plan="street"><span>Street Reputation</span><span>→</span></button>
-        <button class="planner-path" type="button" data-plan="racing"><span>Car & Racing Scene</span><span>→</span></button>
-        <button class="planner-path" type="button" data-plan="collector"><span>Creature Collector</span><span>→</span></button>
-      </div>
-      <div class="planner-note"><strong>No speed-running required.</strong> These are story prompts, not mandatory deadlines. Let other players, consequences and unexpected scenes change the plan.</div>
-    </aside>
-    <div class="planner-main">
-      <div class="planner-top"><div class="planner-progress-copy"><small id="plannerRouteLabel">Civilian foundation</small><strong id="plannerRouteTitle">Your first-week route</strong></div><div class="planner-percentage" id="plannerPercentage">0%</div></div>
-      <div class="planner-bar" aria-label="First week completion"><span id="plannerProgressBar"></span></div>
-      <div class="planner-days" id="plannerDays"></div>
-      <div class="planner-actions"><button class="btn primary" type="button" id="copyWeekPlan">Copy My Plan</button><a class="btn" href="#start">Open New Player Handbook</a><button class="btn" type="button" id="resetWeekPlan">Reset This Route</button><span class="planner-status" id="plannerSaveState" aria-live="polite">Progress saves automatically.</span></div>
-    </div>
-  </div>
-</div></section>
-
-<section class="directory" id="directory"><div class="wrap">
-<div class="directory-summary"><div><span class="kicker">Departments, businesses & city services</span><h2>Find your place<br><span class="accent">inside GLRP.</span></h2></div><p>Find the place where your character belongs. Serve the city, run a business, build cars, lead a team or create something completely new—the doors below are where those stories begin.</p></div>
-<div class="directory-status"><span class="directory-pill recruiting">Applications open</span><span class="directory-pill recruiting">Departments recruiting</span><span class="directory-pill">City coming soon</span><span class="directory-pill">Player businesses supported</span></div>
-<div class="directory-grid">
-<article class="directory-card" style="--directory-bg:url('assets/slide-police.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Emergency Department</span><span class="directory-state open">Recruiting</span></div><h3>Police Department</h3><p>Wear the badge and become part of the stories everyone talks about—patrol the streets, follow evidence, chase suspects and decide how your officer earns respect.</p><ul><li>Patrol and response roles</li><li>Investigations and specialist progression</li><li>Leadership opportunities before launch</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/slide-city-life.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Emergency Department</span><span class="directory-state open">Recruiting</span></div><h3>EMS & Medical</h3><p>Race toward the calls others run from. Treat injuries, support recovery and give every emergency scene a reason to continue after the sirens stop.</p><ul><li>Paramedics and medical staff</li><li>Scene response and patient care</li><li>Department growth and leadership</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/city-overview.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Government Service</span><span class="directory-state">In-House</span></div><h3>City Hall & Licence Centre</h3><p>Earn the right to carry, hunt, fish or fly. City Hall turns licences into real milestones your character must prepare for and achieve.</p><ul><li>Weapon licence</li><li>Open new legal lifestyles</li><li>Pilot licence and future permits</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/slide-motors.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Automotive Business</span><span class="directory-state open">Recruiting</span></div><h3>Kingz Autos</h3><p>Build your reputation one vehicle at a time. Diagnose faults, rescue stranded drivers and transform forgotten shells into cars worth showing off.</p><ul><li>Mechanics and service staff</li><li>Tow and flatbed drivers</li><li>Management and customer-facing roles</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/slide-city-life.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Vehicle Sales</span><span class="directory-state">Coming Soon</span></div><h3>PDM & Luxury Motors</h3><p>Choose the car that fits your story. Explore the showroom, compare your options and make the moment you collect the keys feel like an achievement.</p><ul><li>Standard and luxury stock</li><li>Showroom vehicle previews</li><li>Future dealer employee opportunities</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/coffee-shop.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Player Business</span><span class="directory-state open">Recruiting</span></div><h3>GLRP Coffee</h3><p>Clock in somewhere players actually gather. Learn the menu, serve regulars and help turn GLRP Coffee into the backdrop for friendships, deals and city gossip.</p><ul><li>Staff and management roles</li><li>Stock ordering and crafting</li><li>Customer service and social roleplay</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/slide-dispensary.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Player Business</span><span class="directory-state">Coming Soon</span></div><h3>Dispensary</h3><p>Step into a player-run storefront with its own identity, customers and supply chain. Build trust, move product and make the dispensary part of the neighbourhood.</p><ul><li>Retail and staff roleplay</li><li>Custom products and stock</li><li>Business ownership opportunities</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/city-ongoings.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Entertainment</span><span class="directory-state">In-House</span></div><h3>Crown Casino</h3><p>Dress sharp, buy your chips and test your nerve under the lights. The Crown Casino is built for risky hands, VIP nights and social scenes that can turn in an instant.</p><ul><li>Blackjack and casino tables</li><li>Casino wallet and chips</li><li>Events, VIP nights and social scenes</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/slide-social.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Small Business</span><span class="directory-state open">Applications</span></div><h3>Street Food & City Stands</h3><p>Claim a corner and build a local name. Sell food, goods or ideas face to face and turn a small stand into a place the neighbourhood recognises.</p><ul><li>Custom stand placement</li><li>Worker characters and stock</li><li>Markets, food and local trading</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/city-ongoings.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">City Economy</span><span class="directory-state open">Applications</span></div><h3>Player-Owned Businesses</h3><p>Bring your idea, recruit people you trust and create a venue players return to. The strongest businesses become part of the city’s culture, not just another marker.</p><ul><li>Owners, managers and employees</li><li>Stock, crafting and customer systems</li><li>Business spotlights and city promotion</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/hero.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Housing Service</span><span class="directory-state">Launch Ready</span></div><h3>Starter Homes & Apartments</h3><p>Land with somewhere safe to breathe, unpack and plan your next move. Your first home gives the story a starting point before you work toward something bigger.</p><ul><li>New-player arrival support</li><li>Starter equipment and storage</li><li>Housing and lifestyle progression</li></ul></div></article>
-<article class="directory-card" style="--directory-bg:url('assets/phone-apps.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Connected City Service</span><span class="directory-state">In-House</span></div><h3>GLRP Phone & Services</h3><p>Carry the city in your pocket. Find work, reach friends, follow local news and stay close to the opportunities that can change your night.</p><ul><li>Messages and city feed</li><li>Business and service apps</li><li>News, events and city contacts</li></ul></div></article>
-</div>
-<div class="directory-footer"><p><strong>Looking for a role that is not listed?</strong><br>Join the Discord and register your interest. GLRP is building its launch community across departments, businesses, gangs and everyday civilian life.</p><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Register Interest</a></div>
-</div></section>
-
-
-<section class="city-map-section" id="city-map"><div class="wrap">
-<div class="city-map-head"><div><span class="kicker">Interactive GLRP location guide</span><h2>Know the city.<br><span class="accent">Find your next move.</span></h2></div><p>Explore the places where GLRP stories begin. Find the departments that need recruits, the businesses waiting for regulars and the locations that could become part of your character’s daily life.</p></div>
-<div class="city-map-filters" id="cityMapFilters"><button class="city-map-filter active" data-map-filter="all">All Locations</button><button class="city-map-filter" data-map-filter="service">City Services</button><button class="city-map-filter" data-map-filter="automotive">Automotive</button><button class="city-map-filter" data-map-filter="business">Businesses</button><button class="city-map-filter" data-map-filter="lifestyle">Lifestyle</button><button class="city-map-filter" data-map-filter="progression">Progression</button></div>
-<div class="city-map-shell">
-<div class="city-map-board" id="cityMapBoard" aria-label="Interactive GLRP city locations">
-<div class="city-map-road road-a"></div><div class="city-map-road road-b"></div><div class="city-map-road road-c"></div><div class="city-map-road road-d"></div><div class="city-map-road road-e"></div>
-<div class="city-map-zone zone-north">North district</div><div class="city-map-zone zone-central">Central city</div><div class="city-map-zone zone-east">East district</div><div class="city-map-zone zone-south">South industrial</div><div class="city-map-zone zone-west">West side</div>
-<button class="city-map-pin active" style="--x:47%;--y:40%;--pin:#ff6b1a" data-location="cityhall" data-map-cat="service" aria-label="City Hall"><span>CH</span></button>
-<button class="city-map-pin" style="--x:60%;--y:33%;--pin:#4aa8ff" data-location="police" data-map-cat="service" aria-label="Police Department"><span>PD</span></button>
-<button class="city-map-pin" style="--x:54%;--y:48%;--pin:#ef4d5b" data-location="ems" data-map-cat="service" aria-label="EMS and Medical"><span>EMS</span></button>
-<button class="city-map-pin" style="--x:26%;--y:67%;--pin:#ff9b38" data-location="kingz" data-map-cat="automotive" aria-label="Kingz Autos"><span>KA</span></button>
-<button class="city-map-pin" style="--x:37%;--y:57%;--pin:#ffc24f" data-location="pdm" data-map-cat="automotive" aria-label="PDM Dealership"><span>PDM</span></button>
-<button class="city-map-pin" style="--x:21%;--y:41%;--pin:#d4a2ff" data-location="luxury" data-map-cat="automotive" aria-label="Luxury Motors"><span>LUX</span></button>
-<button class="city-map-pin" style="--x:72%;--y:47%;--pin:#ff9552" data-location="coffee" data-map-cat="business lifestyle" aria-label="GLRP Coffee"><span>CF</span></button>
-<button class="city-map-pin" style="--x:79%;--y:29%;--pin:#58e58a" data-location="dispensary" data-map-cat="business lifestyle" aria-label="Dispensary"><span>DSP</span></button>
-<button class="city-map-pin" style="--x:68%;--y:68%;--pin:#9d4dff" data-location="casino" data-map-cat="lifestyle business" aria-label="Crown Casino"><span>♠</span></button>
-<button class="city-map-pin" style="--x:36%;--y:22%;--pin:#4fd2d9" data-location="apartments" data-map-cat="lifestyle progression" aria-label="Starter Apartments"><span>APT</span></button>
-<button class="city-map-pin" style="--x:43%;--y:81%;--pin:#83b95a" data-location="recycling" data-map-cat="progression service" aria-label="Recycling Hub"><span>REC</span></button>
-<button class="city-map-pin" style="--x:84%;--y:58%;--pin:#ff6f91" data-location="stands" data-map-cat="business lifestyle" aria-label="City Stands and Street Food"><span>ST</span></button>
-</div>
-<aside class="city-map-panel" id="cityMapPanel">
-<div class="city-map-panel-top"><span class="city-map-category" id="mapCategory">City services</span><span class="city-map-state" id="mapState">Applications open</span></div>
-<h3 id="mapTitle">City Hall & Licence Centre</h3>
-<p id="mapDescription">The official starting point for licences, permits and city-issued approvals. City Hall connects civilian progression to weapon, hunting, fishing and pilot licence routes.</p>
-<div class="city-map-meta"><div><small>Main purpose</small><strong id="mapPurpose">Licences & civic services</strong></div><div><small>Best for</small><strong id="mapAudience">Citizens and new arrivals</strong></div></div>
-<ul class="city-map-highlights" id="mapHighlights"><li>Weapon licence applications and tests</li><li>Open new legal lifestyles</li><li>Pilot licence progression</li><li>Future permits and city services</li></ul>
-<div class="city-map-tip"><strong>In-game route:</strong> Exact GPS markers and access instructions are provided through the city, phone and official Discord information.</div>
-<div class="city-map-actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Ask in Discord</a><a class="btn" href="#directory">Full Directory</a></div>
-</aside>
-</div>
-<div class="city-map-list" id="cityMapList">
-<button class="active" data-location="cityhall" data-map-cat="service"><b>City services</b><span>City Hall</span></button><button data-location="police" data-map-cat="service"><b>Emergency</b><span>Police Department</span></button><button data-location="ems" data-map-cat="service"><b>Emergency</b><span>EMS & Medical</span></button><button data-location="kingz" data-map-cat="automotive"><b>Automotive</b><span>Kingz Autos</span></button>
-<button data-location="pdm" data-map-cat="automotive"><b>Automotive</b><span>PDM Dealership</span></button><button data-location="luxury" data-map-cat="automotive"><b>Automotive</b><span>Luxury Motors</span></button><button data-location="coffee" data-map-cat="business lifestyle"><b>Business</b><span>GLRP Coffee</span></button><button data-location="dispensary" data-map-cat="business lifestyle"><b>Business</b><span>Dispensary</span></button>
-<button data-location="casino" data-map-cat="lifestyle business"><b>Lifestyle</b><span>Crown Casino</span></button><button data-location="apartments" data-map-cat="lifestyle progression"><b>New players</b><span>Starter Apartments</span></button><button data-location="recycling" data-map-cat="progression service"><b>Progression</b><span>Recycling Hub</span></button><button data-location="stands" data-map-cat="business lifestyle"><b>Business</b><span>City Stands</span></button>
-</div>
-<p class="city-map-note">This is a website location guide rather than a street-by-street GPS map. Exact in-city routes can change as GLRP expands and are shown through the appropriate game systems.</p>
-</div></section>
-
-<section class="server-hub" id="server"><div class="wrap"><div class="server-shell">
-<div class="server-top"><div><span class="kicker">GLRP server access centre</span><h2>One place to<br><span class="accent">get city ready.</span></h2></div><p>Your route into GLRP starts here. Check who is in the city, grab the official connection details and get ready to land without searching through pages of instructions.</p></div>
-<div class="server-status-grid">
-<article class="server-status-card featured"><small>City status</small><strong class="server-live-line"><i class="server-dot" id="serverDot"></i><span id="serverState">Coming Soon</span></strong><span id="serverMessage">Applications and department recruitment are open before launch.</span></article>
-<article class="server-status-card"><small>Players online</small><strong id="playerCount">1</strong><span id="capacityText">1 player currently connected.</span></article>
-<article class="server-status-card"><small>FiveM join code</small><strong>A44Z4M5</strong><span>Official GLRP Cfx.re connection code.</span></article>
-<article class="server-status-card"><small>Community access</small><strong>Discord Open</strong><span>Applications, news, support and launch announcements.</span></article>
-</div>
-<div class="access-grid">
-<div class="access-panel"><h3>Official connection details</h3><p>Use the direct button or copy one of these into FiveM. Everything below points to the official GLRP server listing.</p>
-<div class="connect-field"><code>cfx.re/join/a44z4m5</code><button class="copy-btn" type="button" data-copy="cfx.re/join/a44z4m5">Copy link</button></div>
-<div class="connect-field"><code>connect cfx.re/join/a44z4m5</code><button class="copy-btn" type="button" data-copy="connect cfx.re/join/a44z4m5">Copy command</button></div>
-<div class="connect-field"><code>a44z4m5</code><button class="copy-btn" type="button" data-copy="a44z4m5">Copy code</button></div>
-</div>
-<div class="access-panel"><h3>First time joining GLRP?</h3><p>Follow these four steps and you will be ready for launch without hunting through different pages.</p><div class="join-guide">
-<div class="join-step"><b>Step 01</b><strong>Join Discord</strong><span>Read announcements, rules and application information.</span></div>
-<div class="join-step"><b>Step 02</b><strong>Install FiveM</strong><span>Make sure GTA V and FiveM are installed and updated.</span></div>
-<div class="join-step"><b>Step 03</b><strong>Prepare your character</strong><span>Choose a believable name, story and direction for serious roleplay.</span></div>
-<div class="join-step"><b>Step 04</b><strong>Connect at launch</strong><span>Use the official button or paste the connection command into F8.</span></div>
-</div></div>
-</div>
-<div class="server-actions"><a class="btn primary" href="https://cfx.re/join/a44z4m5" target="_blank">Direct Connect</a><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><button class="btn" type="button" id="refreshStatus">Refresh Status</button></div>
-<p class="status-note">The live FiveM status is treated as an extra convenience. If the public server-list endpoint is unavailable or launch access is restricted, the website safely keeps the official Coming Soon status instead of showing a broken panel.</p>
-</div></div></section>
-
-<section class="handbook" id="start"><div class="wrap">
-<div class="handbook-head"><div><span class="kicker">New player handbook</span><h2>Land prepared.<br><span class="accent">Start your story.</span></h2></div><p>Your first night should feel exciting, not confusing. Follow the guide from arrival to your first job, first collection and first place to call home, then let the city open naturally around you.</p></div>
+</div></div></section><section class="handbook" id="start"><div class="wrap">
+<div class="handbook-head"><div><span class="kicker">New player handbook</span><h2>Land prepared.<br/><span class="accent">Start your story.</span></h2></div><p>Your first night should feel exciting, not confusing. Follow the guide from arrival to your first job, first collection and first place to call home, then let the city open naturally around you.</p></div>
 <div class="handbook-shell">
-<div class="handbook-tabs" role="tablist" aria-label="New player handbook sections">
-<button class="handbook-tab active" type="button" role="tab" aria-selected="true" data-handbook-tab="arrival"><b>01</b><span>First 15 Minutes<small>Arrival and first priorities</small></span></button>
-<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="starter"><b>02</b><span>Starter Gear<small>What your first items do</small></span></button>
-<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="paths"><b>03</b><span>Life Paths<small>Progression and daily goals</small></span></button>
-<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="collect"><b>04</b><span>Cards & Creatures<small>Collect, scan and evolve</small></span></button>
-<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="home"><b>05</b><span>Home & Storage<small>Apartments and backpacks</small></span></button>
-<button class="handbook-tab" type="button" role="tab" aria-selected="false" data-handbook-tab="help"><b>06</b><span>Help & Support<small>Rules, staff and Discord</small></span></button>
+<div aria-label="New player handbook sections" class="handbook-tabs" role="tablist">
+<button aria-selected="true" class="handbook-tab active" data-handbook-tab="arrival" role="tab" type="button"><b>01</b><span>First 15 Minutes<small>Arrival and first priorities</small></span></button>
+<button aria-selected="false" class="handbook-tab" data-handbook-tab="starter" role="tab" type="button"><b>02</b><span>Starter Gear<small>What your first items do</small></span></button>
+<button aria-selected="false" class="handbook-tab" data-handbook-tab="paths" role="tab" type="button"><b>03</b><span>Life Paths<small>Progression and daily goals</small></span></button>
+<button aria-selected="false" class="handbook-tab" data-handbook-tab="collect" role="tab" type="button"><b>04</b><span>Cards &amp; Creatures<small>Collect, scan and evolve</small></span></button>
+<button aria-selected="false" class="handbook-tab" data-handbook-tab="home" role="tab" type="button"><b>05</b><span>Home &amp; Storage<small>Apartments and backpacks</small></span></button>
+<button aria-selected="false" class="handbook-tab" data-handbook-tab="help" role="tab" type="button"><b>06</b><span>Help &amp; Support<small>Rules, staff and Discord</small></span></button>
 </div>
 <div class="handbook-content">
-<article class="handbook-panel active" role="tabpanel" data-handbook-panel="arrival" data-mark="01">
+<article class="handbook-panel active" data-handbook-panel="arrival" data-mark="01" role="tabpanel">
 <div class="handbook-panel-top"><div><span class="kicker">Your first session</span><h3>Five clear steps after landing.</h3><p>GLRP is built so new players can learn by doing. You do not need to understand every system immediately—focus on these first actions and the rest of the city opens naturally.</p></div><span class="handbook-badge">Start here</span></div>
 <div class="handbook-timeline">
 <div class="handbook-time"><b>Minute 01</b><strong>Finish your character</strong><span>Create a believable identity, outfit and direction that fits serious roleplay.</span></div>
@@ -560,8 +455,7 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 </div>
 <div class="handbook-note"><strong>Best first move:</strong> keep your starter tools safe, read the phone and Life Path screens, and ask questions in character where possible.</div>
 </article>
-
-<article class="handbook-panel" role="tabpanel" data-handbook-panel="starter" data-mark="02">
+<article class="handbook-panel" data-handbook-panel="starter" data-mark="02" role="tabpanel">
 <div class="handbook-panel-top"><div><span class="kicker">Starter equipment</span><h3>Your first tools already connect to bigger systems.</h3><p>The starter kit is designed to introduce different sides of GLRP without flooding you with high-value gear. Each item points toward a system you can grow into.</p></div><span class="handbook-badge">Included at arrival</span></div>
 <div class="starter-grid">
 <div class="starter-item"><i>BAG</i><strong>Starter Backpack</strong><span>Portable extra storage for everyday items. Keep it organised and use home storage for things you do not need on the street.</span></div>
@@ -573,35 +467,31 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 </div>
 <div class="handbook-note"><strong>Starter gear is a beginning, not an endgame reward.</strong> Better storage, rarer cards, stronger creatures, vehicles and specialist equipment come through progression and roleplay.</div>
 </article>
-
-<article class="handbook-panel" role="tabpanel" data-handbook-panel="paths" data-mark="03">
-<div class="handbook-panel-top"><div><span class="kicker">Character progression</span><h3>Life Paths turn actions into reputation.</h3><p>Life Paths give characters themed objectives, XP and unlocks. Early progression starts at street level before deeper specialist paths become available.</p></div><span class="handbook-badge">Daily & long-term</span></div>
+<article class="handbook-panel" data-handbook-panel="paths" data-mark="03" role="tabpanel">
+<div class="handbook-panel-top"><div><span class="kicker">Character progression</span><h3>Life Paths turn actions into reputation.</h3><p>Life Paths give characters themed objectives, XP and unlocks. Early progression starts at street level before deeper specialist paths become available.</p></div><span class="handbook-badge">Daily &amp; long-term</span></div>
 <div class="handbook-columns">
 <div class="handbook-box"><h4>How progression works</h4><ul><li>Choose or begin the available starter route.</li><li>Complete daily and milestone objectives.</li><li>Earn path XP from real gameplay actions.</li><li>Unlock perks, specialist tasks and stronger opportunities.</li><li>Build a character identity through the work you actually do.</li></ul></div>
 <div class="handbook-box"><h4>Examples across the city</h4><ul><li>Bins, recycling and street survival.</li><li>Mechanic diagnostics, repairs and road calls.</li><li>Deliveries, businesses and supplier progression.</li><li>Creature surveys, collecting and care.</li><li>Future legal, criminal and specialist paths.</li></ul></div>
 </div>
 <div class="handbook-note"><strong>Fresh goals every day are paced.</strong> Once a daily task is completed, move on to another activity instead of repeating one action endlessly.</div>
 </article>
-
-<article class="handbook-panel" role="tabpanel" data-handbook-panel="collect" data-mark="04">
-<div class="handbook-panel-top"><div><span class="kicker">Collectible gameplay</span><h3>Open packs. Scan districts. Build a team.</h3><p>GLRP combines interactive card packs with a creature-catching system. Both are designed as long-term collections rather than one-time menus.</p></div><span class="handbook-badge">Collect & compete</span></div>
+<article class="handbook-panel" data-handbook-panel="collect" data-mark="04" role="tabpanel">
+<div class="handbook-panel-top"><div><span class="kicker">Collectible gameplay</span><h3>Open packs. Scan districts. Build a team.</h3><p>GLRP combines interactive card packs with a creature-catching system. Both are designed as long-term collections rather than one-time menus.</p></div><span class="handbook-badge">Collect &amp; compete</span></div>
 <div class="handbook-columns">
 <div class="handbook-box"><h4>Card packs</h4><ul><li>Use the interactive pull-tab opening experience.</li><li>Reveal different rarities and collection pieces.</li><li>Keep early pulls inside your collection flow.</li><li>Build toward trading, showcases and future competition.</li></ul></div>
 <div class="handbook-box"><h4>Creature catching</h4><ul><li>Use the scanner to find district signals.</li><li>Capture creatures with different stats and rarity.</li><li>Build a team, train favourites and explore evolution.</li><li>Use duplicates and eggs as part of long-term progression.</li></ul></div>
 </div>
 <div class="handbook-note"><strong>Explore instead of standing still.</strong> Creature signals, surveys and collection opportunities are designed to send players through different districts.</div>
 </article>
-
-<article class="handbook-panel" role="tabpanel" data-handbook-panel="home" data-mark="05">
-<div class="handbook-panel-top"><div><span class="kicker">Apartments & storage</span><h3>Your backpack travels. Your home keeps the rest safe.</h3><p>Portable storage and apartment storage have different jobs. Learning that difference early keeps your inventory clean and stops important items being carried everywhere.</p></div><span class="handbook-badge">Keep organised</span></div>
+<article class="handbook-panel" data-handbook-panel="home" data-mark="05" role="tabpanel">
+<div class="handbook-panel-top"><div><span class="kicker">Apartments &amp; storage</span><h3>Your backpack travels. Your home keeps the rest safe.</h3><p>Portable storage and apartment storage have different jobs. Learning that difference early keeps your inventory clean and stops important items being carried everywhere.</p></div><span class="handbook-badge">Keep organised</span></div>
 <div class="handbook-columns">
 <div class="handbook-box"><h4>Backpack</h4><ul><li>Use it for items you need while travelling.</li><li>Keep job tools and everyday supplies organised.</li><li>Different backpack types may offer different storage value.</li><li>Avoid filling portable space with items that belong at home.</li></ul></div>
 <div class="handbook-box"><h4>Apartment tabs</h4><ul><li>Storage keeps spare items and long-term supplies at home.</li><li>Wardrobe access handles saved outfits and character clothing.</li><li>Home controls give you a safe base before entering city life.</li><li>Future properties can expand how your character lives and stores belongings.</li></ul></div>
 </div>
 <div class="handbook-note"><strong>Simple rule:</strong> carry what your current scene needs and store the rest. This makes jobs, searches and inventory management much easier.</div>
 </article>
-
-<article class="handbook-panel" role="tabpanel" data-handbook-panel="help" data-mark="06">
+<article class="handbook-panel" data-handbook-panel="help" data-mark="06" role="tabpanel">
 <div class="handbook-panel-top"><div><span class="kicker">Community support</span><h3>Get help without breaking the scene.</h3><p>GLRP supports new and experienced players. Use in-character help for normal city questions and official support channels for technical issues, applications or rule concerns.</p></div><span class="handbook-badge">Discord open</span></div>
 <div class="handbook-columns">
 <div class="handbook-box"><h4>Use in-character help for</h4><ul><li>Finding a mechanic, taxi, business or city service.</li><li>Learning where legal work and public locations are.</li><li>Meeting people and asking believable city questions.</li><li>Building scenes instead of treating everything like a game menu.</li></ul></div>
@@ -611,147 +501,309 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 </article>
 </div>
 </div>
-</div></section>
-
-
-<section class="news-hub" id="news"><div class="wrap">
-<div class="section-head"><div><span class="kicker">Official GLRP announcements</span><h2>City news,<br><span class="accent">events & updates.</span></h2></div><p>Follow the road to launch, see what is being prepared across the city and discover the events planned for players, departments and businesses. Final dates and application details are announced through the official GLRP Discord.</p></div>
+</div></section><section class="role-matcher" id="role-match"><div class="wrap">
+<div class="matcher-head">
+<div><span class="kicker">Interactive GLRP role matcher</span><h2>What kind of story<br/><span class="accent">should you start?</span></h2></div>
+<p>Answer four quick questions and GLRP will point you toward a role that matches how you actually like to play. There is no wrong result—you can change direction whenever your character’s story takes a turn.</p>
+</div>
+<div class="matcher-shell" id="roleMatcher">
+<aside class="matcher-side">
+<small>Your GLRP starting route</small>
+<h3>Find the lane that fits you.</h3>
+<p>This is not a whitelist test. It is a quick way to discover which part of the city could give you the strongest first chapter.</p>
+<div aria-hidden="true" class="matcher-progress"><span class="active"></span><span></span><span></span><span></span></div>
+<div class="matcher-step-label" id="matcherStepLabel">Question 1 of 4</div>
+<div class="matcher-side-list"><span>Department careers</span><span>Player businesses</span><span>Cars and racing</span><span>Street progression</span><span>Collecting and discovery</span><span>Civilian life</span></div>
+</aside>
+<div class="matcher-main">
+<article class="match-question active" data-match-step="0">
+<div class="question-number">Question 01</div><h3>What should your first big GLRP moment feel like?</h3><p>Choose the scene you would be most excited to turn into a proper character story.</p>
+<div class="match-options">
+<button class="match-option" data-match-tags="police ems" type="button"><i>01</i><strong>Answer an urgent call</strong><span>Take responsibility when the city needs someone calm, trained and ready.</span></button>
+<button class="match-option" data-match-tags="mechanic business" type="button"><i>02</i><strong>Build something people remember</strong><span>Create a car, service or business that earns a real reputation.</span></button>
+<button class="match-option" data-match-tags="street racing" type="button"><i>03</i><strong>Make a name under pressure</strong><span>Chase risk, rivalry, money and respect where every choice has consequences.</span></button>
+<button class="match-option" data-match-tags="collector civilian" type="button"><i>04</i><strong>Discover your own path</strong><span>Explore the city, meet people and find opportunities other players overlook.</span></button>
+</div>
+</article>
+<article class="match-question" data-match-step="1">
+<div class="question-number">Question 02</div><h3>Where would your character naturally spend the most time?</h3><p>Think about the place where conversations, contacts and long-running scenes would happen.</p>
+<div class="match-options">
+<button class="match-option" data-match-tags="police ems" type="button"><i>01</i><strong>Patrol, hospital or emergency scenes</strong><span>Work as part of a trained department with structure and responsibility.</span></button>
+<button class="match-option" data-match-tags="mechanic racing" type="button"><i>02</i><strong>Workshop, showroom or car meet</strong><span>Live around engines, custom builds, customers and street machines.</span></button>
+<button class="match-option" data-match-tags="business civilian" type="button"><i>03</i><strong>A busy shop or social business</strong><span>Build regular customers, employ players and become part of daily city life.</span></button>
+<button class="match-option" data-match-tags="street collector" type="button"><i>04</i><strong>Backstreets and unknown locations</strong><span>Follow rumours, rare finds, hidden routes and opportunities with an edge.</span></button>
+</div>
+</article>
+<article class="match-question" data-match-step="2">
+<div class="question-number">Question 03</div><h3>What kind of pressure creates the best roleplay for you?</h3><p>Your answer helps match you to the pace and consequences you are likely to enjoy.</p>
+<div class="match-options">
+<button class="match-option" data-match-tags="police ems" type="button"><i>01</i><strong>Being trusted with real responsibility</strong><span>Other players depend on your judgement, communication and teamwork.</span></button>
+<button class="match-option" data-match-tags="mechanic business" type="button"><i>02</i><strong>Protecting a reputation you built</strong><span>Customers, employees and competitors all remember how you operate.</span></button>
+<button class="match-option" data-match-tags="street racing" type="button"><i>03</i><strong>Risk, rivalry and consequences</strong><span>The bigger the reward, the more your decisions can change the story.</span></button>
+<button class="match-option" data-match-tags="collector civilian" type="button"><i>04</i><strong>Patience, discovery and slow progression</strong><span>You enjoy earning knowledge, contacts and rare rewards over time.</span></button>
+</div>
+</article>
+<article class="match-question" data-match-step="3">
+<div class="question-number">Question 04</div><h3>Which final direction sounds most like your character?</h3><p>This last choice separates the closest matches and gives you one clear starting recommendation.</p>
+<div class="match-options">
+<button class="match-option" data-match-tags="police" type="button"><i>01</i><strong>Officer &amp; investigator</strong><span>Patrol, question, protect and make difficult calls when the city is watching.</span></button>
+<button class="match-option" data-match-tags="ems" type="button"><i>02</i><strong>Medic &amp; emergency responder</strong><span>Save lives, calm scenes and become someone players trust at their lowest point.</span></button>
+<button class="match-option" data-match-tags="mechanic" type="button"><i>03</i><strong>Mechanic &amp; recovery driver</strong><span>Repair, recover and build the machines that define GLRP’s roads.</span></button>
+<button class="match-option" data-match-tags="business" type="button"><i>04</i><strong>Owner &amp; employer</strong><span>Create a place, lead a team and build a business people choose to visit.</span></button>
+<button class="match-option" data-match-tags="street" type="button"><i>05</i><strong>Street hustler &amp; crew builder</strong><span>Earn contacts, respect and access through choices with real consequences.</span></button>
+<button class="match-option" data-match-tags="racing" type="button"><i>06</i><strong>Driver &amp; car-culture name</strong><span>Build your machine, learn the roads and chase a reputation through speed.</span></button>
+<button class="match-option" data-match-tags="collector" type="button"><i>07</i><strong>Creature hunter &amp; collector</strong><span>Follow signals, find rare captures and build a collection no one else owns.</span></button>
+<button class="match-option" data-match-tags="civilian" type="button"><i>08</i><strong>Free civilian story</strong><span>Start without a label and let jobs, friendships and city life choose the path.</span></button>
+</div>
+</article>
+<article aria-live="polite" class="match-result" id="matchResult">
+<span class="result-badge">Your recommended GLRP starting route</span>
+<h3 id="matchResultTitle">Civilian Story</h3>
+<div class="result-line" id="matchResultLine">Start small and let the city reveal who your character becomes.</div>
+<p class="result-description" id="matchResultDescription"></p>
+<div class="result-grid"><div class="result-card"><small>Your strongest first move</small><strong id="matchResultFirst"></strong></div><div class="result-card"><small>Where the story can lead</small><strong id="matchResultFuture"></strong></div></div>
+<div class="result-actions"><a class="btn primary" href="#directory" id="matchExploreLink">Explore this route</a><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank">Join the GLRP Discord</a><button class="btn match-restart" id="matchRestart" type="button">Try again</button></div>
+</article>
+<div class="matcher-controls" id="matcherControls"><button class="matcher-back" hidden="" id="matcherBack" type="button">← Previous question</button><span class="matcher-skip">Four quick choices. No application or account needed.</span></div>
+</div>
+</div>
+</div></section><section class="character-builder" id="character-builder"><div class="wrap">
+<div class="builder-head">
+<div><span class="kicker">Interactive character builder</span><h2>Arrive with a person.<br/><span class="accent">Not just a name.</span></h2></div>
+<p>Build the foundations of a believable GLRP character before launch. Shape their background, goals, strengths and flaws, then copy a clean draft you can use when preparing your whitelist or department application.</p>
+</div>
+<div class="builder-shell">
+<form autocomplete="off" class="builder-form" id="characterBuilderForm">
+<div class="builder-intro"><div><span class="kicker">Your first chapter</span><h3>Create someone the city can change.</h3><p>Keep the character grounded enough to grow. The strongest stories leave room for mistakes, setbacks, relationships and unexpected turns.</p></div><span class="builder-local">Saved on this device</span></div>
+<div class="builder-grid">
+<div class="builder-field"><label for="cbName">Character name</label><input id="cbName" maxlength="36" placeholder="Example: Marcus Hale"/><small>Use a believable first and last name.</small></div>
+<div class="builder-field"><label for="cbAge">Character age</label><input id="cbAge" max="90" min="18" placeholder="24" type="number"/><small>Choose an age that fits their experience.</small></div>
+<div class="builder-field"><label for="cbOrigin">Where are they coming from?</label><select id="cbOrigin"><option value="">Choose a background</option><option>Local to Los Santos</option><option>Moved for a fresh start</option><option>Following family or friends</option><option>Escaping an old reputation</option><option>Looking for work and opportunity</option><option>Returning after years away</option></select></div>
+<div class="builder-field"><label for="cbPath">First direction</label><select id="cbPath"><option value="">Choose a starting direction</option><option>Civilian life and honest work</option><option>Player business and entrepreneurship</option><option>Kingz Autos and car culture</option><option>Police Department</option><option>EMS and medical roleplay</option><option>Street life and criminal progression</option><option>Racing and performance cars</option><option>Creature hunting and collecting</option></select></div>
+<div class="builder-field"><label for="cbStrength">Strongest quality</label><input id="cbStrength" maxlength="70" placeholder="Loyal, patient, ambitious, calm under pressure…"/></div>
+<div class="builder-field"><label for="cbFlaw">Real character flaw</label><input id="cbFlaw" maxlength="70" placeholder="Proud, reckless, distrustful, easily influenced…"/></div>
+<div class="builder-field wide"><label for="cbGoal">What do they want from the city?</label><textarea id="cbGoal" maxlength="260" placeholder="Describe a goal they can work toward over time—not something they should receive immediately."></textarea><span class="builder-counter" data-counter-for="cbGoal">0 / 260</span></div>
+<div class="builder-field wide"><label for="cbStory">Short background story</label><textarea id="cbStory" maxlength="650" placeholder="Where did they come from? What happened before they arrived? Why is GLRP the place where their next chapter begins?"></textarea><span class="builder-counter" data-counter-for="cbStory">0 / 650</span></div>
+<div class="builder-field wide"><label for="cbScene">The first scene you want to create</label><textarea id="cbScene" maxlength="260" placeholder="Example: Ask for work at Kingz Autos, meet a landlord, report a stolen bag, or find someone from their past."></textarea><span class="builder-counter" data-counter-for="cbScene">0 / 260</span></div>
+</div>
+<div class="builder-prompts"><button class="builder-prompt" data-builder-prompt="fresh" type="button">Fresh-start idea</button><button class="builder-prompt" data-builder-prompt="business" type="button">Business idea</button><button class="builder-prompt" data-builder-prompt="service" type="button">Department idea</button><button class="builder-prompt" data-builder-prompt="street" type="button">Street-life idea</button><button class="builder-prompt" data-builder-prompt="collector" type="button">Collector idea</button></div>
+<div class="builder-actions"><button class="btn primary" type="submit">Build Character Draft</button><button class="btn" id="copyCharacterDraft" type="button">Copy Application Draft</button><button class="btn builder-clear" id="clearCharacterDraft" type="button">Clear</button></div>
+<div aria-live="polite" class="builder-save-state" id="builderSaveState">Your draft will autosave locally as you type.</div>
+</form>
+<aside aria-live="polite" class="builder-preview" id="characterPreview">
+<div class="preview-top"><div><small>GLRP character profile</small><h3 class="preview-name" id="previewName">Unnamed Character</h3><div class="preview-meta" id="previewMeta">Age unknown • Direction undecided</div></div><div class="preview-score" id="previewScore" style="--score:0%"><strong id="previewScoreNumber">0</strong><span>ready</span></div></div>
+<div class="preview-quote" id="previewQuote">“A good character arrives with a reason to move forward—and enough flaws for the city to push back.”</div>
+<div class="preview-grid">
+<div class="preview-block"><small>Background</small><strong id="previewOrigin">Not chosen yet</strong></div>
+<div class="preview-block"><small>Starting path</small><strong id="previewPath">Not chosen yet</strong></div>
+<div class="preview-block"><small>Strength</small><strong id="previewStrength">Still to be defined</strong></div>
+<div class="preview-block"><small>Flaw</small><strong id="previewFlaw">Still to be defined</strong></div>
+<div class="preview-block wide"><small>Long-term goal</small><p id="previewGoal">Give your character something meaningful to chase.</p></div>
+<div class="preview-block wide"><small>Background story</small><p id="previewStory">Their history will appear here as you build it.</p></div>
+<div class="preview-block wide"><small>Opening scene</small><p id="previewScene">Plan a small first scene that gives other players a reason to respond.</p></div>
+</div>
+<div class="preview-footer"><span>This tool prepares a draft only. Official applications remain in the GLRP Discord.</span><button id="randomCharacterSpark" type="button">Give me a story spark →</button></div>
+</aside>
+</div>
+<div class="builder-disclaimer"><strong>Private by design:</strong> this builder runs entirely in your browser. It does not submit information to GLRP, GitHub or any external service. Use the copy button when you are ready to paste your draft into the correct Discord application channel.</div>
+</div></section><section class="first-week-planner" id="first-week"><div class="wrap">
+<div class="planner-heading"><div><span class="kicker">Your first seven days in GLRP</span><h2>Arrive with a plan.<br/><span class="accent">Leave with a reputation.</span></h2></div><p>Your first week should create contacts, money, direction and stories—not feel like a list of menus. Choose the life you want to chase and GLRP will build a practical seven-day route you can complete at your own pace.</p></div>
+<div class="planner-shell" id="firstWeekPlanner">
+<aside class="planner-sidebar">
+<small>Choose your starting focus</small><h3>What do you want your first week to become?</h3><p>Your route changes the daily goals below. Progress is saved privately on this device.</p>
+<div aria-label="First week paths" class="planner-paths" role="tablist">
+<button class="planner-path active" data-plan="civilian" type="button"><span>Civilian Foundation</span><span>→</span></button>
+<button class="planner-path" data-plan="business" type="button"><span>Business Builder</span><span>→</span></button>
+<button class="planner-path" data-plan="mechanic" type="button"><span>Kingz Autos</span><span>→</span></button>
+<button class="planner-path" data-plan="service" type="button"><span>Police or EMS</span><span>→</span></button>
+<button class="planner-path" data-plan="street" type="button"><span>Street Reputation</span><span>→</span></button>
+<button class="planner-path" data-plan="racing" type="button"><span>Car &amp; Racing Scene</span><span>→</span></button>
+<button class="planner-path" data-plan="collector" type="button"><span>Creature Collector</span><span>→</span></button>
+</div>
+<div class="planner-note"><strong>No speed-running required.</strong> These are story prompts, not mandatory deadlines. Let other players, consequences and unexpected scenes change the plan.</div>
+</aside>
+<div class="planner-main">
+<div class="planner-top"><div class="planner-progress-copy"><small id="plannerRouteLabel">Civilian foundation</small><strong id="plannerRouteTitle">Your first-week route</strong></div><div class="planner-percentage" id="plannerPercentage">0%</div></div>
+<div aria-label="First week completion" class="planner-bar"><span id="plannerProgressBar"></span></div>
+<div class="planner-days" id="plannerDays"></div>
+<div class="planner-actions"><button class="btn primary" id="copyWeekPlan" type="button">Copy My Plan</button><a class="btn" href="#start">Open New Player Handbook</a><button class="btn" id="resetWeekPlan" type="button">Reset This Route</button><span aria-live="polite" class="planner-status" id="plannerSaveState">Progress saves automatically.</span></div>
+</div>
+</div>
+</div></section><section class="section dark" id="journey"><div class="wrap"><div class="section-head"><div><span class="kicker">Your first hours</span><h2>From arrival<br/><span class="accent">to city life.</span></h2></div><p>The website walks new players through the same journey they will experience in game, making it clear what to do after landing and how the wider systems connect.</p></div><div class="journey">
+<div class="step" data-step="01"><strong>Step 01</strong><h3>Create your character</h3><p>Build your identity through the GLRP character, clothing and appearance systems.</p></div>
+<div class="step" data-step="02"><strong>Step 02</strong><h3>Land at the starter home</h3><p>Learn the basics, unpack your starter gear and understand your first objectives.</p></div>
+<div class="step" data-step="03"><strong>Step 03</strong><h3>Use your backpack &amp; phone</h3><p>Your backpack expands how you carry items, while your phone connects you to the city.</p></div>
+<div class="step" data-step="04"><strong>Step 04</strong><h3>Begin your Life Path</h3><p>Start at street level, complete tasks, earn XP and unlock deeper perks and routes.</p></div>
+<div class="step" data-step="05"><strong>Step 05</strong><h3>Build your reputation</h3><p>Work, hustle, collect, own, compete and turn your character into somebody known.</p></div>
+</div></div></section><section class="section" id="systems"><div class="wrap"><div class="section-head"><div><span class="kicker">Everything in the city</span><h2>Custom systems<br/><span class="accent">built around players.</span></h2></div><p>Pick the kind of experience you want and see where it can take you. Every system below is designed to create choices, progression and stories worth sharing with other players.</p></div>
+<div class="filter-row" id="filterRow"><button class="filter active" data-filter="all">All Systems</button><button class="filter" data-filter="progression">Progression</button><button class="filter" data-filter="vehicles">Vehicles</button><button class="filter" data-filter="business">Businesses</button><button class="filter" data-filter="street">Street Life</button><button class="filter" data-filter="social">Social &amp; City</button></div>
+<div class="systems-grid" id="systemsGrid">
+<article class="system-card" data-cat="progression"><span class="tag">Progression</span><div class="icon">LP</div><h3>GLRP Life Paths</h3><p>Let your actions define your identity. Start at street level, prove yourself through real tasks and unlock specialist paths that show the city what your character has become.</p><ul><li>Rise from the streets</li><li>Fresh goals every day</li><li>Unlock specialist identities</li></ul></article>
+<article class="system-card" data-cat="progression street"><span class="tag">Collect &amp; Battle</span><div class="icon">SCAN</div><h3>Creature Scanner &amp; Catching</h3><p>Follow strange signals into different districts, discover rare creatures and build a team that reflects where you explored, what you risked and what you managed to catch.</p><ul><li>Hunt rare district signals</li><li>Raise and evolve favourites</li><li>Turn every find into progress</li></ul></article>
+<article class="system-card" data-cat="progression social"><span class="tag">Collectible Game</span><div class="icon">PACK</div><h3>Card Packs</h3><p>Rip open every pack, chase the reveal and build a collection worth showing off. Common pulls start the journey; rare finds can define it.</p><ul><li>Feel every pack reveal</li><li>Build a collection with value</li><li>Prepare to trade and compete</li></ul></article>
+<article class="system-card" data-cat="vehicles business"><span class="tag">Kingz Autos</span><div class="icon">AUTO</div><h3>Standalone Mechanic System</h3><p>Turn a passion for cars into one of the city’s most respected careers. Find the fault, earn the customer’s trust and send vehicles back onto the street better than they arrived.</p><ul><li>Find faults customers can feel</li><li>Repair, service and upgrade</li><li>Work remains available around the clock</li></ul></article>
+<article class="system-card" data-cat="vehicles progression"><span class="tag">Vehicle Build</span><div class="icon">BUILD</div><h3>Project Cars</h3><p>Drag a forgotten shell back to the workshop and bring it to life piece by piece. Every completed stage takes you closer to a finished build you truly earned.</p><ul><li>Recover forgotten builds</li><li>Rebuild every stage by hand</li><li>Earn each finished upgrade</li></ul></article>
+<article class="system-card" data-cat="vehicles"><span class="tag">Dealerships</span><div class="icon">PDM</div><h3>PDM &amp; Luxury Dealers</h3><p>Walk the showroom, find the vehicle that fits your character and make it yours before collecting the keys. Buying a car should feel like a moment, not a menu click.</p><ul><li>See the car before committing</li><li>Make the purchase your own</li><li>Showrooms built for the city</li></ul></article>
+<article class="system-card" data-cat="vehicles"><span class="tag">In-House GLRP System</span><div class="icon">GAR</div><h3>Kings Garage System</h3><p>Give every vehicle in your collection a proper home. See what you own, where it is and what you want to drive next without losing the feeling of stepping into a real garage.</p><ul><li>Inspect every car properly</li><li>Your collection stays reliable</li><li>Know what is stored, out or ready</li></ul></article>
+<article class="system-card" data-cat="vehicles"><span class="tag">Performance</span><div class="icon">NOS</div><h3>NOS, Purge &amp; Neon</h3><p>Build a car people hear before they see. Light up the street, purge at the meet and hit the NOS when the road opens—then let the city remember the machine you created.</p></article>
+<article class="system-card" data-cat="business social"><span class="tag">Player Business</span><div class="icon">COFF</div><h3>Coffee Shop</h3><p>Clock in, learn the menu and turn every order into a reason for players to stay. Build a team, serve regulars and make the shop feel like a real part of the city.</p><ul><li>Keep the business supplied</li><li>Make every order feel physical</li><li>Build a team and grow earnings</li></ul></article>
+<article class="system-card" data-cat="business social"><span class="tag">Player Owned</span><div class="icon">STAND</div><h3>City Stands</h3><p>Start small and make a corner your own. Choose the pitch, stock the stand and build enough local attention that players know exactly where to find you.</p><ul><li>Choose the perfect pitch</li><li>Create the face of your stand</li><li>Keep stock and progress saved</li></ul></article>
+<article class="system-card" data-cat="business"><span class="tag">Economy</span><div class="icon">SHOP</div><h3>Markets, Vending &amp; Street Food</h3><p>Follow the flow of money through the city. Grab food on the move, discover local sellers or build your own hustle where foot traffic turns into opportunity.</p></article>
+<article class="system-card" data-cat="street progression"><span class="tag">Starter Path</span><div class="icon">BIN</div><h3>Bins &amp; Recycling</h3><p>Start with empty pockets and turn what everyone else ignores into your first real progress. Search, haul and process enough material to climb out of the bottom.</p><ul><li>Turn survival into daily progress</li><li>Take your route across the district</li><li>Cash in what others overlooked</li></ul></article>
+<article class="system-card" data-cat="street"><span class="tag">Crime</span><div class="icon">VAULT</div><h3>Multi-Stage Robberies</h3><p>Scout the target, bring the right crew and keep your nerve when the plan starts breaking apart. Every stage raises the pressure—and the chance of walking away rich or caught.</p><ul><li>Beat security under pressure</li><li>Handle resistance when it arrives</li><li>Every job leaves a cost</li></ul></article>
+<article class="system-card" data-cat="street progression"><span class="tag">Growing</span><div class="icon">GROW</div><h3>Planting &amp; Drug Systems</h3><p>Turn a seed into a supply line. Care for each plant, protect the process and grow from a small setup into an operation people rely on.</p></article>
+<article class="system-card" data-cat="social business"><span class="tag">In-House GLRP System</span><div class="icon">CAS</div><h3>Crown Casino</h3><p>Step beneath the Crown Casino lights and decide how much luck is worth. Play the tables, host a VIP night or make the casino the setting for deals, celebrations and rivalries.</p><ul><li>Take your seat at the tables</li><li>Manage your own casino bankroll</li><li>Create nights players remember</li></ul></article>
+<article class="system-card" data-cat="social"><span class="tag">Phone</span><div class="icon">TEL</div><h3>City Phone</h3><p>Keep your whole story moving from one device. Reach the right person, find the next opportunity and stay connected when the city changes around you.</p></article>
+<article class="system-card" data-cat="progression social"><span class="tag">Inventory</span><div class="icon">BAG</div><h3>Backpack System</h3><p>Pack for the life you are living. Carry the tools, supplies and valuables you need on the road while deciding what is important enough to keep close.</p></article>
+<article class="system-card" data-cat="social"><span class="tag">In-House GLRP System</span><div class="icon">HUD</div><h3>Kings HUD &amp; Chat</h3><p>Stay informed without losing the scene. The GLRP interface keeps the essentials close, lets you shape your own layout and leaves the city—not the UI—as the main focus.</p><ul><li>See what matters at a glance</li><li>Make the screen feel like yours</li><li>Keep every conversation clear</li></ul></article>
+<article class="system-card" data-cat="social progression"><span class="tag">In-House GLRP System</span><div class="icon">HALL</div><h3>City Hall &amp; Licence Centre</h3><p>Prove you are ready before the city hands you permission. Apply, study and pass the required tests to earn licences that open new routes for your character.</p><ul><li>Earn the right to carry</li><li>Open new legal lifestyles</li><li>Work toward specialist permissions</li></ul></article>
+<article class="system-card" data-cat="social progression"><span class="tag">Wearable</span><div class="icon">WATCH</div><h3>Kings Watch</h3><p>Keep the essentials close without living inside a menu. The Kings Watch gives your character a connected everyday tool built to fit life in GLRP.</p></article>
+<article class="system-card" data-cat="vehicles business"><span class="tag">Roadside</span><div class="icon">TOW</div><h3>Tow &amp; Road Calls</h3><p>Answer the call when another player is stranded. Recover damaged vehicles, clear the road and build a reputation as the person the city phones when everything stops moving.</p></article>
+<article class="system-card" data-cat="social"><span class="tag">Emergency</span><div class="icon">PD</div><h3>Police, EMS &amp; City Services</h3><p>Step into the city’s highest-pressure roles. Respond to incidents, protect lives and create scenes whose consequences reach far beyond the first call.</p></article>
+<article class="system-card" data-cat="social progression"><span class="tag">Properties</span><div class="icon">HOME</div><h3>Homes &amp; Apartments</h3><p>Make the city feel like home. Store what matters, build a wardrobe and work your way from a first apartment toward the lifestyle your character has earned.</p></article>
+<article class="system-card" data-cat="business progression"><span class="tag">Crafting</span><div class="icon">CRAFT</div><h3>Crafting &amp; Stock</h3><p>Keep the shelves full and the doors open. Order what your team needs, turn supplies into products and make the daily work behind a successful business actually matter.</p></article>
+<article class="system-card" data-cat="street social"><span class="tag">Events</span><div class="icon">LIVE</div><h3>Living City Events</h3><p>Log in to a city where something can already be happening. Meets, competitions, openings and organised scenes give strangers a reason to cross paths and start new stories.</p></article>
+</div></div></section><section class="section dark" id="phone"><div class="wrap"><div class="section-head"><div><span class="kicker">Custom In-House GLRP Phone</span><h2>Your whole city<br/><span class="accent">in the palm of your hand.</span></h2></div><p>Your next job, customer, warning or opportunity could arrive at any moment. The GLRP Phone keeps every part of city life within reach without pulling you out of the story.</p></div>
+<div class="feature"><div class="visual phone-stage"><img alt="GLRP messages" src="assets/phone-messages.webp"/></div><div class="copy"><span class="kicker">Messages &amp; contacts</span><h3>Organise your roleplay from the street.</h3><p>One message can start the entire night. Arrange a pickup, call a mechanic, answer a customer or gather the crew before the city knows what is coming.</p><div class="chips"><span class="chip">Contacts</span><span class="chip">Private messages</span><span class="chip">Business calls</span><span class="chip">City services</span></div><div class="feature-list"><div>Mechanic collection messages</div><div>Event invites</div><div>Customer orders</div><div>Crew coordination</div></div></div></div>
+<div class="feature reverse"><div class="visual phone-stage"><img alt="GLRP city feed" src="assets/phone-feed.webp"/></div><div class="copy"><span class="kicker">City feed &amp; news</span><h3>See what is happening before you miss it.</h3><p>See the city moving in real time. Catch an event before it fills up, discover who is hiring and follow the posts that lead you toward new people and unexpected scenes.</p><div class="chips"><span class="chip">Events</span><span class="chip">Hiring</span><span class="chip">Business spotlight</span><span class="chip">City news</span></div></div></div>
+<div class="phone-gallery"><div class="phone-card"><div><img alt="Phone lockscreen" src="assets/phone-lock.webp"/><strong>GLRP Lock Screen</strong></div></div><div class="phone-card"><div><img alt="Phone apps" src="assets/phone-apps.webp"/><strong>Apps &amp; Services</strong></div></div><div class="phone-card"><div><img alt="Phone business app" src="assets/phone-business.webp"/><strong>Business Management</strong></div></div><div class="phone-card"><div><img alt="Phone city feed" src="assets/phone-feed.webp"/><strong>City Feed</strong></div></div></div>
+</div></section><section class="section" id="businesses"><div class="wrap"><div class="feature"><div class="visual"><img alt="GLRP coffee shop" src="assets/coffee-shop.webp"/></div><div class="copy"><span class="kicker">Player-run economy</span><h3>Businesses are places to actually work.</h3><p>A business should feel alive before the first customer even walks in. Stock it, staff it and build the kind of place where regulars return because of the people behind the counter.</p><div class="feature-list"><div>Order stock by cash or bank</div><div>Deliver supplies into storage</div><div>Craft drinks and food</div><div>Manage employees and earnings</div></div></div></div>
+<div class="feature reverse"><div class="visual"><img alt="GLRP city events" src="assets/city-ongoings.webp"/></div><div class="copy"><span class="kicker">A city with things happening</span><h3>Jobs, gangs, cars, emergency services and events.</h3><p>Choose the life that pulls you in. Build something legitimate, answer emergency calls, chase speed, form a crew or step into the underground—then let your decisions connect you to everyone else.</p><div class="chips"><span class="chip">Weekly events</span><span class="chip">Active gangs</span><span class="chip">Player businesses</span><span class="chip">Custom cars</span><span class="chip">PD &amp; EMS</span></div></div></div></div></section><section class="section dark" id="activities"><div class="wrap"><div class="section-head"><div><span class="kicker">Games, minigames &amp; side activities</span><h2>More to do<br/><span class="accent">than grind a job.</span></h2></div><p>Clock off, chase a rare find, rebuild a car, risk a robbery or meet the city at an event. There is always another reason to stay out for one more hour.</p></div><div class="activity-grid">
+<div class="activity"><span class="live">Featured</span><b>◉</b><h3>Creature Catching</h3><p>Follow hidden signals across the city, land the rare capture and raise a team that tells the story of where you have been.</p></div>
+<div class="activity"><span class="live">Featured</span><b>▣</b><h3>Card Pack Opening</h3><p>Rip the tab, watch the reveal and chase the card that makes the whole pack worth opening.</p></div>
+<div class="activity"><span class="live">In-House</span><b>♠</b><h3>Blackjack &amp; Crown Casino</h3><p>Buy your chips, take a seat and decide whether tonight ends with a celebration, a debt or a story nobody believes.</p></div>
+<div class="activity"><b>⚙</b><h3>Project Car Builds</h3><p>Rescue a wreck and turn it into a machine people stop to look at—one hard-earned stage at a time.</p></div>
+<div class="activity"><b>◌</b><h3>Wheel &amp; Bolt Games</h3><p>Get down beside the car, work every bolt and make the repair feel like something your character actually did.</p></div>
+<div class="activity"><b>↯</b><h3>Life Path Challenges</h3><p>Give every session a purpose and watch small routines grow into perks, status and a recognisable character identity.</p></div>
+<div class="activity"><span class="live">In-House</span><b>⌂</b><h3>City Hall &amp; Licences</h3><p>Prepare, pass the test and earn access to new legal routes instead of receiving important licences for nothing.</p></div>
+<div class="activity"><b>♻</b><h3>Recycling Routes</h3><p>Turn a rough start into honest progress by working the streets, filling the trolley and cashing in a full route.</p></div>
+<div class="activity"><b>⌁</b><h3>District Surveys</h3><p>Leave the familiar roads behind and follow unusual readings into districts where the next discovery could be waiting.</p></div>
+<div class="activity"><b>◆</b><h3>Robbery Hacks</h3><p>Keep your hands steady as each solved stage takes the crew closer to the vault—and closer to being caught.</p></div>
+<div class="activity"><b>★</b><h3>City Events</h3><p>Show up, meet people and become part of moments that can launch friendships, rivalries and the next big city story.</p></div>
+</div></div></section><section class="directory" id="directory"><div class="wrap">
+<div class="directory-summary"><div><span class="kicker">Departments, businesses &amp; city services</span><h2>Find your place<br/><span class="accent">inside GLRP.</span></h2></div><p>Find the place where your character belongs. Serve the city, run a business, build cars, lead a team or create something completely new—the doors below are where those stories begin.</p></div>
+<div class="directory-status"><span class="directory-pill recruiting">Applications open</span><span class="directory-pill recruiting">Departments recruiting</span><span class="directory-pill">City coming soon</span><span class="directory-pill">Player businesses supported</span></div>
+<div class="directory-grid">
+<article class="directory-card" style="--directory-bg:url('assets/slide-police.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Emergency Department</span><span class="directory-state open">Recruiting</span></div><h3>Police Department</h3><p>Wear the badge and become part of the stories everyone talks about—patrol the streets, follow evidence, chase suspects and decide how your officer earns respect.</p><ul><li>Patrol and response roles</li><li>Investigations and specialist progression</li><li>Leadership opportunities before launch</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/slide-city-life.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Emergency Department</span><span class="directory-state open">Recruiting</span></div><h3>EMS &amp; Medical</h3><p>Race toward the calls others run from. Treat injuries, support recovery and give every emergency scene a reason to continue after the sirens stop.</p><ul><li>Paramedics and medical staff</li><li>Scene response and patient care</li><li>Department growth and leadership</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/city-overview.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Government Service</span><span class="directory-state">In-House</span></div><h3>City Hall &amp; Licence Centre</h3><p>Earn the right to carry, hunt, fish or fly. City Hall turns licences into real milestones your character must prepare for and achieve.</p><ul><li>Weapon licence</li><li>Open new legal lifestyles</li><li>Pilot licence and future permits</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/slide-motors.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Automotive Business</span><span class="directory-state open">Recruiting</span></div><h3>Kingz Autos</h3><p>Build your reputation one vehicle at a time. Diagnose faults, rescue stranded drivers and transform forgotten shells into cars worth showing off.</p><ul><li>Mechanics and service staff</li><li>Tow and flatbed drivers</li><li>Management and customer-facing roles</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/slide-city-life.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Vehicle Sales</span><span class="directory-state">Coming Soon</span></div><h3>PDM &amp; Luxury Motors</h3><p>Choose the car that fits your story. Explore the showroom, compare your options and make the moment you collect the keys feel like an achievement.</p><ul><li>Standard and luxury stock</li><li>Showroom vehicle previews</li><li>Future dealer employee opportunities</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/coffee-shop.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Player Business</span><span class="directory-state open">Recruiting</span></div><h3>GLRP Coffee</h3><p>Clock in somewhere players actually gather. Learn the menu, serve regulars and help turn GLRP Coffee into the backdrop for friendships, deals and city gossip.</p><ul><li>Staff and management roles</li><li>Stock ordering and crafting</li><li>Customer service and social roleplay</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/slide-dispensary.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Player Business</span><span class="directory-state">Coming Soon</span></div><h3>Dispensary</h3><p>Step into a player-run storefront with its own identity, customers and supply chain. Build trust, move product and make the dispensary part of the neighbourhood.</p><ul><li>Retail and staff roleplay</li><li>Custom products and stock</li><li>Business ownership opportunities</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/city-ongoings.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Entertainment</span><span class="directory-state">In-House</span></div><h3>Crown Casino</h3><p>Dress sharp, buy your chips and test your nerve under the lights. The Crown Casino is built for risky hands, VIP nights and social scenes that can turn in an instant.</p><ul><li>Blackjack and casino tables</li><li>Casino wallet and chips</li><li>Events, VIP nights and social scenes</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/slide-social.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Small Business</span><span class="directory-state open">Applications</span></div><h3>Street Food &amp; City Stands</h3><p>Claim a corner and build a local name. Sell food, goods or ideas face to face and turn a small stand into a place the neighbourhood recognises.</p><ul><li>Custom stand placement</li><li>Worker characters and stock</li><li>Markets, food and local trading</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/city-ongoings.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">City Economy</span><span class="directory-state open">Applications</span></div><h3>Player-Owned Businesses</h3><p>Bring your idea, recruit people you trust and create a venue players return to. The strongest businesses become part of the city’s culture, not just another marker.</p><ul><li>Owners, managers and employees</li><li>Stock, crafting and customer systems</li><li>Business spotlights and city promotion</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/hero.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Housing Service</span><span class="directory-state">Launch Ready</span></div><h3>Starter Homes &amp; Apartments</h3><p>Land with somewhere safe to breathe, unpack and plan your next move. Your first home gives the story a starting point before you work toward something bigger.</p><ul><li>New-player arrival support</li><li>Starter equipment and storage</li><li>Housing and lifestyle progression</li></ul></div></article>
+<article class="directory-card" style="--directory-bg:url('assets/phone-apps.webp')"><div class="directory-card-content"><div class="directory-card-top"><span class="directory-type">Connected City Service</span><span class="directory-state">In-House</span></div><h3>GLRP Phone &amp; Services</h3><p>Carry the city in your pocket. Find work, reach friends, follow local news and stay close to the opportunities that can change your night.</p><ul><li>Messages and city feed</li><li>Business and service apps</li><li>News, events and city contacts</li></ul></div></article>
+</div>
+<div class="directory-footer"><p><strong>Looking for a role that is not listed?</strong><br/>Join the Discord and register your interest. GLRP is building its launch community across departments, businesses, gangs and everyday civilian life.</p><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Register Interest</a></div>
+</div></section><section class="city-map-section" id="city-map"><div class="wrap">
+<div class="city-map-head"><div><span class="kicker">Interactive GLRP location guide</span><h2>Know the city.<br/><span class="accent">Find your next move.</span></h2></div><p>Explore the places where GLRP stories begin. Find the departments that need recruits, the businesses waiting for regulars and the locations that could become part of your character’s daily life.</p></div>
+<div class="city-map-filters" id="cityMapFilters"><button class="city-map-filter active" data-map-filter="all">All Locations</button><button class="city-map-filter" data-map-filter="service">City Services</button><button class="city-map-filter" data-map-filter="automotive">Automotive</button><button class="city-map-filter" data-map-filter="business">Businesses</button><button class="city-map-filter" data-map-filter="lifestyle">Lifestyle</button><button class="city-map-filter" data-map-filter="progression">Progression</button></div>
+<div class="city-map-shell">
+<div aria-label="Interactive GLRP city locations" class="city-map-board" id="cityMapBoard">
+<div class="city-map-road road-a"></div><div class="city-map-road road-b"></div><div class="city-map-road road-c"></div><div class="city-map-road road-d"></div><div class="city-map-road road-e"></div>
+<div class="city-map-zone zone-north">North district</div><div class="city-map-zone zone-central">Central city</div><div class="city-map-zone zone-east">East district</div><div class="city-map-zone zone-south">South industrial</div><div class="city-map-zone zone-west">West side</div>
+<button aria-label="City Hall" class="city-map-pin active" data-location="cityhall" data-map-cat="service" style="--x:47%;--y:40%;--pin:#ff6b1a"><span>CH</span></button>
+<button aria-label="Police Department" class="city-map-pin" data-location="police" data-map-cat="service" style="--x:60%;--y:33%;--pin:#4aa8ff"><span>PD</span></button>
+<button aria-label="EMS and Medical" class="city-map-pin" data-location="ems" data-map-cat="service" style="--x:54%;--y:48%;--pin:#ef4d5b"><span>EMS</span></button>
+<button aria-label="Kingz Autos" class="city-map-pin" data-location="kingz" data-map-cat="automotive" style="--x:26%;--y:67%;--pin:#ff9b38"><span>KA</span></button>
+<button aria-label="PDM Dealership" class="city-map-pin" data-location="pdm" data-map-cat="automotive" style="--x:37%;--y:57%;--pin:#ffc24f"><span>PDM</span></button>
+<button aria-label="Luxury Motors" class="city-map-pin" data-location="luxury" data-map-cat="automotive" style="--x:21%;--y:41%;--pin:#d4a2ff"><span>LUX</span></button>
+<button aria-label="GLRP Coffee" class="city-map-pin" data-location="coffee" data-map-cat="business lifestyle" style="--x:72%;--y:47%;--pin:#ff9552"><span>CF</span></button>
+<button aria-label="Dispensary" class="city-map-pin" data-location="dispensary" data-map-cat="business lifestyle" style="--x:79%;--y:29%;--pin:#58e58a"><span>DSP</span></button>
+<button aria-label="Crown Casino" class="city-map-pin" data-location="casino" data-map-cat="lifestyle business" style="--x:68%;--y:68%;--pin:#9d4dff"><span>♠</span></button>
+<button aria-label="Starter Apartments" class="city-map-pin" data-location="apartments" data-map-cat="lifestyle progression" style="--x:36%;--y:22%;--pin:#4fd2d9"><span>APT</span></button>
+<button aria-label="Recycling Hub" class="city-map-pin" data-location="recycling" data-map-cat="progression service" style="--x:43%;--y:81%;--pin:#83b95a"><span>REC</span></button>
+<button aria-label="City Stands and Street Food" class="city-map-pin" data-location="stands" data-map-cat="business lifestyle" style="--x:84%;--y:58%;--pin:#ff6f91"><span>ST</span></button>
+</div>
+<aside class="city-map-panel" id="cityMapPanel">
+<div class="city-map-panel-top"><span class="city-map-category" id="mapCategory">City services</span><span class="city-map-state" id="mapState">Applications open</span></div>
+<h3 id="mapTitle">City Hall &amp; Licence Centre</h3>
+<p id="mapDescription">The official starting point for licences, permits and city-issued approvals. City Hall connects civilian progression to weapon, hunting, fishing and pilot licence routes.</p>
+<div class="city-map-meta"><div><small>Main purpose</small><strong id="mapPurpose">Licences &amp; civic services</strong></div><div><small>Best for</small><strong id="mapAudience">Citizens and new arrivals</strong></div></div>
+<ul class="city-map-highlights" id="mapHighlights"><li>Weapon licence applications and tests</li><li>Open new legal lifestyles</li><li>Pilot licence progression</li><li>Future permits and city services</li></ul>
+<div class="city-map-tip"><strong>In-game route:</strong> Exact GPS markers and access instructions are provided through the city, phone and official Discord information.</div>
+<div class="city-map-actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Ask in Discord</a><a class="btn" href="#directory">Full Directory</a></div>
+</aside>
+</div>
+<div class="city-map-list" id="cityMapList">
+<button class="active" data-location="cityhall" data-map-cat="service"><b>City services</b><span>City Hall</span></button><button data-location="police" data-map-cat="service"><b>Emergency</b><span>Police Department</span></button><button data-location="ems" data-map-cat="service"><b>Emergency</b><span>EMS &amp; Medical</span></button><button data-location="kingz" data-map-cat="automotive"><b>Automotive</b><span>Kingz Autos</span></button>
+<button data-location="pdm" data-map-cat="automotive"><b>Automotive</b><span>PDM Dealership</span></button><button data-location="luxury" data-map-cat="automotive"><b>Automotive</b><span>Luxury Motors</span></button><button data-location="coffee" data-map-cat="business lifestyle"><b>Business</b><span>GLRP Coffee</span></button><button data-location="dispensary" data-map-cat="business lifestyle"><b>Business</b><span>Dispensary</span></button>
+<button data-location="casino" data-map-cat="lifestyle business"><b>Lifestyle</b><span>Crown Casino</span></button><button data-location="apartments" data-map-cat="lifestyle progression"><b>New players</b><span>Starter Apartments</span></button><button data-location="recycling" data-map-cat="progression service"><b>Progression</b><span>Recycling Hub</span></button><button data-location="stands" data-map-cat="business lifestyle"><b>Business</b><span>City Stands</span></button>
+</div>
+<p class="city-map-note">This is a website location guide rather than a street-by-street GPS map. Exact in-city routes can change as GLRP expands and are shown through the appropriate game systems.</p>
+</div></section><section class="server-hub" id="server"><div class="wrap"><div class="server-shell">
+<div class="server-top"><div><span class="kicker">GLRP server access centre</span><h2>One place to<br/><span class="accent">get city ready.</span></h2></div><p>Your route into GLRP starts here. Check who is in the city, grab the official connection details and get ready to land without searching through pages of instructions.</p></div>
+<div class="server-status-grid">
+<article class="server-status-card featured"><small>City status</small><strong class="server-live-line"><i class="server-dot" id="serverDot"></i><span id="serverState">Coming Soon</span></strong><span id="serverMessage">Applications and department recruitment are open before launch.</span></article>
+<article class="server-status-card"><small>Players online</small><strong id="playerCount">1</strong><span id="capacityText">1 player currently connected.</span></article>
+<article class="server-status-card"><small>FiveM join code</small><strong>A44Z4M5</strong><span>Official GLRP Cfx.re connection code.</span></article>
+<article class="server-status-card"><small>Community access</small><strong>Discord Open</strong><span>Applications, news, support and launch announcements.</span></article>
+</div>
+<div class="access-grid">
+<div class="access-panel"><h3>Official connection details</h3><p>Use the direct button or copy one of these into FiveM. Everything below points to the official GLRP server listing.</p>
+<div class="connect-field"><code>cfx.re/join/a44z4m5</code><button class="copy-btn" data-copy="cfx.re/join/a44z4m5" type="button">Copy link</button></div>
+<div class="connect-field"><code>connect cfx.re/join/a44z4m5</code><button class="copy-btn" data-copy="connect cfx.re/join/a44z4m5" type="button">Copy command</button></div>
+<div class="connect-field"><code>a44z4m5</code><button class="copy-btn" data-copy="a44z4m5" type="button">Copy code</button></div>
+</div>
+<div class="access-panel"><h3>First time joining GLRP?</h3><p>Follow these four steps and you will be ready for launch without hunting through different pages.</p><div class="join-guide">
+<div class="join-step"><b>Step 01</b><strong>Join Discord</strong><span>Read announcements, rules and application information.</span></div>
+<div class="join-step"><b>Step 02</b><strong>Install FiveM</strong><span>Make sure GTA V and FiveM are installed and updated.</span></div>
+<div class="join-step"><b>Step 03</b><strong>Prepare your character</strong><span>Choose a believable name, story and direction for serious roleplay.</span></div>
+<div class="join-step"><b>Step 04</b><strong>Connect at launch</strong><span>Use the official button or paste the connection command into F8.</span></div>
+</div></div>
+</div>
+<div class="server-actions"><a class="btn primary" href="https://cfx.re/join/a44z4m5" target="_blank">Direct Connect</a><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><button class="btn" id="refreshStatus" type="button">Refresh Status</button></div>
+<p class="status-note">The live FiveM status is treated as an extra convenience. If the public server-list endpoint is unavailable or launch access is restricted, the website safely keeps the official Coming Soon status instead of showing a broken panel.</p>
+</div></div></section><section class="news-hub" id="news"><div class="wrap">
+<div class="section-head"><div><span class="kicker">Official GLRP announcements</span><h2>City news,<br/><span class="accent">events &amp; updates.</span></h2></div><p>Follow the road to launch, see what is being prepared across the city and discover the events planned for players, departments and businesses. Final dates and application details are announced through the official GLRP Discord.</p></div>
 <div class="news-top">
 <article class="event-feature"><div class="event-feature-copy"><span class="event-label">Featured launch event</span><h3>GLRP Opening Night</h3><p>The first major city gathering will bring together new citizens, departments, businesses, mechanics, crews and staff. Expect a proper city introduction, custom vehicles, social roleplay and opportunities to meet the people shaping GLRP.</p><div class="event-meta"><span>Date: Coming Soon</span><span>Location: Citywide</span><span>Entry: Through Discord</span></div></div></article>
-<aside class="launch-board"><span class="kicker">Launch board</span><h3>Preparing the city</h3><p>GLRP is being prepared as a full serious-roleplay city. Applications and community registration are already open before the public launch announcement.</p><div class="launch-line"><i></i><strong>Community applications</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Police, EMS & staff recruitment</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Kingz Autos recruitment</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Official launch date</strong><span>Coming soon</span></div><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank" style="margin-top:20px;width:100%">Follow Launch News</a></aside>
+<aside class="launch-board"><span class="kicker">Launch board</span><h3>Preparing the city</h3><p>GLRP is being prepared as a full serious-roleplay city. Applications and community registration are already open before the public launch announcement.</p><div class="launch-line"><i></i><strong>Community applications</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Police, EMS &amp; staff recruitment</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Kingz Autos recruitment</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Official launch date</strong><span>Coming soon</span></div><a class="btn primary" href="https://discord.gg/QPgcjHWShX" style="margin-top:20px;width:100%" target="_blank">Follow Launch News</a></aside>
 </div>
 <div class="news-filters" id="newsFilters"><button class="news-filter active" data-news-filter="all">All Updates</button><button class="news-filter" data-news-filter="event">Events</button><button class="news-filter" data-news-filter="launch">Launch</button><button class="news-filter" data-news-filter="development">Development</button><button class="news-filter" data-news-filter="recruitment">Recruitment</button></div>
 <div class="news-grid" id="newsGrid">
 <article class="news-card" data-news-cat="event" style="--news-color:#ff6b1a"><span class="event-label">Event</span><small>Date to be announced</small><h3>Kingz Autos Car Meet</h3><p>Bring the build you are proud of, meet the city’s automotive crowd and find out whose car earns the most attention when everyone pulls in.</p><a class="news-link" href="https://discord.gg/QPgcjHWShX" target="_blank">Watch for the event post →</a></article>
 <article class="news-card" data-news-cat="event" style="--news-color:#9d4dff"><span class="event-label">Event</span><small>Date to be announced</small><h3>Creature Hunt Weekend</h3><p>Take the scanner out with the community, follow rare signals and see who returns with the discovery everyone else missed.</p><a class="news-link" href="#activities">Explore the activity →</a></article>
 <article class="news-card" data-news-cat="event recruitment" style="--news-color:#58e58a"><span class="event-label">Community</span><small>Before launch</small><h3>Department Open Evening</h3><p>Meet the people building each department, ask real questions and find the role that could define your first chapter in GLRP.</p><a class="news-link" href="#recruitment">See recruiting roles →</a></article>
-<article class="news-card" data-news-cat="development launch" style="--news-color:#4aa8ff"><span class="event-label">In-house system</span><small>Launch preparation</small><h3>Phone, HUD & Garage</h3><p>From the moment you check your phone to the moment you pull a car from storage, every in-house system is being shaped to feel like one connected city.</p><a class="news-link" href="#phone">See the GLRP phone →</a></article>
+<article class="news-card" data-news-cat="development launch" style="--news-color:#4aa8ff"><span class="event-label">In-house system</span><small>Launch preparation</small><h3>Phone, HUD &amp; Garage</h3><p>From the moment you check your phone to the moment you pull a car from storage, every in-house system is being shaped to feel like one connected city.</p><a class="news-link" href="#phone">See the GLRP phone →</a></article>
 <article class="news-card" data-news-cat="development launch" style="--news-color:#ffb347"><span class="event-label">City services</span><small>Launch preparation</small><h3>City Hall Licence Centre</h3><p>Important permissions will be earned through applications and tests, giving citizens real goals and departments meaningful reasons to interact.</p><a class="news-link" href="#directory">View city services →</a></article>
-<article class="news-card" data-news-cat="development" style="--news-color:#ff334e"><span class="event-label">Gameplay update</span><small>Custom progression</small><h3>Life Paths & Collections</h3><p>Your daily choices feed bigger goals, whether you are building a career, completing a collection or raising the team you want to be known for.</p><a class="news-link" href="#systems">Explore city systems →</a></article>
+<article class="news-card" data-news-cat="development" style="--news-color:#ff334e"><span class="event-label">Gameplay update</span><small>Custom progression</small><h3>Life Paths &amp; Collections</h3><p>Your daily choices feed bigger goals, whether you are building a career, completing a collection or raising the team you want to be known for.</p><a class="news-link" href="#systems">Explore city systems →</a></article>
 </div>
 <div class="news-callout"><div><strong>Want the official date and event times first?</strong><span>Join Discord for launch announcements, event sign-ups, applications and any last-minute city changes.</span></div><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join GLRP Discord</a></div>
-</div></section>
-
-<section class="city-showcase" id="showcase"><div class="wrap">
-<div class="section-head"><div><span class="kicker">A look inside Gang Life RP</span><h2>The city in<br><span class="accent">motion.</span></h2></div><p>Only the strongest GLRP scenes made the cut. Use the arrows or dots to move through the city, or let the slideshow change automatically.</p></div>
-<div class="showcase-shell" id="cityShowcase">
-<div class="showcase-stage">
-<article class="showcase-slide active"><img src="assets/slide-city-life.webp" alt="GLRP city life at sunset"><div class="showcase-copy"><span>City atmosphere</span><h3>Every street has a story.</h3><p>Custom businesses, tuned cars, active streets and a city skyline built around serious roleplay.</p></div></article>
-<article class="showcase-slide"><img src="assets/slide-street-hustle.webp" alt="GLRP street hustle scene"><div class="showcase-copy"><span>Street life</span><h3>Start with nothing. Build your name.</h3><p>Search, hustle, survive and turn the smallest beginning into a character people remember.</p></div></article>
-<article class="showcase-slide"><img src="assets/slide-police.webp" alt="GLRP police patrol scene"><div class="showcase-copy"><span>Police & city services</span><h3>Professional scenes. Real consequences.</h3><p>Join the police, EMS or city services and create roleplay that reaches every corner of GLRP.</p></div></article>
-<article class="showcase-slide"><img src="assets/slide-motors.webp" alt="GLRP Motors and custom cars"><div class="showcase-copy"><span>Kingz Autos</span><h3>Build it. Tune it. Own it.</h3><p>Custom cars, diagnostics, repairs, project builds, towing and proper mechanic careers.</p></div></article>
-<article class="showcase-slide"><img src="assets/slide-social.webp" alt="GLRP coffee and social roleplay"><div class="showcase-copy"><span>Businesses & social life</span><h3>The city lives between the big scenes.</h3><p>Coffee shops, food spots, nightlife, local businesses and everyday moments keep GLRP feeling alive.</p></div></article>
-<article class="showcase-slide"><img src="assets/slide-dispensary.webp" alt="GLRP dispensary business"><div class="showcase-copy"><span>Player-run economy</span><h3>Own a business. Build a legacy.</h3><p>Operate venues, manage staff, control stock and create places the whole community wants to visit.</p></div></article>
-<button class="showcase-arrow prev" type="button" aria-label="Previous city image">‹</button>
-<button class="showcase-arrow next" type="button" aria-label="Next city image">›</button>
-</div>
-<div class="showcase-footer"><div class="showcase-dots" aria-label="City slideshow navigation"></div><div class="showcase-count"><span id="showcaseCurrent">01</span> / 06 • auto slides every 6 seconds</div></div>
-</div>
-</div></section>
-
-
-<section class="section dark"><div class="wrap"><div class="section-head"><div><span class="kicker">Your first hours</span><h2>From arrival<br><span class="accent">to city life.</span></h2></div><p>The website walks new players through the same journey they will experience in game, making it clear what to do after landing and how the wider systems connect.</p></div><div class="journey">
-<div class="step" data-step="01"><strong>Step 01</strong><h3>Create your character</h3><p>Build your identity through the GLRP character, clothing and appearance systems.</p></div>
-<div class="step" data-step="02"><strong>Step 02</strong><h3>Land at the starter home</h3><p>Learn the basics, unpack your starter gear and understand your first objectives.</p></div>
-<div class="step" data-step="03"><strong>Step 03</strong><h3>Use your backpack & phone</h3><p>Your backpack expands how you carry items, while your phone connects you to the city.</p></div>
-<div class="step" data-step="04"><strong>Step 04</strong><h3>Begin your Life Path</h3><p>Start at street level, complete tasks, earn XP and unlock deeper perks and routes.</p></div>
-<div class="step" data-step="05"><strong>Step 05</strong><h3>Build your reputation</h3><p>Work, hustle, collect, own, compete and turn your character into somebody known.</p></div>
-</div></div></section>
-
-<section class="section" id="systems"><div class="wrap"><div class="section-head"><div><span class="kicker">Everything in the city</span><h2>Custom systems<br><span class="accent">built around players.</span></h2></div><p>Pick the kind of experience you want and see where it can take you. Every system below is designed to create choices, progression and stories worth sharing with other players.</p></div>
-<div class="filter-row" id="filterRow"><button class="filter active" data-filter="all">All Systems</button><button class="filter" data-filter="progression">Progression</button><button class="filter" data-filter="vehicles">Vehicles</button><button class="filter" data-filter="business">Businesses</button><button class="filter" data-filter="street">Street Life</button><button class="filter" data-filter="social">Social & City</button></div>
-<div class="systems-grid" id="systemsGrid">
-<article class="system-card" data-cat="progression"><span class="tag">Progression</span><div class="icon">LP</div><h3>GLRP Life Paths</h3><p>Let your actions define your identity. Start at street level, prove yourself through real tasks and unlock specialist paths that show the city what your character has become.</p><ul><li>Rise from the streets</li><li>Fresh goals every day</li><li>Unlock specialist identities</li></ul></article>
-<article class="system-card" data-cat="progression street"><span class="tag">Collect & Battle</span><div class="icon">SCAN</div><h3>Creature Scanner & Catching</h3><p>Follow strange signals into different districts, discover rare creatures and build a team that reflects where you explored, what you risked and what you managed to catch.</p><ul><li>Hunt rare district signals</li><li>Raise and evolve favourites</li><li>Turn every find into progress</li></ul></article>
-<article class="system-card" data-cat="progression social"><span class="tag">Collectible Game</span><div class="icon">PACK</div><h3>Card Packs</h3><p>Rip open every pack, chase the reveal and build a collection worth showing off. Common pulls start the journey; rare finds can define it.</p><ul><li>Feel every pack reveal</li><li>Build a collection with value</li><li>Prepare to trade and compete</li></ul></article>
-<article class="system-card" data-cat="vehicles business"><span class="tag">Kingz Autos</span><div class="icon">AUTO</div><h3>Standalone Mechanic System</h3><p>Turn a passion for cars into one of the city’s most respected careers. Find the fault, earn the customer’s trust and send vehicles back onto the street better than they arrived.</p><ul><li>Find faults customers can feel</li><li>Repair, service and upgrade</li><li>Work remains available around the clock</li></ul></article>
-<article class="system-card" data-cat="vehicles progression"><span class="tag">Vehicle Build</span><div class="icon">BUILD</div><h3>Project Cars</h3><p>Drag a forgotten shell back to the workshop and bring it to life piece by piece. Every completed stage takes you closer to a finished build you truly earned.</p><ul><li>Recover forgotten builds</li><li>Rebuild every stage by hand</li><li>Earn each finished upgrade</li></ul></article>
-<article class="system-card" data-cat="vehicles"><span class="tag">Dealerships</span><div class="icon">PDM</div><h3>PDM & Luxury Dealers</h3><p>Walk the showroom, find the vehicle that fits your character and make it yours before collecting the keys. Buying a car should feel like a moment, not a menu click.</p><ul><li>See the car before committing</li><li>Make the purchase your own</li><li>Showrooms built for the city</li></ul></article>
-<article class="system-card" data-cat="vehicles"><span class="tag">In-House GLRP System</span><div class="icon">GAR</div><h3>Kings Garage System</h3><p>Give every vehicle in your collection a proper home. See what you own, where it is and what you want to drive next without losing the feeling of stepping into a real garage.</p><ul><li>Inspect every car properly</li><li>Your collection stays reliable</li><li>Know what is stored, out or ready</li></ul></article>
-<article class="system-card" data-cat="vehicles"><span class="tag">Performance</span><div class="icon">NOS</div><h3>NOS, Purge & Neon</h3><p>Build a car people hear before they see. Light up the street, purge at the meet and hit the NOS when the road opens—then let the city remember the machine you created.</p></article>
-<article class="system-card" data-cat="business social"><span class="tag">Player Business</span><div class="icon">COFF</div><h3>Coffee Shop</h3><p>Clock in, learn the menu and turn every order into a reason for players to stay. Build a team, serve regulars and make the shop feel like a real part of the city.</p><ul><li>Keep the business supplied</li><li>Make every order feel physical</li><li>Build a team and grow earnings</li></ul></article>
-<article class="system-card" data-cat="business social"><span class="tag">Player Owned</span><div class="icon">STAND</div><h3>City Stands</h3><p>Start small and make a corner your own. Choose the pitch, stock the stand and build enough local attention that players know exactly where to find you.</p><ul><li>Choose the perfect pitch</li><li>Create the face of your stand</li><li>Keep stock and progress saved</li></ul></article>
-<article class="system-card" data-cat="business"><span class="tag">Economy</span><div class="icon">SHOP</div><h3>Markets, Vending & Street Food</h3><p>Follow the flow of money through the city. Grab food on the move, discover local sellers or build your own hustle where foot traffic turns into opportunity.</p></article>
-<article class="system-card" data-cat="street progression"><span class="tag">Starter Path</span><div class="icon">BIN</div><h3>Bins & Recycling</h3><p>Start with empty pockets and turn what everyone else ignores into your first real progress. Search, haul and process enough material to climb out of the bottom.</p><ul><li>Turn survival into daily progress</li><li>Take your route across the district</li><li>Cash in what others overlooked</li></ul></article>
-<article class="system-card" data-cat="street"><span class="tag">Crime</span><div class="icon">VAULT</div><h3>Multi-Stage Robberies</h3><p>Scout the target, bring the right crew and keep your nerve when the plan starts breaking apart. Every stage raises the pressure—and the chance of walking away rich or caught.</p><ul><li>Beat security under pressure</li><li>Handle resistance when it arrives</li><li>Every job leaves a cost</li></ul></article>
-<article class="system-card" data-cat="street progression"><span class="tag">Growing</span><div class="icon">GROW</div><h3>Planting & Drug Systems</h3><p>Turn a seed into a supply line. Care for each plant, protect the process and grow from a small setup into an operation people rely on.</p></article>
-<article class="system-card" data-cat="social business"><span class="tag">In-House GLRP System</span><div class="icon">CAS</div><h3>Crown Casino</h3><p>Step beneath the Crown Casino lights and decide how much luck is worth. Play the tables, host a VIP night or make the casino the setting for deals, celebrations and rivalries.</p><ul><li>Take your seat at the tables</li><li>Manage your own casino bankroll</li><li>Create nights players remember</li></ul></article>
-<article class="system-card" data-cat="social"><span class="tag">Phone</span><div class="icon">TEL</div><h3>City Phone</h3><p>Keep your whole story moving from one device. Reach the right person, find the next opportunity and stay connected when the city changes around you.</p></article>
-<article class="system-card" data-cat="progression social"><span class="tag">Inventory</span><div class="icon">BAG</div><h3>Backpack System</h3><p>Pack for the life you are living. Carry the tools, supplies and valuables you need on the road while deciding what is important enough to keep close.</p></article>
-<article class="system-card" data-cat="social"><span class="tag">In-House GLRP System</span><div class="icon">HUD</div><h3>Kings HUD & Chat</h3><p>Stay informed without losing the scene. The GLRP interface keeps the essentials close, lets you shape your own layout and leaves the city—not the UI—as the main focus.</p><ul><li>See what matters at a glance</li><li>Make the screen feel like yours</li><li>Keep every conversation clear</li></ul></article>
-<article class="system-card" data-cat="social progression"><span class="tag">In-House GLRP System</span><div class="icon">HALL</div><h3>City Hall & Licence Centre</h3><p>Prove you are ready before the city hands you permission. Apply, study and pass the required tests to earn licences that open new routes for your character.</p><ul><li>Earn the right to carry</li><li>Open new legal lifestyles</li><li>Work toward specialist permissions</li></ul></article>
-<article class="system-card" data-cat="social progression"><span class="tag">Wearable</span><div class="icon">WATCH</div><h3>Kings Watch</h3><p>Keep the essentials close without living inside a menu. The Kings Watch gives your character a connected everyday tool built to fit life in GLRP.</p></article>
-<article class="system-card" data-cat="vehicles business"><span class="tag">Roadside</span><div class="icon">TOW</div><h3>Tow & Road Calls</h3><p>Answer the call when another player is stranded. Recover damaged vehicles, clear the road and build a reputation as the person the city phones when everything stops moving.</p></article>
-<article class="system-card" data-cat="social"><span class="tag">Emergency</span><div class="icon">PD</div><h3>Police, EMS & City Services</h3><p>Step into the city’s highest-pressure roles. Respond to incidents, protect lives and create scenes whose consequences reach far beyond the first call.</p></article>
-<article class="system-card" data-cat="social progression"><span class="tag">Properties</span><div class="icon">HOME</div><h3>Homes & Apartments</h3><p>Make the city feel like home. Store what matters, build a wardrobe and work your way from a first apartment toward the lifestyle your character has earned.</p></article>
-<article class="system-card" data-cat="business progression"><span class="tag">Crafting</span><div class="icon">CRAFT</div><h3>Crafting & Stock</h3><p>Keep the shelves full and the doors open. Order what your team needs, turn supplies into products and make the daily work behind a successful business actually matter.</p></article>
-<article class="system-card" data-cat="street social"><span class="tag">Events</span><div class="icon">LIVE</div><h3>Living City Events</h3><p>Log in to a city where something can already be happening. Meets, competitions, openings and organised scenes give strangers a reason to cross paths and start new stories.</p></article>
-</div></div></section>
-
-<section class="section dark" id="phone"><div class="wrap"><div class="section-head"><div><span class="kicker">Custom In-House GLRP Phone</span><h2>Your whole city<br><span class="accent">in the palm of your hand.</span></h2></div><p>Your next job, customer, warning or opportunity could arrive at any moment. The GLRP Phone keeps every part of city life within reach without pulling you out of the story.</p></div>
-<div class="feature"><div class="visual phone-stage"><img src="assets/phone-messages.webp" alt="GLRP messages"></div><div class="copy"><span class="kicker">Messages & contacts</span><h3>Organise your roleplay from the street.</h3><p>One message can start the entire night. Arrange a pickup, call a mechanic, answer a customer or gather the crew before the city knows what is coming.</p><div class="chips"><span class="chip">Contacts</span><span class="chip">Private messages</span><span class="chip">Business calls</span><span class="chip">City services</span></div><div class="feature-list"><div>Mechanic collection messages</div><div>Event invites</div><div>Customer orders</div><div>Crew coordination</div></div></div></div>
-<div class="feature reverse"><div class="visual phone-stage"><img src="assets/phone-feed.webp" alt="GLRP city feed"></div><div class="copy"><span class="kicker">City feed & news</span><h3>See what is happening before you miss it.</h3><p>See the city moving in real time. Catch an event before it fills up, discover who is hiring and follow the posts that lead you toward new people and unexpected scenes.</p><div class="chips"><span class="chip">Events</span><span class="chip">Hiring</span><span class="chip">Business spotlight</span><span class="chip">City news</span></div></div></div>
-<div class="phone-gallery"><div class="phone-card"><div><img src="assets/phone-lock.webp" alt="Phone lockscreen"><strong>GLRP Lock Screen</strong></div></div><div class="phone-card"><div><img src="assets/phone-apps.webp" alt="Phone apps"><strong>Apps & Services</strong></div></div><div class="phone-card"><div><img src="assets/phone-business.webp" alt="Phone business app"><strong>Business Management</strong></div></div><div class="phone-card"><div><img src="assets/phone-feed.webp" alt="Phone city feed"><strong>City Feed</strong></div></div></div>
-</div></section>
-
-<section class="section"><div class="wrap"><div class="feature"><div class="visual"><img src="assets/coffee-shop.webp" alt="GLRP coffee shop"></div><div class="copy"><span class="kicker">Player-run economy</span><h3>Businesses are places to actually work.</h3><p>A business should feel alive before the first customer even walks in. Stock it, staff it and build the kind of place where regulars return because of the people behind the counter.</p><div class="feature-list"><div>Order stock by cash or bank</div><div>Deliver supplies into storage</div><div>Craft drinks and food</div><div>Manage employees and earnings</div></div></div></div>
-<div class="feature reverse"><div class="visual"><img src="assets/city-ongoings.webp" alt="GLRP city events"></div><div class="copy"><span class="kicker">A city with things happening</span><h3>Jobs, gangs, cars, emergency services and events.</h3><p>Choose the life that pulls you in. Build something legitimate, answer emergency calls, chase speed, form a crew or step into the underground—then let your decisions connect you to everyone else.</p><div class="chips"><span class="chip">Weekly events</span><span class="chip">Active gangs</span><span class="chip">Player businesses</span><span class="chip">Custom cars</span><span class="chip">PD & EMS</span></div></div></div></div></section>
-
-<section class="section dark" id="activities"><div class="wrap"><div class="section-head"><div><span class="kicker">Games, minigames & side activities</span><h2>More to do<br><span class="accent">than grind a job.</span></h2></div><p>Clock off, chase a rare find, rebuild a car, risk a robbery or meet the city at an event. There is always another reason to stay out for one more hour.</p></div><div class="activity-grid">
-<div class="activity"><span class="live">Featured</span><b>◉</b><h3>Creature Catching</h3><p>Follow hidden signals across the city, land the rare capture and raise a team that tells the story of where you have been.</p></div>
-<div class="activity"><span class="live">Featured</span><b>▣</b><h3>Card Pack Opening</h3><p>Rip the tab, watch the reveal and chase the card that makes the whole pack worth opening.</p></div>
-<div class="activity"><span class="live">In-House</span><b>♠</b><h3>Blackjack & Crown Casino</h3><p>Buy your chips, take a seat and decide whether tonight ends with a celebration, a debt or a story nobody believes.</p></div>
-<div class="activity"><b>⚙</b><h3>Project Car Builds</h3><p>Rescue a wreck and turn it into a machine people stop to look at—one hard-earned stage at a time.</p></div>
-<div class="activity"><b>◌</b><h3>Wheel & Bolt Games</h3><p>Get down beside the car, work every bolt and make the repair feel like something your character actually did.</p></div>
-<div class="activity"><b>↯</b><h3>Life Path Challenges</h3><p>Give every session a purpose and watch small routines grow into perks, status and a recognisable character identity.</p></div>
-<div class="activity"><span class="live">In-House</span><b>⌂</b><h3>City Hall & Licences</h3><p>Prepare, pass the test and earn access to new legal routes instead of receiving important licences for nothing.</p></div>
-<div class="activity"><b>♻</b><h3>Recycling Routes</h3><p>Turn a rough start into honest progress by working the streets, filling the trolley and cashing in a full route.</p></div>
-<div class="activity"><b>⌁</b><h3>District Surveys</h3><p>Leave the familiar roads behind and follow unusual readings into districts where the next discovery could be waiting.</p></div>
-<div class="activity"><b>◆</b><h3>Robbery Hacks</h3><p>Keep your hands steady as each solved stage takes the crew closer to the vault—and closer to being caught.</p></div>
-<div class="activity"><b>★</b><h3>City Events</h3><p>Show up, meet people and become part of moments that can launch friendships, rivalries and the next big city story.</p></div>
-</div></div></section>
-
-<section class="section" id="gallery"><div class="wrap"><div class="section-head"><div><span class="kicker">Visual tour</span><h2>See the style<br><span class="accent">of Gang Life RP.</span></h2></div><p>Take a look at the streets, businesses, cars and city services waiting inside GLRP. Every image is a glimpse at the kind of story you could step into.</p></div><div class="gallery" id="galleryGrid"><button data-img="assets/slide-city-life.webp"><img src="assets/slide-city-life.webp" alt="GLRP city atmosphere"></button><button data-img="assets/slide-police.webp"><img src="assets/slide-police.webp" alt="GLRP police scene"></button><button data-img="assets/slide-motors.webp"><img src="assets/slide-motors.webp" alt="GLRP Motors"></button><button data-img="assets/slide-social.webp"><img src="assets/slide-social.webp" alt="GLRP social scene"></button><button data-img="assets/slide-dispensary.webp"><img src="assets/slide-dispensary.webp" alt="GLRP dispensary"></button></div></div></section>
-
-<section class="section dark" id="rules"><div class="wrap"><div class="section-head"><div><span class="kicker">City standards</span><h2>Serious roleplay<br><span class="accent">without the confusion.</span></h2></div><p>The final detailed rulebook can be linked from Discord. The website gives visitors a clear overview before they join.</p></div><div class="rules-grid"><div class="rule"><strong>Value roleplay</strong><p>Stay in character, react realistically and give other players room to build a scene.</p></div><div class="rule"><strong>No random violence</strong><p>Conflict should have roleplay behind it. Random attacks and low-effort scenes damage the city.</p></div><div class="rule"><strong>Respect the community</strong><p>Keep out-of-character conduct respectful and use staff channels when a situation needs review.</p></div><div class="rule"><strong>Protect progression</strong><p>Do not exploit bugs, duplicate items or abuse systems. Report any issues through the official staff channels.</p></div><div class="rule"><strong>Build stories</strong><p>The goal is not simply winning. Create situations that other players can respond to and remember.</p></div><div class="rule"><strong>Follow staff direction</strong><p>Staff decisions, applications and detailed rules are handled through the official Discord.</p></div></div>
+</div></section><section class="section" id="gallery"><div class="wrap"><div class="section-head"><div><span class="kicker">Visual tour</span><h2>See the style<br/><span class="accent">of Gang Life RP.</span></h2></div><p>Take a look at the streets, businesses, cars and city services waiting inside GLRP. Every image is a glimpse at the kind of story you could step into.</p></div><div class="gallery" id="galleryGrid"><button data-img="assets/slide-city-life.webp"><img alt="GLRP city atmosphere" src="assets/slide-city-life.webp"/></button><button data-img="assets/slide-police.webp"><img alt="GLRP police scene" src="assets/slide-police.webp"/></button><button data-img="assets/slide-motors.webp"><img alt="GLRP Motors" src="assets/slide-motors.webp"/></button><button data-img="assets/slide-social.webp"><img alt="GLRP social scene" src="assets/slide-social.webp"/></button><button data-img="assets/slide-dispensary.webp"><img alt="GLRP dispensary" src="assets/slide-dispensary.webp"/></button></div></div></section><section class="section dark" id="rules"><div class="wrap"><div class="section-head"><div><span class="kicker">City standards</span><h2>Serious roleplay<br/><span class="accent">without the confusion.</span></h2></div><p>The final detailed rulebook can be linked from Discord. The website gives visitors a clear overview before they join.</p></div><div class="rules-grid"><div class="rule"><strong>Value roleplay</strong><p>Stay in character, react realistically and give other players room to build a scene.</p></div><div class="rule"><strong>No random violence</strong><p>Conflict should have roleplay behind it. Random attacks and low-effort scenes damage the city.</p></div><div class="rule"><strong>Respect the community</strong><p>Keep out-of-character conduct respectful and use staff channels when a situation needs review.</p></div><div class="rule"><strong>Protect progression</strong><p>Do not exploit bugs, duplicate items or abuse systems. Report any issues through the official staff channels.</p></div><div class="rule"><strong>Build stories</strong><p>The goal is not simply winning. Create situations that other players can respond to and remember.</p></div><div class="rule"><strong>Follow staff direction</strong><p>Staff decisions, applications and detailed rules are handled through the official Discord.</p></div></div>
 <div class="faq"><details><summary>When does GLRP open?</summary><p>GLRP is coming soon. Join the official Discord for launch announcements, applications, previews and early community access.</p></details><details><summary>How do I join?</summary><p>Join the Discord for applications and announcements, then use the FiveM connect button when you are ready.</p></details><details><summary>Do I need to know every system before joining?</summary><p>No. The starter journey, phone, Life Paths and Discord information are designed to help new players learn as they play.</p></details><details><summary>Can systems be changed on the site later?</summary><p>Yes. The site is structured so individual cards, images and sections can be edited without rebuilding everything.</p></details></div>
-</div></section>
-
-
-<section class="support-centre" id="support"><div class="wrap">
-<div class="support-head"><div><span class="kicker">Rules, whitelist & player support</span><h2>Know the standard.<br><span class="accent">Join the right way.</span></h2></div><p>This centre gives new and returning players one clear route into GLRP. Read the city standard, prepare for whitelist questions, use the correct support channel and keep out-of-character problems away from active roleplay scenes.</p></div>
+</div></section><section class="support-centre" id="support"><div class="wrap">
+<div class="support-head"><div><span class="kicker">Rules, whitelist &amp; player support</span><h2>Know the standard.<br/><span class="accent">Join the right way.</span></h2></div><p>This centre gives new and returning players one clear route into GLRP. Read the city standard, prepare for whitelist questions, use the correct support channel and keep out-of-character problems away from active roleplay scenes.</p></div>
 <div class="support-status"><article><small>Whitelist</small><strong class="open">Applications Open</strong></article><article><small>Rulebook</small><strong>Discord Maintained</strong></article><article><small>Player Support</small><strong class="open">Available</strong></article><article><small>City Launch</small><strong class="soon">Coming Soon</strong></article></div>
 <div class="support-grid">
 <article class="support-card" data-mark="01"><span class="support-type">Before you apply</span><h3>Whitelist Preparation</h3><p>Show that you understand serious roleplay, can create a believable character and want to contribute to other people’s scenes.</p><ul><li>Prepare a realistic character concept</li><li>Explain your goals without chasing instant power</li><li>Understand value of life and scene consequences</li><li>Be ready to learn GLRP systems after joining</li></ul><a class="support-link" href="https://discord.gg/QPgcjHWShX" target="_blank">Open applications in Discord →</a></article>
-<article class="support-card" data-mark="02"><span class="support-type">City conduct</span><h3>Rules & Standards</h3><p>The website gives a quick overview, while the full live rulebook remains in Discord so updates are always clear and current.</p><ul><li>No random violence or low-effort conflict</li><li>No exploiting, duplication or system abuse</li><li>Stay in character during active scenes</li><li>Respect staff decisions and other players</li></ul><a class="support-link" href="#rules">Read the website overview →</a></article>
+<article class="support-card" data-mark="02"><span class="support-type">City conduct</span><h3>Rules &amp; Standards</h3><p>The website gives a quick overview, while the full live rulebook remains in Discord so updates are always clear and current.</p><ul><li>No random violence or low-effort conflict</li><li>No exploiting, duplication or system abuse</li><li>Stay in character during active scenes</li><li>Respect staff decisions and other players</li></ul><a class="support-link" href="#rules">Read the website overview →</a></article>
 <article class="support-card" data-mark="03"><span class="support-type">Technical help</span><h3>Player Support</h3><p>Use support tickets for technical issues, missing items, connection problems or anything that cannot be handled naturally in character.</p><ul><li>Include screenshots or clips when possible</li><li>Explain what happened and when</li><li>Avoid opening duplicate tickets</li><li>Keep support communication respectful</li></ul><a class="support-link" href="https://discord.gg/QPgcjHWShX" target="_blank">Open the support channels →</a></article>
-<article class="support-card" data-mark="04"><span class="support-type">Reports & evidence</span><h3>Player Reports</h3><p>Report serious rule concerns privately rather than turning the issue into an argument inside the city or public chat.</p><ul><li>Provide useful context and evidence</li><li>Give accurate player and scene details</li><li>Do not edit clips to hide context</li><li>Allow staff time to review both sides</li></ul><a class="support-link" href="https://discord.gg/QPgcjHWShX" target="_blank">Use the official report process →</a></article>
+<article class="support-card" data-mark="04"><span class="support-type">Reports &amp; evidence</span><h3>Player Reports</h3><p>Report serious rule concerns privately rather than turning the issue into an argument inside the city or public chat.</p><ul><li>Provide useful context and evidence</li><li>Give accurate player and scene details</li><li>Do not edit clips to hide context</li><li>Allow staff time to review both sides</li></ul><a class="support-link" href="https://discord.gg/QPgcjHWShX" target="_blank">Use the official report process →</a></article>
 <article class="support-card" data-mark="05"><span class="support-type">Fair review</span><h3>Appeals</h3><p>If a punishment or application decision has an appeal route, present your case calmly and focus on facts rather than attacking staff or players.</p><ul><li>Read the appeal requirements first</li><li>Own mistakes where appropriate</li><li>Explain what will change going forward</li><li>Submit one complete and honest appeal</li></ul><a class="support-link" href="https://discord.gg/QPgcjHWShX" target="_blank">View appeal information →</a></article>
-<article class="support-card" data-mark="06"><span class="support-type">Department applications</span><h3>Roles & Recruitment</h3><p>Police, EMS, staff, Kingz Autos and business applications are handled by the relevant team through the official community channels.</p><ul><li>Choose a department that fits your character</li><li>Answer application questions honestly</li><li>Attend interviews or training when requested</li><li>Keep roleplay standards consistent after acceptance</li></ul><a class="support-link" href="#recruitment">See open GLRP roles →</a></article>
+<article class="support-card" data-mark="06"><span class="support-type">Department applications</span><h3>Roles &amp; Recruitment</h3><p>Police, EMS, staff, Kingz Autos and business applications are handled by the relevant team through the official community channels.</p><ul><li>Choose a department that fits your character</li><li>Answer application questions honestly</li><li>Attend interviews or training when requested</li><li>Keep roleplay standards consistent after acceptance</li></ul><a class="support-link" href="#recruitment">See open GLRP roles →</a></article>
 </div>
 <div class="whitelist-flow"><div class="whitelist-flow-top"><div><span class="kicker">Four simple steps</span><h3>Your route into GLRP</h3></div><p>You do not need to memorise every script or system. The important part is showing that you understand serious roleplay, respect the community and have a character idea that can grow.</p></div><div class="whitelist-steps"><div class="whitelist-step"><b>Step 01</b><strong>Join Discord</strong><span>Read announcements, the current rulebook and application information.</span></div><div class="whitelist-step"><b>Step 02</b><strong>Build your character</strong><span>Create a believable background, goals, strengths and flaws.</span></div><div class="whitelist-step"><b>Step 03</b><strong>Submit honestly</strong><span>Complete the whitelist or department application in your own words.</span></div><div class="whitelist-step"><b>Step 04</b><strong>Enter prepared</strong><span>Use the handbook, ask for help and build scenes with the community.</span></div></div></div>
-<div class="support-actions"><p><strong>Need help before applying?</strong><br>Join the official GLRP Discord and use the correct support or application channel.</p><div class="support-buttons"><a class="btn" href="#start">Read New Player Handbook</a><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Open GLRP Discord</a></div></div>
-</div></section>
-
-<section class="join" id="join"><div class="wrap"><div class="join-box"><div><span class="kicker">Coming soon • ready to start?</span><h2>Enter the city.<br><span class="accent">Create your legacy.</span></h2><p>Join the GLRP community before launch, follow official announcements and help shape a server designed around player stories and custom gameplay.</p></div><div class="join-buttons"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">GLRP YouTube</a></div></div></div></section>
-</main>
+<div class="support-actions"><p><strong>Need help before applying?</strong><br/>Join the official GLRP Discord and use the correct support or application channel.</p><div class="support-buttons"><a class="btn" href="#start">Read New Player Handbook</a><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Open GLRP Discord</a></div></div>
+</div></section><section class="join" id="join"><div class="wrap"><div class="join-box"><div><span class="kicker">Coming soon • ready to start?</span><h2>Enter the city.<br/><span class="accent">Create your legacy.</span></h2><p>Join the GLRP community before launch, follow official announcements and help shape a server designed around player stories and custom gameplay.</p></div><div class="join-buttons"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">GLRP YouTube</a></div></div></div></section></main>
 <footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown • Live City Pulse • Smart Search • Character Builder</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
 <div class="toast" id="copyToast">Copied to clipboard</div>
-<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
-
-<div class="site-search-overlay" id="siteSearchOverlay" role="dialog" aria-modal="true" aria-labelledby="siteSearchTitle">
-  <div class="site-search-panel">
-    <div class="site-search-head">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
-      <input class="site-search-input" id="siteSearchInput" type="search" autocomplete="off" placeholder="Search cars, jobs, licences, creatures, businesses…" aria-label="Search GLRP website">
-      <button class="site-search-close" id="siteSearchClose" type="button" aria-label="Close search">×</button>
-    </div>
-    <div class="site-search-help"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span><span id="siteSearchCount">Quick links</span></div>
-    <div class="site-search-results" id="siteSearchResults" role="listbox" aria-label="Search results"></div>
-  </div>
+<button aria-label="Back to top" class="back-to-top" id="backToTop" type="button">↑</button>
+<div aria-labelledby="siteSearchTitle" aria-modal="true" class="site-search-overlay" id="siteSearchOverlay" role="dialog">
+<div class="site-search-panel">
+<div class="site-search-head">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+<input aria-label="Search GLRP website" autocomplete="off" class="site-search-input" id="siteSearchInput" placeholder="Search cars, jobs, licences, creatures, businesses…" type="search"/>
+<button aria-label="Close search" class="site-search-close" id="siteSearchClose" type="button">×</button>
 </div>
-
-<div class="modal" id="modal"><button id="closeModal">CLOSE</button><img id="modalImg" alt="Gallery image"></div>
+<div class="site-search-help"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span><span id="siteSearchCount">Quick links</span></div>
+<div aria-label="Search results" class="site-search-results" id="siteSearchResults" role="listbox"></div>
+</div>
+</div>
+<div class="modal" id="modal"><button id="closeModal">CLOSE</button><img alt="Gallery image" id="modalImg"/></div>
 <script>
 const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links');menuBtn.addEventListener('click',()=>links.classList.toggle('open'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
 
@@ -1321,7 +1373,6 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
 })();
 
 </script>
-
 <script>
 // V3.1.6 — GLRP role matcher
 (() => {
@@ -1404,8 +1455,6 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   showStep(0);
 })();
 </script>
-
-
 <script>
 (() => {
   const form = document.getElementById('characterBuilderForm');
@@ -1586,8 +1635,6 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   loadDraft();
 })();
 </script>
-
-
 <script>
 (() => {
   const root = document.getElementById('firstWeekPlanner');
@@ -1728,5 +1775,16 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   render();
 })();
 </script>
-
-</body></html>
+<script>
+(() => {
+  const more = document.querySelector('.nav-more');
+  if (!more) return;
+  more.querySelectorAll('a').forEach(link => link.addEventListener('click', () => more.removeAttribute('open')));
+  document.addEventListener('click', event => {
+    if (more.open && !more.contains(event.target)) more.removeAttribute('open');
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') more.removeAttribute('open');
+  });
+})();
+</script></body></html>
