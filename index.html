@@ -403,6 +403,57 @@ body.character-stories-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.character-stories,.character-stories-panel,.story-stage-image,.story-persona{transition:none}}
 </style>
 
+
+<style>
+/* V3.2.6.3 — locked high-contrast hero action buttons */
+.hero .actions .btn.tour-launch,
+.hero .actions .btn.pulse-launch,
+.hero .actions .btn.story-launch{
+  color:#ffffff !important;
+  text-shadow:0 1px 2px rgba(0,0,0,.55);
+  border-width:1px !important;
+  border-style:solid !important;
+  font-weight:950;
+  opacity:1 !important;
+}
+.hero .actions .btn.tour-launch{
+  background:linear-gradient(135deg,#168cff,#315cff) !important;
+  border-color:rgba(126,193,255,.8) !important;
+  box-shadow:0 12px 28px rgba(35,112,255,.34);
+}
+.hero .actions .btn.pulse-launch{
+  background:linear-gradient(135deg,#ff334e,#ff6b1a) !important;
+  border-color:rgba(255,151,95,.82) !important;
+  box-shadow:0 12px 28px rgba(255,67,55,.32);
+}
+.hero .actions .btn.story-launch{
+  background:linear-gradient(135deg,#7c3aed,#c026d3) !important;
+  border-color:rgba(216,180,254,.82) !important;
+  box-shadow:0 12px 28px rgba(151,71,255,.32);
+}
+.hero .actions .btn.tour-launch:hover,
+.hero .actions .btn.pulse-launch:hover,
+.hero .actions .btn.story-launch:hover{
+  color:#ffffff !important;
+  filter:brightness(1.13) saturate(1.08);
+  transform:translateY(-3px);
+}
+.hero .actions .btn.tour-launch:focus-visible,
+.hero .actions .btn.pulse-launch:focus-visible,
+.hero .actions .btn.story-launch:focus-visible{
+  outline:3px solid #ffffff;
+  outline-offset:3px;
+}
+.hero .actions .btn.tour-launch:before{color:#ffffff !important;}
+.hero .actions .btn.pulse-launch:before{color:#b9ffd0 !important;}
+.hero .actions .btn.story-launch:after{background:rgba(255,255,255,.85) !important;}
+@media(max-width:760px){
+  .hero .actions .btn.tour-launch,
+  .hero .actions .btn.pulse-launch,
+  .hero .actions .btn.story-launch{min-width:0;width:100%;}
+}
+</style>
+
 </head>
 <body>
 <header class="header"><div class="wrap nav">
