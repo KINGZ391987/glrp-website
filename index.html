@@ -296,6 +296,24 @@ section[id]{scroll-margin-top:92px}
   .route-card{min-height:150px}
 }
 @media(prefers-reduced-motion:reduce){.nav-more-menu{animation:none}.route-card:hover{transform:none}}
+
+
+/* V3.2.0 — GLRP Applications Centre */
+.applications-centre{padding:94px 0;background:radial-gradient(circle at 18% 12%,rgba(255,61,79,.12),transparent 30%),linear-gradient(180deg,#070b12,#080c13);border-block:1px solid rgba(255,255,255,.06)}
+.applications-head{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:end;margin-bottom:26px}.applications-head h2{font-size:clamp(42px,6vw,82px);line-height:.9;letter-spacing:-.055em;text-transform:uppercase;margin:12px 0 0}.applications-head p{margin:0;color:var(--muted);font-size:16px;line-height:1.76}
+.application-shell{display:grid;grid-template-columns:310px minmax(0,1fr);gap:16px;padding:15px;border-radius:30px;border:1px solid rgba(255,88,105,.24);background:linear-gradient(145deg,rgba(255,61,79,.075),rgba(88,166,255,.025) 48%,rgba(0,0,0,.28));box-shadow:var(--shadow)}
+.application-role-list{display:grid;align-content:start;gap:9px;padding:10px;border-radius:22px;background:rgba(5,8,13,.72);border:1px solid var(--line)}
+.application-role{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:center;width:100%;padding:13px;border:1px solid transparent;border-radius:15px;background:transparent;color:#d8dee8;text-align:left;cursor:pointer;transition:.2s}.application-role:hover{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.075)}.application-role.active{background:linear-gradient(135deg,rgba(255,61,79,.16),rgba(255,107,26,.08));border-color:rgba(255,88,105,.43);box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}
+.application-role-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#1a2533,#0b1017);border:1px solid rgba(255,255,255,.08);color:#ffc06a;font-size:10px;font-weight:950;letter-spacing:.06em}.application-role.active .application-role-icon{background:linear-gradient(135deg,#ff7440,#ff3d4f);color:#fff;border-color:transparent}.application-role strong{display:block;font-size:13px;margin-bottom:4px}.application-role small{display:block;color:#8f99aa;font-size:10px;line-height:1.45}
+.application-main{padding:28px;border-radius:22px;background:linear-gradient(150deg,#111925,#070b11 72%);border:1px solid var(--line);min-width:0}.application-main-top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:21px}.application-main-top small{display:block;color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}.application-main-top h3{font-size:clamp(30px,4vw,48px);line-height:.98;text-transform:uppercase;margin:0}.application-state{padding:8px 11px;border-radius:999px;border:1px solid rgba(103,226,129,.28);background:rgba(103,226,129,.075);color:#8cff9f;font-size:9px;font-weight:950;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.application-pitch{padding:17px 18px;margin-bottom:20px;border-radius:17px;border:1px solid rgba(255,107,26,.2);background:rgba(255,107,26,.055);color:#d5dce6;font-size:14px;line-height:1.7}.application-pitch strong{color:#ffc06a}
+.application-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.application-field{display:grid;gap:7px}.application-field.wide{grid-column:1/-1}.application-field label{font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#cbd3df}.application-field input,.application-field textarea,.application-field select{width:100%;border:1px solid rgba(255,255,255,.09);border-radius:13px;background:#080d14;color:#fff;padding:13px 14px;font:inherit;font-size:13px;outline:none;transition:.2s}.application-field textarea{min-height:115px;resize:vertical;line-height:1.6}.application-field input:focus,.application-field textarea:focus,.application-field select:focus{border-color:rgba(255,88,105,.58);box-shadow:0 0 0 3px rgba(255,61,79,.08)}.application-field small{color:#788396;font-size:9px;line-height:1.45}
+.application-preview{margin-top:18px;padding:19px;border-radius:18px;border:1px solid rgba(88,166,255,.18);background:linear-gradient(145deg,rgba(88,166,255,.055),rgba(255,255,255,.015));white-space:pre-wrap;color:#cfd7e2;font-size:12px;line-height:1.65;min-height:170px}.application-preview:empty:before{content:'Your application draft will appear here as you type.';color:#667285}
+.application-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.application-actions .btn{cursor:pointer}.application-note{display:flex;align-items:center;gap:9px;margin-top:14px;color:#7f8a9b;font-size:10px;line-height:1.55}.application-note:before{content:'✓';display:grid;place-items:center;width:22px;height:22px;flex:0 0 auto;border-radius:50%;background:rgba(103,226,129,.08);color:#8cff9f;border:1px solid rgba(103,226,129,.2)}
+.application-toast{position:fixed;left:50%;bottom:26px;z-index:260;transform:translate(-50%,22px);opacity:0;pointer-events:none;padding:12px 16px;border-radius:13px;background:#111923;color:#fff;border:1px solid rgba(255,88,105,.34);box-shadow:0 18px 45px rgba(0,0,0,.42);font-size:11px;font-weight:850;transition:.23s}.application-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:980px){.application-shell{grid-template-columns:1fr}.application-role-list{grid-template-columns:repeat(5,minmax(130px,1fr));overflow-x:auto}.application-role{min-width:150px}.applications-head{grid-template-columns:1fr}}
+@media(max-width:700px){.applications-centre{padding:72px 0}.application-main{padding:20px}.application-form-grid{grid-template-columns:1fr}.application-field.wide{grid-column:auto}.application-main-top{display:grid}.application-actions,.application-actions .btn{width:100%}.application-role-list{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:165px}.applications-head h2{font-size:44px}}
+
 </style>
 </head>
 <body>
@@ -311,6 +329,7 @@ section[id]{scroll-margin-top:92px}
 <details class="nav-more">
 <summary>More <span aria-hidden="true">⌄</span></summary>
 <div class="nav-more-menu">
+<a href="#applications">Applications Centre</a>
 <a href="#role-match">Find Your Role</a>
 <a href="#character-builder">Build Character</a>
 <a href="#first-week">First Week Plan</a>
@@ -432,7 +451,34 @@ section[id]{scroll-margin-top:92px}
 </div>
 <div class="application-flow"><div class="application-flow-top"><div><span class="kicker">Simple application process</span><h3>How to register your interest</h3></div><p>You do not need to know every GLRP system before applying. Join the community, choose the area that interests you and the relevant team will guide you through the next steps.</p></div><div class="apply-steps"><div class="apply-step"><b>Step 01</b><strong>Join the official Discord</strong><span>Access launch news, department information and the application channels.</span></div><div class="apply-step"><b>Step 02</b><strong>Choose your role</strong><span>Select staff, PD, EMS, Kingz Autos, business ownership or general player interest.</span></div><div class="apply-step"><b>Step 03</b><strong>Submit your application</strong><span>Answer the questions honestly and speak with the relevant department team.</span></div></div></div>
 <div class="recruit-actions"><span>Applications, interviews and launch updates are handled through the official GLRP Discord.</span><div class="recruit-buttons"><a class="btn" href="#systems">Explore City Systems</a><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Apply Through Discord</a></div></div>
-</div></div></section><section class="handbook" id="start"><div class="wrap">
+</div></div></section><section class="applications-centre" id="applications"><div class="wrap">
+<div class="applications-head"><div><span class="kicker">GLRP applications centre</span><h2>Step forward.<br/><span class="accent">Claim your role.</span></h2></div><p>Prepare a stronger application before entering Discord. Pick the department or business path you want, answer the questions in your own words and copy a clean draft when you are ready.</p></div>
+<div class="application-shell" id="applicationCentre">
+<div class="application-role-list" aria-label="Application role selection">
+<button class="application-role active" data-application-role="staff" type="button"><span class="application-role-icon">STAFF</span><span><strong>Staff &amp; Support</strong><small>Protect fair roleplay and help the community grow.</small></span></button>
+<button class="application-role" data-application-role="police" type="button"><span class="application-role-icon">PD</span><span><strong>Police Department</strong><small>Patrol, investigate and create consequences.</small></span></button>
+<button class="application-role" data-application-role="ems" type="button"><span class="application-role-icon">EMS</span><span><strong>EMS &amp; Medical</strong><small>Keep scenes alive when everything goes wrong.</small></span></button>
+<button class="application-role" data-application-role="autos" type="button"><span class="application-role-icon">AUTO</span><span><strong>Kingz Autos</strong><small>Build trust through cars, recovery and service.</small></span></button>
+<button class="application-role" data-application-role="business" type="button"><span class="application-role-icon">BIZ</span><span><strong>Business Owner</strong><small>Create a place players choose to return to.</small></span></button>
+</div>
+<div class="application-main">
+<div class="application-main-top"><div><small id="applicationCategory">Community Team</small><h3 id="applicationTitle">Staff &amp; Support</h3></div><span class="application-state">Applications Open</span></div>
+<div class="application-pitch" id="applicationPitch"><strong>Be one of the people players can rely on.</strong> Show that you can stay calm, communicate clearly and protect the roleplay without making yourself the centre of every scene.</div>
+<div class="application-form-grid">
+<div class="application-field"><label for="appDiscord">Discord name</label><input id="appDiscord" maxlength="50" placeholder="Example: Kingz#0001"/><small>Used only in the copied draft.</small></div>
+<div class="application-field"><label for="appCharacter">Character name</label><input id="appCharacter" maxlength="50" placeholder="Example: Marcus Hale"/><small>Leave blank if the role is out-of-character only.</small></div>
+<div class="application-field"><label for="appAvailability">Availability</label><input id="appAvailability" maxlength="100" placeholder="Example: Evenings and weekends, UK time"/></div>
+<div class="application-field"><label for="appExperience">Relevant experience</label><input id="appExperience" maxlength="140" placeholder="Experience is useful, honesty matters more."/></div>
+<div class="application-field wide"><label for="appWhy" id="applicationWhyLabel">Why do you want to join the GLRP team?</label><textarea id="appWhy" maxlength="700" placeholder="Explain what interests you, what you can bring and what kind of roleplay or community experience you want to help create."></textarea></div>
+<div class="application-field wide"><label for="appScenario" id="applicationScenarioLabel">How would you handle a difficult player situation?</label><textarea id="appScenario" maxlength="700" placeholder="Give a calm, realistic answer. There is no need to make yourself sound perfect."></textarea></div>
+<div class="application-field wide"><label for="appExtra">Anything else the team should know?</label><textarea id="appExtra" maxlength="450" placeholder="Optional: goals, ideas, leadership interest or anything that helps the team understand you."></textarea></div>
+</div>
+<div class="application-preview" id="applicationPreview" aria-live="polite"></div>
+<div class="application-actions"><button class="btn primary" id="copyApplicationDraft" type="button">Copy Application Draft</button><button class="btn" id="saveApplicationDraft" type="button">Save on This Device</button><button class="btn" id="clearApplicationDraft" type="button">Clear Draft</button><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank" rel="noopener">Open Discord</a></div>
+<div class="application-note">Nothing is submitted through this website. Drafts stay in your browser until you copy them into the official GLRP Discord application channel.</div>
+</div>
+</div>
+</div></section><section class="handbook" id="start"><div class="wrap">
 <div class="handbook-head"><div><span class="kicker">New player handbook</span><h2>Land prepared.<br/><span class="accent">Start your story.</span></h2></div><p>Your first night should feel exciting, not confusing. Follow the guide from arrival to your first job, first collection and first place to call home, then let the city open naturally around you.</p></div>
 <div class="handbook-shell">
 <div aria-label="New player handbook sections" class="handbook-tabs" role="tablist">
@@ -1787,4 +1833,71 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
     if (event.key === 'Escape') more.removeAttribute('open');
   });
 })();
-</script></body></html>
+</script>
+<script>
+(() => {
+  const root=document.getElementById('applicationCentre');
+  if(!root) return;
+  const roles={
+    staff:{category:'Community Team',title:'Staff & Support',pitch:'<strong>Be one of the people players can rely on.</strong> Show that you can stay calm, communicate clearly and protect the roleplay without making yourself the centre of every scene.',why:'Why do you want to join the GLRP staff team?',scenario:'How would you handle a difficult player or heated support situation?'},
+    police:{category:'Emergency Services',title:'Police Department',pitch:'<strong>Wear the badge for the story, not just the authority.</strong> Show that you can investigate, communicate and create fair consequences while leaving room for every player in the scene.',why:'Why does your character want to join the Police Department?',scenario:'How would your officer handle a tense traffic stop that begins to escalate?'},
+    ems:{category:'Emergency Services',title:'EMS & Medical',pitch:'<strong>Be the person who keeps the story moving after the sirens arrive.</strong> Show patience, empathy and the ability to create meaningful medical roleplay instead of rushing through treatment.',why:'Why does your character want to work in EMS or medical services?',scenario:'How would you handle an injured player who is panicking and refusing treatment?'},
+    autos:{category:'Automotive Careers',title:'Kingz Autos',pitch:'<strong>Build a name through service, skill and trust.</strong> Show that you can create customer roleplay, care about the vehicles and help make the workshop a place players remember.',why:'Why do you want your character to work at Kingz Autos?',scenario:'How would you handle an angry customer who believes their repair was done incorrectly?'},
+    business:{category:'Player Economy',title:'Business Owner',pitch:'<strong>Bring more than a logo and a menu.</strong> Explain how your business will create jobs, repeat customers, relationships and new scenes for the wider GLRP community.',why:'What business do you want to build, and why will players return to it?',scenario:'How would you keep the business active when customer numbers are quiet?' }
+  };
+  const ids=['appDiscord','appCharacter','appAvailability','appExperience','appWhy','appScenario','appExtra'];
+  const inputs=Object.fromEntries(ids.map(id=>[id,document.getElementById(id)]));
+  const title=document.getElementById('applicationTitle');
+  const category=document.getElementById('applicationCategory');
+  const pitch=document.getElementById('applicationPitch');
+  const whyLabel=document.getElementById('applicationWhyLabel');
+  const scenarioLabel=document.getElementById('applicationScenarioLabel');
+  const preview=document.getElementById('applicationPreview');
+  const storageKey='glrp-application-centre-v1';
+  let state={role:'staff',drafts:{}};
+  try{state={...state,...JSON.parse(localStorage.getItem(storageKey)||'{}')}}catch(_){ }
+  if(!roles[state.role]) state.role='staff';
+  if(!state.drafts||typeof state.drafts!=='object') state.drafts={};
+
+  function toast(message){
+    let el=document.querySelector('.application-toast');
+    if(!el){el=document.createElement('div');el.className='application-toast';document.body.appendChild(el)}
+    el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),1900);
+  }
+  function getDraft(){return Object.fromEntries(ids.map(id=>[id,inputs[id]?.value.trim()||'']))}
+  function setDraft(draft={}){ids.forEach(id=>{if(inputs[id]) inputs[id].value=draft[id]||''})}
+  function persist(message){state.drafts[state.role]=getDraft();try{localStorage.setItem(storageKey,JSON.stringify(state));if(message)toast(message)}catch(_){if(message)toast('Draft saved for this visit.')}}
+  function buildText(){
+    const r=roles[state.role],d=getDraft();
+    const line=(label,value)=>`${label}: ${value||'Not provided'}`;
+    return [`GLRP ${r.title.toUpperCase()} APPLICATION DRAFT`,'',line('Discord name',d.appDiscord),line('Character name',d.appCharacter),line('Availability',d.appAvailability),line('Relevant experience',d.appExperience),'',`${whyLabel.textContent}\n${d.appWhy||'Not answered yet.'}`,'',`${scenarioLabel.textContent}\n${d.appScenario||'Not answered yet.'}`,'',`Anything else the team should know?\n${d.appExtra||'Nothing additional.'}`,'','Prepared using the GLRP Applications Centre.'].join('\n');
+  }
+  function renderPreview(){preview.textContent=buildText()}
+  function selectRole(role,saveCurrent=true){
+    if(saveCurrent) state.drafts[state.role]=getDraft();
+    state.role=role;const r=roles[role];
+    root.querySelectorAll('.application-role').forEach(btn=>btn.classList.toggle('active',btn.dataset.applicationRole===role));
+    category.textContent=r.category;title.textContent=r.title;pitch.innerHTML=r.pitch;whyLabel.textContent=r.why;scenarioLabel.textContent=r.scenario;
+    setDraft(state.drafts[role]||{});
+    try{
+      if(!inputs.appCharacter.value){const character=JSON.parse(localStorage.getItem('glrp-character-builder-v1')||'{}');if(character.cbName)inputs.appCharacter.value=character.cbName}
+    }catch(_){ }
+    renderPreview();try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(_){ }
+  }
+  root.querySelectorAll('.application-role').forEach(btn=>btn.addEventListener('click',()=>selectRole(btn.dataset.applicationRole)));
+  ids.forEach(id=>inputs[id]?.addEventListener('input',renderPreview));
+  document.getElementById('saveApplicationDraft')?.addEventListener('click',()=>persist('Application draft saved on this device.'));
+  document.getElementById('clearApplicationDraft')?.addEventListener('click',()=>{
+    if(!window.confirm(`Clear the saved ${roles[state.role].title} draft?`)) return;
+    state.drafts[state.role]={};setDraft({});persist('Application draft cleared.');renderPreview();
+  });
+  document.getElementById('copyApplicationDraft')?.addEventListener('click',async()=>{
+    const output=buildText();
+    try{await navigator.clipboard.writeText(output)}catch(_){const area=document.createElement('textarea');area.value=output;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();document.execCommand('copy');area.remove()}
+    persist();toast('Application draft copied.');
+  });
+  selectRole(state.role,false);
+})();
+</script>
+
+</body></html>
