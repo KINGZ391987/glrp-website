@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#070a10">
 <meta name="description" content="Gang Life RP — UK serious FiveM roleplay with custom progression, businesses, vehicles, life paths, creature collection, city activities and more.">
-<title>Gang Life RP | Coming Soon — Applications Open</title>
+<title>Gang Life RP | Coming Soon — Join Before Launch</title>
 <link rel="icon" type="image/webp" href="assets/favicon.webp">
 <style>
 :root{--bg:#05070b;--bg2:#090e16;--panel:#0d141e;--panel2:#151e2a;--text:#f5f7fb;--muted:#9da8b8;--orange:#ff6b1a;--gold:#ffb347;--red:#ff334e;--green:#58e58a;--line:rgba(255,255,255,.09);--shadow:0 24px 70px rgba(0,0,0,.48);--max:1320px}
@@ -181,6 +181,18 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 @media(max-width:760px){.hero-live-line{font-size:11px;line-height:1.45}.back-to-top{right:14px;bottom:14px;width:44px;height:44px}.modal-nav{width:43px;height:43px}.modal-nav.prev{left:9px}.modal-nav.next{right:9px}.links a:not(.nav-join):after{bottom:2px}}
 @media(prefers-reduced-motion:reduce){.hero-live-line i{animation:none}.page-progress span{transition:none}.js-interactive-card{transform:none!important}.js-ripple{display:none}}
 
+
+
+/* V3.1.4 — Launch Countdown & Live City Pulse */
+.city-pulse{padding:34px 0 96px;position:relative}.pulse-shell{position:relative;overflow:hidden;border-radius:30px;border:1px solid rgba(255,107,26,.3);background:radial-gradient(circle at 88% 8%,rgba(255,51,78,.2),transparent 31%),radial-gradient(circle at 8% 100%,rgba(74,168,255,.12),transparent 32%),linear-gradient(140deg,#120912,#09111b 52%,#06090f);padding:42px;box-shadow:var(--shadow)}.pulse-shell:before{content:"CITY PULSE";position:absolute;right:-22px;top:-31px;font-size:118px;font-weight:950;letter-spacing:-.07em;color:rgba(255,255,255,.025);pointer-events:none}.pulse-head{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:end}.pulse-head h2{font-size:clamp(42px,5.6vw,76px);line-height:.91;letter-spacing:-.055em;text-transform:uppercase;margin:13px 0 0}.pulse-head p{color:#c8d1de;line-height:1.72;margin:0}.pulse-live{display:flex;align-items:center;gap:10px;width:fit-content;margin-bottom:13px;padding:10px 13px;border-radius:999px;border:1px solid rgba(88,229,138,.25);background:rgba(88,229,138,.07);color:#a8ffbf;font-size:10px;font-weight:950;letter-spacing:.14em;text-transform:uppercase}.pulse-live i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 15px var(--green);animation:pulseBeacon 1.7s ease-in-out infinite}@keyframes pulseBeacon{0%,100%{opacity:.65;transform:scale(.82)}50%{opacity:1;transform:scale(1.16)}}
+.countdown-wrap{position:relative;z-index:2;margin-top:28px;padding:22px;border-radius:22px;border:1px solid var(--line);background:rgba(0,0,0,.34)}.countdown-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:14px}.countdown-top strong{font-size:15px}.countdown-top span{color:#8290a4;font-size:11px;line-height:1.5;text-align:right}.launch-countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.count-cell{min-height:105px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:17px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(145deg,rgba(255,107,26,.09),rgba(255,255,255,.02));text-align:center}.count-cell strong{font-size:clamp(25px,3.2vw,43px);line-height:1;color:#fff;letter-spacing:-.035em}.count-cell small{margin-top:9px;color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.countdown-note{margin:13px 0 0;color:#8f9bad;font-size:11px;line-height:1.55}
+.pulse-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.pulse-card{min-height:185px;padding:21px;border-radius:19px;border:1px solid var(--line);background:rgba(7,10,16,.7);transition:.22s ease}.pulse-card:hover{transform:translateY(-4px);border-color:rgba(255,107,26,.4);box-shadow:0 18px 42px rgba(0,0,0,.28)}.pulse-card small{display:block;color:#8190a5;font-size:9px;font-weight:950;letter-spacing:.14em;text-transform:uppercase}.pulse-card h3{font-size:22px;margin:12px 0 8px}.pulse-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.62}.pulse-card .pulse-state{display:inline-flex;align-items:center;gap:7px;margin-top:14px;color:#9bffb1;font-size:9px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}.pulse-card .pulse-state:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.story-signal{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin-top:18px;padding:22px;border-radius:20px;border:1px solid rgba(255,107,26,.23);background:linear-gradient(90deg,rgba(255,51,78,.09),rgba(255,107,26,.07),rgba(74,168,255,.06))}.story-signal small{display:block;color:#8290a5;font-size:9px;font-weight:950;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}.story-signal strong{display:block;font-size:clamp(19px,2.3vw,30px);line-height:1.25;transition:opacity .18s ease,transform .18s ease}.story-signal strong.swap{opacity:0;transform:translateY(6px)}.story-signal button{border:1px solid rgba(255,107,26,.32);background:rgba(255,107,26,.1);color:#fff;border-radius:13px;padding:13px 16px;font-size:10px;font-weight:950;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap}.story-signal button:hover{background:linear-gradient(135deg,var(--red),var(--orange));color:#140609;border-color:transparent}
+.pulse-ticker{position:relative;z-index:2;overflow:hidden;margin-top:18px;border-block:1px solid var(--line);background:rgba(0,0,0,.22)}.pulse-ticker:before,.pulse-ticker:after{content:"";position:absolute;z-index:2;top:0;bottom:0;width:80px;pointer-events:none}.pulse-ticker:before{left:0;background:linear-gradient(90deg,#080c13,transparent)}.pulse-ticker:after{right:0;background:linear-gradient(-90deg,#080c13,transparent)}.pulse-track{display:flex;width:max-content;gap:42px;padding:13px 0;animation:pulseTicker 28s linear infinite}.pulse-track span{color:#d3dbe6;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}.pulse-track span:before{content:"◆";color:var(--orange);margin-right:12px}@keyframes pulseTicker{to{transform:translateX(-50%)}}
+@media(max-width:1050px){.pulse-head{grid-template-columns:1fr}.pulse-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.city-pulse{padding:20px 0 72px}.pulse-shell{padding:25px}.launch-countdown,.pulse-grid{grid-template-columns:repeat(2,1fr)}.countdown-top{display:block}.countdown-top span{display:block;text-align:left;margin-top:7px}.story-signal{grid-template-columns:1fr}.story-signal button{width:100%}.pulse-shell:before{font-size:72px}.pulse-ticker:before,.pulse-ticker:after{width:35px}}
+@media(prefers-reduced-motion:reduce){.pulse-live i,.pulse-track{animation:none}.pulse-track{flex-wrap:wrap;width:auto;padding:13px;gap:13px}.pulse-track span:nth-child(n+6){display:none}}
+
 </style>
 </head>
 <body>
@@ -195,6 +207,37 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 <div class="hero-copy"><span class="kicker">Coming soon • UK serious roleplay • applications open</span><h1>Live the streets.<br><span class="accent">Run the city.</span><br>Build your legacy.</h1><p>Step into a serious UK roleplay city where every shift, deal, rivalry and discovery can change your character’s future. Build a name through business, street life, emergency services, custom cars, collecting, competition and stories that keep moving long after your first night.</p><div class="hero-live-line" aria-live="polite"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">Watch GLRP</a></div></div>
 <div class="hero-side"><div class="hero-stat"><strong>City Status</strong><span>Coming soon — applications open now</span></div><div class="hero-stat"><strong>Applications Open</strong><span>Staff, Police, EMS, Kingz Autos, businesses and players</span></div><div class="hero-stat"><strong>Style</strong><span>Serious roleplay with progression and freedom</span></div><div class="hero-stat"><strong>Community</strong><span>Player stories, businesses, gangs and events</span></div></div>
 </div></section>
+
+<section class="city-pulse" id="pulse"><div class="wrap"><div class="pulse-shell">
+  <div class="pulse-head">
+    <div><span class="kicker">GLRP launch countdown & live city pulse</span><h2>The city is getting ready.<br><span class="accent">Get in before the doors open.</span></h2></div>
+    <div><div class="pulse-live"><i></i> Community access open now</div><p>Follow the road to launch, register your interest early and find the role that could shape your first chapter. The official date will appear here the moment it is locked in.</p></div>
+  </div>
+  <div class="countdown-wrap" id="launchCountdown" data-launch-date="">
+    <div class="countdown-top"><strong>Official GLRP launch countdown</strong><span id="countdownStatus">Launch date reveal coming soon — join Discord so you do not miss it.</span></div>
+    <div class="launch-countdown" aria-live="polite">
+      <div class="count-cell"><strong id="countDays">DATE</strong><small id="labelDays">Launch</small></div>
+      <div class="count-cell"><strong id="countHours">REVEAL</strong><small id="labelHours">Announcement</small></div>
+      <div class="count-cell"><strong id="countMinutes">COMING</strong><small id="labelMinutes">GLRP</small></div>
+      <div class="count-cell"><strong id="countSeconds">SOON</strong><small id="labelSeconds">Be Ready</small></div>
+    </div>
+    <p class="countdown-note">The timer is launch-ready. Once the official date is confirmed, it automatically changes from the Coming Soon display into a live days, hours, minutes and seconds countdown.</p>
+  </div>
+  <div class="pulse-grid">
+    <article class="pulse-card"><small>Community</small><h3>Applications open</h3><p>Join before launch, introduce your character and get into the right channels for departments, businesses and community access.</p><span class="pulse-state">Open now</span></article>
+    <article class="pulse-card"><small>Departments</small><h3>Police & EMS recruiting</h3><p>Help shape the teams that will handle the city’s biggest calls, investigations, medical scenes and long-running stories.</p><span class="pulse-state">Recruiting</span></article>
+    <article class="pulse-card"><small>Automotive</small><h3>Kingz Autos building its crew</h3><p>Mechanics, recovery drivers and future management can claim a place before the first customers roll through the doors.</p><span class="pulse-state">Roles open</span></article>
+    <article class="pulse-card"><small>Player economy</small><h3>Business ideas welcome</h3><p>Bring a concept worth visiting, build a team around it and become one of the names that gives daily city life its character.</p><span class="pulse-state">Interest open</span></article>
+  </div>
+  <div class="story-signal">
+    <div><small>Your first GLRP chapter could begin with</small><strong id="pulseStory">a starter job, one useful contact and a plan to own the block.</strong></div>
+    <button type="button" id="nextPulseStory">Show another path</button>
+  </div>
+  <div class="pulse-ticker" aria-label="Current GLRP opportunities"><div class="pulse-track">
+    <span>Staff applications open</span><span>Police recruits wanted</span><span>EMS recruits wanted</span><span>Kingz Autos crew wanted</span><span>Business proposals welcome</span><span>General players welcome</span>
+    <span aria-hidden="true">Staff applications open</span><span aria-hidden="true">Police recruits wanted</span><span aria-hidden="true">EMS recruits wanted</span><span aria-hidden="true">Kingz Autos crew wanted</span><span aria-hidden="true">Business proposals welcome</span><span aria-hidden="true">General players welcome</span>
+  </div></div>
+</div></div></section>
 
 <section class="section" id="about"><div class="wrap"><div class="section-head"><div><span class="kicker">Welcome to Gang Life RP</span><h2>A full city.<br><span class="accent">Not just a server.</span></h2></div><p>Land with the basics and decide who you are going to become. Earn your first money, meet the right people, choose a Life Path and turn small opportunities into a reputation the whole city recognises.</p></div>
 <div class="overview-grid"><div class="overview-copy"><span class="kicker">Why GLRP feels different</span><h3>Build a life worth logging back into.</h3><p>Every choice leaves a mark. The people you trust, the cars you build, the businesses you grow, the skills you master, the collections you complete and the reputation you earn all become part of one connected story. Nothing feels like a throwaway session—each night moves your character closer to the name you want the city to remember.</p><div class="chips"><span class="chip">UK serious roleplay</span><span class="chip">Progress that matters</span><span class="chip">Player-run economy</span><span class="chip">In-house GLRP systems</span><span class="chip">New chapters coming</span></div></div><div class="overview-image"><img src="assets/city-overview.webp" alt="Gang Life RP overview"></div></div>
@@ -500,7 +543,7 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 
 <section class="join" id="join"><div class="wrap"><div class="join-box"><div><span class="kicker">Coming soon • ready to start?</span><h2>Enter the city.<br><span class="accent">Create your legacy.</span></h2><p>Join the GLRP community before launch, follow official announcements and help shape a server designed around player stories and custom gameplay.</p></div><div class="join-buttons"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">GLRP YouTube</a></div></div></div></section>
 </main>
-<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Interactive City Map & Locations Guide</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
+<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown & Live City Pulse</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
 <div class="toast" id="copyToast">Copied to clipboard</div>
 <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
 <div class="modal" id="modal"><button id="closeModal">CLOSE</button><img id="modalImg" alt="Gallery image"></div>
@@ -595,7 +638,7 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealTargets = [
-    ...document.querySelectorAll('.section-head, .overview-copy, .overview-image, .recruit-card, .directory-card, .system-card, .activity, .step, .news-card, .handbook-shell, .server-shell, .support-shell, .city-map-shell')
+    ...document.querySelectorAll('.section-head, .overview-copy, .overview-image, .recruit-card, .directory-card, .system-card, .activity, .step, .news-card, .handbook-shell, .server-shell, .support-shell, .city-map-shell, .pulse-shell, .pulse-card')
   ];
 
   revealTargets.forEach((el, index) => {
@@ -717,7 +760,7 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   }
 
   // Subtle cursor lighting and depth on premium cards.
-  const interactiveCards = [...document.querySelectorAll('.system-card,.recruit-card,.directory-card,.news-card,.support-card,.activity,.hero-stat,.starter-item,.handbook-time')];
+  const interactiveCards = [...document.querySelectorAll('.system-card,.recruit-card,.directory-card,.news-card,.support-card,.activity,.hero-stat,.starter-item,.handbook-time,.pulse-card')];
   interactiveCards.forEach(card => {
     card.classList.add('js-interactive-card');
     if (!finePointer || reduceMotion) return;
@@ -739,7 +782,7 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   });
 
   // Physical click feedback on buttons and controls.
-  document.querySelectorAll('.btn,.filter,.news-filter,.city-map-filter,.handbook-tab,.copy-btn,.nav-join').forEach(control => {
+  document.querySelectorAll('.btn,.filter,.news-filter,.city-map-filter,.handbook-tab,.copy-btn,.nav-join,#nextPulseStory').forEach(control => {
     control.classList.add('js-ripple-host');
     control.addEventListener('pointerdown', event => {
       if (reduceMotion) return;
@@ -804,6 +847,81 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
       if (event.key === 'ArrowRight') showGalleryImage(galleryIndex + 1);
     });
   }
+})();
+
+
+
+// V3.1.4 — launch countdown and live city pulse
+(() => {
+  const countdown = document.getElementById('launchCountdown');
+  const days = document.getElementById('countDays');
+  const hours = document.getElementById('countHours');
+  const minutes = document.getElementById('countMinutes');
+  const seconds = document.getElementById('countSeconds');
+  const status = document.getElementById('countdownStatus');
+  const labels = {
+    days: document.getElementById('labelDays'),
+    hours: document.getElementById('labelHours'),
+    minutes: document.getElementById('labelMinutes'),
+    seconds: document.getElementById('labelSeconds')
+  };
+
+  // Add an ISO date to data-launch-date on #launchCountdown when the official launch is announced.
+  const launchValue = countdown?.dataset.launchDate?.trim();
+  if (countdown && launchValue) {
+    const launchTime = new Date(launchValue).getTime();
+    if (Number.isFinite(launchTime)) {
+      labels.days.textContent = 'Days';
+      labels.hours.textContent = 'Hours';
+      labels.minutes.textContent = 'Minutes';
+      labels.seconds.textContent = 'Seconds';
+      const updateCountdown = () => {
+        const distance = launchTime - Date.now();
+        if (distance <= 0) {
+          days.textContent = 'CITY';
+          hours.textContent = 'IS';
+          minutes.textContent = 'NOW';
+          seconds.textContent = 'OPEN';
+          status.textContent = 'Gang Life RP is open — use the official connect button and enter the city.';
+          return false;
+        }
+        const totalSeconds = Math.floor(distance / 1000);
+        days.textContent = String(Math.floor(totalSeconds / 86400)).padStart(2, '0');
+        hours.textContent = String(Math.floor((totalSeconds % 86400) / 3600)).padStart(2, '0');
+        minutes.textContent = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+        seconds.textContent = String(totalSeconds % 60).padStart(2, '0');
+        status.textContent = 'The official countdown is live. Get your character and applications ready.';
+        return true;
+      };
+      if (updateCountdown()) {
+        const countdownTimer = window.setInterval(() => {
+          if (!updateCountdown()) window.clearInterval(countdownTimer);
+        }, 1000);
+      }
+    }
+  }
+
+  const story = document.getElementById('pulseStory');
+  const nextStory = document.getElementById('nextPulseStory');
+  const storyPaths = [
+    'a starter job, one useful contact and a plan to own the block.',
+    'a damaged project car that becomes the machine everyone recognises.',
+    'a Police or EMS application and a career built through the city’s biggest scenes.',
+    'a scanner signal, a rare discovery and a collection nobody else can match.',
+    'a small business idea that grows into a place the whole city visits.',
+    'a crew formed from trust, shared risk and the reputation you build together.',
+    'one risky opportunity that pulls your character deeper into the streets.',
+    'a quiet first night that turns into a rivalry the whole server follows.'
+  ];
+  let storyIndex = 0;
+  nextStory?.addEventListener('click', () => {
+    storyIndex = (storyIndex + 1) % storyPaths.length;
+    story?.classList.add('swap');
+    window.setTimeout(() => {
+      if (story) story.textContent = storyPaths[storyIndex];
+      story?.classList.remove('swap');
+    }, 180);
+  });
 })();
 
 </script>

@@ -1,23 +1,22 @@
-# GLRP Website V3.1.1 — Midnight Crimson
+# GLRP Website V3.1.4 — Launch Countdown & Live City Pulse
 
-Stable V3.1 website with a refreshed premium colour system:
+This build keeps the locked V3.1.3 website and adds a new launch-focused interactive section near the top.
 
-- Midnight black and graphite panels
-- Crimson/red gradients
-- Controlled orange highlights
-- Cool steel-grey text instead of beige/brown
-- Subtle blue ambient glow for depth
-- No structure, content, assets, links or JavaScript changed
+## Added
 
-Safest live update: upload only `index.html`, because the assets are unchanged.
+- Honest Coming Soon countdown display
+- Countdown automatically activates once an official ISO launch date is placed in `data-launch-date`
+- Live community, department, Kingz Autos and business opportunity cards
+- Interactive player story path generator
+- Animated opportunity ticker
+- Mobile and reduced-motion support
 
+## Links already configured
 
-## V3.1.2 Story & Motion update
-- Rewrote the GLRP promise section to sell long-term character progression.
-- Added tasteful JavaScript scroll reveals, staggered chips, hero entrances and subtle parallax.
-- Added reduced-motion support for accessibility.
-- No assets, links, systems or page structure were removed.
+- Discord: https://discord.gg/QPgcjHWShX
+- FiveM: https://cfx.re/join/a44z4m5
+- YouTube: https://www.youtube.com/@GLRPFiveM
 
+## Safe update
 
-## V3.1.3 JavaScript Experience
-Adds scroll progress, active navigation, rotating hero messaging, card lighting, click feedback, keyboard slideshow controls, enhanced gallery navigation, and a back-to-top control.
+Upload only `index.html` when updating an existing V3.1.3 site. The full package is retained as a backup.
