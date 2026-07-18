@@ -17,3 +17,7 @@ Safest live update: upload only `index.html`, because the assets are unchanged.
 - Added tasteful JavaScript scroll reveals, staggered chips, hero entrances and subtle parallax.
 - Added reduced-motion support for accessibility.
 - No assets, links, systems or page structure were removed.
+
+
+## V3.1.3 JavaScript Experience
+Adds scroll progress, active navigation, rotating hero messaging, card lighting, click feedback, keyboard slideshow controls, enhanced gallery navigation, and a back-to-top control.

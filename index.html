@@ -165,6 +165,22 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 @keyframes heroSideIn{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.js-reveal,.js-reveal.reveal-left,.js-reveal.reveal-right,.overview-copy .chip,.hero-copy,.hero-side,.hero-bg{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
 
+
+
+/* V3.1.3 — JavaScript Experience Layer */
+.page-progress{position:fixed;z-index:240;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.035);pointer-events:none}.page-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--red),var(--orange),var(--gold));box-shadow:0 0 16px rgba(255,107,26,.72);transition:width .08s linear}
+.links a.active:not(.nav-join){color:#fff}.links a.active:not(.nav-join):after{transform:scaleX(1)}.links a:not(.nav-join){position:relative}.links a:not(.nav-join):after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,var(--red),var(--orange));transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
+.hero-live-line{display:flex;align-items:center;gap:11px;width:fit-content;max-width:100%;margin-top:20px;padding:11px 14px;border-radius:13px;border:1px solid rgba(255,107,26,.26);background:rgba(5,8,13,.62);backdrop-filter:blur(12px);color:#cbd3df;font-size:12px;font-weight:750;letter-spacing:.035em}.hero-live-line i{width:8px;height:8px;flex:0 0 auto;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green);animation:livePulse 1.8s ease-in-out infinite}.hero-live-line strong{color:var(--gold);transition:opacity .2s ease,transform .2s ease}.hero-live-line strong.swap{opacity:0;transform:translateY(5px)}
+@keyframes livePulse{0%,100%{opacity:.72;transform:scale(.86)}50%{opacity:1;transform:scale(1.12)}}
+.back-to-top{position:fixed;right:22px;bottom:22px;z-index:180;width:48px;height:48px;border-radius:15px;border:1px solid rgba(255,107,26,.3);background:rgba(8,12,18,.88);backdrop-filter:blur(14px);color:#fff;font-size:20px;font-weight:950;cursor:pointer;box-shadow:var(--shadow);opacity:0;transform:translateY(16px) scale(.94);pointer-events:none;transition:.22s ease}.back-to-top.visible{opacity:1;transform:none;pointer-events:auto}.back-to-top:hover{background:linear-gradient(135deg,var(--red),var(--orange));color:#10070a;border-color:transparent;transform:translateY(-3px)}
+.js-interactive-card{position:relative;isolation:isolate;will-change:transform}.js-interactive-card:after{content:"";position:absolute;z-index:-1;inset:0;border-radius:inherit;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(255,107,26,.13),transparent 46%);opacity:0;transition:opacity .22s ease;pointer-events:none}.js-interactive-card:hover:after{opacity:1}
+.js-ripple-host{position:relative;overflow:hidden}.js-ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.32);transform:translate(-50%,-50%) scale(0);animation:jsRipple .62s ease-out;pointer-events:none}.nav-join .js-ripple,.btn.primary .js-ripple{background:rgba(15,5,9,.22)}
+@keyframes jsRipple{to{transform:translate(-50%,-50%) scale(1);opacity:0}}
+.modal-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(7,10,15,.8);color:#fff;font-size:27px;cursor:pointer;backdrop-filter:blur(12px);z-index:3}.modal-nav:hover{background:linear-gradient(135deg,var(--red),var(--orange));color:#120609;border-color:transparent}.modal-nav.prev{left:24px}.modal-nav.next{right:24px}
+.showcase-shell:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+@media(max-width:760px){.hero-live-line{font-size:11px;line-height:1.45}.back-to-top{right:14px;bottom:14px;width:44px;height:44px}.modal-nav{width:43px;height:43px}.modal-nav.prev{left:9px}.modal-nav.next{right:9px}.links a:not(.nav-join):after{bottom:2px}}
+@media(prefers-reduced-motion:reduce){.hero-live-line i{animation:none}.page-progress span{transition:none}.js-interactive-card{transform:none!important}.js-ripple{display:none}}
+
 </style>
 </head>
 <body>
@@ -173,9 +189,10 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 <button class="menu" id="menuBtn" aria-label="Open menu">MENU</button>
 <nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#directory">Directory</a><a href="#city-map">City Map</a><a href="#server">Server</a><a href="#start">Start Here</a><a href="#news">News & Events</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="#support">Support</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
 </div></header>
+<div class="page-progress" aria-hidden="true"><span id="pageProgressBar"></span></div>
 <main>
 <section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
-<div class="hero-copy"><span class="kicker">Coming soon • UK serious roleplay • applications open</span><h1>Live the streets.<br><span class="accent">Run the city.</span><br>Build your legacy.</h1><p>Step into a serious UK roleplay city where every shift, deal, rivalry and discovery can change your character’s future. Build a name through business, street life, emergency services, custom cars, collecting, competition and stories that keep moving long after your first night.</p><div class="actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">Watch GLRP</a></div></div>
+<div class="hero-copy"><span class="kicker">Coming soon • UK serious roleplay • applications open</span><h1>Live the streets.<br><span class="accent">Run the city.</span><br>Build your legacy.</h1><p>Step into a serious UK roleplay city where every shift, deal, rivalry and discovery can change your character’s future. Build a name through business, street life, emergency services, custom cars, collecting, competition and stories that keep moving long after your first night.</p><div class="hero-live-line" aria-live="polite"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">Watch GLRP</a></div></div>
 <div class="hero-side"><div class="hero-stat"><strong>City Status</strong><span>Coming soon — applications open now</span></div><div class="hero-stat"><strong>Applications Open</strong><span>Staff, Police, EMS, Kingz Autos, businesses and players</span></div><div class="hero-stat"><strong>Style</strong><span>Serious roleplay with progression and freedom</span></div><div class="hero-stat"><strong>Community</strong><span>Player stories, businesses, gangs and events</span></div></div>
 </div></section>
 
@@ -485,6 +502,7 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 </main>
 <footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Interactive City Map & Locations Guide</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
 <div class="toast" id="copyToast">Copied to clipboard</div>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
 <div class="modal" id="modal"><button id="closeModal">CLOSE</button><img id="modalImg" alt="Gallery image"></div>
 <script>
 const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links');menuBtn.addEventListener('click',()=>links.classList.toggle('open'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
@@ -621,5 +639,172 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
     updateHero();
   }
 })();
+
+
+// V3.1.3 — polished interaction layer
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+  const progressBar = document.getElementById('pageProgressBar');
+  const backToTop = document.getElementById('backToTop');
+  const header = document.querySelector('.header');
+  const localNavLinks = [...document.querySelectorAll('#links a[href^="#"]')];
+  const trackedSections = localNavLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  let scrollTicking = false;
+  function updateScrollUI() {
+    const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    const ratio = Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
+    if (progressBar) progressBar.style.width = `${ratio * 100}%`;
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 720);
+    if (header) header.classList.toggle('scrolled', window.scrollY > 24);
+
+    const marker = window.scrollY + Math.min(window.innerHeight * 0.34, 250);
+    let activeId = '';
+    trackedSections.forEach(section => {
+      if (section.offsetTop <= marker) activeId = section.id;
+    });
+    localNavLinks.forEach(link => {
+      const active = link.getAttribute('href') === `#${activeId}`;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    scrollTicking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(updateScrollUI);
+      scrollTicking = true;
+    }
+  }, { passive: true });
+  window.addEventListener('resize', updateScrollUI, { passive: true });
+  updateScrollUI();
+  backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+  // Keep the mobile menu accessible and keyboard friendly.
+  menuBtn?.addEventListener('click', () => menuBtn.setAttribute('aria-expanded', String(links.classList.contains('open'))));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && links?.classList.contains('open')) {
+      links.classList.remove('open');
+      menuBtn?.setAttribute('aria-expanded', 'false');
+      menuBtn?.focus();
+    }
+  });
+
+  // Rotating player-facing hero promise.
+  const heroRole = document.getElementById('heroRole');
+  const roles = [
+    'build a name from nothing.',
+    'run a business people remember.',
+    'serve the city through Police or EMS.',
+    'turn your dream car into street legend.',
+    'hunt rare creatures and complete your collection.',
+    'create a crew, a rivalry and a legacy.'
+  ];
+  if (heroRole && !reduceMotion) {
+    let roleIndex = 0;
+    window.setInterval(() => {
+      heroRole.classList.add('swap');
+      window.setTimeout(() => {
+        roleIndex = (roleIndex + 1) % roles.length;
+        heroRole.textContent = roles[roleIndex];
+        heroRole.classList.remove('swap');
+      }, 210);
+    }, 2800);
+  }
+
+  // Subtle cursor lighting and depth on premium cards.
+  const interactiveCards = [...document.querySelectorAll('.system-card,.recruit-card,.directory-card,.news-card,.support-card,.activity,.hero-stat,.starter-item,.handbook-time')];
+  interactiveCards.forEach(card => {
+    card.classList.add('js-interactive-card');
+    if (!finePointer || reduceMotion) return;
+    card.addEventListener('pointermove', event => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      card.style.setProperty('--mx', `${x}px`);
+      card.style.setProperty('--my', `${y}px`);
+      const rotateY = ((x / rect.width) - .5) * 2.4;
+      const rotateX = (((y / rect.height) - .5) * -2.0);
+      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.removeProperty('transform');
+      card.style.setProperty('--mx', '50%');
+      card.style.setProperty('--my', '50%');
+    });
+  });
+
+  // Physical click feedback on buttons and controls.
+  document.querySelectorAll('.btn,.filter,.news-filter,.city-map-filter,.handbook-tab,.copy-btn,.nav-join').forEach(control => {
+    control.classList.add('js-ripple-host');
+    control.addEventListener('pointerdown', event => {
+      if (reduceMotion) return;
+      const rect = control.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height) * 2.15;
+      const ripple = document.createElement('span');
+      ripple.className = 'js-ripple';
+      ripple.style.width = ripple.style.height = `${size}px`;
+      ripple.style.left = `${event.clientX - rect.left}px`;
+      ripple.style.top = `${event.clientY - rect.top}px`;
+      control.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+    });
+  });
+
+  // Make the city slideshow fully keyboard controllable.
+  if (showcase) {
+    showcase.tabIndex = 0;
+    showcase.setAttribute('aria-label', 'GLRP city showcase. Use left and right arrow keys to change slide.');
+    showcase.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showcase.querySelector('.prev')?.click();
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showcase.querySelector('.next')?.click();
+      }
+    });
+  }
+
+  // Upgrade the gallery modal with next/previous controls and keyboard navigation.
+  const galleryButtons = [...document.querySelectorAll('#galleryGrid button[data-img]')];
+  if (modal && modalImg && galleryButtons.length) {
+    let galleryIndex = 0;
+    const previous = document.createElement('button');
+    const next = document.createElement('button');
+    previous.type = next.type = 'button';
+    previous.className = 'modal-nav prev';
+    next.className = 'modal-nav next';
+    previous.setAttribute('aria-label', 'Previous gallery image');
+    next.setAttribute('aria-label', 'Next gallery image');
+    previous.textContent = '‹';
+    next.textContent = '›';
+    modal.append(previous, next);
+
+    const showGalleryImage = index => {
+      galleryIndex = (index + galleryButtons.length) % galleryButtons.length;
+      const button = galleryButtons[galleryIndex];
+      modalImg.src = button.dataset.img;
+      modalImg.alt = button.querySelector('img')?.alt || 'GLRP gallery image';
+    };
+    galleryButtons.forEach((button, index) => button.addEventListener('click', () => {
+      galleryIndex = index;
+      showGalleryImage(index);
+    }));
+    previous.addEventListener('click', event => { event.stopPropagation(); showGalleryImage(galleryIndex - 1); });
+    next.addEventListener('click', event => { event.stopPropagation(); showGalleryImage(galleryIndex + 1); });
+    document.addEventListener('keydown', event => {
+      if (!modal.classList.contains('open')) return;
+      if (event.key === 'ArrowLeft') showGalleryImage(galleryIndex - 1);
+      if (event.key === 'ArrowRight') showGalleryImage(galleryIndex + 1);
+    });
+  }
+})();
+
 </script>
 </body></html>
