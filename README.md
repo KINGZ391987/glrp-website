@@ -1,23 +1,29 @@
-# GLRP Website V3.1.7 — Character Builder & Whitelist Prep
+<!DOCTYPE html>
 
-This update keeps every feature from V3.1.6 and adds a browser-only interactive character builder.
-
-## Added
-- Character name, age, origin and starting direction fields
-- Strength, flaw, long-term goal, background story and opening-scene planner
-- Live character profile preview
-- Completion score to show how prepared the draft is
-- Five optional story templates
-- Rotating story-spark ideas
-- Automatic local browser saving
-- Copyable Discord application draft
-- Privacy note explaining no information is submitted anywhere
-- New Build Character navigation link
-
-## Safe upload
-For the normal update, upload only `index.html`. The `assets` folder is unchanged.
-
-## Official links
-- Discord: https://discord.gg/QPgcjHWShX
-- FiveM: https://cfx.re/join/a44z4m5
-- YouTube: https://www.youtube.com/@GLRPFiveM
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#070910" name="theme-color"/><meta content="Follow opening news, recruitment drives, car meets, creature hunts, development updates and the events that bring players together." name="description"/><title>News &amp; Events | Gang Life RP</title><link href="assets/favicon.webp" rel="icon"/><link href="assets/styles.css" rel="stylesheet"/></head><body class="portal-page"><header class="header"><div class="wrap nav"><a class="brand" href="index.html"><img alt="GLRP" src="assets/favicon.webp"/><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a><button aria-expanded="false" aria-label="Open menu" class="menu" id="menuBtn">MENU</button><nav class="links" id="links"><a data-page="index.html" href="index.html">Home</a><a data-page="gameplay.html" href="gameplay.html">Gameplay</a><a data-page="departments.html" href="departments.html">Departments</a><a data-page="businesses.html" href="businesses.html">Businesses</a><a data-page="new-players.html" href="new-players.html">New Players</a><a data-page="city-guide.html" href="city-guide.html">City Guide</a><details class="nav-more"><summary>More <span aria-hidden="true">⌄</span></summary><div class="nav-more-menu"><a data-page="news.html" href="news.html">News &amp; Events</a><a data-page="rules-support.html" href="rules-support.html">Rules &amp; Support</a><a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a></div></details><a class="nav-join" href="https://discord.gg/QPgcjHWShX" target="_blank">Join City</a></nav></div></header><div class="page-progress"><span id="pageProgressBar"></span></div><button class="site-search-trigger" id="siteSearchTrigger" type="button"><span>⌕</span><b>Find Anything</b><small>Ctrl K</small></button><main><section class="page-hero"><div class="wrap"><div class="page-kicker">GLRP City Portal • News &amp; Events</div><h1>The city keeps moving.<br/><span>Stay ahead of it.</span></h1><p>Follow opening news, recruitment drives, car meets, creature hunts, development updates and the events that bring players together.</p><div class="page-actions"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn secondary" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a></div></div></section><div class="page-section-nav"><div class="wrap"><a href="#news">News &amp; Events</a></div></div><section class="news-hub" id="news"><div class="wrap">
+<div class="section-head"><div><span class="kicker">Official GLRP announcements</span><h2>City news,<br/><span class="accent">events &amp; updates.</span></h2></div><p>Follow the road to launch, see what is being prepared across the city and discover the events planned for players, departments and businesses. Final dates and application details are announced through the official GLRP Discord.</p></div>
+<div class="news-top">
+<article class="event-feature"><div class="event-feature-copy"><span class="event-label">Featured launch event</span><h3>GLRP Opening Night</h3><p>The first major city gathering will bring together new citizens, departments, businesses, mechanics, crews and staff. Expect a proper city introduction, custom vehicles, social roleplay and opportunities to meet the people shaping GLRP.</p><div class="event-meta"><span>Date: Coming Soon</span><span>Location: Citywide</span><span>Entry: Through Discord</span></div></div></article>
+<aside class="launch-board"><span class="kicker">Launch board</span><h3>Preparing the city</h3><p>GLRP is being prepared as a full serious-roleplay city. Applications and community registration are already open before the public launch announcement.</p><div class="launch-line"><i></i><strong>Community applications</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Police, EMS &amp; staff recruitment</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Kingz Autos recruitment</strong><span>Open now</span></div><div class="launch-line"><i></i><strong>Official launch date</strong><span>Coming soon</span></div><a class="btn primary" href="https://discord.gg/QPgcjHWShX" style="margin-top:20px;width:100%" target="_blank">Follow Launch News</a></aside>
+</div>
+<div class="news-filters" id="newsFilters"><button class="news-filter active" data-news-filter="all">All Updates</button><button class="news-filter" data-news-filter="event">Events</button><button class="news-filter" data-news-filter="launch">Launch</button><button class="news-filter" data-news-filter="development">Development</button><button class="news-filter" data-news-filter="recruitment">Recruitment</button></div>
+<div class="news-grid" id="newsGrid">
+<article class="news-card" data-news-cat="event" style="--news-color:#ff6b1a"><span class="event-label">Event</span><small>Date to be announced</small><h3>Kingz Autos Car Meet</h3><p>Bring the build you are proud of, meet the city’s automotive crowd and find out whose car earns the most attention when everyone pulls in.</p><a class="news-link" href="https://discord.gg/QPgcjHWShX" target="_blank">Watch for the event post →</a></article>
+<article class="news-card" data-news-cat="event" style="--news-color:#9d4dff"><span class="event-label">Event</span><small>Date to be announced</small><h3>Creature Hunt Weekend</h3><p>Take the scanner out with the community, follow rare signals and see who returns with the discovery everyone else missed.</p><a class="news-link" href="gameplay.html#activities">Explore the activity →</a></article>
+<article class="news-card" data-news-cat="event recruitment" style="--news-color:#58e58a"><span class="event-label">Community</span><small>Before launch</small><h3>Department Open Evening</h3><p>Meet the people building each department, ask real questions and find the role that could define your first chapter in GLRP.</p><a class="news-link" href="departments.html#recruitment">See recruiting roles →</a></article>
+<article class="news-card" data-news-cat="development launch" style="--news-color:#4aa8ff"><span class="event-label">In-house system</span><small>Launch preparation</small><h3>Phone, HUD &amp; Garage</h3><p>From the moment you check your phone to the moment you pull a car from storage, every in-house system is being shaped to feel like one connected city.</p><a class="news-link" href="gameplay.html#phone">See the GLRP phone →</a></article>
+<article class="news-card" data-news-cat="development launch" style="--news-color:#ffb347"><span class="event-label">City services</span><small>Launch preparation</small><h3>City Hall Licence Centre</h3><p>Important permissions will be earned through applications and tests, giving citizens real goals and departments meaningful reasons to interact.</p><a class="news-link" href="city-guide.html#directory">View city services →</a></article>
+<article class="news-card" data-news-cat="development" style="--news-color:#ff334e"><span class="event-label">Gameplay update</span><small>Custom progression</small><h3>Life Paths &amp; Collections</h3><p>Your daily choices feed bigger goals, whether you are building a career, completing a collection or raising the team you want to be known for.</p><a class="news-link" href="gameplay.html#systems">Explore city systems →</a></article>
+</div>
+<div class="news-callout"><div><strong>Want the official date and event times first?</strong><span>Join Discord for launch announcements, event sign-ups, applications and any last-minute city changes.</span></div><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join GLRP Discord</a></div>
+</div></section></main><footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Multi-Page City Portal</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer><div class="toast" id="copyToast">Copied</div><button aria-label="Back to top" class="back-to-top" id="backToTop" type="button">↑</button><div aria-labelledby="siteSearchTitle" aria-modal="true" class="site-search-overlay" id="siteSearchOverlay" role="dialog">
+<div class="site-search-panel">
+<div class="site-search-head">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+<input aria-label="Search GLRP website" autocomplete="off" class="site-search-input" id="siteSearchInput" placeholder="Search cars, jobs, licences, creatures, businesses…" type="search"/>
+<button aria-label="Close search" class="site-search-close" id="siteSearchClose" type="button">×</button>
+</div>
+<div class="site-search-help"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span><span id="siteSearchCount">Quick links</span></div>
+<div aria-label="Search results" class="site-search-results" id="siteSearchResults" role="listbox"></div>
+</div>
+</div><script src="assets/site.js"></script></body></html>
