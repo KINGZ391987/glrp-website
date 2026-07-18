@@ -376,7 +376,34 @@ body.tour-open{overflow:hidden}
 @media(max-width:560px){.tour-visual{min-height:230px}.tour-copy h2{font-size:34px}.tour-copy p{font-size:14px}.tour-points{margin:18px 0}.tour-point{font-size:12px}.tour-controls{flex-wrap:wrap}.tour-control{flex:1;min-width:0}.tour-control.next{margin-left:0}.tour-step-count{width:100%;text-align:center;order:-1}}
 @media(prefers-reduced-motion:reduce){.city-tour,.city-tour-panel,.tour-visual img,.tour-progress button:after{transition:none}}
 
-</style></head>
+
+/* V3.2.5 — GLRP community pulse overlay */
+.pulse-launch{cursor:pointer;background:rgba(255,51,78,.1);border-color:rgba(255,51,78,.34)!important}.pulse-launch:before{content:"●";font-size:8px;margin-right:9px;color:var(--green);text-shadow:0 0 12px var(--green);animation:pulseBeacon 1.8s ease-in-out infinite}@keyframes pulseBeacon{0%,100%{opacity:.45;transform:scale(.82)}50%{opacity:1;transform:scale(1.14)}}
+.community-pulse{position:fixed;inset:0;z-index:530;display:grid;place-items:center;padding:22px;background:rgba(2,4,8,.89);backdrop-filter:blur(18px);opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}.community-pulse.open{opacity:1;visibility:visible}.community-pulse-panel{width:min(1180px,100%);max-height:calc(100vh - 44px);overflow:auto;position:relative;border:1px solid rgba(255,255,255,.12);border-radius:30px;background:radial-gradient(circle at 8% 0,rgba(255,51,78,.14),transparent 30%),radial-gradient(circle at 92% 10%,rgba(54,133,255,.12),transparent 31%),#080c13;box-shadow:0 45px 140px rgba(0,0,0,.72);transform:translateY(18px) scale(.985);transition:transform .32s cubic-bezier(.2,.72,.2,1)}.community-pulse.open .community-pulse-panel{transform:none}.community-pulse-close{position:absolute;right:18px;top:18px;z-index:5;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(4,7,11,.74);color:#fff;font-size:22px;cursor:pointer}.community-pulse-close:hover{border-color:rgba(255,107,26,.7);color:var(--gold)}
+.community-pulse-head{display:grid;grid-template-columns:1.12fr .88fr;gap:28px;padding:54px 56px 26px}.community-pulse-head small{color:var(--gold);font-size:10px;font-weight:950;letter-spacing:.17em;text-transform:uppercase}.community-pulse-head h2{font-size:clamp(44px,5.7vw,78px);line-height:.89;letter-spacing:-.06em;text-transform:uppercase;margin:14px 0 16px}.community-pulse-head p{color:#aeb9c8;font-size:16px;line-height:1.72;margin:0}.pulse-live-card{align-self:end;padding:20px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:linear-gradient(135deg,rgba(255,107,26,.11),rgba(255,255,255,.025))}.pulse-live-row{display:flex;align-items:center;gap:11px}.pulse-live-row i{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 17px var(--green)}.pulse-live-row strong{font-size:17px}.pulse-live-card span{display:block;color:#8e9aad;font-size:12px;line-height:1.55;margin-top:8px}.pulse-live-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pulse-live-meta b{padding:8px 10px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.035);color:#dce4ef;font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.pulse-filter-row{display:flex;gap:8px;flex-wrap:wrap;padding:0 56px 20px}.pulse-filter{padding:10px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);color:#aeb9c8;font-size:9px;font-weight:950;letter-spacing:.11em;text-transform:uppercase;cursor:pointer}.pulse-filter.active,.pulse-filter:hover{color:#fff;border-color:rgba(255,107,26,.48);background:rgba(255,107,26,.11)}
+.pulse-body{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;padding:0 56px 52px}.pulse-feature{min-height:430px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:#0a0f17}.pulse-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.54;transform:scale(1.02);transition:opacity .35s ease,transform 1.1s ease}.community-pulse.open .pulse-feature img{transform:scale(1.065)}.pulse-feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,8,13,.98) 0%,rgba(5,8,13,.76) 42%,rgba(5,8,13,.14) 100%)}.pulse-feature-copy{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:30px}.pulse-feature-tag{display:inline-flex;padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.13);background:rgba(5,8,13,.62);color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}.pulse-feature h3{font-size:clamp(30px,4vw,52px);line-height:.95;letter-spacing:-.045em;text-transform:uppercase;margin:14px 0 12px}.pulse-feature p{color:#c0c9d5;max-width:650px;font-size:14px;line-height:1.65;margin:0}.pulse-feature-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px}.pulse-feature-actions a,.pulse-feature-actions button{padding:12px 15px;border-radius:11px;border:1px solid rgba(255,255,255,.1);background:rgba(5,8,13,.62);color:#fff;font-size:9px;font-weight:950;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.pulse-feature-actions a:first-child{background:linear-gradient(135deg,var(--orange),#d94318);border:0;color:#160709}.pulse-feature-dots{display:flex;gap:6px;margin-left:auto}.pulse-feature-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.22)}.pulse-feature-dots button.active{background:var(--orange);box-shadow:0 0 12px rgba(255,107,26,.6)}
+.pulse-stream{display:grid;gap:10px;align-content:start}.pulse-stream-card{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:15px;border:1px solid rgba(255,255,255,.075);border-radius:16px;background:rgba(255,255,255,.025);transition:.2s ease}.pulse-stream-card:hover{transform:translateY(-2px);border-color:rgba(255,107,26,.34);background:rgba(255,107,26,.055)}.pulse-stream-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,rgba(255,107,26,.18),rgba(255,51,78,.12));color:var(--gold);font-size:10px;font-weight:950;letter-spacing:.06em}.pulse-stream-card small{display:block;color:#748196;font-size:8px;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}.pulse-stream-card strong{display:block;font-size:13px}.pulse-stream-card p{color:#98a4b5;font-size:11px;line-height:1.45;margin:5px 0 0}.pulse-stream-card>a{color:var(--gold);font-size:18px;padding:6px}.pulse-stream-card[hidden]{display:none}.pulse-stream-footer{padding:16px;border:1px dashed rgba(255,255,255,.12);border-radius:16px;color:#8e9aad;font-size:11px;line-height:1.55;text-align:center}.pulse-stream-footer a{color:var(--gold);font-weight:900}
+body.community-pulse-open{overflow:hidden}
+@media(max-width:900px){.community-pulse{padding:10px}.community-pulse-head,.pulse-body{grid-template-columns:1fr}.community-pulse-head{padding:50px 24px 24px}.pulse-filter-row{padding:0 24px 18px}.pulse-body{padding:0 24px 30px}.pulse-feature{min-height:390px}.community-pulse-close{right:13px;top:13px}}
+@media(max-width:560px){.community-pulse-head h2{font-size:40px}.community-pulse-head p{font-size:14px}.pulse-body{padding-inline:14px}.pulse-filter-row{padding-inline:14px}.pulse-feature{min-height:430px}.pulse-feature-copy{padding:22px}.pulse-feature h3{font-size:34px}.pulse-feature-dots{width:100%;margin-left:0;margin-top:5px}.pulse-stream-card{grid-template-columns:auto 1fr}.pulse-stream-card>a{display:none}}
+@media(prefers-reduced-motion:reduce){.pulse-launch:before,.community-pulse,.community-pulse-panel,.pulse-feature img,.pulse-stream-card{animation:none;transition:none}}
+
+</style>
+<style>
+/* V3.2.6 — Character Stories */
+.story-launch{position:relative;overflow:hidden}.story-launch:after{content:"";position:absolute;inset:auto 12px 7px;height:2px;border-radius:9px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.65;transform:scaleX(.45);transition:transform .25s ease}.story-launch:hover:after{transform:scaleX(1)}
+.character-stories{position:fixed;inset:0;z-index:545;display:grid;place-items:center;padding:22px;background:rgba(2,4,8,.91);backdrop-filter:blur(20px);opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}.character-stories.open{opacity:1;visibility:visible}.character-stories-panel{width:min(1160px,100%);max-height:calc(100vh - 44px);overflow:auto;position:relative;border:1px solid rgba(255,255,255,.12);border-radius:30px;background:radial-gradient(circle at 9% 0,rgba(255,61,79,.13),transparent 31%),radial-gradient(circle at 91% 8%,rgba(75,142,255,.12),transparent 30%),#080c13;box-shadow:0 48px 150px rgba(0,0,0,.75);transform:translateY(18px) scale(.985);transition:transform .32s cubic-bezier(.2,.72,.2,1)}.character-stories.open .character-stories-panel{transform:none}.character-stories-close{position:absolute;right:18px;top:18px;z-index:5;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(4,7,11,.76);color:#fff;font-size:22px;cursor:pointer}.character-stories-close:hover{border-color:rgba(255,107,26,.7);color:var(--gold)}
+.character-stories-head{padding:52px 58px 26px;max-width:840px}.character-stories-head small{color:var(--gold);font-size:10px;font-weight:950;letter-spacing:.18em;text-transform:uppercase}.character-stories-head h2{font-size:clamp(43px,5.8vw,76px);line-height:.9;letter-spacing:-.06em;text-transform:uppercase;margin:14px 0 16px}.character-stories-head p{color:#aeb9c8;font-size:16px;line-height:1.72;margin:0}.character-stories-head .story-honesty{display:inline-flex;margin-top:16px;padding:8px 11px;border:1px solid rgba(255,255,255,.09);border-radius:999px;background:rgba(255,255,255,.035);color:#8996a8;font-size:9px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+.character-stories-body{display:grid;grid-template-columns:280px 1fr;gap:20px;padding:0 58px 52px}.story-personas{display:grid;gap:9px;align-content:start}.story-persona{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;width:100%;padding:12px;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.025);color:#dce4ef;text-align:left;cursor:pointer;transition:.2s ease}.story-persona:hover,.story-persona.active{border-color:rgba(255,107,26,.52);background:linear-gradient(135deg,rgba(255,107,26,.13),rgba(255,255,255,.03));transform:translateX(3px)}.story-persona-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#0e1520;border:1px solid rgba(255,255,255,.08);font-size:20px}.story-persona strong{display:block;font-size:12px;letter-spacing:.03em}.story-persona span{display:block;margin-top:4px;color:#7f8b9c;font-size:10px;line-height:1.35}
+.story-stage{min-height:515px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:#0a0f17}.story-stage-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;transform:scale(1.03);transition:opacity .35s ease,transform 1.1s ease}.character-stories.open .story-stage-image{transform:scale(1.075)}.story-stage:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,8,13,.96) 0%,rgba(5,8,13,.82) 51%,rgba(5,8,13,.26) 100%),linear-gradient(0deg,rgba(5,8,13,.96),transparent 68%)}.story-stage-copy{position:relative;z-index:2;min-height:515px;display:flex;flex-direction:column;justify-content:flex-end;padding:34px;max-width:690px}.story-stage-tag{display:inline-flex;width:max-content;padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.13);background:rgba(5,8,13,.62);color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}.story-stage h3{font-size:clamp(34px,4.5vw,58px);line-height:.94;letter-spacing:-.05em;text-transform:uppercase;margin:16px 0 13px}.story-quote{max-width:620px;color:#f2f5f8;font-size:clamp(18px,2vw,23px);font-weight:750;line-height:1.45;margin-bottom:15px}.story-description{color:#aeb9c8;font-size:14px;line-height:1.7;max-width:630px}.story-steps{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}.story-steps li{padding:8px 10px;border:1px solid rgba(255,255,255,.09);border-radius:999px;background:rgba(4,7,11,.62);color:#d5dde8;font-size:9px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}.story-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:22px}.story-actions a,.story-actions button{padding:12px 15px;border-radius:11px;border:1px solid rgba(255,255,255,.11);background:rgba(5,8,13,.68);color:#fff;font-size:9px;font-weight:950;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.story-actions a:first-child{background:linear-gradient(135deg,var(--orange),#d94318);border:0;color:#160709}.story-counter{margin-left:auto;color:#7f8b9d;font-size:10px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+body.character-stories-open{overflow:hidden}
+@media(max-width:900px){.character-stories{padding:10px}.character-stories-head{padding:50px 24px 24px}.character-stories-body{grid-template-columns:1fr;padding:0 24px 30px}.story-personas{display:flex;overflow-x:auto;padding-bottom:6px}.story-persona{min-width:190px}.story-stage,.story-stage-copy{min-height:500px}.story-stage:after{background:linear-gradient(0deg,rgba(5,8,13,.98) 0%,rgba(5,8,13,.74) 65%,rgba(5,8,13,.2) 100%)}}
+@media(max-width:560px){.character-stories-head h2{font-size:40px}.character-stories-head p{font-size:14px}.character-stories-body{padding-inline:14px}.story-stage-copy{padding:23px}.story-stage h3{font-size:36px}.story-quote{font-size:17px}.story-counter{width:100%;margin-left:0}}
+@media(prefers-reduced-motion:reduce){.character-stories,.character-stories-panel,.story-stage-image,.story-persona{transition:none}}
+</style>
+
+</head>
 <body>
 <header class="header"><div class="wrap nav">
 <a class="brand" href="#home"><img alt="GLRP" src="assets/favicon.webp"/><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a>
@@ -410,7 +437,7 @@ body.tour-open{overflow:hidden}
 <button aria-haspopup="dialog" aria-label="Search the GLRP website" class="site-search-trigger" id="siteSearchTrigger" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>Find anything</span><kbd>Ctrl K</kbd></button>
 <main>
 <section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
-<div class="hero-copy"><span class="kicker">WELCOME TO GANG LIFE RP • COMING SOON</span><h1>Start with nothing.<br/><span class="accent">Build something</span><br/>the city remembers.</h1><p>A serious UK roleplay city where your contacts, choices, vehicles, businesses and reputation become one connected story. Find your lane, meet the right people and give the city a reason to remember your name.</p><div aria-live="polite" class="hero-live-line"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="#showcase">Explore the City</a><button class="btn tour-launch" id="launchCityTour" type="button">Take 60-Second Tour</button><a class="btn" href="#role-match">Find Your Role</a><a class="btn" href="https://discord.gg/QPgcjHWShX" rel="noopener" target="_blank">Join GLRP</a></div></div>
+<div class="hero-copy"><span class="kicker">WELCOME TO GANG LIFE RP • COMING SOON</span><h1>Start with nothing.<br/><span class="accent">Build something</span><br/>the city remembers.</h1><p>A serious UK roleplay city where your contacts, choices, vehicles, businesses and reputation become one connected story. Find your lane, meet the right people and give the city a reason to remember your name.</p><div aria-live="polite" class="hero-live-line"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="#showcase">Explore the City</a><button class="btn tour-launch" id="launchCityTour" type="button">Take 60-Second Tour</button><button class="btn pulse-launch" id="launchCommunityPulse" type="button">City Pulse</button><button class="btn story-launch" id="launchCharacterStories" type="button">Meet the City</button><a class="btn" href="#role-match">Find Your Role</a><a class="btn" href="https://discord.gg/QPgcjHWShX" rel="noopener" target="_blank">Join GLRP</a></div></div>
 <div class="hero-side hero-invite-panel">
 <div class="invite-live"><span class="invite-dot"></span><div><small>Live city status</small><strong data-live-state="">Connecting to GLRP…</strong><span data-live-capacity="">Checking the real server count.</span></div></div>
 <div class="invite-copy"><small>YOUR FIRST CHAPTER</small><h2>There is no single right way to arrive.</h2><p>Serve the city, build a business, chase rare finds, live for cars or earn respect on the streets. GLRP gives your choices somewhere to lead.</p></div>
@@ -2183,4 +2210,296 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
 })();
 
 </script>
+
+
+<div aria-hidden="true" aria-label="GLRP character story previews" aria-modal="true" class="character-stories" id="characterStories" role="dialog">
+  <div class="character-stories-panel">
+    <button aria-label="Close character stories" class="character-stories-close" id="closeCharacterStories" type="button">×</button>
+    <div class="character-stories-head">
+      <small>CHARACTER STORY PREVIEWS</small>
+      <h2>Meet the person<br/><span class="accent">you could become.</span></h2>
+      <p>GLRP is not built around one winning route. It is built around people whose choices collide, connect and become stories worth returning to.</p>
+      <span class="story-honesty">Example character concepts — not real player testimonials</span>
+    </div>
+    <div class="character-stories-body">
+      <div aria-label="Choose a character story" class="story-personas" id="storyPersonas" role="tablist"></div>
+      <article class="story-stage">
+        <img alt="GLRP character story background" class="story-stage-image" id="storyStageImage" src="assets/slide-city-life.webp"/>
+        <div class="story-stage-copy">
+          <span class="story-stage-tag" id="storyStageTag">Civilian story</span>
+          <h3 id="storyStageTitle">The newcomer</h3>
+          <p class="story-quote" id="storyStageQuote">“I arrived with a backpack, a phone and no name anyone recognised.”</p>
+          <p class="story-description" id="storyStageDescription">Meet people, take honest work and let small decisions become the first chapter of a much bigger life.</p>
+          <ul class="story-steps" id="storyStageSteps"></ul>
+          <div class="story-actions">
+            <a href="#start" id="storyExploreLink">Explore this route</a>
+            <button id="storyPrevious" type="button">Previous</button>
+            <button id="storyNext" type="button">Next story</button>
+            <span class="story-counter" id="storyCounter">1 / 6</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div aria-hidden="true" aria-label="GLRP community pulse" aria-modal="true" class="community-pulse" id="communityPulse" role="dialog">
+  <div class="community-pulse-panel">
+    <button aria-label="Close community pulse" class="community-pulse-close" id="closeCommunityPulse" type="button">×</button>
+    <div class="community-pulse-head">
+      <div><small>GLRP community pulse</small><h2>The city is <span class="accent">building momentum.</span></h2><p>See what players can step into before launch—from departments looking for their first names to city events, business opportunities and the stories waiting to begin.</p></div>
+      <div class="pulse-live-card"><div class="pulse-live-row"><i id="pulseLiveDot"></i><strong id="pulseLiveState">Checking city status…</strong></div><span id="pulseLiveText">Connecting to the secure GLRP live feed.</span><div class="pulse-live-meta"><b id="pulsePlayers">— players</b><b id="pulseCapacity">— slots</b><b>Join code A44Z4M5</b></div></div>
+    </div>
+    <div aria-label="Filter community updates" class="pulse-filter-row">
+      <button class="pulse-filter active" data-pulse-filter="all" type="button">Everything</button><button class="pulse-filter" data-pulse-filter="recruitment" type="button">Recruitment</button><button class="pulse-filter" data-pulse-filter="events" type="button">Events</button><button class="pulse-filter" data-pulse-filter="city" type="button">City Life</button><button class="pulse-filter" data-pulse-filter="development" type="button">Development</button>
+    </div>
+    <div class="pulse-body">
+      <article class="pulse-feature"><img alt="GLRP community highlight" id="pulseFeatureImage" src="assets/slide-city-life.webp"/><div class="pulse-feature-copy"><span class="pulse-feature-tag" id="pulseFeatureTag">Opening chapter</span><h3 id="pulseFeatureTitle">Be there when the first stories begin.</h3><p id="pulseFeatureText">Opening night is more than a server launch. It is the moment rivalries, friendships, businesses, careers and reputations all begin at the same starting line.</p><div class="pulse-feature-actions"><a href="https://discord.gg/QPgcjHWShX" id="pulseFeatureAction" rel="noopener" target="_blank">Join the community</a><button id="pulseFeatureNext" type="button">Another highlight</button><div aria-label="Community highlight navigation" class="pulse-feature-dots" id="pulseFeatureDots"></div></div></div></article>
+      <div class="pulse-stream" id="pulseStream">
+        <article class="pulse-stream-card" data-pulse-category="recruitment"><span class="pulse-stream-icon">PD</span><div><small>Recruitment</small><strong>Police Department is forming its first team.</strong><p>Help set the standard for serious scenes, fair enforcement and memorable city service.</p></div><a href="#recruitment" aria-label="Open recruitment">→</a></article>
+        <article class="pulse-stream-card" data-pulse-category="recruitment"><span class="pulse-stream-icon">EMS</span><div><small>Recruitment</small><strong>EMS needs calm players who create scenes, not rush them.</strong><p>Build medical roleplay around care, pressure and the people behind every emergency.</p></div><a href="#recruitment" aria-label="Open recruitment">→</a></article>
+        <article class="pulse-stream-card" data-pulse-category="recruitment"><span class="pulse-stream-icon">KA</span><div><small>Kingz Autos</small><strong>Mechanics, tow drivers and future management wanted.</strong><p>Become the person the city calls when a build, breakdown or dream car needs saving.</p></div><a href="#directory" aria-label="Open city directory">→</a></article>
+        <article class="pulse-stream-card" data-pulse-category="events"><span class="pulse-stream-icon">MEET</span><div><small>Coming event</small><strong>Opening car meet and city welcome.</strong><p>Bring your character, meet the community and see which names begin turning heads.</p></div><a href="#news" aria-label="Open news and events">→</a></article>
+        <article class="pulse-stream-card" data-pulse-category="city"><span class="pulse-stream-icon">BIZ</span><div><small>Player economy</small><strong>Business ideas can become real city destinations.</strong><p>Pitch something worth visiting, recruit a team and build customers through roleplay.</p></div><a href="#businesses" aria-label="Open businesses">→</a></article>
+        <article class="pulse-stream-card" data-pulse-category="events"><span class="pulse-stream-icon">HUNT</span><div><small>City activity</small><strong>Creature hunts will turn districts into shared discoveries.</strong><p>Follow signals, compare finds and chase the rare encounter before someone else does.</p></div><a href="#creatures" aria-label="Open creature system">→</a></article>
+        <article class="pulse-stream-card" data-pulse-category="development"><span class="pulse-stream-icon">GLRP</span><div><small>In-house development</small><strong>Phone, HUD, garages and city systems are built around GLRP.</strong><p>The city is being shaped as one connected experience—not a pile of unrelated menus.</p></div><a href="#systems" aria-label="Open custom systems">→</a></article>
+        <div class="pulse-stream-footer">Official times and application details live in the <a href="https://discord.gg/QPgcjHWShX" rel="noopener" target="_blank">GLRP Discord</a>.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// V3.2.5 — GLRP community pulse
+(() => {
+  const modal = document.getElementById('communityPulse');
+  const openButton = document.getElementById('launchCommunityPulse');
+  const closeButton = document.getElementById('closeCommunityPulse');
+  if (!modal || !openButton || !closeButton) return;
+
+  const highlights = [
+    { tag:'Opening chapter', title:'Be there when the first stories begin.', text:'Opening night is more than a server launch. It is the moment rivalries, friendships, businesses, careers and reputations all begin at the same starting line.', image:'assets/slide-city-life.webp', href:'https://discord.gg/QPgcjHWShX', action:'Join the community' },
+    { tag:'Departments recruiting', title:'Help define how the city is served.', text:'Police and EMS are looking for players who understand that the best scenes are built with patience, pressure and believable decisions—not rushed outcomes.', image:'assets/slide-police.webp', href:'#recruitment', action:'View open roles' },
+    { tag:'Kingz Autos', title:'Become part of the city’s car culture.', text:'Build, recover and transform vehicles while earning the trust of customers who remember the mechanic behind their favourite machine.', image:'assets/slide-motors.webp', href:'#directory', action:'Discover Kingz Autos' },
+    { tag:'Player economy', title:'Turn an idea into somewhere players return to.', text:'Own a business, recruit a crew and create the kind of place that becomes part of another character’s routine, opportunity or story.', image:'assets/coffee-shop.webp', href:'#businesses', action:'Explore businesses' },
+    { tag:'Custom experiences', title:'Chase something the rest of the city may never find.', text:'Creature signals, rare cards, evolving collections and shared hunts give players another reason to explore, trade and compete.', image:'assets/systems-poster.webp', href:'#creatures', action:'See custom gameplay' }
+  ];
+
+  let activeHighlight = 0;
+  let previousFocus = null;
+  let rotationTimer = null;
+  const image = document.getElementById('pulseFeatureImage');
+  const tag = document.getElementById('pulseFeatureTag');
+  const title = document.getElementById('pulseFeatureTitle');
+  const text = document.getElementById('pulseFeatureText');
+  const action = document.getElementById('pulseFeatureAction');
+  const next = document.getElementById('pulseFeatureNext');
+  const dots = document.getElementById('pulseFeatureDots');
+  const filterButtons = [...document.querySelectorAll('[data-pulse-filter]')];
+  const streamCards = [...document.querySelectorAll('[data-pulse-category]')];
+
+  highlights.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Open community highlight ${index + 1}`);
+    dot.addEventListener('click', () => renderHighlight(index, true));
+    dots?.appendChild(dot);
+  });
+
+  function renderHighlight(index, restart = false) {
+    activeHighlight = (index + highlights.length) % highlights.length;
+    const item = highlights[activeHighlight];
+    if (image) { image.style.opacity = '0'; setTimeout(() => { image.src = item.image; image.alt = item.title; image.style.opacity = ''; }, 130); }
+    if (tag) tag.textContent = item.tag;
+    if (title) title.textContent = item.title;
+    if (text) text.textContent = item.text;
+    if (action) { action.href = item.href; action.textContent = item.action; }
+    [...(dots?.children || [])].forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === activeHighlight));
+    if (restart) startRotation();
+  }
+
+  function startRotation() {
+    clearInterval(rotationTimer);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    rotationTimer = setInterval(() => renderHighlight(activeHighlight + 1), 7000);
+  }
+
+  function mirrorLiveStatus() {
+    const sourceState = document.getElementById('serverState');
+    const sourceMessage = document.getElementById('serverMessage');
+    const sourcePlayers = document.getElementById('playerCount');
+    const sourceCapacity = document.getElementById('capacityText');
+    const targetState = document.getElementById('pulseLiveState');
+    const targetText = document.getElementById('pulseLiveText');
+    const targetPlayers = document.getElementById('pulsePlayers');
+    const targetCapacity = document.getElementById('pulseCapacity');
+    const targetDot = document.getElementById('pulseLiveDot');
+    if (sourceState && targetState) targetState.textContent = sourceState.textContent;
+    if (sourceMessage && targetText) targetText.textContent = sourceMessage.textContent;
+    if (sourcePlayers && targetPlayers) targetPlayers.textContent = `${sourcePlayers.textContent} players`;
+    if (sourceCapacity && targetCapacity) {
+      const match = sourceCapacity.textContent.match(/(\d+)\s*slots?/i);
+      targetCapacity.textContent = match ? `${match[1]} slots` : sourceCapacity.textContent;
+    }
+    if (targetDot && sourceState) {
+      const isOnline = /online/i.test(sourceState.textContent) && !/offline|unavailable/i.test(sourceState.textContent);
+      targetDot.style.background = isOnline ? 'var(--green)' : '#ff4b63';
+      targetDot.style.boxShadow = isOnline ? '0 0 17px var(--green)' : '0 0 17px rgba(255,75,99,.7)';
+    }
+  }
+
+  ['serverState','serverMessage','playerCount','capacityText'].forEach(id => {
+    const node = document.getElementById(id);
+    if (node) new MutationObserver(mirrorLiveStatus).observe(node, { childList:true, subtree:true, characterData:true });
+  });
+
+  function openPulse() {
+    previousFocus = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('community-pulse-open');
+    mirrorLiveStatus();
+    renderHighlight(activeHighlight);
+    startRotation();
+    setTimeout(() => closeButton.focus(), 40);
+  }
+  function closePulse() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('community-pulse-open');
+    clearInterval(rotationTimer);
+    previousFocus?.focus?.();
+  }
+
+  openButton.addEventListener('click', openPulse);
+  closeButton.addEventListener('click', closePulse);
+  modal.addEventListener('click', event => { if (event.target === modal) closePulse(); });
+  next?.addEventListener('click', () => renderHighlight(activeHighlight + 1, true));
+  action?.addEventListener('click', event => { if ((action.getAttribute('href') || '').startsWith('#')) closePulse(); });
+
+  filterButtons.forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.pulseFilter;
+    filterButtons.forEach(item => item.classList.toggle('active', item === button));
+    streamCards.forEach(card => { card.hidden = filter !== 'all' && card.dataset.pulseCategory !== filter; });
+  }));
+
+  document.addEventListener('keydown', event => {
+    if (!modal.classList.contains('open')) return;
+    if (event.key === 'Escape') closePulse();
+    if (event.key === 'ArrowRight') renderHighlight(activeHighlight + 1, true);
+    if (event.key === 'ArrowLeft') renderHighlight(activeHighlight - 1, true);
+    if (event.key === 'Tab') {
+      const focusable = [...modal.querySelectorAll('button:not([disabled]),a[href]')].filter(node => node.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>
+
+
+<script>
+/* V3.2.6 — Character Stories */
+(function(){
+  const overlay=document.getElementById('characterStories');
+  const openButton=document.getElementById('launchCharacterStories');
+  const closeButton=document.getElementById('closeCharacterStories');
+  const personaList=document.getElementById('storyPersonas');
+  const image=document.getElementById('storyStageImage');
+  const tag=document.getElementById('storyStageTag');
+  const title=document.getElementById('storyStageTitle');
+  const quote=document.getElementById('storyStageQuote');
+  const description=document.getElementById('storyStageDescription');
+  const steps=document.getElementById('storyStageSteps');
+  const explore=document.getElementById('storyExploreLink');
+  const previous=document.getElementById('storyPrevious');
+  const next=document.getElementById('storyNext');
+  const counter=document.getElementById('storyCounter');
+  if(!overlay||!openButton||!personaList)return;
+
+  const stories=[
+    {icon:'⌂',label:'The Newcomer',sub:'Civilian life',tag:'Civilian story',title:'The newcomer',quote:'“I arrived with a backpack, a phone and no name anyone recognised.”',description:'Take honest work, meet the people who keep the city moving and let ordinary choices become the foundation of a life that feels completely yours.',steps:['Find a first job','Build real contacts','Choose your direction'],image:'assets/slide-city-life.webp',link:'#start'},
+    {icon:'⚙',label:'The Builder',sub:'Kingz Autos',tag:'Automotive story',title:'The builder',quote:'“The first car I touched was barely running. The next one stopped traffic.”',description:'Start with repairs and roadside calls, earn trust in the workshop and build machines that carry your reputation through every street meet and late-night run.',steps:['Learn the workshop','Answer roadside calls','Create a street legend'],image:'assets/slide-motors.webp',link:'#systems'},
+    {icon:'✚',label:'The Responder',sub:'Police or EMS',tag:'Service story',title:'The responder',quote:'“The radio went off and suddenly the whole city needed us.”',description:'Step into scenes where judgement matters. Protect people, treat injuries, investigate what happened and become someone the city knows it can call.',steps:['Apply through Discord','Train with your team','Shape serious scenes'],image:'assets/slide-police.webp',link:'#recruitment'},
+    {icon:'◆',label:'The Owner',sub:'Player business',tag:'Business story',title:'The owner',quote:'“It started as an empty counter. Then people began calling it their spot.”',description:'Choose a concept, build a team and turn stock, service and customer roleplay into a business that becomes part of the city’s identity.',steps:['Pitch your idea','Hire the right people','Earn loyal customers'],image:'assets/coffee-shop.webp',link:'#businesses'},
+    {icon:'⌁',label:'The Hustler',sub:'Street progression',tag:'Street story',title:'The hustler',quote:'“Nobody gave me access. I earned every introduction.”',description:'Read the streets, take measured risks and build relationships carefully. Reputation opens doors, but every shortcut can create a rival or a consequence.',steps:['Start from the bottom','Earn introductions','Protect your reputation'],image:'assets/slide-street-hustle.webp',link:'#journey'},
+    {icon:'✦',label:'The Collector',sub:'Creatures & cards',tag:'Collector story',title:'The collector',quote:'“One signal became a hunt. One rare pull became an obsession.”',description:'Scan districts, catch creatures, open interactive packs and grow a collection other players recognise—then decide whether to trade, train or compete.',steps:['Follow scanner signals','Open your first packs','Chase rare discoveries'],image:'assets/systems-poster.webp',link:'#activities'}
+  ];
+  let active=0;
+  let timer=null;
+  let lastFocus=null;
+
+  function render(index){
+    active=(index+stories.length)%stories.length;
+    const story=stories[active];
+    image.style.opacity='0';
+    window.setTimeout(()=>{image.src=story.image;image.alt=story.title+' GLRP story';image.style.opacity='.5';},120);
+    tag.textContent=story.tag;
+    title.textContent=story.title;
+    quote.textContent=story.quote;
+    description.textContent=story.description;
+    explore.href=story.link;
+    steps.innerHTML=story.steps.map(item=>'<li>'+item+'</li>').join('');
+    counter.textContent=(active+1)+' / '+stories.length;
+    personaList.querySelectorAll('.story-persona').forEach((button,i)=>{
+      const selected=i===active;
+      button.classList.toggle('active',selected);
+      button.setAttribute('aria-selected',selected?'true':'false');
+      button.tabIndex=selected?0:-1;
+    });
+  }
+
+  stories.forEach((story,index)=>{
+    const button=document.createElement('button');
+    button.type='button';
+    button.className='story-persona'+(index===0?' active':'');
+    button.setAttribute('role','tab');
+    button.setAttribute('aria-selected',index===0?'true':'false');
+    button.innerHTML='<span class="story-persona-icon">'+story.icon+'</span><span><strong>'+story.label+'</strong><span>'+story.sub+'</span></span>';
+    button.addEventListener('click',()=>{render(index);restartTimer();});
+    personaList.appendChild(button);
+  });
+
+  function openStories(){
+    lastFocus=document.activeElement;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.classList.add('character-stories-open');
+    render(active);
+    restartTimer();
+    window.setTimeout(()=>closeButton&&closeButton.focus(),80);
+  }
+  function closeStories(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.classList.remove('character-stories-open');
+    window.clearInterval(timer);
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  function restartTimer(){
+    window.clearInterval(timer);
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      timer=window.setInterval(()=>render(active+1),9000);
+    }
+  }
+
+  openButton.addEventListener('click',openStories);
+  closeButton&&closeButton.addEventListener('click',closeStories);
+  overlay.addEventListener('click',event=>{if(event.target===overlay)closeStories();});
+  previous&&previous.addEventListener('click',()=>{render(active-1);restartTimer();});
+  next&&next.addEventListener('click',()=>{render(active+1);restartTimer();});
+  explore.addEventListener('click',closeStories);
+  document.addEventListener('keydown',event=>{
+    if(!overlay.classList.contains('open'))return;
+    if(event.key==='Escape')closeStories();
+    if(event.key==='ArrowRight'){render(active+1);restartTimer();}
+    if(event.key==='ArrowLeft'){render(active-1);restartTimer();}
+  });
+  render(0);
+})();
+</script>
+
 </body></html>
