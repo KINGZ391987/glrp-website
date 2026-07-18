@@ -797,8 +797,8 @@ section[id]{scroll-margin-top:92px}
 </div></section><section class="server-hub" id="server"><div class="wrap"><div class="server-shell">
 <div class="server-top"><div><span class="kicker">GLRP server access centre</span><h2>One place to<br/><span class="accent">get city ready.</span></h2></div><p>Your route into GLRP starts here. Check who is in the city, grab the official connection details and get ready to land without searching through pages of instructions.</p></div>
 <div class="server-status-grid">
-<article class="server-status-card featured"><small>City status</small><strong class="server-live-line"><i class="server-dot" id="serverDot"></i><span id="serverState">Coming Soon</span></strong><span id="serverMessage">Applications and department recruitment are open before launch.</span></article>
-<article class="server-status-card"><small>Players online</small><strong id="playerCount">1</strong><span id="capacityText">1 player currently connected.</span></article>
+<article class="server-status-card featured"><small>City status</small><strong class="server-live-line"><i class="server-dot" id="serverDot"></i><span id="serverState">Checking Live Status</span></strong><span id="serverMessage">Connecting to the secure GLRP server feed.</span></article>
+<article class="server-status-card"><small>Players online</small><strong id="playerCount">—</strong><span id="capacityText">Loading the real player count…</span></article>
 <article class="server-status-card"><small>FiveM join code</small><strong>A44Z4M5</strong><span>Official GLRP Cfx.re connection code.</span></article>
 <article class="server-status-card"><small>Community access</small><strong>Discord Open</strong><span>Applications, news, support and launch announcements.</span></article>
 </div>
@@ -816,7 +816,7 @@ section[id]{scroll-margin-top:92px}
 </div></div>
 </div>
 <div class="server-actions"><a class="btn primary" href="https://cfx.re/join/a44z4m5" target="_blank">Direct Connect</a><a class="btn" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><button class="btn" id="refreshStatus" type="button">Refresh Status</button></div>
-<p class="status-note">The live FiveM status is treated as an extra convenience. If the public server-list endpoint is unavailable or launch access is restricted, the website safely keeps the official Coming Soon status instead of showing a broken panel.</p>
+<p class="status-note">This panel reads directly from the secure GLRP live-status bridge and refreshes automatically every 30 seconds. It shows the real connected player count reported by the FiveM server.</p>
 </div></div></section><section class="news-hub" id="news"><div class="wrap">
 <div class="section-head"><div><span class="kicker">Official GLRP announcements</span><h2>City news,<br/><span class="accent">events &amp; updates.</span></h2></div><p>Follow the road to launch, see what is being prepared across the city and discover the events planned for players, departments and businesses. Final dates and application details are announced through the official GLRP Discord.</p></div>
 <div class="news-top">
@@ -871,18 +871,51 @@ const toast=document.getElementById('copyToast');let toastTimer;
 function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),1800)}
 document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{const value=btn.dataset.copy;try{await navigator.clipboard.writeText(value);showToast('Copied: '+value)}catch(_){const area=document.createElement('textarea');area.value=value;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();showToast('Copied: '+value)}}));
 const serverDot=document.getElementById('serverDot'),serverState=document.getElementById('serverState'),serverMessage=document.getElementById('serverMessage'),playerCount=document.getElementById('playerCount'),capacityText=document.getElementById('capacityText');
+const GLRP_LIVE_STATUS_URL='https://glrp-live-status.wgibson064.workers.dev/status';
+let serverStatusBusy=false;
 async function refreshServerStatus(){
- serverState.textContent='Checking Status';serverMessage.textContent='Contacting the public FiveM server listing…';serverDot.className='server-dot';playerCount.textContent='Checking…';capacityText.textContent='Please wait a moment.';
- const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),7000);
+ if(serverStatusBusy)return;
+ serverStatusBusy=true;
+ serverState.textContent='Checking Live Status';
+ serverMessage.textContent='Syncing with the secure GLRP server feed…';
+ serverDot.className='server-dot';
+ playerCount.textContent='—';
+ capacityText.textContent='Loading the real player count…';
+ const controller=new AbortController();
+ const timeout=setTimeout(()=>controller.abort(),8000);
  try{
-  const response=await fetch('https://servers-frontend.fivem.net/api/servers/single/a44z4m5',{signal:controller.signal,cache:'no-store'});if(!response.ok)throw new Error('status unavailable');
-  const payload=await response.json();const data=payload.Data||payload.data||payload;const current=Number(data.clients??0);const maximum=Number(data.svMaxclients??data.vars?.sv_maxClients??0);
-  serverState.textContent='City Online';serverMessage.textContent=data.hostname||'Gang Life RP is responding through the FiveM server list.';serverDot.className='server-dot online';playerCount.textContent=maximum?`${current} / ${maximum}`:String(current);capacityText.textContent=current===1?'1 player currently connected.':`${current} players currently connected.`;
+  const response=await fetch(`${GLRP_LIVE_STATUS_URL}?t=${Date.now()}`,{signal:controller.signal,cache:'no-store',headers:{Accept:'application/json'}});
+  const data=await response.json().catch(()=>null);
+  if(!response.ok||!data||data.ok!==true)throw new Error(data?.error||`Live status returned ${response.status}`);
+  const current=Math.max(0,Number(data.players)||0);
+  const maximum=Math.max(0,Number(data.maxPlayers)||0);
+  const online=data.online!==false;
+  serverState.textContent=online?'City Online':'City Offline';
+  serverDot.className=`server-dot ${online?'online':'offline'}`;
+  serverMessage.textContent=online?(data.hostname||data.server||'Gang Life RP is online.'):'Gang Life RP is currently offline.';
+  playerCount.textContent=online?(maximum?`${current} / ${maximum}`:String(current)):'0';
+  if(online){
+   const playerWord=current===1?'player':'players';
+   capacityText.textContent=maximum?`${current} ${playerWord} connected • ${maximum} slots`:`${current} ${playerWord} currently connected.`;
+  }else{
+   capacityText.textContent='No players connected while the city is offline.';
+  }
  }catch(error){
-  serverState.textContent='City Online';serverMessage.textContent='Gang Life RP is online. Live listing refresh is temporarily unavailable.';serverDot.className='server-dot online';playerCount.textContent='1';capacityText.textContent='1 player currently connected.';
- }finally{clearTimeout(timeout)}
+  serverState.textContent='Status Unavailable';
+  serverMessage.textContent='The live feed could not be reached. The website will try again automatically.';
+  serverDot.className='server-dot';
+  playerCount.textContent='—';
+  capacityText.textContent='Live player count temporarily unavailable.';
+  console.warn('[GLRP] Live status request failed:',error);
+ }finally{
+  clearTimeout(timeout);
+  serverStatusBusy=false;
+ }
 }
-document.getElementById('refreshStatus')?.addEventListener('click',refreshServerStatus);refreshServerStatus();
+document.getElementById('refreshStatus')?.addEventListener('click',()=>{refreshServerStatus();showToast('Refreshing live server status…')});
+refreshServerStatus();
+setInterval(refreshServerStatus,30000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshServerStatus()});
 
 const filters=[...document.querySelectorAll('.filter')],cards=[...document.querySelectorAll('.system-card')];filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;cards.forEach(c=>c.classList.toggle('hidden',f!=='all'&&!c.dataset.cat.split(' ').includes(f)));}));
 const modal=document.getElementById('modal'),modalImg=document.getElementById('modalImg');document.querySelectorAll('#galleryGrid button').forEach(b=>b.addEventListener('click',()=>{modalImg.src=b.dataset.img;modal.classList.add('open')}));document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('open'));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
