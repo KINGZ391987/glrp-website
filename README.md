@@ -1,22 +1,23 @@
-# GLRP Website V3.1.4 — Launch Countdown & Live City Pulse
+# GLRP Website V3.1.7 — Character Builder & Whitelist Prep
 
-This build keeps the locked V3.1.3 website and adds a new launch-focused interactive section near the top.
+This update keeps every feature from V3.1.6 and adds a browser-only interactive character builder.
 
 ## Added
+- Character name, age, origin and starting direction fields
+- Strength, flaw, long-term goal, background story and opening-scene planner
+- Live character profile preview
+- Completion score to show how prepared the draft is
+- Five optional story templates
+- Rotating story-spark ideas
+- Automatic local browser saving
+- Copyable Discord application draft
+- Privacy note explaining no information is submitted anywhere
+- New Build Character navigation link
 
-- Honest Coming Soon countdown display
-- Countdown automatically activates once an official ISO launch date is placed in `data-launch-date`
-- Live community, department, Kingz Autos and business opportunity cards
-- Interactive player story path generator
-- Animated opportunity ticker
-- Mobile and reduced-motion support
+## Safe upload
+For the normal update, upload only `index.html`. The `assets` folder is unchanged.
 
-## Links already configured
-
+## Official links
 - Discord: https://discord.gg/QPgcjHWShX
 - FiveM: https://cfx.re/join/a44z4m5
 - YouTube: https://www.youtube.com/@GLRPFiveM
-
-## Safe update
-
-Upload only `index.html` when updating an existing V3.1.3 site. The full package is retained as a backup.

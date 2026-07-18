@@ -215,13 +215,30 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 @media(max-width:650px){.role-matcher{padding:72px 0}.matcher-main,.matcher-side{padding:23px}.match-options,.result-grid{grid-template-columns:1fr}.matcher-side-list{grid-template-columns:1fr}.matcher-controls{align-items:flex-start}.matcher-skip{max-width:150px}.role-matcher:before{font-size:62px;top:28px}}
 @media(prefers-reduced-motion:reduce){.match-question.active,.match-result.active{animation:none}.match-option:hover{transform:none}}
 
+
+
+/* V3.1.7 — Character Builder & Whitelist Prep */
+.character-builder{position:relative;padding:100px 0;overflow:hidden;background:radial-gradient(circle at 10% 12%,rgba(74,168,255,.11),transparent 28%),radial-gradient(circle at 88% 78%,rgba(255,51,78,.12),transparent 31%),linear-gradient(180deg,#070b12,#0b111a)}
+.character-builder:before{content:"YOUR CHARACTER";position:absolute;left:-25px;bottom:-28px;color:rgba(255,255,255,.022);font-size:clamp(72px,12vw,180px);font-weight:950;letter-spacing:-.075em;white-space:nowrap;pointer-events:none}
+.builder-head{position:relative;z-index:2;display:grid;grid-template-columns:1fr .82fr;gap:36px;align-items:end;margin-bottom:32px}.builder-head h2{font-size:clamp(42px,5.8vw,76px);line-height:.92;letter-spacing:-.055em;text-transform:uppercase;margin:12px 0 0}.builder-head p{margin:0;color:#b6c1d0;line-height:1.75}
+.builder-shell{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:18px}.builder-form,.builder-preview{border:1px solid rgba(255,255,255,.1);border-radius:28px;background:linear-gradient(150deg,rgba(17,26,39,.97),rgba(7,10,16,.98));box-shadow:0 34px 90px rgba(0,0,0,.4)}.builder-form{padding:28px}.builder-preview{padding:28px;position:sticky;top:92px;align-self:start;overflow:hidden}.builder-preview:after{content:"GLRP";position:absolute;right:-14px;bottom:-42px;color:rgba(255,255,255,.025);font-size:145px;font-weight:950;letter-spacing:-.08em;pointer-events:none}
+.builder-intro{display:flex;justify-content:space-between;gap:18px;align-items:start;margin-bottom:24px}.builder-intro h3{margin:7px 0 7px;font-size:29px;line-height:1.08}.builder-intro p{margin:0;color:#8e9aae;font-size:13px;line-height:1.6}.builder-local{flex:none;padding:8px 10px;border-radius:999px;border:1px solid rgba(88,229,138,.22);background:rgba(88,229,138,.07);color:#9ff3b8;font-size:8px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}
+.builder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.builder-field{display:flex;flex-direction:column;gap:8px}.builder-field.wide{grid-column:1/-1}.builder-field label{color:#c7d0dd;font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}.builder-field input,.builder-field select,.builder-field textarea{width:100%;border:1px solid rgba(255,255,255,.1);border-radius:13px;background:#080d14;color:#f5f7fb;padding:13px 14px;outline:0;font:650 14px/1.45 Inter,system-ui,sans-serif;transition:.18s}.builder-field textarea{min-height:108px;resize:vertical}.builder-field input:focus,.builder-field select:focus,.builder-field textarea:focus{border-color:rgba(255,107,26,.62);box-shadow:0 0 0 3px rgba(255,107,26,.08)}.builder-field input::placeholder,.builder-field textarea::placeholder{color:#536075}.builder-field small{color:#657287;font-size:10px;line-height:1.45}.builder-counter{align-self:flex-end;color:#657287;font-size:9px;font-weight:850;letter-spacing:.07em}.builder-counter.limit{color:#ff8395}
+.builder-prompts{display:flex;flex-wrap:wrap;gap:8px;margin:19px 0 0}.builder-prompt{border:1px solid rgba(255,255,255,.09);border-radius:999px;background:rgba(255,255,255,.025);color:#aeb9c8;padding:9px 11px;font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.builder-prompt:hover{border-color:rgba(255,107,26,.38);color:#fff;background:rgba(255,107,26,.08)}
+.builder-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.builder-actions .btn{cursor:pointer}.builder-actions .builder-clear{background:transparent;color:#8895a7}.builder-save-state{min-height:18px;margin-top:12px;color:#6f7d91;font-size:10px}.builder-save-state.saved{color:#8ceaaa}
+.preview-top{display:flex;justify-content:space-between;gap:15px;align-items:start;position:relative;z-index:1}.preview-top small{display:block;color:#748196;font-size:9px;font-weight:950;letter-spacing:.14em;text-transform:uppercase}.preview-name{font-size:clamp(32px,4vw,51px);line-height:.94;letter-spacing:-.045em;text-transform:uppercase;margin:10px 0 7px}.preview-meta{color:var(--gold);font-size:12px;font-weight:850}.preview-score{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;flex:none;background:conic-gradient(var(--orange) var(--score,0%),rgba(255,255,255,.08) 0);position:relative}.preview-score:after{content:"";position:absolute;inset:6px;border-radius:50%;background:#0b1119}.preview-score strong{position:relative;z-index:1;font-size:17px}.preview-score span{position:absolute;z-index:1;bottom:14px;font-size:6px;color:#8d99aa;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.preview-quote{position:relative;z-index:1;margin:22px 0;padding:17px;border-left:3px solid var(--orange);background:rgba(255,107,26,.055);color:#dfe5ed;font-size:14px;line-height:1.7}.preview-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:10px}.preview-block{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.preview-block.wide{grid-column:1/-1}.preview-block small{display:block;color:#738196;font-size:8px;font-weight:950;letter-spacing:.13em;text-transform:uppercase;margin-bottom:8px}.preview-block strong,.preview-block p{margin:0;color:#dbe2ec;font-size:12px;line-height:1.55}.preview-block p{color:#a7b2c2;white-space:pre-wrap}.preview-footer{position:relative;z-index:1;margin-top:19px;padding-top:17px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;align-items:center}.preview-footer span{color:#718096;font-size:9px;line-height:1.5}.preview-footer button{border:0;background:transparent;color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.builder-disclaimer{position:relative;z-index:2;margin-top:18px;padding:15px 18px;border:1px solid rgba(74,168,255,.18);border-radius:16px;background:rgba(74,168,255,.045);color:#93a2b7;font-size:11px;line-height:1.65}.builder-disclaimer strong{color:#dce6f1}
+@media(max-width:960px){.builder-head,.builder-shell{grid-template-columns:1fr}.builder-preview{position:relative;top:auto}.builder-head{align-items:start}}
+@media(max-width:650px){.character-builder{padding:72px 0}.builder-form,.builder-preview{padding:21px;border-radius:22px}.builder-grid,.preview-grid{grid-template-columns:1fr}.builder-field.wide,.preview-block.wide{grid-column:auto}.builder-intro{flex-direction:column}.builder-actions .btn{width:100%}.character-builder:before{font-size:70px;bottom:10px}}
+
 </style>
 </head>
 <body>
 <header class="header"><div class="wrap nav">
 <a class="brand" href="#home"><img src="assets/favicon.webp" alt="GLRP"><span><strong>GANG LIFE RP</strong><small>UK SERIOUS ROLEPLAY</small></span></a>
 <button class="menu" id="menuBtn" aria-label="Open menu">MENU</button>
-<nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#role-match">Find Your Role</a><a href="#directory">Directory</a><a href="#city-map">City Map</a><a href="#server">Server</a><a href="#start">Start Here</a><a href="#news">News & Events</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="#support">Support</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
+<nav class="links" id="links"><a href="#about">About</a><a href="#recruitment">Recruiting</a><a href="#role-match">Find Your Role</a><a href="#character-builder">Build Character</a><a href="#directory">Directory</a><a href="#city-map">City Map</a><a href="#server">Server</a><a href="#start">Start Here</a><a href="#news">News & Events</a><a href="#showcase">Showcase</a><a href="#systems">Systems</a><a href="#phone">Phone</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#rules">Rules</a><a href="#support">Support</a><a href="https://discord.gg/QPgcjHWShX" target="_blank" class="nav-join">Join City</a></nav>
 </div></header>
 <div class="page-progress" aria-hidden="true"><span id="pageProgressBar"></span></div>
 <button class="site-search-trigger" id="siteSearchTrigger" type="button" aria-label="Search the GLRP website" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>Find anything</span><kbd>Ctrl K</kbd></button>
@@ -351,6 +368,48 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
       <div class="matcher-controls" id="matcherControls"><button class="matcher-back" id="matcherBack" type="button" hidden>← Previous question</button><span class="matcher-skip">Four quick choices. No application or account needed.</span></div>
     </div>
   </div>
+</div></section>
+
+
+<section class="character-builder" id="character-builder"><div class="wrap">
+  <div class="builder-head">
+    <div><span class="kicker">Interactive character builder</span><h2>Arrive with a person.<br><span class="accent">Not just a name.</span></h2></div>
+    <p>Build the foundations of a believable GLRP character before launch. Shape their background, goals, strengths and flaws, then copy a clean draft you can use when preparing your whitelist or department application.</p>
+  </div>
+  <div class="builder-shell">
+    <form class="builder-form" id="characterBuilderForm" autocomplete="off">
+      <div class="builder-intro"><div><span class="kicker">Your first chapter</span><h3>Create someone the city can change.</h3><p>Keep the character grounded enough to grow. The strongest stories leave room for mistakes, setbacks, relationships and unexpected turns.</p></div><span class="builder-local">Saved on this device</span></div>
+      <div class="builder-grid">
+        <div class="builder-field"><label for="cbName">Character name</label><input id="cbName" maxlength="36" placeholder="Example: Marcus Hale"><small>Use a believable first and last name.</small></div>
+        <div class="builder-field"><label for="cbAge">Character age</label><input id="cbAge" type="number" min="18" max="90" placeholder="24"><small>Choose an age that fits their experience.</small></div>
+        <div class="builder-field"><label for="cbOrigin">Where are they coming from?</label><select id="cbOrigin"><option value="">Choose a background</option><option>Local to Los Santos</option><option>Moved for a fresh start</option><option>Following family or friends</option><option>Escaping an old reputation</option><option>Looking for work and opportunity</option><option>Returning after years away</option></select></div>
+        <div class="builder-field"><label for="cbPath">First direction</label><select id="cbPath"><option value="">Choose a starting direction</option><option>Civilian life and honest work</option><option>Player business and entrepreneurship</option><option>Kingz Autos and car culture</option><option>Police Department</option><option>EMS and medical roleplay</option><option>Street life and criminal progression</option><option>Racing and performance cars</option><option>Creature hunting and collecting</option></select></div>
+        <div class="builder-field"><label for="cbStrength">Strongest quality</label><input id="cbStrength" maxlength="70" placeholder="Loyal, patient, ambitious, calm under pressure…"></div>
+        <div class="builder-field"><label for="cbFlaw">Real character flaw</label><input id="cbFlaw" maxlength="70" placeholder="Proud, reckless, distrustful, easily influenced…"></div>
+        <div class="builder-field wide"><label for="cbGoal">What do they want from the city?</label><textarea id="cbGoal" maxlength="260" placeholder="Describe a goal they can work toward over time—not something they should receive immediately."></textarea><span class="builder-counter" data-counter-for="cbGoal">0 / 260</span></div>
+        <div class="builder-field wide"><label for="cbStory">Short background story</label><textarea id="cbStory" maxlength="650" placeholder="Where did they come from? What happened before they arrived? Why is GLRP the place where their next chapter begins?"></textarea><span class="builder-counter" data-counter-for="cbStory">0 / 650</span></div>
+        <div class="builder-field wide"><label for="cbScene">The first scene you want to create</label><textarea id="cbScene" maxlength="260" placeholder="Example: Ask for work at Kingz Autos, meet a landlord, report a stolen bag, or find someone from their past."></textarea><span class="builder-counter" data-counter-for="cbScene">0 / 260</span></div>
+      </div>
+      <div class="builder-prompts"><button class="builder-prompt" type="button" data-builder-prompt="fresh">Fresh-start idea</button><button class="builder-prompt" type="button" data-builder-prompt="business">Business idea</button><button class="builder-prompt" type="button" data-builder-prompt="service">Department idea</button><button class="builder-prompt" type="button" data-builder-prompt="street">Street-life idea</button><button class="builder-prompt" type="button" data-builder-prompt="collector">Collector idea</button></div>
+      <div class="builder-actions"><button class="btn primary" type="submit">Build Character Draft</button><button class="btn" id="copyCharacterDraft" type="button">Copy Application Draft</button><button class="btn builder-clear" id="clearCharacterDraft" type="button">Clear</button></div>
+      <div class="builder-save-state" id="builderSaveState" aria-live="polite">Your draft will autosave locally as you type.</div>
+    </form>
+    <aside class="builder-preview" id="characterPreview" aria-live="polite">
+      <div class="preview-top"><div><small>GLRP character profile</small><h3 class="preview-name" id="previewName">Unnamed Character</h3><div class="preview-meta" id="previewMeta">Age unknown • Direction undecided</div></div><div class="preview-score" id="previewScore" style="--score:0%"><strong id="previewScoreNumber">0</strong><span>ready</span></div></div>
+      <div class="preview-quote" id="previewQuote">“A good character arrives with a reason to move forward—and enough flaws for the city to push back.”</div>
+      <div class="preview-grid">
+        <div class="preview-block"><small>Background</small><strong id="previewOrigin">Not chosen yet</strong></div>
+        <div class="preview-block"><small>Starting path</small><strong id="previewPath">Not chosen yet</strong></div>
+        <div class="preview-block"><small>Strength</small><strong id="previewStrength">Still to be defined</strong></div>
+        <div class="preview-block"><small>Flaw</small><strong id="previewFlaw">Still to be defined</strong></div>
+        <div class="preview-block wide"><small>Long-term goal</small><p id="previewGoal">Give your character something meaningful to chase.</p></div>
+        <div class="preview-block wide"><small>Background story</small><p id="previewStory">Their history will appear here as you build it.</p></div>
+        <div class="preview-block wide"><small>Opening scene</small><p id="previewScene">Plan a small first scene that gives other players a reason to respond.</p></div>
+      </div>
+      <div class="preview-footer"><span>This tool prepares a draft only. Official applications remain in the GLRP Discord.</span><button id="randomCharacterSpark" type="button">Give me a story spark →</button></div>
+    </aside>
+  </div>
+  <div class="builder-disclaimer"><strong>Private by design:</strong> this builder runs entirely in your browser. It does not submit information to GLRP, GitHub or any external service. Use the copy button when you are ready to paste your draft into the correct Discord application channel.</div>
 </div></section>
 
 
@@ -636,7 +695,7 @@ body{background:radial-gradient(circle at 88% -5%,rgba(255,51,78,.17) 0,transpar
 
 <section class="join" id="join"><div class="wrap"><div class="join-box"><div><span class="kicker">Coming soon • ready to start?</span><h2>Enter the city.<br><span class="accent">Create your legacy.</span></h2><p>Join the GLRP community before launch, follow official announcements and help shape a server designed around player stories and custom gameplay.</p></div><div class="join-buttons"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">GLRP YouTube</a></div></div></div></section>
 </main>
-<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown • Live City Pulse • Smart Search</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
+<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown • Live City Pulse • Smart Search • Character Builder</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
 <div class="toast" id="copyToast">Copied to clipboard</div>
 <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
 
@@ -1303,6 +1362,188 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   back.addEventListener('click',undoStep);
   restart.addEventListener('click',reset);
   showStep(0);
+})();
+</script>
+
+
+<script>
+(() => {
+  const form = document.getElementById('characterBuilderForm');
+  if (!form) return;
+
+  const ids = ['cbName','cbAge','cbOrigin','cbPath','cbStrength','cbFlaw','cbGoal','cbStory','cbScene'];
+  const fields = Object.fromEntries(ids.map(id => [id, document.getElementById(id)]));
+  const storageKey = 'glrp-character-builder-v1';
+  const saveState = document.getElementById('builderSaveState');
+
+  const preview = {
+    name: document.getElementById('previewName'), meta: document.getElementById('previewMeta'), origin: document.getElementById('previewOrigin'),
+    path: document.getElementById('previewPath'), strength: document.getElementById('previewStrength'), flaw: document.getElementById('previewFlaw'),
+    goal: document.getElementById('previewGoal'), story: document.getElementById('previewStory'), scene: document.getElementById('previewScene'),
+    quote: document.getElementById('previewQuote'), score: document.getElementById('previewScore'), scoreNumber: document.getElementById('previewScoreNumber')
+  };
+
+  const clean = value => String(value || '').trim();
+  const getData = () => Object.fromEntries(ids.map(id => [id, clean(fields[id].value)]));
+
+  const pathQuotes = {
+    'Civilian life and honest work': '“A quiet beginning can still become the story everyone remembers.”',
+    'Player business and entrepreneurship': '“Build somewhere people choose to return to—and give them a reason to know your name.”',
+    'Kingz Autos and car culture': '“Every machine has a story. Your character could be the one trusted to bring it back to life.”',
+    'Police Department': '“The badge creates authority. The choices behind it create reputation.”',
+    'EMS and medical roleplay': '“When the city falls apart, your character can be the reason somebody gets another chapter.”',
+    'Street life and criminal progression': '“Respect is never handed over. It is earned through choices the city does not forget.”',
+    'Racing and performance cars': '“Some reputations are built in conversation. Others are built one corner at a time.”',
+    'Creature hunting and collecting': '“The rarest discoveries belong to the players willing to look where everyone else walks past.”'
+  };
+
+  function updateCounters(){
+    document.querySelectorAll('[data-counter-for]').forEach(counter => {
+      const input = document.getElementById(counter.dataset.counterFor);
+      if (!input) return;
+      counter.textContent = `${input.value.length} / ${input.maxLength}`;
+      counter.classList.toggle('limit', input.value.length >= input.maxLength * .9);
+    });
+  }
+
+  function completionScore(data){
+    const weights = {cbName:14,cbAge:8,cbOrigin:10,cbPath:12,cbStrength:8,cbFlaw:10,cbGoal:14,cbStory:16,cbScene:8};
+    let total = 0;
+    Object.entries(weights).forEach(([key,weight]) => {
+      const value = data[key];
+      if (!value) return;
+      if (key === 'cbStory') total += weight * Math.min(1, value.length / 220);
+      else if (['cbGoal','cbScene'].includes(key)) total += weight * Math.min(1, value.length / 90);
+      else total += weight;
+    });
+    return Math.round(total);
+  }
+
+  function updatePreview(){
+    const d = getData();
+    preview.name.textContent = d.cbName || 'Unnamed Character';
+    preview.meta.textContent = `${d.cbAge ? `Age ${d.cbAge}` : 'Age unknown'} • ${d.cbPath || 'Direction undecided'}`;
+    preview.origin.textContent = d.cbOrigin || 'Not chosen yet';
+    preview.path.textContent = d.cbPath || 'Not chosen yet';
+    preview.strength.textContent = d.cbStrength || 'Still to be defined';
+    preview.flaw.textContent = d.cbFlaw || 'Still to be defined';
+    preview.goal.textContent = d.cbGoal || 'Give your character something meaningful to chase.';
+    preview.story.textContent = d.cbStory || 'Their history will appear here as you build it.';
+    preview.scene.textContent = d.cbScene || 'Plan a small first scene that gives other players a reason to respond.';
+    preview.quote.textContent = pathQuotes[d.cbPath] || '“A good character arrives with a reason to move forward—and enough flaws for the city to push back.”';
+    const score = completionScore(d);
+    preview.score.style.setProperty('--score', `${score}%`);
+    preview.scoreNumber.textContent = score;
+    updateCounters();
+  }
+
+  let saveTimer;
+  function saveDraft(){
+    clearTimeout(saveTimer);
+    saveState.textContent = 'Saving your draft…';
+    saveState.classList.remove('saved');
+    saveTimer = setTimeout(() => {
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(getData()));
+        saveState.textContent = 'Draft saved on this device.';
+        saveState.classList.add('saved');
+      } catch (_) {
+        saveState.textContent = 'Draft preview updated. Local saving is unavailable in this browser.';
+      }
+    }, 220);
+  }
+
+  function loadDraft(){
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+      ids.forEach(id => { if (saved[id] !== undefined && fields[id]) fields[id].value = saved[id]; });
+    } catch (_) {}
+    updatePreview();
+  }
+
+  function draftText(){
+    const d = getData();
+    return [
+      'GLRP CHARACTER APPLICATION DRAFT',
+      '--------------------------------',
+      `Character Name: ${d.cbName || 'Not decided'}`,
+      `Character Age: ${d.cbAge || 'Not decided'}`,
+      `Background: ${d.cbOrigin || 'Not decided'}`,
+      `Starting Direction: ${d.cbPath || 'Not decided'}`,
+      `Strongest Quality: ${d.cbStrength || 'Not decided'}`,
+      `Character Flaw: ${d.cbFlaw || 'Not decided'}`,
+      '',
+      'WHAT THEY WANT FROM THE CITY',
+      d.cbGoal || 'Not written yet.',
+      '',
+      'SHORT BACKGROUND STORY',
+      d.cbStory || 'Not written yet.',
+      '',
+      'FIRST SCENE I WANT TO CREATE',
+      d.cbScene || 'Not written yet.',
+      '',
+      'This is a preparation draft created with the GLRP website character builder.'
+    ].join('\n');
+  }
+
+  async function copyDraft(){
+    const text = draftText();
+    try {
+      await navigator.clipboard.writeText(text);
+      saveState.textContent = 'Application draft copied. Paste it into the correct Discord channel.';
+      saveState.classList.add('saved');
+    } catch (_) {
+      const area = document.createElement('textarea'); area.value = text; area.style.position='fixed'; area.style.opacity='0';
+      document.body.appendChild(area); area.select(); document.execCommand('copy'); area.remove();
+      saveState.textContent = 'Application draft copied.'; saveState.classList.add('saved');
+    }
+  }
+
+  const promptIdeas = {
+    fresh:{cbOrigin:'Moved for a fresh start',cbPath:'Civilian life and honest work',cbStrength:'Patient and willing to learn',cbFlaw:'Too eager to trust the wrong people',cbGoal:'Build a stable life, find reliable work and eventually earn a home that feels permanent.',cbStory:'They arrived with limited money and no powerful contacts after realising their old life was going nowhere. They are determined to rebuild without pretending the past never happened.',cbScene:'Ask around for honest work, meet another new arrival and decide whether the first person offering help can really be trusted.'},
+    business:{cbOrigin:'Looking for work and opportunity',cbPath:'Player business and entrepreneurship',cbStrength:'Ambitious and good with people',cbFlaw:'Struggles to accept failure or criticism',cbGoal:'Start as an employee, learn how the city economy works and eventually create a business people genuinely value.',cbStory:'They grew up watching small businesses disappear around them and believe the right idea, team and reputation can create something stronger.',cbScene:'Walk into a player business looking for work and pitch one small idea that could help bring in more customers.'},
+    service:{cbOrigin:'Following family or friends',cbPath:'EMS and medical roleplay',cbStrength:'Calm when other people panic',cbFlaw:'Carries guilt after outcomes they cannot control',cbGoal:'Earn training, become someone citizens trust in an emergency and eventually mentor newer medics.',cbStory:'A serious incident involving somebody close to them changed how they see emergency work. They arrived wanting to become useful when a scene turns bad.',cbScene:'Visit the hospital to ask about recruitment and unexpectedly help calm somebody waiting for news about a patient.'},
+    street:{cbOrigin:'Escaping an old reputation',cbPath:'Street life and criminal progression',cbStrength:'Loyal once trust is earned',cbFlaw:'Reacts badly when disrespected',cbGoal:'Build contacts and financial security without becoming the same kind of person they once feared.',cbStory:'They left behind a place where one mistake followed them everywhere. Los Santos offers a clean map, but not necessarily a clean path.',cbScene:'Search for quick work, meet someone offering easy money and decide how much risk is worth taking on the first night.'},
+    collector:{cbOrigin:'Returning after years away',cbPath:'Creature hunting and collecting',cbStrength:'Observant and persistent',cbFlaw:'Becomes obsessed and ignores practical responsibilities',cbGoal:'Discover rare creatures, build a respected collection and uncover places in the city most people never notice.',cbStory:'They remember stories about strange discoveries around Los Santos and have returned to prove that the rumours were more than childhood nonsense.',cbScene:'Use the starter scanner near an overlooked part of the city and meet another collector chasing the same signal.'}
+  };
+
+  document.querySelectorAll('.builder-prompt').forEach(button => button.addEventListener('click', () => {
+    const idea = promptIdeas[button.dataset.builderPrompt];
+    if (!idea) return;
+    Object.entries(idea).forEach(([id,value]) => { if (fields[id]) fields[id].value = value; });
+    updatePreview(); saveDraft();
+  }));
+
+  const sparks = [
+    'A relative already lives in the city—but does not know your character has arrived.',
+    'Your character owes a favour to somebody whose real identity they do not know.',
+    'A small object in their starter backpack connects to a person from their past.',
+    'They recognise a vehicle in Los Santos that should not be there.',
+    'Their first honest job creates an opportunity to make dishonest money.',
+    'They came to find one person, but only know a nickname and an old location.',
+    'Their strongest quality becomes dangerous when pushed too far.',
+    'The person who helps them first may be the worst influence they could meet.'
+  ];
+  let sparkIndex = 0;
+  document.getElementById('randomCharacterSpark')?.addEventListener('click', () => {
+    sparkIndex = (sparkIndex + 1) % sparks.length;
+    preview.quote.textContent = `Story spark: ${sparks[sparkIndex]}`;
+  });
+
+  ids.forEach(id => fields[id]?.addEventListener('input', () => { updatePreview(); saveDraft(); }));
+  ids.forEach(id => fields[id]?.addEventListener('change', () => { updatePreview(); saveDraft(); }));
+  form.addEventListener('submit', event => { event.preventDefault(); updatePreview(); saveDraft(); document.getElementById('characterPreview')?.scrollIntoView({behavior:'smooth',block:'center'}); });
+  document.getElementById('copyCharacterDraft')?.addEventListener('click', copyDraft);
+  document.getElementById('clearCharacterDraft')?.addEventListener('click', () => {
+    if (!window.confirm('Clear the saved character draft on this device?')) return;
+    form.reset();
+    try { localStorage.removeItem(storageKey); } catch (_) {}
+    updatePreview();
+    saveState.textContent = 'Character draft cleared.';
+    saveState.classList.remove('saved');
+  });
+
+  loadDraft();
 })();
 </script>
 
