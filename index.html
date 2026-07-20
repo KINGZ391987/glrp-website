@@ -452,6 +452,27 @@ body.character-stories-open{overflow:hidden}
   .hero .actions .btn.pulse-launch,
   .hero .actions .btn.story-launch{min-width:0;width:100%;}
 }
+
+
+/* V3.2.7 — Start Your GLRP Journey */
+.join-route-open{overflow:hidden}
+.join-route-overlay{position:fixed;inset:0;z-index:940;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(2,4,7,.9);backdrop-filter:blur(18px)}
+.join-route-overlay.open{display:flex;animation:joinRouteFade .2s ease both}
+.join-route-panel{position:relative;width:min(1080px,100%);max-height:calc(100vh - 48px);overflow:auto;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:radial-gradient(circle at 92% 0,rgba(255,51,78,.18),transparent 32%),radial-gradient(circle at 0 100%,rgba(255,107,26,.14),transparent 35%),linear-gradient(150deg,#111924,#070a10 72%);box-shadow:0 45px 140px rgba(0,0,0,.78)}
+.join-route-close{position:absolute;right:18px;top:18px;z-index:4;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:#080d14;color:#fff;font-size:20px;cursor:pointer}.join-route-close:hover{border-color:rgba(255,107,26,.75);background:#151019}
+.join-route-head{padding:48px 56px 25px;border-bottom:1px solid var(--line)}
+.join-route-head h2{max-width:820px;margin:13px 0 14px;font-size:clamp(42px,6vw,76px);line-height:.9;letter-spacing:-.055em;text-transform:uppercase}.join-route-head p{max-width:720px;margin:0;color:#b8c3d1;font-size:15px;line-height:1.7}
+.join-route-status{display:flex;align-items:center;gap:10px;width:max-content;max-width:100%;margin-top:22px;padding:10px 13px;border:1px solid rgba(88,229,138,.22);border-radius:999px;background:rgba(88,229,138,.065);color:#d8ffe2;font-size:10px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.join-route-status i{width:8px;height:8px;flex:0 0 auto;border-radius:50%;background:var(--green);box-shadow:0 0 13px var(--green)}
+.join-route-body{padding:30px 56px 48px}
+.join-route-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.join-route-step{position:relative;min-height:310px;display:flex;flex-direction:column;padding:25px;border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.018));overflow:hidden}.join-route-step:after{content:attr(data-number);position:absolute;right:-5px;top:-22px;color:rgba(255,255,255,.035);font-size:112px;font-weight:950;line-height:1;pointer-events:none}.join-route-number{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,var(--orange),var(--red));color:#fff;font-size:17px;font-weight:950;box-shadow:0 12px 30px rgba(255,72,51,.25)}.join-route-step:nth-child(2) .join-route-number{background:linear-gradient(135deg,#3e8cff,#7658ff)}.join-route-step:nth-child(3) .join-route-number{background:linear-gradient(135deg,#31ca71,#1f9f8a)}
+.join-route-step small{display:block;margin-top:21px;color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.14em;text-transform:uppercase}.join-route-step h3{margin:8px 0 10px;font-size:25px;line-height:1.05}.join-route-step p{margin:0 0 18px;color:#99a6b8;font-size:13px;line-height:1.65}.join-route-links{display:grid;gap:8px;margin-top:auto}.join-route-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 13px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:#090e15;color:#f7f9fc;font-size:10px;font-weight:900;letter-spacing:.075em;text-transform:uppercase;cursor:pointer}.join-route-link:hover{transform:translateY(-1px);border-color:rgba(255,107,26,.55);background:#131019}.join-route-link.primary{border:0;background:linear-gradient(135deg,var(--orange),#de3e1c);color:#fff;box-shadow:0 11px 26px rgba(255,88,33,.2)}.join-route-step:nth-child(2) .join-route-link.primary{background:linear-gradient(135deg,#3d8cff,#7157ed)}.join-route-step:nth-child(3) .join-route-link.primary{background:linear-gradient(135deg,#35c873,#188f80)}
+.join-route-tip{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;margin-top:18px;padding:18px 20px;border:1px solid rgba(255,179,71,.2);border-radius:17px;background:rgba(255,179,71,.055)}.join-route-tip-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:rgba(255,179,71,.12);color:var(--gold);font-weight:950}.join-route-tip strong{display:block;font-size:13px}.join-route-tip span{display:block;margin-top:4px;color:#9aa6b5;font-size:11px;line-height:1.5}.join-route-tip a{white-space:nowrap;color:var(--gold);font-size:9px;font-weight:950;letter-spacing:.1em;text-transform:uppercase}
+.hero .actions .journey-launch{background:linear-gradient(135deg,#34c875,#168c7d)!important;border:0!important;color:#fff!important;box-shadow:0 12px 28px rgba(39,186,126,.24)!important}.hero .actions .journey-launch:hover{filter:brightness(1.1);box-shadow:0 15px 34px rgba(39,186,126,.34)!important}.nav-join.journey-launch{cursor:pointer;border:0}
+@keyframes joinRouteFade{from{opacity:0}to{opacity:1}}
+@media(max-width:900px){.join-route-steps{grid-template-columns:1fr}.join-route-step{min-height:0}.join-route-head,.join-route-body{padding-left:28px;padding-right:28px}.join-route-tip{grid-template-columns:auto 1fr}.join-route-tip a{grid-column:2}}
+@media(max-width:600px){.join-route-overlay{padding:10px}.join-route-panel{max-height:calc(100vh - 20px);border-radius:20px}.join-route-head{padding:36px 20px 22px}.join-route-body{padding:20px}.join-route-head h2{font-size:42px}.join-route-close{right:11px;top:11px}.join-route-tip{grid-template-columns:1fr}.join-route-tip-icon{display:none}.join-route-tip a{grid-column:auto}.hero .actions .journey-launch{width:100%}}
+@media(prefers-reduced-motion:reduce){.join-route-overlay.open{animation:none}.join-route-link:hover{transform:none}}
+
 </style>
 
 </head>
@@ -481,14 +502,14 @@ body.character-stories-open{overflow:hidden}
 <a href="#support">Support</a>
 </div>
 </details>
-<a class="nav-join" href="https://discord.gg/QPgcjHWShX" target="_blank">Join City</a>
+<button aria-haspopup="dialog" class="nav-join journey-launch" id="launchJoinRouteNav" type="button">Join City</button>
 </nav>
 </div></header>
 <div aria-hidden="true" class="page-progress"><span id="pageProgressBar"></span></div>
 <button aria-haspopup="dialog" aria-label="Search the GLRP website" class="site-search-trigger" id="siteSearchTrigger" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><span>Find anything</span><kbd>Ctrl K</kbd></button>
 <main>
 <section class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-grid">
-<div class="hero-copy"><span class="kicker">WELCOME TO GANG LIFE RP • COMING SOON</span><h1>Start with nothing.<br/><span class="accent">Build something</span><br/>the city remembers.</h1><p>A serious UK roleplay city where your contacts, choices, vehicles, businesses and reputation become one connected story. Find your lane, meet the right people and give the city a reason to remember your name.</p><div aria-live="polite" class="hero-live-line"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="#showcase">Explore the City</a><button class="btn tour-launch" id="launchCityTour" type="button">Take 60-Second Tour</button><button class="btn pulse-launch" id="launchCommunityPulse" type="button">City Pulse</button><button class="btn story-launch" id="launchCharacterStories" type="button">Meet the City</button><a class="btn" href="#role-match">Find Your Role</a><a class="btn" href="https://discord.gg/QPgcjHWShX" rel="noopener" target="_blank">Join GLRP</a></div></div>
+<div class="hero-copy"><span class="kicker">WELCOME TO GANG LIFE RP • COMING SOON</span><h1>Start with nothing.<br/><span class="accent">Build something</span><br/>the city remembers.</h1><p>A serious UK roleplay city where your contacts, choices, vehicles, businesses and reputation become one connected story. Find your lane, meet the right people and give the city a reason to remember your name.</p><div aria-live="polite" class="hero-live-line"><i></i><span>Your next chapter:</span><strong id="heroRole">build a name from nothing.</strong></div><div class="actions"><a class="btn primary" href="#showcase">Explore the City</a><button class="btn tour-launch" id="launchCityTour" type="button">Take 60-Second Tour</button><button class="btn pulse-launch" id="launchCommunityPulse" type="button">City Pulse</button><button class="btn story-launch" id="launchCharacterStories" type="button">Meet the City</button><a class="btn" href="#role-match">Find Your Role</a><button aria-haspopup="dialog" class="btn journey-launch" id="launchJoinRoute" type="button">How to Join</button></div></div>
 <div class="hero-side hero-invite-panel">
 <div class="invite-live"><span class="invite-dot"></span><div><small>Live city status</small><strong data-live-state="">Connecting to GLRP…</strong><span data-live-capacity="">Checking the real server count.</span></div></div>
 <div class="invite-copy"><small>YOUR FIRST CHAPTER</small><h2>There is no single right way to arrive.</h2><p>Serve the city, build a business, chase rare finds, live for cars or earn respect on the streets. GLRP gives your choices somewhere to lead.</p></div>
@@ -960,7 +981,7 @@ body.character-stories-open{overflow:hidden}
 <div class="whitelist-flow"><div class="whitelist-flow-top"><div><span class="kicker">Four simple steps</span><h3>Your route into GLRP</h3></div><p>You do not need to memorise every script or system. The important part is showing that you understand serious roleplay, respect the community and have a character idea that can grow.</p></div><div class="whitelist-steps"><div class="whitelist-step"><b>Step 01</b><strong>Join Discord</strong><span>Read announcements, the current rulebook and application information.</span></div><div class="whitelist-step"><b>Step 02</b><strong>Build your character</strong><span>Create a believable background, goals, strengths and flaws.</span></div><div class="whitelist-step"><b>Step 03</b><strong>Submit honestly</strong><span>Complete the whitelist or department application in your own words.</span></div><div class="whitelist-step"><b>Step 04</b><strong>Enter prepared</strong><span>Use the handbook, ask for help and build scenes with the community.</span></div></div></div>
 <div class="support-actions"><p><strong>Need help before applying?</strong><br/>Join the official GLRP Discord and use the correct support or application channel.</p><div class="support-buttons"><a class="btn" href="#start">Read New Player Handbook</a><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Open GLRP Discord</a></div></div>
 </div></section><section class="join" id="join"><div class="wrap"><div class="join-box"><div><span class="kicker">Coming soon • ready to start?</span><h2>Enter the city.<br/><span class="accent">Create your legacy.</span></h2><p>Join the GLRP community before launch, follow official announcements and help shape a server designed around player stories and custom gameplay.</p></div><div class="join-buttons"><a class="btn primary" href="https://discord.gg/QPgcjHWShX" target="_blank">Join Discord</a><a class="btn" href="https://cfx.re/join/a44z4m5" target="_blank">Connect to FiveM</a><a class="btn" href="https://www.youtube.com/@GLRPFiveM" target="_blank">GLRP YouTube</a></div></div></div></section></main>
-<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown • Live City Pulse • Smart Search • Character Builder • Media Hub</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
+<footer class="footer"><div class="wrap footer-grid"><span>© 2026 Gang Life RP • UK Serious Roleplay • Coming Soon • Launch Countdown • Live City Pulse • Smart Search • Character Builder • Media Hub • Guided Join Route</span><span><a href="https://discord.gg/QPgcjHWShX" target="_blank">Discord</a> • <a href="https://www.youtube.com/@GLRPFiveM" target="_blank">YouTube</a> • <a href="https://cfx.re/join/a44z4m5" target="_blank">FiveM</a></span></div></footer>
 <div class="toast" id="copyToast">Copied to clipboard</div>
 <button aria-label="Back to top" class="back-to-top" id="backToTop" type="button">↑</button>
 <div aria-labelledby="siteSearchTitle" aria-modal="true" class="site-search-overlay" id="siteSearchOverlay" role="dialog">
@@ -974,6 +995,59 @@ body.character-stories-open{overflow:hidden}
 <div aria-label="Search results" class="site-search-results" id="siteSearchResults" role="listbox"></div>
 </div>
 </div>
+
+<div aria-hidden="true" aria-labelledby="joinRouteTitle" aria-modal="true" class="join-route-overlay" id="joinRouteOverlay" role="dialog">
+  <div class="join-route-panel">
+    <button aria-label="Close join guide" class="join-route-close" id="closeJoinRoute" type="button">×</button>
+    <div class="join-route-head">
+      <span class="kicker">Your route into Gang Life RP</span>
+      <h2 id="joinRouteTitle">Three steps.<br/><span class="accent">No guessing.</span></h2>
+      <p>Get into the community, prepare a believable character and enter the city knowing exactly where to begin. You can explore the site first or start immediately.</p>
+      <div class="join-route-status"><i></i> Community access and applications are open</div>
+    </div>
+    <div class="join-route-body">
+      <div class="join-route-steps">
+        <article class="join-route-step" data-number="01">
+          <div class="join-route-number">01</div>
+          <small>Meet the community</small>
+          <h3>Join the GLRP Discord</h3>
+          <p>Get launch announcements, application channels, support and the people who will shape your first city connections.</p>
+          <div class="join-route-links">
+            <a class="join-route-link primary" href="https://discord.gg/QPgcjHWShX" rel="noopener" target="_blank">Open Discord <span>→</span></a>
+            <a class="join-route-link" href="#rules">Read the rules <span>→</span></a>
+          </div>
+        </article>
+        <article class="join-route-step" data-number="02">
+          <div class="join-route-number">02</div>
+          <small>Prepare your arrival</small>
+          <h3>Build a character with direction</h3>
+          <p>Pick a starting route, create strengths and flaws, then use the first-week planner so your story has somewhere to grow.</p>
+          <div class="join-route-links">
+            <a class="join-route-link primary" href="#character-builder">Build your character <span>→</span></a>
+            <a class="join-route-link" href="#role-match">Find your role <span>→</span></a>
+            <a class="join-route-link" href="#first-week">Plan your first week <span>→</span></a>
+          </div>
+        </article>
+        <article class="join-route-step" data-number="03">
+          <div class="join-route-number">03</div>
+          <small>Enter Gang Life RP</small>
+          <h3>Connect when you are ready</h3>
+          <p>Launch FiveM directly, arrive with a plan and let real players, opportunities and consequences change that plan.</p>
+          <div class="join-route-links">
+            <a class="join-route-link primary" href="https://cfx.re/join/a44z4m5" rel="noopener" target="_blank">Connect to FiveM <span>→</span></a>
+            <button class="join-route-link" data-copy="connect a44z4m5" type="button">Copy connect command <span>⧉</span></button>
+          </div>
+        </article>
+      </div>
+      <div class="join-route-tip">
+        <div class="join-route-tip-icon">?</div>
+        <div><strong>Not sure which route suits you?</strong><span>The role matcher takes less than a minute and points you toward a strong first character direction.</span></div>
+        <a href="#role-match">Use role matcher →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal" id="modal"><button id="closeModal">CLOSE</button><img alt="Gallery image" id="modalImg"/></div>
 <script>
 const menuBtn=document.getElementById('menuBtn'),links=document.getElementById('links');menuBtn.addEventListener('click',()=>links.classList.toggle('open'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
@@ -2551,6 +2625,41 @@ cityMapFilters.forEach(filter=>filter.addEventListener('click',()=>{const catego
   });
   render(0);
 })();
+
+
+// V3.2.7 — Start Your GLRP Journey
+(()=>{
+  const overlay=document.getElementById('joinRouteOverlay');
+  const closeButton=document.getElementById('closeJoinRoute');
+  const launchers=[document.getElementById('launchJoinRoute'),document.getElementById('launchJoinRouteNav')].filter(Boolean);
+  if(!overlay||!closeButton||!launchers.length)return;
+  let lastFocus=null;
+  const openRoute=()=>{
+    lastFocus=document.activeElement;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.classList.add('join-route-open');
+    window.setTimeout(()=>closeButton.focus(),60);
+  };
+  const closeRoute=()=>{
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.classList.remove('join-route-open');
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  };
+  launchers.forEach(button=>button.addEventListener('click',openRoute));
+  closeButton.addEventListener('click',closeRoute);
+  overlay.addEventListener('click',event=>{if(event.target===overlay)closeRoute();});
+  overlay.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',closeRoute));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&overlay.classList.contains('open'))closeRoute();});
+
+  overlay.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
+    const value=button.dataset.copy;
+    try{await navigator.clipboard.writeText(value);if(typeof showToast==='function')showToast('Copied: '+value)}
+    catch(_){const area=document.createElement('textarea');area.value=value;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();if(typeof showToast==='function')showToast('Copied: '+value)}
+  }));
+})();
+
 </script>
 
 </body></html>
